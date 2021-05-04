@@ -1,5 +1,5 @@
 import "../index.css";
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 import logo from "../assets/images/logo.png";
 import { NavLink } from "react-router-dom";
 import NavbarLinks from "../NavbarLinks";
@@ -73,18 +73,18 @@ const Navbar = (props: NavbarProps) => {
                           </Transition>
                         ) : (
                           <Transition
-                          show={true}
-                          enter="transform transition ease-in duration-400"
-                          enterFrom="opacity-0 rotate-0"
-                          enterTo="opacity-100 -rotate-180"
-                          leave="transform transition ease-out duration-400"
-                          leaveFrom="opacity-100 scale-100"
-                          leaveTo="opacity-0 scale-80"
-                        >
-                          <MenuIcon
-                            className="block h-6 w-6"
-                            aria-hidden="true"
-                          />
+                            show={true}
+                            enter="transform transition ease-in duration-400"
+                            enterFrom="opacity-0 rotate-0"
+                            enterTo="opacity-100 -rotate-180"
+                            leave="transform transition ease-out duration-400"
+                            leaveFrom="opacity-100 scale-100"
+                            leaveTo="opacity-0 scale-80"
+                          >
+                            <MenuIcon
+                              className="block h-6 w-6"
+                              aria-hidden="true"
+                            />
                           </Transition>
                         )}
                       </Disclosure.Button>

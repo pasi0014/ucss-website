@@ -6,11 +6,7 @@ import Banner from "./components/Banner";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HowYouCanHelpUs from "./pages/HowYouCanHelpUs";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
-
-// function selectLink(){
-//   const navLinks = NavbarLinks.GetNavigationLinks();
-
-// }
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -23,7 +19,7 @@ function App() {
             <TransitionGroup>
               <CSSTransition
                 key={location.location.key}
-                timeout={300}
+                timeout={400}
                 classNames="fade"
               >
                 <Switch>
@@ -39,6 +35,7 @@ function App() {
             </TransitionGroup>
           )}
         />
+        <Footer/>
       </div>
     </Router>
   );
