@@ -1,6 +1,3 @@
-import Banner from "../components/Banner";
-import Navbar from "../components/Navbar";
-import Anime from "react-anime";
 import React from "react";
 
 class HowYouCanHelpUs extends React.Component {
