@@ -1,13 +1,16 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 export default function Footer() {
   return (
     <>
-      <footer className="relative bg-gray-700 pt-8 pb-6 text-gray-200 mt-10">
+      <footer className="relative bg-gray-700 pt-8 pb-6 text-gray-200">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap">
             <div className="w-full lg:w-6/12 px-4">
-              <h4 className="text-3xl font-semibold">Truck your bus</h4>
+              <h4 className="text-3xl font-semibold">
+                Ukrainian Canadian Social Servises Ottawa
+              </h4>
               <h5 className="text-lg mt-0 mb-2 text-gray-100">
                 Developed by Nazar Pasika
               </h5>
@@ -20,12 +23,11 @@ export default function Footer() {
                   </span>
                   <ul className="list-unstyled">
                     <li>
-                      <a
-                        className="text-gray-100 hover:text-gray-400 font-semibold block pb-2 text-sm"
-                        href="/about"
-                      >
-                        About
-                      </a>
+                      <NavLink to="/about">
+                        <span className="text-gray-100 hover:text-gray-400 font-semibold block pb-2 text-sm">
+                          About
+                        </span>
+                      </NavLink>
                     </li>
                     <li>
                       <a
@@ -44,7 +46,8 @@ export default function Footer() {
           <div className="flex flex-wrap items-center md:justify-between justify-center">
             <div className="w-full md:w-4/12 px-4 mx-auto text-center">
               <div className="text-sm text-gray-400 font-semibold py-1">
-                {new Date().getFullYear()} Nazar Pasika
+                &copy; {new Date().getFullYear()} Ukrainian Canadian Social
+                Servises Ottawa
               </div>
             </div>
           </div>

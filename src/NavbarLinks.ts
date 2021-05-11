@@ -14,13 +14,13 @@ export default class NavbarLinks {
         isActive: false,
       },
       {
-        title: "How You Can Help Us",
-        link: "/how-you-can-help-us",
+        title: "How We Can Help You",
+        link: "/how-we-can-help-you",
         isActive: false,
       },
       {
-        title: "How We Can Help You",
-        link: "/how-we-can-help-you",
+        title: "Donate",
+        link: "/donate",
         isActive: false,
       },
       {

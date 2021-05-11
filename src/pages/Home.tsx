@@ -20,7 +20,7 @@ class Home extends React.Component {
                 corrupti deleniti quaerat molestiae.
               </div>
 
-              <div className="flex flex-col sm:flex-row md:space-x-1 sm:space-x-2 justify-center">
+              <div className="flex flex-col md:flex-row md:space-x-2 justify-center">
                 <div className="w-full bg-red-500 rounded-lg shadow-sm mt-1">
                   <h1 className="text-2xl text-center font-medium mb-2 p-10">
                     Upcoming Events
@@ -98,10 +98,6 @@ class Home extends React.Component {
                 ullam totam molestias doloribus expedita, modi exercitationem
                 quis laboriosam quae, enim dolor!
               </div>
-
-              {/* <div className="bg-indigo-400 shadow-sm rounded-lg h-1/2 lg:h-32 text-left">
-                <h1 className="text-white font-medium text-left">Title</h1>
-              </div> */}
 
               <div className="bg-blue-300 rounded-lg h-full p-5  mb-3">
                 <h1 className="text-2xl font-medium mb-2 text-center">Title</h1>

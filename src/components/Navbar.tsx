@@ -30,7 +30,9 @@ const Navbar = (props: NavbarProps) => {
                   <div className="flex items-center md:justify-center justify-between h-16">
                     <div className="flex items-center">
                       <div className="flex-shrink-0">
-                        <img className="h-8 w-8" src={logo} alt="UcssLogo" />
+                        <NavLink to="/">
+                          <img className="h-8 w-8" src={logo} alt="UcssLogo" />
+                        </NavLink>
                       </div>
                       <div className="hidden md:block">
                         <div className="ml-10 flex items-baseline space-x-4 navLinks">
@@ -145,7 +147,6 @@ const Navbar = (props: NavbarProps) => {
                             <span
                               key={item.title}
                               className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium hover:no-underline"
-                              // onClick={() => handleClick(item)}
                             >
                               {item.title}
                             </span>
