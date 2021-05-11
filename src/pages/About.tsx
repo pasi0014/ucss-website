@@ -2,6 +2,8 @@ import React from "react";
 import aboutImage from "../assets/images/aboutImg.jpg";
 import { useState } from "react";
 import svgFile from "../assets/static/document.svg";
+import Posts, { Post } from "./posts/Posts";
+import { Link } from "react-router-dom";
 
 // ABOUT PAGE
 // TODO(Nazar):
@@ -9,16 +11,15 @@ import svgFile from "../assets/static/document.svg";
 // Try to place pdf file little bit closer to the title in second section
 // Improve responsive design
 
-
 export const About = () => {
   const [hovered, setHovered] = useState(false);
   const toggleHover = () => {
     setHovered(!hovered);
   };
   const handleScroll = () => {
-    window.scrollTo({ top: 1547, left: 0, behavior: "smooth" });
+    var secondSection = document.getElementById("second-section");
+    secondSection?.scrollIntoView({ behavior: "smooth" });
   };
-  // window.scrollTo({ top: 80, left: 0, behavior: "smooth" });
   return (
     <section className="text-gray-600 body-font overflow-hidden">
       <div className="relative container h-screen mx-auto flex px-5 py-24 flex flex-wrap md:flex-nowrap lg:items-center">
@@ -29,7 +30,11 @@ export const About = () => {
             src={aboutImage}
           />
         </div>
-        <div className="w-screen lg:flex-grow lg:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:mx-auto md:text-left items-center text-center shadow p-4 m-3 rounded-2xl">
+        <div
+          className="w-screen lg:flex-grow lg:w-1/2 lg:pl-24 md:pl-16
+          flex flex-col md:items-start md:mx-auto md:text-left
+          items-center text-center shadow p-4 m-3 rounded-2xl"
+        >
           <h1 className="title-font mb-4 font-medium">About Us</h1>
           <p className="mb-8 leading-relaxed text-lg text-left">
             <span className="font-medium">
@@ -43,9 +48,9 @@ export const About = () => {
           </p>
         </div>
         <span className="absolute inset-x-0 bottom-0 flex justify-center mb-5">
-          <button onClick={handleScroll}>
+          <button onClick={handleScroll} className="p-1">
             <svg
-              className="animate-bounce text-white w-6 h-6 mr-3"
+              className="animate-bounce text-white w-6 h-6"
               xmlns="http://www.w3.org/2000/svg"
               fillRule="evenodd"
               clipRule="evenodd"
@@ -56,7 +61,10 @@ export const About = () => {
         </span>
       </div>
 
-      <div className="h-screen w-screen bg-blue-300 flex flex-wrap md:flex-nowrap justify-center items-center">
+      <div
+        className="h-screen w-screen bg-blue-300 flex flex-col lg:flex-row justify-center items-center"
+        id="second-section"
+      >
         <div
           className={
             hovered
@@ -67,14 +75,22 @@ export const About = () => {
           <h1 className="text-yellow-300 leading-relaxed tracking-wider xl:text-left text-5xl">
             What we do?
           </h1>
-          <h3 className="text-gray-500 xl:text-left">
+          <h3 className="text-gray-500 text-xl md:text-left">
             UCSS helps people who need help both in Canada and abroad
           </h3>
-          <div className="flex flex-col items-start space-y-2 mt-5 w-12/12 sm:w-12/12 md:w-8/12 xl:w-6/12">
-            <button className="btn px-4 py-2 font-semibold text-gray-100 shadow-sm bg-green-600 transition hover:text-white hover:bg-green-500 w-full">
+          <div className="flex flex-col items-start space-y-2 mt-5 w-12/12 sm:w-12/12 md:w-7/12 lg:w-10/12 xl:w-7/12">
+            <button
+              className="btn px-4 py-2 font-semibold text-gray-100
+             shadow-sm bg-green-600 transition hover:text-white 
+             hover:bg-green-500 w-full"
+            >
               Find out how we can help you
             </button>
-            <button className="btn px-4 py-2 font-semibold text-gray-100 shadow-sm bg-blue-600 transition hover:text-white hover:bg-blue-500 w-full">
+            <button
+              className="btn px-4 py-2 font-semibold text-gray-100
+             shadow-sm bg-blue-600 transition hover:text-white
+              hover:bg-blue-500 w-full"
+            >
               Contact us now
             </button>
           </div>
@@ -85,25 +101,37 @@ export const About = () => {
             onMouseEnter={toggleHover}
             onMouseLeave={toggleHover}
             alt="Document"
-            className="bg-white rounded-lg transform shadow-sm transition hover:scale-110 hover:shadow-lg w-11/12 lg:w-9/12 md:w-9/12 sm:w-9/12 sm:mt-7 lg:mt-0"
+            className="bg-white rounded-lg transform shadow-sm transition
+            hover:scale-110 hover:shadow-lg
+            w-9/12  lg:w-9/12 md:w-7/12 sm:w-8/12 sm:mt-7 lg:mt-0"
           />
         </div>
       </div>
-      <div className="h-screen bg-yellow-200 flex flex-wrap md:flex-nowrap justify-center items-center">
+      <div className="h-screen bg-yellow-200 flex flex-col lg:flex-row justify-center items-center">
         <div className="text-center">
-          <h1 className="text-blue-300 leading-relaxed tracking-wide font-extrabold text-5xl">
+          <h1 className="text-blue-300 mb-4 leading-relaxed tracking-wide font-extrabold text-5xl">
             We Help People
           </h1>
         </div>
-        <div className="w-4/12 m-3 text-center justify-center items-center rounded-lg p-0 ">
-          <div className="bg-gray-100 text-left p-5 rounded-lg shadow-sm">
-            <h2>Review</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
-              unde inventore a ratione maxime amet aut facilis mollitia beatae
-              facere ad perferendis molestiae saepe dicta dolores cupiditate,
-              qui laudantium esse?
+        <div className="w-full px-2 lg:w-5/12 md:w-10/12 sm:w-full m-3 text-center justify-center items-center rounded-lg p-0 ">
+          <div className="bg-gray-100 text-left p-5 rounded-xl shadow transition transform">
+            <h2>Our Reviews</h2>
+            <p className="text-lg mt-3 leading-relaxed tracking-wide">
+              <blockquote>
+                <cite>
+                <q>Я не можу словами передати свою безмежну вдячність за це. Але
+                Бог все бачить! І Він сторицею віддячить їм, а також їхнім
+                родинам за їх допомогу. Я зустріла добрих, щирих чуйних людей,
+                які стали мені як сім’я. Ця організація, а точніше люди, які там
+                працюють, вони рятують життя. Ще раз дякую за все!!!</q>
+                </cite>
+              </blockquote>
             </p>
+            <Link to="/stories">
+            <button className="btn px-3 py-2 bg-blue-300 text-white font-semibold mt-3 transition hover:bg-blue-200">
+              Read More
+            </button>
+            </Link>
           </div>
         </div>
       </div>

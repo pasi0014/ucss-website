@@ -14,7 +14,7 @@ interface Props {
 
 export const PdfView = (props: Props) => {
   const [pageNumber, setPageNumber] = useState(1);
-
+  setPageNumber(1);
   return (
     <div className="flex justify-center p-0 m-0">
       <Document

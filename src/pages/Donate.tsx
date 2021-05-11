@@ -129,7 +129,10 @@ export const Donate = () => {
                   taxidermy. Gastropub indxgo juice poutine, ramps microdosing
                   banh mi pug VHS try-hard.
                 </p>
-                <a href="#p" className="mt-3 text-indigo-400 inline-flex items-center">
+                <a
+                  href="#p"
+                  className="mt-3 text-indigo-400 inline-flex items-center"
+                >
                   Learn More
                   <svg
                     fill="none"
