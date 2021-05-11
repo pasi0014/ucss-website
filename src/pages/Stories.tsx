@@ -22,7 +22,11 @@ export const Stories = () => {
                   <h2 className="text-2xl font-medium text-gray-700 title-font mb-2">
                     {post.author}
                   </h2>
-                  <p className="leading-relaxed text-gray-900">{post.body}</p>
+                  <p className="text-lg mt-3 leading-relaxed tracking-wide review">
+                    <blockquote className="bg-gray-100 text-gray-600">
+                      <cite>{post.body}</cite>
+                    </blockquote>
+                  </p>
                   <Link
                     to={`/story/${post.id}`}
                     className="text-indigo-400 inline-flex items-center mt-4"

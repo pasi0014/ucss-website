@@ -2,24 +2,39 @@ import React from "react";
 import aboutImage from "../assets/images/aboutImg.jpg";
 import { useState } from "react";
 import svgFile from "../assets/static/document.svg";
-import Posts, { Post } from "./posts/Posts";
+// import Posts, { Post } from "./posts/Posts";
 import { Link } from "react-router-dom";
 
 // ABOUT PAGE
 // TODO(Nazar):
-// Improve layout of the last part
-// Try to place pdf file little bit closer to the title in second section
-// Improve responsive design
+// Improve layout of the last part - DONE
+// Try to place pdf file little bit closer to the title in second section - DONE
+// Improve responsive design - IN PROGRESS
 
 export const About = () => {
-  const [hovered, setHovered] = useState(false);
+  const [hovered, setHovered] = useState<boolean>(false);
+  const [scrollToThirdSetion, setScrollToThirdSection] =
+    useState<boolean>(false);
+  const [scrollToSecondSetion, setScrollToSecondSection] =
+    useState<boolean>(false);
+
   const toggleHover = () => {
     setHovered(!hovered);
   };
+
+  const thirdSection = document.getElementById("third-section");
+  const secondSection = document.getElementById("second-section");
+
   const handleScroll = () => {
-    var secondSection = document.getElementById("second-section");
-    secondSection?.scrollIntoView({ behavior: "smooth" });
+    if (scrollToThirdSetion) {
+      thirdSection?.scrollIntoView({ behavior: "smooth" });
+    }
+    if (scrollToSecondSetion) {
+      console.log("test");
+      secondSection?.scrollIntoView({ behavior: "smooth" });
+    }
   };
+
   return (
     <section className="text-gray-600 body-font overflow-hidden">
       <div className="relative container h-screen mx-auto flex px-5 py-24 flex flex-wrap md:flex-nowrap lg:items-center">
@@ -48,7 +63,15 @@ export const About = () => {
           </p>
         </div>
         <span className="absolute inset-x-0 bottom-0 flex justify-center mb-5">
-          <button onClick={handleScroll} className="p-1">
+          <button
+            onClick={() => {
+              scrollToSecondSetion
+                ? setScrollToSecondSection(false)
+                : setScrollToSecondSection(true);
+              handleScroll();
+            }}
+            className="p-1"
+          >
             <svg
               className="animate-bounce text-white w-6 h-6"
               xmlns="http://www.w3.org/2000/svg"
@@ -62,7 +85,7 @@ export const About = () => {
       </div>
 
       <div
-        className="h-screen w-screen bg-blue-300 flex flex-col lg:flex-row justify-center items-center"
+        className="relative h-screen w-screen bg-blue-300 flex flex-col lg:flex-row justify-center items-center"
         id="second-section"
       >
         <div
@@ -106,8 +129,31 @@ export const About = () => {
             w-9/12  lg:w-9/12 md:w-7/12 sm:w-8/12 sm:mt-7 lg:mt-0"
           />
         </div>
+        <span className="absolute inset-x-0 bottom-0 flex justify-center mb-5">
+          <button
+            onClick={() => {
+              scrollToThirdSetion
+                ? setScrollToThirdSection(false)
+                : setScrollToThirdSection(true);
+              handleScroll();
+            }}
+            className="p-1"
+          >
+            <svg
+              className="animate-bounce text-white w-6 h-6"
+              xmlns="http://www.w3.org/2000/svg"
+              fillRule="evenodd"
+              clipRule="evenodd"
+            >
+              <path d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z" />
+            </svg>
+          </button>
+        </span>
       </div>
-      <div className="h-screen bg-yellow-200 flex flex-col lg:flex-row justify-center items-center">
+      <div
+        className="h-screen bg-yellow-200 flex flex-col lg:flex-row justify-center items-center"
+        id="third-section"
+      >
         <div className="text-center">
           <h1 className="text-blue-300 mb-4 leading-relaxed tracking-wide font-extrabold text-5xl">
             We Help People
@@ -116,21 +162,21 @@ export const About = () => {
         <div className="w-full px-2 lg:w-5/12 md:w-10/12 sm:w-full m-3 text-center justify-center items-center rounded-lg p-0 ">
           <div className="bg-gray-100 text-left p-5 rounded-xl shadow transition transform">
             <h2>Our Reviews</h2>
-            <p className="text-lg mt-3 leading-relaxed tracking-wide">
+            <p className="text-lg mt-3 leading-relaxed tracking-wide review">
               <blockquote>
                 <cite>
-                <q>Я не можу словами передати свою безмежну вдячність за це. Але
-                Бог все бачить! І Він сторицею віддячить їм, а також їхнім
-                родинам за їх допомогу. Я зустріла добрих, щирих чуйних людей,
-                які стали мені як сім’я. Ця організація, а точніше люди, які там
-                працюють, вони рятують життя. Ще раз дякую за все!!!</q>
+                  Я не можу словами передати свою безмежну вдячність за це. Але
+                  Бог все бачить! І Він сторицею віддячить їм, а також їхнім
+                  родинам за їх допомогу. Я зустріла добрих, щирих чуйних людей,
+                  які стали мені як сім’я. Ця організація, а точніше люди, які
+                  там працюють, вони рятують життя. Ще раз дякую за все!!!
                 </cite>
               </blockquote>
             </p>
             <Link to="/stories">
-            <button className="btn px-3 py-2 bg-blue-300 text-white font-semibold mt-3 transition hover:bg-blue-200">
-              Read More
-            </button>
+              <button className="btn px-3 py-2 bg-blue-300 text-white font-semibold mt-3 transition hover:bg-blue-200">
+                Read More
+              </button>
             </Link>
           </div>
         </div>

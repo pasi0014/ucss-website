@@ -37,19 +37,17 @@ function App() {
                     component={HowWeCanHelpYou}
                   />
                   <Route path="/donate" component={Donate} />
-                  <Route path="/stories" component={Stories} />
-                  <Route
-                    exact
-                    path="/story/:id"
-                    render={({ match }) => (
-                      <Story
-                        post={posts.find((p: any) => p.id === match.params.id)}
-                      />
-                    )}
-                  />
                 </Switch>
               </CSSTransition>
             </TransitionGroup>
+          )}
+        />
+        <Route path="/stories" component={Stories} />
+        <Route
+          exact
+          path="/story/:id"
+          render={({ match }) => (
+            <Story post={posts.find((p: any) => p.id === match.params.id)} />
           )}
         />
         <Footer />
