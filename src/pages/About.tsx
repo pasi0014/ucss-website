@@ -3,6 +3,13 @@ import aboutImage from "../assets/images/aboutImg.jpg";
 import { useState } from "react";
 import svgFile from "../assets/static/document.svg";
 
+// ABOUT PAGE
+// TODO(Nazar):
+// Improve layout of the last part
+// Try to place pdf file little bit closer to the title in second section
+// Improve responsive design
+
+
 export const About = () => {
   const [hovered, setHovered] = useState(false);
   const toggleHover = () => {
