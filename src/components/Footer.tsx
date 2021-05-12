@@ -37,6 +37,13 @@ export default function Footer() {
                         Github
                       </a>
                     </li>
+                    <li>
+                      <NavLink to="/contact">
+                        <span className="text-gray-100 hover:text-gray-400 font-semibold block pb-2 text-sm">
+                          Contact Us
+                        </span>
+                      </NavLink>
+                    </li>
                   </ul>
                 </div>
               </div>

@@ -1,6 +1,7 @@
 import React from "react";
 
 export const Donate = () => {
+  window.scrollTo({ top: 500, behavior: "smooth" });
   return (
     <>
       <section className="text-gray-400 bg-yellow-50 body-font">

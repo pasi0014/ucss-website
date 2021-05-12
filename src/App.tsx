@@ -12,6 +12,7 @@ import { Stories } from "./pages/Stories";
 import HowWeCanHelpYou from "./pages/HowWeCanHelpYou";
 import { Story } from "./pages/Story";
 import Posts from "./pages/posts/Posts";
+import ContactForm from "./components/ContactForm";
 
 function App() {
   const posts = Posts.getPosts();
@@ -42,6 +43,7 @@ function App() {
             </TransitionGroup>
           )}
         />
+        <Route path="/contact" component={ContactForm} />
         <Route path="/stories" component={Stories} />
         <Route
           exact

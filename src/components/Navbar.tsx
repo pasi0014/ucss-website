@@ -42,12 +42,16 @@ const Navbar = (props: NavbarProps) => {
                                 to={item.link}
                                 activeClassName="activeLink"
                               >
-                                <span
+                                <button
                                   key={item.title}
-                                  className="block text-gray-300 hover:bg-gray-700 hover:text-white hover:no-underline px-3 py-2 rounded-md text-sm font-medium "
+                                  className={
+                                    item.link !== "/contact"
+                                      ? "btn text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium "
+                                      : "btn text-gray-800 bg-yellow-300 hover:bg-yellow-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                                  }
                                 >
                                   {item.title}
-                                </span>
+                                </button>
                               </NavLink>
                             </Fragment>
                           ))}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import aboutImage from "../assets/images/aboutImg.jpg";
 import { useState } from "react";
 import svgFile from "../assets/static/document.svg";
@@ -21,6 +21,11 @@ export const About = () => {
   const toggleHover = () => {
     setHovered(!hovered);
   };
+
+  useEffect(() => {
+    window.scrollTo({ top: 500, behavior: "smooth" });
+    setHovered(false);
+  }, []);
 
   const thirdSection = document.getElementById("third-section");
   const secondSection = document.getElementById("second-section");
@@ -102,20 +107,24 @@ export const About = () => {
             UCSS helps people who need help both in Canada and abroad
           </h3>
           <div className="flex flex-col items-start space-y-2 mt-5 w-12/12 sm:w-12/12 md:w-7/12 lg:w-10/12 xl:w-7/12">
-            <button
-              className="btn px-4 py-2 font-semibold text-gray-100
+            <Link to="/" className="w-100">
+              <button
+                className="btn px-4 py-2 font-semibold text-gray-100
              shadow-sm bg-green-600 transition hover:text-white 
              hover:bg-green-500 w-full"
-            >
-              Find out how we can help you
-            </button>
-            <button
-              className="btn px-4 py-2 font-semibold text-gray-100
+              >
+                Find out how we can help you
+              </button>
+            </Link>
+            <Link to="/contact" className="w-100">
+              <button
+                className="btn px-4 py-2 font-semibold text-gray-100
              shadow-sm bg-blue-600 transition hover:text-white
               hover:bg-blue-500 w-full"
-            >
-              Contact us now
-            </button>
+              >
+                Contact us now
+              </button>
+            </Link>
           </div>
         </div>
         <div className="m-3 flex items-center justify-center items-center rounded-lg p-0">

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export const Stories = () => {
   const posts = Posts.getPosts();
-  // window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  window.scrollTo({ top: 500, left: 0, behavior: "smooth" });
   return (
     <section className="text-gray-400 bg-gray-100 body-font overflow-hidden">
       <div className="container px-5 py-24 mx-auto shadow rounded mt-2 mb-2">

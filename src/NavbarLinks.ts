@@ -28,6 +28,11 @@ export default class NavbarLinks {
         link: "/stories",
         isActive: false,
       },
+      {
+        title: "Contact Us",
+        link: "/contact",
+        isActive: false,
+      },
     ];
 
     return navigationLinks;
