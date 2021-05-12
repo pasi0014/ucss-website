@@ -1,14 +1,13 @@
-*{
-  margin:0px;
+* {
+  margin: 0px;
   padding: 0px;
 }
 
-
 .fade-appear,
 .fade-enter {
-    opacity: 0;
-    z-index: 1;
-    transform: translateY(10px);
+  opacity: 0;
+  z-index: 1;
+  transform: translateY(10px);
 }
 .fade-appear p,
 .fade-enter p {
@@ -39,11 +38,11 @@
   transition: opacity 300ms linear 500ms, transform 300ms ease-out 500ms;
 }
 .fade-exit {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 .fade-exit.fade-exit-active {
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: opacity 150ms linear, transform 150ms ease-in;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 150ms linear, transform 150ms ease-in;
 }

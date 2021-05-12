@@ -1,5 +1,5 @@
 import "../index.css";
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 import logo from "../assets/images/logo.png";
 import { NavLink } from "react-router-dom";
 import NavbarLinks from "../NavbarLinks";
@@ -30,7 +30,9 @@ const Navbar = (props: NavbarProps) => {
                   <div className="flex items-center md:justify-center justify-between h-16">
                     <div className="flex items-center">
                       <div className="flex-shrink-0">
-                        <img className="h-8 w-8" src={logo} alt="UcssLogo" />
+                        <NavLink to="/">
+                          <img className="h-8 w-8" src={logo} alt="UcssLogo" />
+                        </NavLink>
                       </div>
                       <div className="hidden md:block">
                         <div className="ml-10 flex items-baseline space-x-4 navLinks">
@@ -40,12 +42,16 @@ const Navbar = (props: NavbarProps) => {
                                 to={item.link}
                                 activeClassName="activeLink"
                               >
-                                <span
+                                <button
                                   key={item.title}
-                                  className="block text-gray-300 hover:bg-gray-700 hover:text-white hover:no-underline px-3 py-2 rounded-md text-sm font-medium "
+                                  className={
+                                    item.link !== "/contact"
+                                      ? "btn text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium "
+                                      : "btn text-gray-800 bg-yellow-300 hover:bg-yellow-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                                  }
                                 >
                                   {item.title}
-                                </span>
+                                </button>
                               </NavLink>
                             </Fragment>
                           ))}
@@ -73,18 +79,18 @@ const Navbar = (props: NavbarProps) => {
                           </Transition>
                         ) : (
                           <Transition
-                          show={true}
-                          enter="transform transition ease-in duration-400"
-                          enterFrom="opacity-0 rotate-0"
-                          enterTo="opacity-100 -rotate-180"
-                          leave="transform transition ease-out duration-400"
-                          leaveFrom="opacity-100 scale-100"
-                          leaveTo="opacity-0 scale-80"
-                        >
-                          <MenuIcon
-                            className="block h-6 w-6"
-                            aria-hidden="true"
-                          />
+                            show={true}
+                            enter="transform transition ease-in duration-400"
+                            enterFrom="opacity-0 rotate-0"
+                            enterTo="opacity-100 -rotate-180"
+                            leave="transform transition ease-out duration-400"
+                            leaveFrom="opacity-100 scale-100"
+                            leaveTo="opacity-0 scale-80"
+                          >
+                            <MenuIcon
+                              className="block h-6 w-6"
+                              aria-hidden="true"
+                            />
                           </Transition>
                         )}
                       </Disclosure.Button>
@@ -145,7 +151,6 @@ const Navbar = (props: NavbarProps) => {
                             <span
                               key={item.title}
                               className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium hover:no-underline"
-                              // onClick={() => handleClick(item)}
                             >
                               {item.title}
                             </span>

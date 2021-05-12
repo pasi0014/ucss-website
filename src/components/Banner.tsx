@@ -1,5 +1,6 @@
 import React from "react";
 import Anime from "react-anime";
+// import logo from "../assets/images/logo.png";
 
 interface BannerState {
   animateTitle: boolean;
@@ -37,14 +38,20 @@ class Banner extends React.Component<BannerProps, BannerState> {
               opacity={[0, 1]}
               delay={1000}
             >
-              <h3 className="text-gray-200 mb-10 animated-lead-text">
-                <p>
-                  {/* <img src="." height="55" alt="ottawa-landscape" /> */}
-                </p>
-                UKRAINIAN CANADIAN SOCIAL SERVICES OTTAWA
-                <br />
-                СУСПІЛЬНА СЛУЖБА УКРАЇНЦІВ КАНАДИ ОТТАВА
-              </h3>
+              {/* <div className="hidden sm:block">
+                <img
+                  src={logo}
+                  className="w-8 h-8 mb-3 mr-3"
+                  alt="ottawa-landscape"
+                />
+              </div> */}
+              <div className="text-2xl font-extrabold animated-lead-text tracking-wider ">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-yellow-200 to-yellow-400 ">
+                  UKRAINIAN CANADIAN SOCIAL SERVICES OTTAWA
+                  <br />
+                  СУСПІЛЬНА СЛУЖБА УКРАЇНЦІВ КАНАДИ ОТТАВА
+                </span>
+              </div>
             </Anime>
           ) : (
             <h3

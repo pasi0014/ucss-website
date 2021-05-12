@@ -1,6 +1,6 @@
 import React from "react";
 
-class HowYouCanHelpUs extends React.Component {
+class HowWeCanHelpYou extends React.Component {
   componentDidMount() {}
 
   render() {
@@ -20,4 +20,4 @@ class HowYouCanHelpUs extends React.Component {
   }
 }
 
-export default HowYouCanHelpUs;
+export default HowWeCanHelpYou;

@@ -4,15 +4,18 @@ import About from "./pages/About";
 import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import HowYouCanHelpUs from "./pages/HowYouCanHelpUs";
+// import HowYouCanHelpUs from "./pages/HowWeCanHelpYou";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
-
-// function selectLink(){
-//   const navLinks = NavbarLinks.GetNavigationLinks();
-
-// }
+import Footer from "./components/Footer";
+import { Donate } from "./pages/Donate";
+import { Stories } from "./pages/Stories";
+import HowWeCanHelpYou from "./pages/HowWeCanHelpYou";
+import { Story } from "./pages/Story";
+import Posts from "./pages/posts/Posts";
+import ContactForm from "./components/ContactForm";
 
 function App() {
+  const posts = Posts.getPosts();
   return (
     <Router>
       <div className="mx-auto">
@@ -23,7 +26,7 @@ function App() {
             <TransitionGroup>
               <CSSTransition
                 key={location.location.key}
-                timeout={300}
+                timeout={400}
                 classNames="fade"
               >
                 <Switch>
@@ -31,14 +34,25 @@ function App() {
                   <Route path="/home" component={Home} />
                   <Route path="/about" component={About} />
                   <Route
-                    path="/how-you-can-help-us"
-                    component={HowYouCanHelpUs}
+                    path="/how-we-can-help-you"
+                    component={HowWeCanHelpYou}
                   />
+                  <Route path="/donate" component={Donate} />
                 </Switch>
               </CSSTransition>
             </TransitionGroup>
           )}
         />
+        <Route path="/contact" component={ContactForm} />
+        <Route path="/stories" component={Stories} />
+        <Route
+          exact
+          path="/story/:id"
+          render={({ match }) => (
+            <Story post={posts.find((p: any) => p.id === match.params.id)} />
+          )}
+        />
+        <Footer />
       </div>
     </Router>
   );

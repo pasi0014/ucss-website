@@ -23,10 +23,6 @@ h5 {
   @apply text-base font-bold;
 }
 
-#menu-toggle:checked + #menu {
-  display: block;
-}
-
 .links > a {
   @apply hover:no-underline space-x-5;
 }
@@ -34,6 +30,26 @@ h5 {
 .activeLink {
   @apply block bg-gray-900 text-white rounded-md text-sm font-medium hover:no-underline;
 }
+
+blockquote {
+  @apply bg-gray-200 rounded-r-lg shadow;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+/* .review p::before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+} */
+
+/* blockquote p {
+  display: inline;
+} */
 
 .overlay {
   background-color: #000;
