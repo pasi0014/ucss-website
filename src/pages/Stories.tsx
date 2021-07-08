@@ -1,5 +1,5 @@
 import React from "react";
-import Posts, { Post } from "./posts/Posts";
+import Posts, { Post } from "../posts/Posts";
 import { Link } from "react-router-dom";
 
 export const Stories = () => {
@@ -41,7 +41,7 @@ export const Stories = () => {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                     >
-                      <path d="M5 12h14"></path>
+                    <path d="M5 12h14"></path>
                       <path d="M12 5l7 7-7 7"></path>
                     </svg>
                   </Link>

@@ -1,11 +1,14 @@
-import "../index.css";
+import Anime from "react-anime";
+
 import { Fragment } from "react";
-import logo from "../assets/images/logo.png";
 import { NavLink } from "react-router-dom";
-import NavbarLinks from "../NavbarLinks";
 import { Disclosure, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
-import Anime from "react-anime";
+
+import NavbarLinks from "../../NavbarLinks";
+import "../../index.css";
+import logo from '../../assets/images/logo.png';
+
 
 interface NavbarProps {
   animateNavbar: boolean;

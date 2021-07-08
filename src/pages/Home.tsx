@@ -4,7 +4,7 @@ class Home extends React.Component {
   componentDidMount() {}
 
   render() {
-    window.scrollTo({ top: 500, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: "smooth" });
     return (
       <>
         <main className="flex-1 overflow-x-hidden overflow-y-auto">

@@ -24,7 +24,7 @@ export default class Posts {
       {
         id: "2",
         author: "Подяка Від Благодійної Організації",
-        body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi doloremque non aliquam repellendus consectetur molestias debitis laborum, repudiandae omnis? Tenetur, sunt. Eveniet reiciendis nulla est! Dolor iusto facere ab laudantium!",
+        body: "",
         extendedBody: "",
         uploaded_at: new Date(),
       },
