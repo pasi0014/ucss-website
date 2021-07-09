@@ -2,6 +2,11 @@ import React from "react";
 
 export const Donate = () => {
   window.scrollTo({ top: 500, behavior: "smooth" });
+
+  const displayDonatePopUp = () => {
+    return <div>Hello from popup</div>;
+  };
+
   return (
     <>
       <section className="text-gray-400 bg-yellow-50 body-font">
@@ -172,7 +177,12 @@ export const Donate = () => {
               services and support programs.
             </p>
             <div className="flex justify-center">
-              <button className="inline-flex text-white bg-indigo-500 font-medium border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+              <button
+                className="inline-flex text-white bg-indigo-500
+                           font-medium border-0 py-2 px-6
+                           focus:outline-none hover:bg-indigo-600 rounded text-lg"
+                onClick={displayDonatePopUp}
+              >
                 <svg
                   className="animate-bounce text-white w-6 h-6 mr-3"
                   xmlns="http://www.w3.org/2000/svg"

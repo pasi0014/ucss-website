@@ -2,26 +2,18 @@ import React, { useEffect } from "react";
 import aboutImage from "../assets/images/aboutImg.jpg";
 import { useState } from "react";
 import svgFile from "../assets/static/document.svg";
-// import Posts, { Post } from "./posts/Posts";
 import { Link } from "react-router-dom";
 
-// ABOUT PAGE
-// TODO(Nazar):
-// Improve layout of the last part - DONE
-// Try to place pdf file little bit closer to the title in second section - DONE
-// Improve responsive design - IN PROGRESS
-
-export const About = () => {
+const About = () => {
   const [hovered, setHovered] = useState<boolean>(false);
-  const [scrollToThirdSetion, setScrollToThirdSection] =
-    useState<boolean>(false);
-  const [scrollToSecondSetion, setScrollToSecondSection] =
-    useState<boolean>(false);
 
   const toggleHover = () => {
     setHovered(!hovered);
   };
 
+  /**
+   * UseEffect to scroll to the top of the page
+   */
   useEffect(() => {
     window.scrollTo({ top: 500, behavior: "smooth" });
     setHovered(false);
@@ -30,13 +22,15 @@ export const About = () => {
   const thirdSection = document.getElementById("third-section");
   const secondSection = document.getElementById("second-section");
 
-  const handleScroll = () => {
-    if (scrollToThirdSetion) {
+  const handleScroll = (sectionNumber: number) => {
+    if (sectionNumber === 3) {
       thirdSection?.scrollIntoView({ behavior: "smooth" });
     }
-    if (scrollToSecondSetion) {
-      console.log("test");
+    if (sectionNumber === 2) {
       secondSection?.scrollIntoView({ behavior: "smooth" });
+    }
+    if (sectionNumber === 1) {
+      window.scrollTo({ top: 500, behavior: "smooth" });
     }
   };
 
@@ -67,13 +61,10 @@ export const About = () => {
             social services and support programs.
           </p>
         </div>
-        <span className="absolute inset-x-0 bottom-0 flex justify-center mb-5">
+        <span className="absolute inset-x-0 bottom-5 flex justify-center mb-5">
           <button
             onClick={() => {
-              scrollToSecondSetion
-                ? setScrollToSecondSection(false)
-                : setScrollToSecondSection(true);
-              handleScroll();
+              handleScroll(2);
             }}
             className="p-1"
           >
@@ -141,10 +132,7 @@ export const About = () => {
         <span className="absolute inset-x-0 bottom-0 flex justify-center mb-5">
           <button
             onClick={() => {
-              scrollToThirdSetion
-                ? setScrollToThirdSection(false)
-                : setScrollToThirdSection(true);
-              handleScroll();
+              handleScroll(3);
             }}
             className="p-1"
           >
@@ -160,7 +148,7 @@ export const About = () => {
         </span>
       </div>
       <div
-        className="h-screen bg-yellow-200 flex flex-col lg:flex-row justify-center items-center"
+        className="relative h-screen bg-yellow-200 flex flex-col lg:flex-row justify-center items-center"
         id="third-section"
       >
         <div className="text-center">
@@ -171,8 +159,8 @@ export const About = () => {
         <div className="w-full px-2 lg:w-5/12 md:w-10/12 sm:w-full m-3 text-center justify-center items-center rounded-lg p-0 ">
           <div className="bg-gray-100 text-left p-5 rounded-xl shadow transition transform">
             <h2>Our Reviews</h2>
-            <p className="text-lg mt-3 leading-relaxed tracking-wide review">
-              <blockquote>
+            <blockquote>
+              <p className="text-lg mt-3 leading-relaxed tracking-wide review">
                 <cite>
                   Я не можу словами передати свою безмежну вдячність за це. Але
                   Бог все бачить! І Він сторицею віддячить їм, а також їхнім
@@ -180,8 +168,9 @@ export const About = () => {
                   які стали мені як сім’я. Ця організація, а точніше люди, які
                   там працюють, вони рятують життя. Ще раз дякую за все!!!
                 </cite>
-              </blockquote>
-            </p>
+              </p>
+            </blockquote>
+
             <Link to="/stories">
               <button className="btn px-3 py-2 bg-blue-300 text-white font-semibold mt-3 transition hover:bg-blue-200">
                 Read More
@@ -189,6 +178,23 @@ export const About = () => {
             </Link>
           </div>
         </div>
+        <span className="absolute inset-x-0 bottom-5 flex justify-center mb-5">
+          <button
+            onClick={() => {
+              handleScroll(1);
+            }}
+            className="p-1"
+          >
+            <svg
+              className="animate-bounce text-white w-6 h-6"
+              xmlns="http://www.w3.org/2000/svg"
+              fillRule="evenodd"
+              clipRule="evenodd"
+            >
+              <path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z" />
+            </svg>
+          </button>
+        </span>
       </div>
     </section>
   );
