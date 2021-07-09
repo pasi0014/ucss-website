@@ -195,7 +195,7 @@ export const ContactForm = () => {
                     )}
                   </div>
                 </div>
-                {!success && (
+                {success && (
                   <div className="p-2 w-full mx-auto text-center">
                     <span className="text-green-500 font-medium">
                       Message was sent successfully
