@@ -1,6 +1,8 @@
 {
   "name": "ucss",
-  "version": "0.1.0",
+  "homepage": "http://ucssottawa.com",
+  "version": "1.0.0",
+  "description": "UCSS at Ottawa",
   "private": true,
   "dependencies": {
     "@craco/craco": "^5.9.0",
