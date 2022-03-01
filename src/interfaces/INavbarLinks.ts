@@ -1,5 +1,5 @@
 export default interface NavbarLinks {
-  title: string;
+  title: object | string;
   link: string;
   isActive: boolean;
 }

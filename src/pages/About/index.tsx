@@ -1,22 +1,21 @@
-import React, { useEffect } from "react";
-import aboutImage from "../assets/images/aboutImg.jpg";
-import { useState } from "react";
-import svgFile from "../assets/static/document.svg";
+import React, { useEffect, useState, useContext } from "react";
+import { useIntl } from "react-intl";
+
+import aboutImage from "../../assets/images/aboutImg.jpg";
+import { Context } from "../../components/Wrappper/index";
+
 import { Link } from "react-router-dom";
 
+import messages from "./messages";
+
 const About = () => {
-  const [hovered, setHovered] = useState<boolean>(false);
-
-  const toggleHover = () => {
-    setHovered(!hovered);
-  };
-
+  const context = useContext(Context);
+  const { formatMessage } = useIntl();
   /**
    * UseEffect to scroll to the top of the page
    */
   useEffect(() => {
     window.scrollTo({ top: 500, behavior: "smooth" });
-    setHovered(false);
   }, []);
 
   const thirdSection = document.getElementById("third-section");
@@ -49,11 +48,11 @@ const About = () => {
           flex flex-col md:items-start md:mx-auto md:text-left
           items-center text-center shadow p-4 m-3 rounded-2xl"
         >
-          <h1 className="title-font mb-4 font-medium">About Us</h1>
+          <h1 className="title-font mb-4 font-medium">{formatMessage({...messages.aboutUsTitle})}</h1>
           <p className="mb-8 leading-relaxed text-lg text-left">
             <span className="font-medium">
               Ukrainian Canadian Social Services (Ottawa)
-            </span>{" "}
+            </span>
             is a non-profit charitable organization serving the Ukrainian
             ethno-cultural. Guided by the needs of individuals and families of
             Ukrainian ethno-cultural back-ground in the community, who
@@ -85,11 +84,7 @@ const About = () => {
         id="second-section"
       >
         <div
-          className={
-            hovered
-              ? "transition filter blur duration-400 ease-in flex flex-col lg:w-5/12 p-3 md:w-8/12 lg:mx-auto w-full items-center md:items-center lg:items-start p-3 md:w-screen md:mx-auto sm:w-6/12 sm:mx-auto sm:w-screen"
-              : "transition duration-300 ease-out flex flex-col lg:w-5/12 lg:mx-auto p-3 md:w-screen md:mx-auto items-center md:items-center lg:items-start sm:w-6/12 sm:mx-auto sm:w-screen"
-          }
+          className="transition duration-300 ease-out flex flex-col lg:w-5/12 lg:mx-auto p-3 md:w-screen md:mx-auto items-center md:items-center lg:items-start sm:w-6/12 sm:mx-auto sm:w-screen"
         >
           <h1 className="text-yellow-300 leading-relaxed tracking-wider xl:text-left text-5xl">
             What we do?
@@ -118,7 +113,8 @@ const About = () => {
             </Link>
           </div>
         </div>
-        <div className="m-3 flex items-center justify-center items-center rounded-lg p-0">
+        {/* TODO: Look into this part later, to see if we even need this - NP */}
+        {/* <div className="m-3 flex items-center justify-center items-center rounded-lg p-0">
           <img
             src={svgFile}
             onMouseEnter={toggleHover}
@@ -128,7 +124,7 @@ const About = () => {
             hover:scale-110 hover:shadow-lg
             w-9/12  lg:w-9/12 md:w-7/12 sm:w-8/12 sm:mt-7 lg:mt-0"
           />
-        </div>
+        </div> */}
         <span className="absolute inset-x-0 bottom-0 flex justify-center mb-5">
           <button
             onClick={() => {

@@ -1,35 +1,31 @@
 import INavbarLinks from "./interfaces//INavbarLinks";
+import messages from "./components/Navbar/messages";
 
 export default class NavbarLinks {
   public static GetNavigationLinks() {
     const navigationLinks: INavbarLinks[] = [
       {
-        title: "Home",
+        title: messages.home,
         link: "/home",
         isActive: false,
       },
       {
-        title: "About Us",
+        title: messages.about,
         link: "/about",
         isActive: false,
       },
+      // {
+      //   title: messages.howWeCanHelpYou,
+      //   link: "/how-we-can-help-you",
+      //   isActive: false,
+      // },
       {
-        title: "How We Can Help You",
-        link: "/how-we-can-help-you",
-        isActive: false,
-      },
-      {
-        title: "Donate",
+        title: messages.donate,
         link: "/donate",
         isActive: false,
       },
       {
-        title: "Our Stories",
-        link: "/stories",
-        isActive: false,
-      },
-      {
-        title: "Contact Us",
+        title: messages.contact,
         link: "/contact",
         isActive: false,
       },

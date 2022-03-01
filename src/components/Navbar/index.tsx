@@ -1,19 +1,24 @@
+import React, { useContext } from "react";
 import Anime from "react-anime";
-
+import { useIntl } from "react-intl";
 import { Fragment } from "react";
 import { NavLink } from "react-router-dom";
 import { Disclosure, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 
+import { Context } from "../Wrappper";
+import { LOCALES } from '../../i18n/locales';
+
+import logo from "../../assets/images/logo.png";
 import NavbarLinks from "../../NavbarLinks";
 import "../../index.css";
-import logo from '../../assets/images/logo.png';
-
 
 interface NavbarProps {
   animateNavbar: boolean;
 }
 const Navbar = (props: NavbarProps) => {
+  const context = useContext(Context);
+  const { formatMessage } = useIntl();
   const activeLink: any = NavbarLinks.GetNavigationLinks();
 
   function renderAnimatedNavbar() {
@@ -39,25 +44,36 @@ const Navbar = (props: NavbarProps) => {
                       </div>
                       <div className="hidden md:block">
                         <div className="ml-10 flex items-baseline space-x-4 navLinks">
-                          {activeLink.map((item: any) => (
+                          {activeLink.map((item: any, index: number) => (
                             <Fragment key={item.title}>
                               <NavLink
                                 to={item.link}
                                 activeClassName="activeLink"
                               >
                                 <button
-                                  key={item.title}
+                                  key={index}
                                   className={
-                                    item.link !== "/contact"
+                                    item.link !== "/donate"
                                       ? "btn text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium "
                                       : "btn text-gray-800 bg-yellow-300 hover:bg-yellow-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                                   }
                                 >
-                                  {item.title}
+                                  {formatMessage({ ...item.title })}
                                 </button>
                               </NavLink>
                             </Fragment>
                           ))}
+                          <select
+                            value={context.locale}
+                            defaultValue={context.locale}
+                            onChange={context.selectLanguage}
+                            className="text-gray-300 bg-gray-700 hover:bg-gray-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                          >
+                            <option value={LOCALES.ENGLISH}>English</option>
+                            <option value={LOCALES.UKRAINIAN}>Ukrainian</option>
+                            <option value={LOCALES.RUSSIAN}>Russian</option>
+                            <option value={LOCALES.FRENCH}>French</option>
+                          </select>
                         </div>
                       </div>
                     </div>

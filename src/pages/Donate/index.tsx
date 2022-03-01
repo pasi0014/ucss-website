@@ -1,27 +1,45 @@
-import React from "react";
+import React, { useEffect, useContext } from "react";
+import { useIntl } from "react-intl";
+import { Context } from "../../components/Wrappper/index";
+
+import { DonatePopUp } from "./DonatePopUp";
+
+import messages from "./messages";
 
 export const Donate = () => {
-  window.scrollTo({ top: 500, behavior: "smooth" });
+  const [donatePopUp, setDonatePopUp] = React.useState(false);
+  const context = useContext(Context);
+  const { formatMessage } = useIntl();
 
+  useEffect(() => {
+    window.scrollTo({ top: 500, behavior: "smooth" });
+  }, []);
   const displayDonatePopUp = () => {
-    return <div>Hello from popup</div>;
+    if (donatePopUp) {
+      setDonatePopUp(false);
+    } else {
+      setDonatePopUp(true);
+    }
   };
 
   return (
     <>
-      <section className="text-gray-400 bg-yellow-50 body-font">
+      <section className="text-gray-400 bg-yellow-100 body-font">
         <div className="container px-5 py-24 mx-auto">
-          <div className="text-center mb-20">
-            <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-700 mb-4">
-              Raw Denim Heirloom Man Braid
+          <div className="text-center mb-20 border-red-600 bg-red-400 p-5 rounded-lg">
+            <h1 className="sm:text-3xl text-2xl font-semibold title-font text-gray-800 mb-4">
+              {formatMessage({ ...messages.title })}
             </h1>
-            <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-400 text-opacity-80">
-              Blue bottle crucifix vinyl post-ironic four dollar toast vegan
-              taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh
-              mi pug.
+            <p className="text-base leading-relaxed font-medium xl:w-2/4 lg:w-3/4 mx-auto text-gray-900 text-opacity-100">
+            Відкритий воєнний напад Росії на Україну, розпочатий 24 лютого 2022 року.
+            За кілька хвилин після оголошення війни пролунали вибухи в Києві, Харкові, Одесі та на Донбасі. Росія запустила крилаті та балістичні ракети по аеродромах, військових штабах і військових складах у Києві, Харкові та Дніпрі.
+            Сотні цивільних людей загинули, тисячі поранених. Тисячі людей знаходяться в укриттях і бояться за своє життя. Серед загиблих є ДІТИ!!!
             </p>
+            <h2 className="w-80 mx-auto mt-4 p-1 sm:text-3xl rounded-lg text-2xl font-medium title-fontbg-clip-text bg-gradient-to-r from-blue-400 via-yellow-200 to-yellow-400 text-gray-800 mb-4">
+              #StandWithUkraine
+            </h2>
             <div className="flex mt-6 justify-center">
-              <div className="w-16 h-1 rounded-full bg-gray-200 inline-flex"></div>
+              {/* <div className="w-16 h-1 rounded-full bg-gray-200 inline-flex"></div> */}
             </div>
           </div>
           <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
@@ -41,7 +59,7 @@ export const Donate = () => {
               </div>
               <div className="flex-grow">
                 <h2 className="text-gray-600 text-lg title-font font-medium mb-3">
-                  Shooting Stars
+                  Медичні засоби
                 </h2>
                 <p className="leading-relaxed text-base">
                   Blue bottle crucifix vinyl post-ironic four dollar toast vegan
@@ -85,7 +103,7 @@ export const Donate = () => {
               </div>
               <div className="flex-grow">
                 <h2 className="text-gray-600 text-lg title-font font-medium mb-3">
-                  The Catalyzer
+                  Допомога воїнам ЗСУ
                 </h2>
                 <p className="leading-relaxed text-base">
                   Blue bottle crucifix vinyl post-ironic four dollar toast vegan
@@ -160,7 +178,7 @@ export const Donate = () => {
           </button>
         </div>
       </section>
-      <section className="text-gray-400 bg-gray-900 body-font">
+      {/* <section className="text-gray-400 bg-gray-900 body-font">
         <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
           <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
             <h1 className="title-font mb-4 font-medium text-white">Donate</h1>
@@ -194,6 +212,7 @@ export const Donate = () => {
               </button>
             </div>
           </div>
+          {donatePopUp && <DonatePopUp />}
           <div className="lg:max-w-lg md:w-1/2 w-5/6 sm:w-full rounded-lg">
             <img
               className="object-cover object-center rounded"
@@ -202,7 +221,7 @@ export const Donate = () => {
             />
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 };

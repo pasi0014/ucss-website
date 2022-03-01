@@ -1,9 +1,11 @@
-import React from "react";
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { send } from "emailjs-com";
 import validator from "validator";
 import LoadingOverlay from "react-loading-overlay-ts";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import { injectIntl, useIntl } from "react-intl";
+import { FormattedMessage } from "react-intl";
+import messages from "./messages";
 
 interface IValidationErrors {
   fullNameError: string;
@@ -23,6 +25,8 @@ export const ContactForm = () => {
     reply_to: "",
   });
 
+  const intl = useIntl();
+
   useEffect(() => {
     window.scrollTo({ top: 500, behavior: "smooth" });
   }, []);
@@ -32,10 +36,10 @@ export const ContactForm = () => {
     setIsLoading(true);
     if (doValidateForm()) {
       const response = await send(
-        "service_jrt4xk3",
-        "template_e7yormj",
+        "service_exzfe2b",
+        "template_pe5pqps",
         toSend,
-        "user_AbY04H1SQlHJDuvIm4DQh"
+        "leQSjc44cMN6cP7rf"
       );
       setIsLoading(false);
       if (response.status === 200) {
@@ -68,7 +72,7 @@ export const ContactForm = () => {
   const onReset = () => {
     setToSend({ from_name: "", message: "", reply_to: "" });
     setErrors({ fullNameError: "", emailError: "", messageError: "" });
-  }
+  };
 
   const doValidateForm = () => {
     let validationErrors = {} as IValidationErrors;
@@ -94,7 +98,7 @@ export const ContactForm = () => {
     <section className="text-gray-600 body-font relative bg-gray-200">
       <LoadingOverlay active={isLoading} spinner text="Loading...">
         <div className="container px-5 py-24 w-10/12 mx-auto rounded-lg shadow-lg bg-white">
-          <div className="flex flex-col text-center w-full mb-12">
+          <div className="flex flex-col text-center w-full mb-12 border-red-300">
             <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
               Contact Us
             </h1>
@@ -105,19 +109,21 @@ export const ContactForm = () => {
 
           <form onSubmit={onSubmit}>
             <div className="lg:w-1/2 md:w-2/3 mx-auto">
-              <div className="flex flex-wrap -m-2">
+              <div className="flex flex-wrap -m-2 sm:flex-nowrap">
                 <div className="p-2 w-1/2">
                   <div className="relative">
                     <label
                       htmlFor="name"
                       className="leading-7 text-sm font-medium text-gray-600"
                     >
-                      Name
+                      <FormattedMessage {...messages.nameLabel} />
                     </label>
                     <input
                       type="text"
                       id="name"
-                      placeholder="Your Name"
+                      placeholder={intl.formatMessage({
+                        ...messages.namePlaceholder,
+                      })}
                       name="from_name"
                       value={toSend.from_name}
                       onChange={handleChange}
@@ -142,13 +148,15 @@ export const ContactForm = () => {
                       htmlFor="email"
                       className="leading-7 text-sm font-medium text-gray-600"
                     >
-                      Email
+                      <FormattedMessage {...messages.emailLabel} />
                     </label>
                     <input
                       type="text"
                       id="email"
                       name="reply_to"
-                      placeholder="Your email"
+                      placeholder={intl.formatMessage({
+                        ...messages.emailPlaceholder,
+                      })}
                       value={toSend.reply_to}
                       onChange={handleChange}
                       className={
@@ -172,12 +180,14 @@ export const ContactForm = () => {
                       htmlFor="message"
                       className="leading-7 text-sm font-medium text-gray-600"
                     >
-                      Message
+                      <FormattedMessage {...messages.messageLabel} />
                     </label>
                     <textarea
                       id="message"
                       name="message"
-                      placeholder="Your message"
+                      placeholder={intl.formatMessage({
+                        ...messages.messagePlaceholder,
+                      })}
                       value={toSend.message}
                       onChange={handleChange}
                       className={
@@ -219,10 +229,10 @@ export const ContactForm = () => {
                 </div>
                 <div className="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
                   <a
-                    href="mailto:ucssottawa@gmail.com"
-                    className="text-blue-500"
+                    href="mailto:maryna@ucssottawa.com"
+                    className="text-blue-500 leading-normal my-5"
                   >
-                    ucssottawa@gmail.com
+                    maryna@ucssottawa.com
                   </a>
                   <p className="leading-normal my-5">
                     49 Smith St. Saint Cloud, MN 56301
@@ -296,4 +306,4 @@ export const ContactForm = () => {
   );
 };
 
-export default ContactForm;
+export default injectIntl(ContactForm);
