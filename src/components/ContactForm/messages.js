@@ -3,6 +3,14 @@ import { defineMessages } from "@formatjs/intl";
 const scope = "app.components.ContactForm";
 
 export default defineMessages({
+    contactUs: {
+        id: `${scope}.contactUs`,
+        defaultMessage: "Contact Us",
+    },
+    contactUsSubtitle: {
+        id: `${scope}.contactUsSubtitle`,
+        defaultMessage: "We will get back to you as soon as possible",
+    },
     nameLabel: {
         id: `${scope}.nameLabel`,
         defaultMessage: `Name`
@@ -26,5 +34,13 @@ export default defineMessages({
     messagePlaceholder: {
         id: `${scope}.messagePlaceholder`,
         defaultMessage: 'Please, enter your message',
+    },
+    success: {
+        id: `${scope}.success`,
+        defaultMessage: 'Your message has been sent successfully',
+    },
+    error: {
+        id: `${scope}.error`,
+        defaultMessage: 'Something went wrong, please try again later',
     },
 })

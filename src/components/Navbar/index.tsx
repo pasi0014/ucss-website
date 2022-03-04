@@ -45,7 +45,7 @@ const Navbar = (props: NavbarProps) => {
                       <div className="hidden md:block">
                         <div className="ml-10 flex items-baseline space-x-4 navLinks">
                           {activeLink.map((item: any, index: number) => (
-                            <Fragment key={item.title}>
+                            <Fragment key={formatMessage({ ...item.title })}>
                               <NavLink
                                 to={item.link}
                                 activeClassName="activeLink"
@@ -129,13 +129,13 @@ const Navbar = (props: NavbarProps) => {
                   <Disclosure.Panel static className="md:hidden">
                     <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 navLinks">
                       {activeLink.map((item: any) => (
-                        <Fragment key={item.title}>
+                        <Fragment key={formatMessage({ ...item.title })}>
                           <NavLink to={item.link} activeClassName="activeLink">
                             <span
-                              key={item.title}
+                              key={formatMessage({ ...item.title })}
                               className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium hover:no-underline"
                             >
-                              {item.title}
+                              {formatMessage({ ...item.title })}
                             </span>
                           </NavLink>
                         </Fragment>

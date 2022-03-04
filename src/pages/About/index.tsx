@@ -48,16 +48,21 @@ const About = () => {
           flex flex-col md:items-start md:mx-auto md:text-left
           items-center text-center shadow p-4 m-3 rounded-2xl"
         >
-          <h1 className="title-font mb-4 font-medium">{formatMessage({...messages.aboutUsTitle})}</h1>
+          <h1 className="title-font mb-4 font-medium">
+            {formatMessage({ ...messages.aboutUsTitle })}
+          </h1>
           <p className="mb-8 leading-relaxed text-lg text-left">
             <span className="font-medium">
-              Ukrainian Canadian Social Services (Ottawa)
-            </span>
+              Ukrainian Canadian Social Services in Ottawa
+            </span>{" "}
             is a non-profit charitable organization serving the Ukrainian
             ethno-cultural. Guided by the needs of individuals and families of
             Ukrainian ethno-cultural back-ground in the community, who
-            experience language and cultural barriers, we provide a range of
-            social services and support programs.
+            experience language and cultural barriers.
+            <p className="font-medium">
+              At this challenging time for Ukraine, we are committed to the
+              humanitarian help.
+            </p>
           </p>
         </div>
         <span className="absolute inset-x-0 bottom-5 flex justify-center mb-5">
@@ -83,14 +88,13 @@ const About = () => {
         className="relative h-screen w-screen bg-blue-300 flex flex-col lg:flex-row justify-center items-center"
         id="second-section"
       >
-        <div
-          className="transition duration-300 ease-out flex flex-col lg:w-5/12 lg:mx-auto p-3 md:w-screen md:mx-auto items-center md:items-center lg:items-start sm:w-6/12 sm:mx-auto sm:w-screen"
-        >
+        <div className="transition duration-300 ease-out flex flex-col lg:w-5/12 lg:mx-auto p-3 md:w-screen md:mx-auto items-center md:items-center lg:items-start sm:w-6/12 sm:mx-auto sm:w-screen">
           <h1 className="text-yellow-300 leading-relaxed tracking-wider xl:text-left text-5xl">
             What we do?
           </h1>
           <h3 className="text-gray-500 text-xl md:text-left">
-            UCSS helps people who need help both in Canada and abroad
+            Ukrainian Canadian Social Services helps people who need help both
+            in Canada and abroad
           </h3>
           <div className="flex flex-col items-start space-y-2 mt-5 w-12/12 sm:w-12/12 md:w-7/12 lg:w-10/12 xl:w-7/12">
             <Link to="/" className="w-100">

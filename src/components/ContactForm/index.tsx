@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { send } from "emailjs-com";
 import validator from "validator";
 import LoadingOverlay from "react-loading-overlay-ts";
@@ -16,6 +16,7 @@ interface IValidationErrors {
 export const ContactForm = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [success, setSuccess] = useState<boolean>(false);
+  const [requestError, setRequestError] = useState<boolean>(false);
   const [errors, setErrors] = useState<IValidationErrors>(
     {} as IValidationErrors
   );
@@ -30,6 +31,14 @@ export const ContactForm = () => {
   useEffect(() => {
     window.scrollTo({ top: 500, behavior: "smooth" });
   }, []);
+
+  useEffect(() => {
+    if (success) {
+      setTimeout(() => {
+        setSuccess(false);
+      }, 7000);
+    }
+  }, [success]);
 
   const onSubmit = async (e: any) => {
     e.preventDefault();
@@ -49,9 +58,11 @@ export const ContactForm = () => {
           response: response,
         });
         setSuccess(true);
+        setRequestError(false);
         setToSend({ from_name: "", message: "", reply_to: "" });
       } else {
         setSuccess(false);
+        setRequestError(true);
         console.error(`Unexpected Error : Could not send email`, {
           component: `ContactForm/index.tsx`,
           params: toSend,
@@ -97,90 +108,86 @@ export const ContactForm = () => {
   return (
     <section className="text-gray-600 body-font relative bg-gray-200">
       <LoadingOverlay active={isLoading} spinner text="Loading...">
-        <div className="container px-5 py-24 w-10/12 mx-auto rounded-lg shadow-lg bg-white">
+        <div className="container px-5 py-24 lg:w-8/12 mx-auto rounded-lg shadow-lg bg-white">
           <div className="flex flex-col text-center w-full mb-12 border-red-300">
             <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
-              Contact Us
+              {intl.formatMessage({ ...messages.contactUs })}
             </h1>
             <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-              We will be glad to hear from you!
+              {intl.formatMessage({ ...messages.contactUsSubtitle })}
             </p>
           </div>
 
           <form onSubmit={onSubmit}>
-            <div className="lg:w-1/2 md:w-2/3 mx-auto">
-              <div className="flex flex-wrap -m-2 sm:flex-nowrap">
-                <div className="p-2 w-1/2">
-                  <div className="relative">
-                    <label
-                      htmlFor="name"
-                      className="leading-7 text-sm font-medium text-gray-600"
-                    >
-                      <FormattedMessage {...messages.nameLabel} />
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      placeholder={intl.formatMessage({
-                        ...messages.namePlaceholder,
-                      })}
-                      name="from_name"
-                      value={toSend.from_name}
-                      onChange={handleChange}
-                      className={
-                        "w-full bg-gray-100 bg-opacity-50 rounded border " +
-                        (errors.fullNameError
-                          ? "border-red-500 focus:border-red:300 bg-red-300"
-                          : "border-gray-300 focus:border-blue-500") +
-                        " focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                      }
-                    />
-                    {errors.fullNameError && (
-                      <span className="text-red-500 font-medium text-sm text-opacity-75">
-                        {errors.fullNameError}
-                      </span>
-                    )}
-                  </div>
+            <div className="md:w-2/3 mx-auto sm:w-100">
+              <div className="flex flex-wrap -mx-3 mb-6">
+                <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                  <label
+                    htmlFor="name"
+                    className="leading-7 text-sm font-medium text-gray-600"
+                  >
+                    {intl.formatMessage({ ...messages.nameLabel })}
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    placeholder={intl.formatMessage({
+                      ...messages.namePlaceholder,
+                    })}
+                    name="from_name"
+                    value={toSend.from_name}
+                    onChange={handleChange}
+                    className={
+                      "w-full bg-gray-100 bg-opacity-50 rounded border " +
+                      (errors.fullNameError
+                        ? "border-red-500 focus:border-red:300 bg-red-300"
+                        : "border-gray-300 focus:border-blue-500") +
+                      " focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                    }
+                  />
+                  {errors.fullNameError && (
+                    <span className="text-red-500 font-medium text-sm text-opacity-75">
+                      {errors.fullNameError}
+                    </span>
+                  )}
                 </div>
-                <div className="p-2 w-1/2">
-                  <div className="relative">
-                    <label
-                      htmlFor="email"
-                      className="leading-7 text-sm font-medium text-gray-600"
-                    >
-                      <FormattedMessage {...messages.emailLabel} />
-                    </label>
-                    <input
-                      type="text"
-                      id="email"
-                      name="reply_to"
-                      placeholder={intl.formatMessage({
-                        ...messages.emailPlaceholder,
-                      })}
-                      value={toSend.reply_to}
-                      onChange={handleChange}
-                      className={
-                        "w-full bg-gray-100 bg-opacity-50 rounded border " +
-                        (errors.emailError
-                          ? "border-red-500 focus:border-red:300 bg-red-300 placeholder-white::placeholder"
-                          : "border-gray-300 focus:border-blue-500") +
-                        " focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                      }
-                    />
-                    {errors.emailError && (
-                      <span className="text-red-500 font-medium text-sm text-opacity-75">
-                        {errors.emailError}
-                      </span>
-                    )}
-                  </div>
+                <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                  <label
+                    htmlFor="email"
+                    className="leading-7 text-sm font-medium text-gray-600"
+                  >
+                    {intl.formatMessage({ ...messages.emailLabel })}
+                  </label>
+                  <input
+                    type="text"
+                    id="email"
+                    name="reply_to"
+                    placeholder={intl.formatMessage({
+                      ...messages.emailPlaceholder,
+                    })}
+                    value={toSend.reply_to}
+                    onChange={handleChange}
+                    className={
+                      "w-full bg-gray-100 bg-opacity-50 rounded border " +
+                      (errors.emailError
+                        ? "border-red-500 focus:border-red:300 bg-red-300 placeholder-white::placeholder"
+                        : "border-gray-300 focus:border-blue-500") +
+                      " focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                    }
+                  />
+                  {errors.emailError && (
+                    <span className="text-red-500 font-medium text-sm text-opacity-75">
+                      {errors.emailError}
+                    </span>
+                  )}
                 </div>
-                <div className="p-2 w-full">
+                <div className="w-full px-3 mb-6 md:mb-0">
                   <div className="relative">
                     <label
                       htmlFor="message"
                       className="leading-7 text-sm font-medium text-gray-600"
                     >
-                      <FormattedMessage {...messages.messageLabel} />
+                      {intl.formatMessage({ ...messages.messageLabel })}
                     </label>
                     <textarea
                       id="message"
@@ -206,10 +213,19 @@ export const ContactForm = () => {
                   </div>
                 </div>
                 {success && (
-                  <div className="p-2 w-full mx-auto text-center">
-                    <span className="text-green-500 font-medium">
-                      Message was sent successfully
-                    </span>
+                  <div
+                    className="mx-auto w-90 py-3 px-5 mb-4 bg-green-100 text-green-900 text-sm rounded-md border border-green-200"
+                    role="alert"
+                  >
+                    {intl.formatMessage({ ...messages.success })}
+                  </div>
+                )}
+                {requestError && (
+                  <div
+                    className="py-3 px-5 mb-4 bg-red-100 text-red-900 text-sm rounded-md border border-red-200"
+                    role="alert"
+                  >
+                    {intl.formatMessage({ ...messages.error })}
                   </div>
                 )}
                 <div className="p-2 w-full flex flex-row items-center justify-center space-x-4">
@@ -229,13 +245,13 @@ export const ContactForm = () => {
                 </div>
                 <div className="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
                   <a
-                    href="mailto:maryna@ucssottawa.com"
-                    className="text-blue-500 leading-normal my-5"
+                    href="mailto:ucssottawa@gmail.com"
+                    className="text-blue-500"
                   >
-                    maryna@ucssottawa.com
+                    help@ucssottawa.com
                   </a>
                   <p className="leading-normal my-5">
-                    49 Smith St. Saint Cloud, MN 56301
+                    37 Ridgefield Crescent, Ottawa, ON K2H 6S3
                   </p>
                   <span className="inline-flex">
                     <a href="#s" className="text-gray-500">
