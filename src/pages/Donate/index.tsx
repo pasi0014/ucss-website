@@ -6,6 +6,8 @@ import messages from "./messages";
 import DonateDrawer from "../../components/DonateDrawer/index";
 import useModal from "../../utils/useModal";
 
+import interacLogo from "../../assets/images/interac.svg";
+
 export const Donate = () => {
   const { formatMessage } = useIntl();
   const [classTrigger, setClassTrigger] = useState(false);
@@ -219,13 +221,14 @@ export const Donate = () => {
           <h2 className="py-5">Donation Information</h2>
           <p className="text-lg leading-relaxed font-medium font-sans xl:w-2/4 lg:w-3/4 mx-auto text-gray-600 py-5">
             Ви можете зробити E-transfer на рахунок нашої організації. Наш email
-            на який ви можете подати платіж:{" "}
+            на який ви можете подати платіж:
             <button
               onClick={coppyToClipboard}
               className="text-indigo-500 hover:text-indigo-700 font-medium"
             >
               ucss@xata.com
             </button>
+            <img src={interacLogo} alt="interac" className="w-40 mx-auto" />
             {isCopied && (
               <div
                 className="py-3 px-5 mb-4 bg-green-100 text-green-900 text-sm rounded-md border border-green-200 transition-all duration-500"

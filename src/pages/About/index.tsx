@@ -117,18 +117,6 @@ const About = () => {
             </Link>
           </div>
         </div>
-        {/* TODO: Look into this part later, to see if we even need this - NP */}
-        {/* <div className="m-3 flex items-center justify-center items-center rounded-lg p-0">
-          <img
-            src={svgFile}
-            onMouseEnter={toggleHover}
-            onMouseLeave={toggleHover}
-            alt="Document"
-            className="bg-white rounded-lg transform shadow-sm transition
-            hover:scale-110 hover:shadow-lg
-            w-9/12  lg:w-9/12 md:w-7/12 sm:w-8/12 sm:mt-7 lg:mt-0"
-          />
-        </div> */}
         <span className="absolute inset-x-0 bottom-0 flex justify-center mb-5">
           <button
             onClick={() => {

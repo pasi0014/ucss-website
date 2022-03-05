@@ -1,33 +1,35 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 
-// const stripePromise = loadStripe(process.env.PUBLISHABLE_KEY as string);
 
 const DonateDrawer = (isOpen: any) => {
+  console.log(process.env.REACT_APP_PUBLISHABLE_KEY);
+  const [stripePromise, setStripePromise] = useState<any>(null);
   useEffect(() => {
     console.log(isOpen);
-    // const handleClick = async () => {
-    //   // When the customer clicks on the button, redirect them to Checkout.
-    //   const stripe = await stripePromise;
-    //   const { error } = await stripe.redirectToCheckout({
-    //     lineItems: [
-    //       {
-    //         price: "{{PRICE_ID}}",
-    //         quantity: 1,
-    //       },
-    //     ],
-    //     mode: "payment",
-    //     successUrl: "https://example.com/success",
-    //     cancelUrl: "https://example.com/cancel",
-    //   });
-    //   // If `redirectToCheckout` fails due to a browser or network
-    //   // error, display the localized error message to your customer
-    //   // using `error.message`.
-    // };
-    // if (displayForm) {
-    //   handleClick();
-    // }
+    if (isOpen) {
+      setStripePromise(loadStripe(process.env.REACT_APP_PUBLISHABLE_KEY as string));
+    }
+    // If `redirectToCheckout` fails due to a browser or network
+    // error, display the localized error message to your customer
+    // using `error.message`.
   }, [isOpen]);
+
+  const handleClick = async (priceId: string) => {
+    // When the customer clicks on the button, redirect them to Checkout.
+    const stripe = await stripePromise;
+    await stripe?.redirectToCheckout({
+      lineItems: [
+        {
+          price: priceId,
+          quantity: 1,
+        },
+      ],
+      mode: "payment",
+      successUrl: "https://example.com/success",
+      cancelUrl: "https://example.com/cancel",
+    });
+  };
 
   return (
     <>
@@ -44,15 +46,16 @@ const DonateDrawer = (isOpen: any) => {
             />
             <div
               role="listitem"
-              className="bg-white cursor-pointer shadow rounded-lg p-8 relative z-30"
+              className="transition-all hover:scale-125 ease-in hover:bg-blue-300 cursor-pointer shadow rounded-lg p-8 relative z-30"
+              onClick={() => handleClick("price_1KZpbVGjXTlWWmWRbYmM4g5c")}
             >
               <div className="md:flex items-center justify-between">
                 <h2 className="text-2xl font-semibold leading-6 text-gray-800">
-                  Starter
+                  $25
                 </h2>
-                <p className="text-2xl font-semibold md:mt-0 mt-4 leading-6 text-gray-800">
+                {/* <p className="text-2xl font-semibold md:mt-0 mt-4 leading-6 text-gray-800">
                   FREE
-                </p>
+                </p> */}
               </div>
               <p className="md:w-80 text-base leading-6 mt-4 text-gray-600">
                 Full access to all features and no credit card required
@@ -61,16 +64,16 @@ const DonateDrawer = (isOpen: any) => {
             <div
               role="listitem"
               className="bg-white cursor-pointer shadow rounded-lg mt-3 flex relative z-30"
+              onClick={() => handleClick("price_1KZpcGGjXTlWWmWRwftbLWzq")}
             >
-              {/* <div className="w-2.5  h-auto hover:bg-indigo-700 rounded-tl-md rounded-bl-md" /> */}
               <div className="w-full p-8 transition-all hover:scale-125 ease-in hover:bg-blue-300">
                 <div className="md:flex items-center justify-between">
                   <h2 className="text-2xl font-semibold leading-6 text-gray-800">
-                    Personal
+                    $50
                   </h2>
-                  <p className="text-2xl md:mt-0 mt-4 font-semibold leading-6 text-gray-800">
+                  {/* <p className="text-2xl md:mt-0 mt-4 font-semibold leading-6 text-gray-800">
                     $18<span className="font-normal text-base">/mo</span>
-                  </p>
+                  </p> */}
                 </div>
                 <p className="md:w-80 text-base leading-6 mt-4 text-gray-600">
                   Unlimited products features and dedicated support channels
@@ -79,15 +82,16 @@ const DonateDrawer = (isOpen: any) => {
             </div>
             <div
               role="listitem"
-              className="bg-white cursor-pointer shadow rounded-lg p-8 relative z-30 mt-7"
+              className="transition-all hover:scale-125 ease-in hover:bg-blue-300 cursor-pointer shadow rounded-lg p-8 relative z-30 mt-7"
+              onClick={() => handleClick("price_1KZpctGjXTlWWmWRIpDKwsn9")}
             >
               <div className="md:flex items-center justify-between">
                 <h2 className="text-2xl font-semibold leading-6 text-gray-800">
-                  Team
+                  $100
                 </h2>
-                <p className="text-2xl md:mt-0 mt-4 font-semibold leading-6 text-gray-800">
+                {/* <p className="text-2xl md:mt-0 mt-4 font-semibold leading-6 text-gray-800">
                   $18<span className="font-normal text-base">/mo</span>
-                </p>
+                </p> */}
               </div>
               <p className="md:w-80 text-base leading-6 mt-4 text-gray-600">
                 Unlimited products features and dedicated support channels
