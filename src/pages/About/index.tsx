@@ -5,6 +5,7 @@ import aboutImage from "../../assets/images/aboutImg.jpg";
 import profilePicture from "../../assets/images/profilePicture.jpg";
 import { Context } from "../../components/Wrappper/index";
 
+import logo from "../../assets/images/logo.png";
 // import { Link } from "react-router-dom";
 
 import messages from "./messages";
@@ -59,8 +60,8 @@ const About = () => {
         </figure>
       </div>
 
-      <div className="bg-blue-200 font-sans h-screen w-full flex flex-row justify-center items-center">
-        <div className="card w-96 mx-auto bg-white shadow-xl rounded-lg">
+      <div className="bg-blue-200 font-sans sm:h-screen sm:py-0 py-5 h-full w-full flex sm:flex-row sm:space-y-0 space-y-24 flex-col justify-center items-center">
+        <div className="card w-96 mx-auto bg-white shadow-xl rounded-lg sm:mt-0 mt-20">
           <img
             className="w-32 mx-auto rounded-full -mt-20 border-8 border-white"
             src={profilePicture}
@@ -73,10 +74,52 @@ const About = () => {
             <a href="tel:6134134159">613-413-4159</a>
           </div>
           <div className="text-center font-normal text-sm mt-2">
-            <a href="mailto:maryna@uscssottawa.com">maryna@ucssottawa.com</a>
+            <a href="mailto:ucss@xata.com">ucss@xata.com</a>
           </div>
           <div className="px-6 text-center mt-2 font-base text-sm">
             <p>{formatMessage({ ...messages.presidentTitle })}</p>
+          </div>
+          <hr className="mt-8" />
+        </div>
+
+        <div className="card w-96 mx-auto bg-white shadow-xl rounded-lg">
+          <img
+            className="w-32 mx-auto rounded-full -mt-20 border-8 border-white"
+            src={logo}
+            alt=""
+          />
+          <div className="text-center mt-2 text-3xl font-medium">
+            {formatMessage({ ...messages.vpName })}
+          </div>
+          <div className="text-center mt-2 text-sm">
+            <a href="tel:6137248206">613-724-8206</a>
+          </div>
+          <div className="text-center font-normal text-sm mt-4">
+            {" "}
+          </div>
+          <div className="px-6 text-center mt-2 font-base text-sm">
+            <p>{formatMessage({ ...messages.vpTitle })}</p>
+          </div>
+          <hr className="mt-8" />
+        </div>
+
+        <div className="card w-96 mx-auto bg-white shadow-xl rounded-lg mb-14">
+          <img
+            className="w-32 mx-auto rounded-full -mt-20 border-8 border-white"
+            src={logo}
+            alt=""
+          />
+          <div className="text-center mt-2 text-3xl font-medium">
+            {formatMessage({ ...messages.coordinatorName })}
+          </div>
+          <div className="text-center mt-2 text-sm">
+            <a href="tel:6135583893">613-558-3893</a>
+          </div>
+          <div className="text-center font-normal text-sm mt-2">
+            <a href="mailto:nazar@ucssottawa.com">nazar@ucssottawa.com</a>
+          </div>
+          <div className="px-6 text-center mt-2 font-base text-sm">
+            <p>{formatMessage({ ...messages.coordinatorTitle })}</p>
           </div>
           <hr className="mt-8" />
         </div>

@@ -21,10 +21,26 @@ export default defineMessages({
     },
     presidentName: {
         id: `${scope}.presidentName`,
-        defaultMessage: "Maryna Popovych",
+        defaultMessage: "Maryna",
     },
     presidentTitle: {
         id: `${scope}.presidentTitle`,
-        defaultMessage: "President of Ukrainian Canadian Social Services at Ottawa",
+        defaultMessage: "President of Ukrainian Canadian Social Services at Ottawa branch",
+    },
+    vpTitle: {
+        id: `${scope}.vpTitle`,
+        defaultMessage: "VP of Ukrainian Canadian Social Services at Ottawa branch",
+    },
+    vpName: {
+        id: `${scope}.vpName`,
+        defaultMessage: "Michael",
+    },
+    coordinatorTitle: {
+        id: `${scope}.coordinatorTitle`,
+        defaultMessage: "Coordinator of Ukrainian Canadian Social Services at Ottawa branch",
+    },
+    coordinatorName: {
+        id: `${scope}.coordinatorName`,
+        defaultMessage: "Nazar",
     },
 })

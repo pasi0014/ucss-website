@@ -9,7 +9,7 @@ export default defineMessages({
     },
     helpNow: {
         id: `${scope}.helpNow`,
-        defaultMessage: "by supporting the Ukrainian Canadian Social Services at Ottawa",
+        defaultMessage: "by supporting the Ukrainian Canadian Social Services at Ottawa branch",
     },
     moneyTo: {
         id: `${scope}.moneyTo`,
@@ -33,11 +33,11 @@ export default defineMessages({
     },
     donateMoney: {
         id: `${scope}.donateMoney`,
-        defaultMessage: "Donate money to the Ukrainian Canadian Social Services at Ottawa",
+        defaultMessage: "Donate money to the Ukrainian Canadian Social Services at Ottawa branch",
     },
     donateHumanitarian: {
         id: `${scope}.donateHumanitarian`,
-        defaultMessage: "Donate humanitarian aid to the Ukrainian Canadian Social Services at Ottawa",
+        defaultMessage: "Donate humanitarian aid to the Ukrainian Canadian Social Services at Ottawa branch",
     },
     donateAddress: {
         id: `${scope}.donateAddress`,
@@ -45,7 +45,7 @@ export default defineMessages({
     },
     translator: {
         id: `${scope}.translator`,
-        defaultMessage: "Provide translation services to the Ukrainian Canadian Social Services at Ottawa",
+        defaultMessage: "Provide translation services to the Ukrainian Canadian Social Services at Ottawa branch",
     },
     donationInfoTitle: {
         id: `${scope}.donationInfoTitle`,

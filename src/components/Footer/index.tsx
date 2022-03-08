@@ -30,7 +30,18 @@ export default function Footer() {
                           href="tel:6134134159"
                           className="hover:text-gray-100"
                         >
-                          {formatMessage({...messages.maryna})} - 613-413-4159
+                          {formatMessage({ ...messages.maryna })} - 613-413-4159
+                        </a>
+                      </span>
+                    </li>
+                    <li>
+                      <span className="text-gray-100 hover:text-gray-400 font-semibold block pb-2 text-sm">
+                        <a
+                          href="tel:6137248206"
+                          className="hover:text-gray-100"
+                        >
+                          {formatMessage({ ...messages.michael })} -
+                          613-724-8206
                         </a>
                       </span>
                     </li>
@@ -40,7 +51,7 @@ export default function Footer() {
                           href="tel:6135583893"
                           className="hover:text-gray-100"
                         >
-                          {formatMessage({...messages.nazar})} - 613-558-3893
+                          {formatMessage({ ...messages.nazar })} - 613-558-3893
                         </a>
                       </span>
                     </li>

@@ -23,4 +23,8 @@ export default defineMessages({
         id: `${scope}.nazar`,
         defaultMessage: "Nazar",
     },
+    michael: {
+        id: `${scope}.michael`,
+        defaultMessage: "Michael",
+    },
 });

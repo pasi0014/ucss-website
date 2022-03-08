@@ -43,9 +43,6 @@ export const ContactForm = () => {
     e.preventDefault();
     setIsLoading(true);
     if (doValidateForm()) {
-      console.log(process.env.REACT_APP_EMAIL_SERVICE_ID);
-      console.log(process.env.REACT_APP_EMAIL_TEMPLATE_ID);
-      console.log(process.env.REACT_APP_EMAIL_USER_ID);
       const response = await send(
         process.env.REACT_APP_EMAIL_SERVICE_ID as string,
         process.env.REACT_APP_EMAIL_TEMPLATE_ID as string,
@@ -247,10 +244,10 @@ export const ContactForm = () => {
                 </div>
                 <div className="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
                   <a
-                    href="mailto:maryna@ucssottawa.com"
+                    href="mailto:ucss@xata.com"
                     className="text-blue-500"
                   >
-                    maryna@ucssottawa.com
+                    ucss@xata.com
                   </a>
                   <br />
                   <a
