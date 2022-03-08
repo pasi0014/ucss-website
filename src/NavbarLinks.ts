@@ -4,11 +4,11 @@ import messages from "./components/Navbar/messages";
 export default class NavbarLinks {
   public static GetNavigationLinks() {
     const navigationLinks: INavbarLinks[] = [
-      {
-        title: messages.home,
-        link: "/home",
-        isActive: false,
-      },
+      // {
+      //   title: messages.home,
+      //   link: "/home",
+      //   isActive: false,
+      // },
       {
         title: messages.about,
         link: "/about",

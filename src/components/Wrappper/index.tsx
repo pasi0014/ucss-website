@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { IntlProvider } from "react-intl";
 
 import { LOCALES } from "../../i18n/locales";
-import French from "../../lang/fr.json";
+// import French from "../../lang/fr.json";
 import Ukrainian from "../../lang/ua.json";
 import English from "../../lang/en.json";
-import Russian from "../../lang/ru.json";
+// import Russian from "../../lang/ru.json";
 
 export const Context = React.createContext({
   value: { locale: "en", selectLanguage: () => {} },
@@ -17,9 +17,7 @@ let lang: any;
 if (local === LOCALES.ENGLISH) {
   lang = English;
 } else {
-  if (local === LOCALES.FRENCH) {
-    lang = French;
-  } else if (local === LOCALES.UKRAINIAN) {
+  if (local === LOCALES.UKRAINIAN) {
     lang = Ukrainian;
   }
 }
@@ -34,12 +32,8 @@ const Wrapper = (props: any) => {
     setLocale(newLocale);
     if (newLocale === LOCALES.ENGLISH) {
       setMessages(English);
-    } else if (newLocale === LOCALES.FRENCH) {
-      setMessages(French);
     } else if (newLocale === LOCALES.UKRAINIAN) {
       setMessages(Ukrainian);
-    } else if (newLocale === LOCALES.RUSSIAN) {
-      setMessages(Russian);
     }
   }
   return (

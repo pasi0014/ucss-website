@@ -7,7 +7,7 @@ import { Disclosure, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 
 import { Context } from "../Wrappper";
-import { LOCALES } from '../../i18n/locales';
+import { LOCALES } from "../../i18n/locales";
 
 import logo from "../../assets/images/logo.png";
 import NavbarLinks from "../../NavbarLinks";
@@ -71,8 +71,8 @@ const Navbar = (props: NavbarProps) => {
                           >
                             <option value={LOCALES.ENGLISH}>English</option>
                             <option value={LOCALES.UKRAINIAN}>Ukrainian</option>
-                            <option value={LOCALES.RUSSIAN}>Russian</option>
-                            <option value={LOCALES.FRENCH}>French</option>
+                            {/* <option value={LOCALES.RUSSIAN}>Russian</option> */}
+                            {/* <option value={LOCALES.FRENCH}>French</option> */}
                           </select>
                         </div>
                       </div>
@@ -140,6 +140,17 @@ const Navbar = (props: NavbarProps) => {
                           </NavLink>
                         </Fragment>
                       ))}
+                      <select
+                        value={context.locale}
+                        defaultValue={context.locale}
+                        onChange={context.selectLanguage}
+                        className="text-gray-300 w-full bg-gray-700 hover:bg-gray-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                      >
+                        <option value={LOCALES.ENGLISH}>English</option>
+                        <option value={LOCALES.UKRAINIAN}>Ukrainian</option>
+                        {/* <option value={LOCALES.RUSSIAN}>Russian</option> */}
+                        {/* <option value={LOCALES.FRENCH}>French</option> */}
+                      </select>
                     </div>
                   </Disclosure.Panel>
                 </Transition>

@@ -1,47 +1,54 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { useIntl } from "react-intl";
+import { Context } from "../Wrappper";
+import messages from "./messages";
 
 export default function Footer() {
+  const context = useContext(Context);
+  const { formatMessage } = useIntl();
   return (
     <>
       <footer className="relative bg-gray-700 pt-8 pb-6 text-gray-200">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap">
-            <div className="w-full lg:w-6/12 px-4">
+            <div className="w-full lg:w-4/12 px-4 py-5">
               <h4 className="text-3xl font-semibold">
-                Ukrainian Canadian Social Servises Ottawa
+                {formatMessage({ ...messages.footerTitle })}
               </h4>
-              <h5 className="text-lg mt-0 mb-2 text-gray-100">
-                Developed by Nazar Pasika
-              </h5>
             </div>
             <div className="w-full lg:w-6/12 px-4">
               <div className="flex flex-wrap items-top mb-6">
-                <div className="w-full lg:w-4/12 px-4 ml-auto sm:mt-5">
+                <div className="w-full lg:w-6/12 px-4 ml-auto mt-5">
                   <span className="block uppercase text-gray-100 text-lg font-semibold mb-2">
-                    Useful Links
+                    {formatMessage({ ...messages.contactInfo })}
                   </span>
                   <ul className="list-unstyled">
                     <li>
-                      <NavLink to="/about">
-                        <span className="text-gray-100 hover:text-gray-400 font-semibold block pb-2 text-sm">
-                          About
-                        </span>
-                      </NavLink>
+                      <span className="text-gray-100 hover:text-gray-400 font-semibold block pb-2 text-sm">
+                        <a
+                          href="tel:6134134159"
+                          className="hover:text-gray-100"
+                        >
+                          {formatMessage({...messages.maryna})} - 613-413-4159
+                        </a>
+                      </span>
                     </li>
                     <li>
-                      <a
-                        className="text-gray-100 hover:text-gray-400 font-semibold block pb-2 text-sm"
-                        href="https://github.com/pasi0014/Track-your-bus"
-                      >
-                        Github
-                      </a>
+                      <span className="text-gray-100 hover:text-gray-400 font-semibold block pb-2 text-sm">
+                        <a
+                          href="tel:6135583893"
+                          className="hover:text-gray-100"
+                        >
+                          {formatMessage({...messages.nazar})} - 613-558-3893
+                        </a>
+                      </span>
                     </li>
                     <li>
                       <NavLink to="/contact">
-                        <span className="text-gray-100 hover:text-gray-400 font-semibold block pb-2 text-sm">
-                          Contact Us
-                        </span>
+                        <button className="text-gray-100 hover:text-gray-400 font-semibold block pb-2 text-sm">
+                          {formatMessage({ ...messages.contactUs })}
+                        </button>
                       </NavLink>
                     </li>
                   </ul>

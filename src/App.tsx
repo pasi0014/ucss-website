@@ -7,6 +7,8 @@ import Footer from "./components/Footer/index";
 import Banner from "./components/Banner/index";
 import ContactForm from "./components/ContactForm/index";
 import { Donate } from "./pages/Donate/index";
+import Success from "./pages/Success/index";
+import NotFound from "./pages/NotFound";
 // import HowWeCanHelpYou from "./pages/HowWeCanHelpYou";
 import Home from "./pages/Home/index";
 import About from "./pages/About/index";
@@ -29,19 +31,17 @@ function App() {
               >
                 <Switch>
                   <Route path="/" exact component={Home} />
-                  <Route path="/home" component={Home} />
-                  <Route path="/about" component={About} />
-                  {/* <Route
-                    path="/how-we-can-help-you"
-                    component={HowWeCanHelpYou}
-                  /> */}
-                  <Route path="/donate" component={Donate} />
+                  <Route path="/home" exact component={Home} />
+                  <Route path="/about" exact component={About} />
+                  <Route path="/donate" exact component={Donate} />
+                  <Route path="/donate/success" exact component={Success} />
+                  <Route path="/contact" exact component={ContactForm} />
+                  <Route path="*" component={NotFound} />
                 </Switch>
               </CSSTransition>
             </TransitionGroup>
           )}
         />
-        <Route path="/contact" component={ContactForm} />
         <Footer />
       </div>
     </Router>

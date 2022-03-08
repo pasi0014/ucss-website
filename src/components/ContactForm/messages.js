@@ -43,4 +43,12 @@ export default defineMessages({
         id: `${scope}.error`,
         defaultMessage: 'Something went wrong, please try again later',
     },
+    send: {
+        id: `${scope}.send`,
+        defaultMessage: 'Send',
+    },
+    clear: {
+        id: `${scope}.clear`,
+        defaultMessage: 'Clear',
+    }
 })
