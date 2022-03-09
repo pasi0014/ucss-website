@@ -2,7 +2,7 @@
   "name": "ucss",
   "homepage": "http://ucssottawa.com",
   "version": "1.0.0",
-  "description": "UCSS at Ottawa",
+  "description": "UCSS Ottawa Branch",
   "private": true,
   "dependencies": {
     "@craco/craco": "^5.9.0",

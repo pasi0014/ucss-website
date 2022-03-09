@@ -25,11 +25,11 @@ export default defineMessages({
     },
     presidentTitle: {
         id: `${scope}.presidentTitle`,
-        defaultMessage: "President of Ukrainian Canadian Social Services at Ottawa branch",
+        defaultMessage: "President of Ukrainian Canadian Social Services Ottawa Branch",
     },
     vpTitle: {
         id: `${scope}.vpTitle`,
-        defaultMessage: "VP of Ukrainian Canadian Social Services at Ottawa branch",
+        defaultMessage: "VP of Ukrainian Canadian Social Services Ottawa Branch",
     },
     vpName: {
         id: `${scope}.vpName`,
@@ -37,7 +37,7 @@ export default defineMessages({
     },
     coordinatorTitle: {
         id: `${scope}.coordinatorTitle`,
-        defaultMessage: "Coordinator of Ukrainian Canadian Social Services at Ottawa branch",
+        defaultMessage: "Coordinator of Ukrainian Canadian Social Services Ottawa Branch",
     },
     coordinatorName: {
         id: `${scope}.coordinatorName`,
