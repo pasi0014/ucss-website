@@ -21,7 +21,7 @@ export const Donate = () => {
 
   const coppyToClipboard = (e: any) => {
     e.preventDefault();
-    navigator.clipboard.writeText("ucss@xata.com");
+    navigator.clipboard.writeText("ucss@xata.ca");
     setIsCopied(true);
   };
 
@@ -175,7 +175,7 @@ export const Donate = () => {
                   onClick={coppyToClipboard}
                   className="text-indigo-500 hover:text-indigo-700 font-medium"
                 >
-                  ucss@xata.com
+                  ucss@xata.ca
                 </button>
               ),
             }}

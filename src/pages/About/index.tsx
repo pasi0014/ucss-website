@@ -74,7 +74,7 @@ const About = () => {
             <a href="tel:6134134159">613-413-4159</a>
           </div>
           <div className="text-center font-normal text-sm mt-2">
-            <a href="mailto:ucss@xata.com">ucss@xata.com</a>
+            <a href="mailto:ucss@xata.ca">ucss@xata.ca</a>
           </div>
           <div className="px-6 text-center mt-2 font-base text-sm">
             <p>{formatMessage({ ...messages.presidentTitle })}</p>

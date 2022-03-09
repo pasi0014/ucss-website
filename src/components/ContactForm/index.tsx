@@ -244,10 +244,10 @@ export const ContactForm = () => {
                 </div>
                 <div className="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
                   <a
-                    href="mailto:ucss@xata.com"
+                    href="mailto:ucss@xata.ca"
                     className="text-blue-500"
                   >
-                    ucss@xata.com
+                    ucss@xata.ca
                   </a>
                   <br />
                   <a
