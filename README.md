@@ -1,6 +1,10 @@
-# Getting Started with Create React App
-GUTEN MORGEN
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# UCSS Ottawa branch website (front-end)
+
+This project is determined to non-profit charitable organization of Ukrainian Canadian Social Services Ottawa Branch
+Bellow is information about how to start the project. 
+Later on I will post here the info on how to setup the project as well.
+
+N.P
 
 ## Available Scripts
 
