@@ -47,9 +47,9 @@ class Banner extends React.Component<BannerProps, BannerState> {
               </div> */}
               <div className="text-2xl font-extrabold animated-lead-text tracking-wider ">
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-yellow-200 to-yellow-400 ">
-                  UKRAINIAN CANADIAN SOCIAL SERVICES OTTAWA
+                UKRAINIAN CANADIAN SOCIAL SERVICES - OTTAWA BRANCH
                   <br />
-                  СУСПІЛЬНА СЛУЖБА УКРАЇНЦІВ КАНАДИ ОТТАВА
+                  СУСПІЛЬНА СЛУЖБА УКРАЇНЦІВ КАНАДИ ОТТАВИ
                 </span>
               </div>
             </Anime>
@@ -59,9 +59,9 @@ class Banner extends React.Component<BannerProps, BannerState> {
               style={{ transform: "translateY(-100px)" }}
             >
               <p>{/* <img src="." height="55" alt="ottawa-landscape" /> */}</p>
-              UKRAINIAN CANADIAN SOCIAL SERVICES OTTAWA
+              UKRAINIAN CANADIAN SOCIAL SERVICES - OTTAWA BRANCH
               <br />
-              СУСПІЛЬНА СЛУЖБА УКРАЇНЦІВ КАНАДИ ОТТАВА
+              СУСПІЛЬНА СЛУЖБА УКРАЇНЦІВ КАНАДИ ОТТАВИ
             </h3>
           )}
         </div>
@@ -83,9 +83,9 @@ class Banner extends React.Component<BannerProps, BannerState> {
           >
             <h3 className="text-gray-200 mb-10 animated-lead-text">
               <p>{/* <img src="." height="55" alt="ottawa-landscape" /> */}</p>
-              UKRAINIAN CANADIAN SOCIAL SERVICES OTTAWA
+              UKRAINIAN CANADIAN SOCIAL SERVICES - OTTAWA BRANCH
               <br />
-              СУСПІЛЬНА СЛУЖБА УКРАЇНЦІВ КАНАДИ ОТТАВА
+              СУСПІЛЬНА СЛУЖБА УКРАЇНЦІВ КАНАДИ ОТТАВИ
             </h3>
           </Anime>
         ) : (
@@ -94,9 +94,9 @@ class Banner extends React.Component<BannerProps, BannerState> {
             style={{ transform: "translateY(-100px)" }}
           >
             <p>{/* <img src="." height="55" alt="ottawa-landscape" /> */}</p>
-            UKRAINIAN CANADIAN SOCIAL SERVICES OTTAWA
+            UKRAINIAN CANADIAN SOCIAL SERVICES - OTTAWA BRANCH
             <br />
-            СУСПІЛЬНА СЛУЖБА УКРАЇНЦІВ КАНАДИ ОТТАВА
+            СУСПІЛЬНА СЛУЖБА УКРАЇНЦІВ КАНАДИ ОТТАВИ
           </h3>
         )}
       </div>
