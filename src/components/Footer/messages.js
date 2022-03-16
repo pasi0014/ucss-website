@@ -5,7 +5,7 @@ const scope = "app.components.Footer";
 export default defineMessages({
     footerTitle: {
         id: `${scope}.footerTitle`,
-        defaultMessage: " Ukrainian Canadian Social Servises Ottawa",
+        defaultMessage: " Ukrainian Canadian Social Services - Ottawa Branch",
     },
     contactInfo: {
         id: `${scope}.contactInfo`,
@@ -13,18 +13,18 @@ export default defineMessages({
     },
     contactUs: {
         id: `${scope}.contactUs`,
-        defaultMessage: "Contact Us",
+        defaultMessage: "Contact Form",
     },
     maryna: {
         id: `${scope}.maryna`,
-        defaultMessage: "Maryna",
+        defaultMessage: "Maryna Popovych",
     },
     nazar: {
         id: `${scope}.nazar`,
-        defaultMessage: "Nazar",
+        defaultMessage: "Nazar Pasika",
     },
     michael: {
         id: `${scope}.michael`,
-        defaultMessage: "Michael",
+        defaultMessage: "Michael Rynzak",
     },
 });

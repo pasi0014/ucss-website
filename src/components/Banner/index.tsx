@@ -38,30 +38,23 @@ class Banner extends React.Component<BannerProps, BannerState> {
               opacity={[0, 1]}
               delay={1000}
             >
-              {/* <div className="hidden sm:block">
-                <img
-                  src={logo}
-                  className="w-8 h-8 mb-3 mr-3"
-                  alt="ottawa-landscape"
-                />
-              </div> */}
-              <div className="text-2xl font-extrabold animated-lead-text tracking-wider ">
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-yellow-200 to-yellow-400 ">
+              <div className="flex flex-col text-2xl font-extrabold animated-lead-text tracking-wider ">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-yellow-200 to-yellow-400">
                 UKRAINIAN CANADIAN SOCIAL SERVICES - OTTAWA BRANCH
-                  <br />
-                  СУСПІЛЬНА СЛУЖБА УКРАЇНЦІВ КАНАДИ ОТТАВИ
+                </span>
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-yellow-200 to-yellow-400 sm:text-center lg:text-center">
+                  СУСПІЛЬНА СЛУЖБА УКРАЇНЦІВ КАНАДИ (ОТТАВA) 
                 </span>
               </div>
             </Anime>
           ) : (
             <h3
-              className="text-gray-200 mb-10 animated-lead-text"
+              className="text-gray-200 mb-10 animated-lead-text sm:text-center text-left"
               style={{ transform: "translateY(-100px)" }}
             >
-              <p>{/* <img src="." height="55" alt="ottawa-landscape" /> */}</p>
-              UKRAINIAN CANADIAN SOCIAL SERVICES - OTTAWA BRANCH
+              UKRAINIAN CANADIAN SOCIAL SERVICES - OTTAWA BRANCH 123123123
               <br />
-              СУСПІЛЬНА СЛУЖБА УКРАЇНЦІВ КАНАДИ ОТТАВИ
+              СУСПІЛЬНА СЛУЖБА УКРАЇНЦІВ КАНАДИ (ОТТАВA)
             </h3>
           )}
         </div>
@@ -81,20 +74,18 @@ class Banner extends React.Component<BannerProps, BannerState> {
             opacity={[0, 1]}
             delay={1000}
           >
-            <h3 className="text-gray-200 mb-10 animated-lead-text">
-              <p>{/* <img src="." height="55" alt="ottawa-landscape" /> */}</p>
-              UKRAINIAN CANADIAN SOCIAL SERVICES - OTTAWA BRANCH
+            <h3 className="text-gray-200 mb-10 animated-lead-text text-center">
+              UKRAINIAN CANADIAN SOCIAL SERVICES - OTTAWA BRANCH 1111111
               <br />
               СУСПІЛЬНА СЛУЖБА УКРАЇНЦІВ КАНАДИ ОТТАВИ
             </h3>
           </Anime>
         ) : (
           <h3
-            className="text-gray-200 mb-10 animated-lead-text"
+            className="text-gray-200 mb-10 animated-lead-text text-center"
             style={{ transform: "translateY(-100px)" }}
           >
-            <p>{/* <img src="." height="55" alt="ottawa-landscape" /> */}</p>
-            UKRAINIAN CANADIAN SOCIAL SERVICES - OTTAWA BRANCH
+            UKRAINIAN CANADIAN SOCIAL SERVICES - OTTAWA BRANCH 22222222
             <br />
             СУСПІЛЬНА СЛУЖБА УКРАЇНЦІВ КАНАДИ ОТТАВИ
           </h3>

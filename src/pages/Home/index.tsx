@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Home = () => {
   useEffect(() => {
     window.scrollTo({ top: 500, behavior: "smooth" });
-  });
+  }, []);
 
   return (
     <main className="flex-1 overflow-x-hidden overflow-y-auto">
@@ -19,6 +19,16 @@ const Home = () => {
         </div>
         {/* </div> */}
       </div>
+      {/* <div className="container mx-auto text-center flex justify-center">
+          <iframe
+            title="survey"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSe3d12aPANpiDuY4uVjhr2heq6P47zyNMICkQKit10xQKXxtQ/viewform?embedded=true"
+            width="1040"
+            height="3100"
+            frameBorder="10"
+          >
+          </iframe>
+        </div> */}
     </main>
   );
 };
