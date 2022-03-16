@@ -5,11 +5,11 @@ const scope = "app.components.Donate";
 export default defineMessages({
     title: {
         id: `${scope}.title`,
-        defaultMessage: "Russia invades Ukraine!",
+        defaultMessage: "russia invaded Ukraine!",
     },
     helpNow: {
         id: `${scope}.helpNow`,
-        defaultMessage: "by supporting the Ukrainian Canadian Social Services Ottawa Branch",
+        defaultMessage: "and donate to the Ukrainian Canadian Social Services - Ottawa Branch",
     },
     moneyTo: {
         id: `${scope}.moneyTo`,
@@ -17,15 +17,15 @@ export default defineMessages({
     },
     medical: {
         id: `${scope}.medical`,
-        defaultMessage: "Tactical First aid kits",
+        defaultMessage: "Purchase tactical first aid kits and send them to the most needed locations in Ukraine",
     },
     refugee: {
         id: `${scope}.refugee`,
-        defaultMessage: "Support Ukrainian refugees and humanitarian aid to people in Ukraine",
+        defaultMessage: "Provide support to Ukrainian refugees coming to Canada",
     },
     helpInCanada: {
         id: `${scope}.helpInCanada`,
-        defaultMessage: "Support for the Ukrainian people in Canada",
+        defaultMessage: "Provide humanitarian aid to people in Ukraine",
     },
     helpUs: {
         id: `${scope}.helpUs`,
@@ -33,11 +33,11 @@ export default defineMessages({
     },
     donateMoney: {
         id: `${scope}.donateMoney`,
-        defaultMessage: "Donate money to the Ukrainian Canadian Social Services Ottawa Branch",
+        defaultMessage: "Donate money to the Ukrainian Canadian Social Services - Ottawa Branch",
     },
     donateHumanitarian: {
         id: `${scope}.donateHumanitarian`,
-        defaultMessage: "Donate humanitarian aid to the Ukrainian Canadian Social Services Ottawa Branch",
+        defaultMessage: "Donate humanitarian aid to the Ukrainian Canadian Social Services - Ottawa Branch",
     },
     donateAddress: {
         id: `${scope}.donateAddress`,
@@ -45,7 +45,7 @@ export default defineMessages({
     },
     translator: {
         id: `${scope}.translator`,
-        defaultMessage: "Provide translation services to the Ukrainian Canadian Social Services Ottawa Branch",
+        defaultMessage: "Provide translation services to the Ukrainian Canadian Social Services - Ottawa Branch",
     },
     donationInfoTitle: {
         id: `${scope}.donationInfoTitle`,
@@ -53,7 +53,7 @@ export default defineMessages({
     },
     donationInfoText: {
         id: `${scope}.donationInfoText`,
-        defaultMessage: "You can make an E-transfer to the account of our organization. Our email to which you can submit a payment : {email}",
+        defaultMessage: "You can make an E-transfer to support our organization. Our email to which you can submit a payment : {email}",
     },
     emailCopied: {
         id: `${scope}.emailCopied`,
