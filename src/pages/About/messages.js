@@ -9,11 +9,11 @@ export default defineMessages({
     },
     aboutUsParagraphTitle: {
         id: `${scope}.aboutUsParagraphTitle`,
-        defaultMessage: "Ukrainian Canadian Social Services in Ottawa",
+        defaultMessage: "What is Ukrainian Canadian Social Services - Ottawa Branch?",
     },
     aboutUsParagraph: {
         id: `${scope}.aboutUsParagraph`,
-        defaultMessage:"is a non-profit charitable organization serving the Ukrainian ethno-cultural. Guided by the needs of individuals and families of Ukrainian ethno-cultural back-ground in the community, who experience language and cultural barriers."
+        defaultMessage:"Ukrainian Canadian Social Services - Ottawa Branch is a non-profit charitable organization serving the Ukrainian community in Ottawa. Guided by the needs of individuals and families of Ukrainian community, who experience language and cultural barriers. We provide a range of support services."
     },
     aboutUsExtra: {
         id: `${scope}.aboutUsExtra`,
@@ -21,7 +21,7 @@ export default defineMessages({
     },
     presidentName: {
         id: `${scope}.presidentName`,
-        defaultMessage: "Maryna",
+        defaultMessage: "Maryna Popovych",
     },
     presidentTitle: {
         id: `${scope}.presidentTitle`,
@@ -33,7 +33,7 @@ export default defineMessages({
     },
     vpName: {
         id: `${scope}.vpName`,
-        defaultMessage: "Michael",
+        defaultMessage: "Michael Rynzak",
     },
     coordinatorTitle: {
         id: `${scope}.coordinatorTitle`,
@@ -41,6 +41,6 @@ export default defineMessages({
     },
     coordinatorName: {
         id: `${scope}.coordinatorName`,
-        defaultMessage: "Nazar",
+        defaultMessage: "Nazar Pasika",
     },
 })

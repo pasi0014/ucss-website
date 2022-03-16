@@ -72,7 +72,7 @@ export default function Footer() {
             <div className="w-full md:w-4/12 px-4 mx-auto text-center">
               <div className="text-sm text-gray-400 font-semibold py-1">
                 &copy; {new Date().getFullYear()} Ukrainian Canadian Social
-                Servises Ottawa
+                Services Ottawa
               </div>
             </div>
           </div>

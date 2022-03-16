@@ -37,35 +37,94 @@ const About = () => {
 
   return (
     <section className="body-font overflow-hidden">
-      <div className="container w-full bg-yellow-100 rounded-xl mt-5 sm:mb-1">
-        <figure className="md:flex rounded-xl sm:p-8 py-4 md:p-0 md:place-items-center">
+      <div className="w-full h-full bg-yellow-100">
+        <div className="md:flex mx-auto mt-auto rounded-xl sm:p-8 py-5 md:p-5 md:place-items-center bg-blue-300 sm:h-full h-screen">
           <img
             className="sm:w-34 md:w-72 md:h-52 lg:w-4/12 lg:h-auto w-40 h-32 md:rounded-xl rounded-full mx-auto"
             src={aboutImage}
             alt="Flags waving in the wind"
           />
           <div className="pt-6 md:p-8 text-left space-y-4">
+            <h1 className="sm:p-2 p-3 text-gray-600">
+              {formatMessage({ ...messages.aboutUsParagraphTitle })}
+            </h1>
             <blockquote className="bg-gray-100 border-l-6 border-yellow-300 rounded-lg lg:p-5">
               <p className="text-lg">
-                <span className="font-medium">
-                  {formatMessage({ ...messages.aboutUsParagraphTitle })}
-                </span>{" "}
                 {formatMessage({ ...messages.aboutUsParagraph })}
-                <p className="font-medium">
-                  {formatMessage({ ...messages.aboutUsExtra })}
-                </p>
               </p>
             </blockquote>
           </div>
-        </figure>
+        </div>
+        <div className="font-sans sm:h-screen sm:py-0 py-5 h-full w-full flex sm:flex-row sm:space-y-0 space-y-24 flex-col justify-center items-center">
+          <div className="card w-96 mx-auto bg-white shadow-xl rounded-lg sm:mt-0 mt-20">
+            <img
+              className="w-32 mx-auto rounded-full -mt-20 border-8 border-white"
+              src={logo}
+              alt="Ukrainian Social Services Ottawa Branch logo"
+            />
+            <div className="text-center mt-2 text-3xl font-medium">
+              {formatMessage({ ...messages.presidentName })}
+            </div>
+            <div className="text-center mt-2 text-sm">
+              <a href="tel:6134134159">613-413-4159</a>
+            </div>
+            <div className="text-center font-normal text-sm mt-2">
+              <a href="mailto:ucss@xata.ca">ucss@xata.ca</a>
+            </div>
+            <div className="px-6 text-center mt-2 font-base text-sm">
+              <p>{formatMessage({ ...messages.presidentTitle })}</p>
+            </div>
+            <hr className="mt-8" />
+          </div>
+
+          <div className="card w-96 mx-auto bg-white shadow-xl rounded-lg">
+            <img
+              className="w-32 mx-auto rounded-full -mt-20 border-8 border-white"
+              src={logo}
+              alt="Ukrainian Social Services Ottawa Branch logo"
+            />
+            <div className="text-center mt-2 text-3xl font-medium">
+              {formatMessage({ ...messages.vpName })}
+            </div>
+            <div className="text-center mt-2 text-sm">
+              <a href="tel:6137248206">613-724-8206</a>
+            </div>
+            <div className="text-center font-normal text-sm mt-4"> </div>
+            <div className="px-6 text-center mt-2 font-base text-sm">
+              <p>{formatMessage({ ...messages.vpTitle })}</p>
+            </div>
+            <hr className="mt-8" />
+          </div>
+
+          <div className="card w-96 mx-auto bg-white shadow-xl rounded-lg mb-14">
+            <img
+              className="w-32 mx-auto rounded-full -mt-20 border-8 border-white"
+              src={logo}
+              alt="Ukrainian Social Services Ottawa Branch logo"
+            />
+            <div className="text-center mt-2 text-3xl font-medium">
+              {formatMessage({ ...messages.coordinatorName })}
+            </div>
+            <div className="text-center mt-2 text-sm">
+              <a href="tel:6135583893">613-558-3893</a>
+            </div>
+            <div className="text-center font-normal text-sm mt-2">
+              <a href="mailto:nazar@ucssottawa.com">nazar@ucssottawa.com</a>
+            </div>
+            <div className="px-6 text-center mt-2 font-base text-sm">
+              <p>{formatMessage({ ...messages.coordinatorTitle })}</p>
+            </div>
+            <hr className="mt-8" />
+          </div>
+        </div>
       </div>
 
-      <div className="bg-blue-200 font-sans sm:h-screen sm:py-0 py-5 h-full w-full flex sm:flex-row sm:space-y-0 space-y-24 flex-col justify-center items-center">
+      {/* <div className="bg-blue-200 font-sans sm:h-screen sm:py-0 py-5 h-full w-full flex sm:flex-row sm:space-y-0 space-y-24 flex-col justify-center items-center">
         <div className="card w-96 mx-auto bg-white shadow-xl rounded-lg sm:mt-0 mt-20">
           <img
             className="w-32 mx-auto rounded-full -mt-20 border-8 border-white"
-            src={profilePicture}
-            alt=""
+            src={logo}
+            alt="Ukrainian Social Services Ottawa Branch logo"
           />
           <div className="text-center mt-2 text-3xl font-medium">
             {formatMessage({ ...messages.presidentName })}
@@ -86,7 +145,7 @@ const About = () => {
           <img
             className="w-32 mx-auto rounded-full -mt-20 border-8 border-white"
             src={logo}
-            alt=""
+            alt="Ukrainian Social Services Ottawa Branch logo"
           />
           <div className="text-center mt-2 text-3xl font-medium">
             {formatMessage({ ...messages.vpName })}
@@ -94,9 +153,7 @@ const About = () => {
           <div className="text-center mt-2 text-sm">
             <a href="tel:6137248206">613-724-8206</a>
           </div>
-          <div className="text-center font-normal text-sm mt-4">
-            {" "}
-          </div>
+          <div className="text-center font-normal text-sm mt-4"> </div>
           <div className="px-6 text-center mt-2 font-base text-sm">
             <p>{formatMessage({ ...messages.vpTitle })}</p>
           </div>
@@ -107,7 +164,7 @@ const About = () => {
           <img
             className="w-32 mx-auto rounded-full -mt-20 border-8 border-white"
             src={logo}
-            alt=""
+            alt="Ukrainian Social Services Ottawa Branch logo"
           />
           <div className="text-center mt-2 text-3xl font-medium">
             {formatMessage({ ...messages.coordinatorName })}
@@ -123,7 +180,7 @@ const About = () => {
           </div>
           <hr className="mt-8" />
         </div>
-      </div>
+      </div> */}
 
       {/* <div
         className="relative h-screen w-screen bg-blue-300 flex flex-col lg:flex-row justify-center items-center"
