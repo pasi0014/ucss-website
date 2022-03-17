@@ -5,7 +5,7 @@ const scope = "app.components.ContactForm";
 export default defineMessages({
     contactUs: {
         id: `${scope}.contactUs`,
-        defaultMessage: "Contact Us",
+        defaultMessage: "Contact Form",
     },
     contactUsSubtitle: {
         id: `${scope}.contactUsSubtitle`,
