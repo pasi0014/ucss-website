@@ -1,7 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
+import { useIntl } from "react-intl";
+import { Context } from "../../components/Wrappper/index";
 import { Link } from "react-router-dom";
 
+import messages from "./messages";
+
 const Home = () => {
+  const context = useContext(Context);
+  const { formatMessage } = useIntl();
+
   useEffect(() => {
     window.scrollTo({ top: 500, behavior: "smooth" });
   }, []);
@@ -16,19 +23,24 @@ const Home = () => {
               #StandWithUkraine
             </h2>
           </Link>
+          <div className="container mx-auto text-center flex justify-center">
+            <a
+              href={
+                context.locale === "en"
+                  ? "https://forms.gle/GKWiFwgi13p6aHhx5"
+                  : "https://forms.gle/42rwjQ5zABN7TEga8"
+              }
+              target="_blank"
+              rel="noreferrer"
+            >
+              <button className="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+                {formatMessage({ ...messages.googleForm })}
+              </button>
+            </a>
+          </div>
         </div>
         {/* </div> */}
       </div>
-      {/* <div className="container mx-auto text-center flex justify-center">
-          <iframe
-            title="survey"
-            src="https://docs.google.com/forms/d/e/1FAIpQLSe3d12aPANpiDuY4uVjhr2heq6P47zyNMICkQKit10xQKXxtQ/viewform?embedded=true"
-            width="1040"
-            height="3100"
-            frameBorder="10"
-          >
-          </iframe>
-        </div> */}
     </main>
   );
 };

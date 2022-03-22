@@ -56,5 +56,9 @@
     "app.components.Donate.translator": "Надати послуги перекладу для Суспільної Служби Українців Канади (Оттава)",
     "app.components.Donate.donationInfoTitle": "Інформація для пожертвування",
     "app.components.Donate.donationInfoText": "Ви можете зробити E-transfer на рахунок нашої організації. Наш email на який ви можете подати платіж : {email}",
-    "app.components.Donate.emailCopied": "Email скопійовано"
+    "app.components.Donate.emailCopied": "Email скопійовано",
+    "app.components.Donate.googleForm": "Заповніть форму, щоб взяти участь у нашій волонтерській програмі",
+
+    "app.pages.Home.googleForm": "Заповніть форму, щоб взяти участь у нашій волонтерській програмі"
+
 }

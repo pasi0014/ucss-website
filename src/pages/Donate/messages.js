@@ -59,4 +59,8 @@ export default defineMessages({
         id: `${scope}.emailCopied`,
         defaultMessage: "Email copied to clipboard",
     },
+    googleForm: {
+        id: `${scope}.googleForm`,
+        defaultMessage: "Fill out the form below to get involved in our volunteer program",
+    }
 })

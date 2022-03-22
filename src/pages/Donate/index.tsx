@@ -147,12 +147,19 @@ export const Donate = () => {
             </div>
           </div>
         </div>
-        {/* <button
-          className="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
-          onClick={toggleMenu}
+        <a
+          href={
+            context.locale === "en"
+              ? "https://forms.gle/GKWiFwgi13p6aHhx5"
+              : "https://forms.gle/42rwjQ5zABN7TEga8"
+          }
+          target="_blank"
+          rel="noreferrer"
         >
-          Donate
-        </button> */}
+          <button className="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+            {formatMessage({...messages.googleForm})}
+          </button>
+        </a>
       </div>
       <div
         className={
