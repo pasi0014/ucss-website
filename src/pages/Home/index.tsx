@@ -14,7 +14,7 @@ const Home = () => {
   }, []);
 
   return (
-    <main className="flex-1 overflow-x-hidden overflow-y-auto">
+    <main className="flex-1 overflow-x-hidden overflow-y-auto bg-blue-200">
       <div className="lg:flex lg:mx-auto w-full lg:w-10/12 mb-4 mt-4 justify-center lg:space-x-3 p-3">
         <div className="flex flex-col lg:w-10/12 sm:w-12/12 bg-gray-200 rounded-lg shadow-md p-5">
           {/* <div className="lg:w-full bg-gray-200 rounded-lg shadow-sm mx-auto my-3 p-16"> */}

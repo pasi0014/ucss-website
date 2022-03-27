@@ -62,5 +62,9 @@ export default defineMessages({
     googleForm: {
         id: `${scope}.googleForm`,
         defaultMessage: "Fill out the form below to get involved in our volunteer program",
+    },
+    donationWeReceived: {
+        id: `${scope}.donationWeReceived`,
+        defaultMessage: "Donations we already received",
     }
 })

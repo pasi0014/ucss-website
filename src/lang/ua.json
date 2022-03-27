@@ -22,6 +22,10 @@
     "app.pages.About.vpName": "Михайло Риндзак",
     "app.pages.About.coordinatorTitle": "Координатор Суспільної Служби Українців Канади в Оттаві",
     "app.pages.About.coordinatorName": "Назар Пасіка",
+    "app.pages.About.lvivTitle": "Наші представники у Львові",
+    "app.pages.About.artashes": "Маркарян Арташес",
+    "app.pages.About.lvivGanna": "Ганна Надточій",
+    "app.pages.About.lvivVP": "Заступник командира по роботі з особовим складом підполковник",
 
     "app.components.NavBar.home": "Головна",
     "app.components.NavBar.about": "Про Нас",
@@ -58,7 +62,11 @@
     "app.components.Donate.donationInfoText": "Ви можете зробити E-transfer на рахунок нашої організації. Наш email на який ви можете подати платіж : {email}",
     "app.components.Donate.emailCopied": "Email скопійовано",
     "app.components.Donate.googleForm": "Заповніть форму, щоб взяти участь у нашій волонтерській програмі",
+    "app.components.Donate.donationWeReceived": "Отримана допомога",
 
-    "app.pages.Home.googleForm": "Заповніть форму, щоб взяти участь у нашій волонтерській програмі"
-
+    "app.pages.Home.googleForm": "Заповніть форму, щоб взяти участь у нашій волонтерській програмі",
+    "app.components.ControlledCarousel.received_help_title": "Доставлена нами допомога вже прибула в Польщу",
+    "app.components.ControlledCarousel.received_help_subtitle": "Наші волонтери у Польщі отримали допомогу, і передали її в Україну",
+    "app.components.ControlledCarousel.medicine_1_title": "Медичні пожертви",
+    "app.components.ControlledCarousel.aid_kits": "Аптечки з джгутами"
 }
