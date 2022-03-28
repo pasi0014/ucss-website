@@ -13,7 +13,7 @@ export default defineMessages({
     },
     aboutUsParagraph: {
         id: `${scope}.aboutUsParagraph`,
-        defaultMessage:"Ukrainian Canadian Social Services - Ottawa Branch is a non-profit charitable organization serving the Ukrainian community in Ottawa. Guided by the needs of individuals and families of Ukrainian community, who experience language and cultural barriers. We provide a range of support services."
+        defaultMessage: "Ukrainian Canadian Social Services - Ottawa Branch is a non-profit charitable organization serving the Ukrainian community in Ottawa. Guided by the needs of individuals and families of Ukrainian community, who experience language and cultural barriers. We provide a range of support services."
     },
     aboutUsExtra: {
         id: `${scope}.aboutUsExtra`,
@@ -34,6 +34,22 @@ export default defineMessages({
     vpName: {
         id: `${scope}.vpName`,
         defaultMessage: "Michael Rynzak",
+    },
+    artashes: {
+        id: `${scope}.artashes`,
+        defaultMessage: "Markarian Artashes",
+    },
+    lvivTitle: {
+        id: `${scope}.lvivTitle`,
+        defaultMessage: "Our Representatives in Lviv",
+    },
+    lvivGanna: {
+        id: `${scope}.lvivGanna`,
+        defaultMessage: "Ganna Nadtochii",
+    },
+    lvivVP: {
+        id: `${scope}.lvivVP`,
+        defaultMessage: "Deputy Commander for Personnel, Lieutenant Colonel",
     },
     coordinatorTitle: {
         id: `${scope}.coordinatorTitle`,
