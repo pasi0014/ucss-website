@@ -32,7 +32,7 @@ function App() {
                 <Switch>
                   <Route path="/" exact component={Home} />
                   <Route path="/home" exact component={Home} />
-                  <Route path="/about" exact component={About} />
+                  {/* <Route path="/about" exact component={About} /> */}
                   <Route path="/donate" exact component={Donate} />
                   <Route path="/donate/success" exact component={Success} />
                   <Route path="/contact" exact component={ContactForm} />

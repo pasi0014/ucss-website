@@ -19,7 +19,7 @@ function ControlledCarousel() {
     <Carousel activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>
         <img
-          className="sm:w-2/4 sm:h-2/4 w-full block mx-auto rounded-lg p-2"
+          className="sm:w-3/4 sm:h-2/4 w-screen block mx-auto rounded-lg p-2"
           src={images.medicine_1}
           alt="First slide"
         />
@@ -29,7 +29,7 @@ function ControlledCarousel() {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="sm:w-1/3 sm:h-1/6 w-full block mx-auto rounded-xl p-2"
+          className="sm:w-2/3 sm:h-1/6 w-full block mx-auto rounded-xl p-2"
           src={images.medicine_2}
           alt="Second slide"
         />
@@ -39,7 +39,7 @@ function ControlledCarousel() {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="sm:w-1/2 sm:h-1/6 md:w-1/5 block mx-auto rounded-lg p-2"
+          className="sm:w-3/4 sm:h-1/6 md:w-2/5 block mx-auto rounded-lg p-2"
           src={images.medicine_3}
           alt="Third slide"
         />
@@ -47,16 +47,16 @@ function ControlledCarousel() {
           <h3>{formatMessage({ ...messages.medicine_1_title })}</h3>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item>
+      {/* <Carousel.Item>
         <img
           className="sm:w-1/2 sm:h-1/6 block mx-auto rounded-lg p-2"
           src={images.child_support}
           alt="Third slide"
         />
-      </Carousel.Item>
+      </Carousel.Item> */}
       <Carousel.Item>
         <img
-          className="sm:w-1/3 sm:h-1/6 w-full block mx-auto rounded-lg p-2"
+          className="sm:w-3/4 sm:h-1/6 w-full block mx-auto rounded-lg p-2"
           src={images.received_help}
           alt="Third slide"
         />

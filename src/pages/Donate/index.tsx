@@ -201,12 +201,12 @@ export const Donate = () => {
           )}
         </p>
       </div>
-      <div className="w-full mx-auto bg-blue-300">
+      {/* <div className="w-full mx-auto bg-blue-300">
         <h2 className="text-center py-5 text-gray-700">
           {formatMessage({ ...messages.donationWeReceived })}
         </h2>
         <ControlledCarousel />
-      </div>
+      </div> */}
       {/* <div className="container mx-auto h-50">
         <div className="grid-cols-3 sm:p-20 md:p-5 space-y-2 bg-yellow-200 lg:space-y-0 lg:grid lg:gap-3 lg:grid-rows-3">
           <div className="w-full rounded">
