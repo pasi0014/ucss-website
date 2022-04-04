@@ -117,171 +117,50 @@ const About = () => {
             <hr className="mt-8" />
           </div>
         </div>
+        <h2 className="text-center mb-5">
+          {formatMessage({ ...messages.lvivTitle })}
+        </h2>
+        <div className="font-sans sm:py-0 py-5 w-full flex sm:flex-row sm:space-y-0 space-y-24 flex-col justify-center items-center">
+          <div className="card w-96 mx-auto bg-white shadow-xl rounded-lg sm:mt-0 mt-20">
+            <img
+              className="w-32 mx-auto rounded-full -mt-20 border-8 border-white"
+              src={logo}
+              alt="Ukrainian Social Services Ottawa Branch logo"
+            />
+            <div className="text-center mt-2 text-3xl font-medium">
+              {formatMessage({ ...messages.artashes })}
+            </div>
+            <div className="text-center mt-2 text-sm">
+              <a href="tel:380974710045">+380 97 471 0045</a>
+            </div>
+            <div className="text-center font-normal text-sm mt-2">
+              <a href="mailto:bolzen777@gmail.com">bolzen777@gmail.com</a>
+            </div>
+            <div className="px-6 text-center mt-2 font-base text-sm">
+              <p>{formatMessage({ ...messages.lvivVP })}</p>
+            </div>
+            <hr className="mt-8" />
+          </div>
+
+          <div className="card w-96 mx-auto bg-white shadow-xl rounded-lg">
+            <img
+              className="w-32 mx-auto rounded-full -mt-20 border-8 border-white"
+              src={logo}
+              alt="Ukrainian Social Services Ottawa Branch logo"
+            />
+            <div className="text-center mt-2 text-3xl font-medium">
+              {formatMessage({ ...messages.lvivGanna })}
+            </div>
+            <div className="text-center mt-2 text-sm">
+              <a href="tel:6137248206">+380 67 255 7073</a>
+            </div>
+            <div className="text-center font-normal text-sm mt-2">
+              <a href="mailto:a.nadtochii@gmail.com">a.nadtochii@gmail.com</a>
+            </div>
+            <hr className="mt-8" />
+          </div>
+        </div>
       </div>
-
-      {/* <div className="bg-blue-200 font-sans sm:h-screen sm:py-0 py-5 h-full w-full flex sm:flex-row sm:space-y-0 space-y-24 flex-col justify-center items-center">
-        <div className="card w-96 mx-auto bg-white shadow-xl rounded-lg sm:mt-0 mt-20">
-          <img
-            className="w-32 mx-auto rounded-full -mt-20 border-8 border-white"
-            src={logo}
-            alt="Ukrainian Social Services Ottawa Branch logo"
-          />
-          <div className="text-center mt-2 text-3xl font-medium">
-            {formatMessage({ ...messages.presidentName })}
-          </div>
-          <div className="text-center mt-2 text-sm">
-            <a href="tel:6134134159">613-413-4159</a>
-          </div>
-          <div className="text-center font-normal text-sm mt-2">
-            <a href="mailto:ucss@xata.ca">ucss@xata.ca</a>
-          </div>
-          <div className="px-6 text-center mt-2 font-base text-sm">
-            <p>{formatMessage({ ...messages.presidentTitle })}</p>
-          </div>
-          <hr className="mt-8" />
-        </div>
-
-        <div className="card w-96 mx-auto bg-white shadow-xl rounded-lg">
-          <img
-            className="w-32 mx-auto rounded-full -mt-20 border-8 border-white"
-            src={logo}
-            alt="Ukrainian Social Services Ottawa Branch logo"
-          />
-          <div className="text-center mt-2 text-3xl font-medium">
-            {formatMessage({ ...messages.vpName })}
-          </div>
-          <div className="text-center mt-2 text-sm">
-            <a href="tel:6137248206">613-724-8206</a>
-          </div>
-          <div className="text-center font-normal text-sm mt-4"> </div>
-          <div className="px-6 text-center mt-2 font-base text-sm">
-            <p>{formatMessage({ ...messages.vpTitle })}</p>
-          </div>
-          <hr className="mt-8" />
-        </div>
-
-        <div className="card w-96 mx-auto bg-white shadow-xl rounded-lg mb-14">
-          <img
-            className="w-32 mx-auto rounded-full -mt-20 border-8 border-white"
-            src={logo}
-            alt="Ukrainian Social Services Ottawa Branch logo"
-          />
-          <div className="text-center mt-2 text-3xl font-medium">
-            {formatMessage({ ...messages.coordinatorName })}
-          </div>
-          <div className="text-center mt-2 text-sm">
-            <a href="tel:6135583893">613-558-3893</a>
-          </div>
-          <div className="text-center font-normal text-sm mt-2">
-            <a href="mailto:nazar@ucssottawa.com">nazar@ucssottawa.com</a>
-          </div>
-          <div className="px-6 text-center mt-2 font-base text-sm">
-            <p>{formatMessage({ ...messages.coordinatorTitle })}</p>
-          </div>
-          <hr className="mt-8" />
-        </div>
-      </div> */}
-
-      {/* <div
-        className="relative h-screen w-screen bg-blue-300 flex flex-col lg:flex-row justify-center items-center"
-        id="second-section"
-      >
-        <div className="transition duration-300 ease-out flex flex-col lg:w-5/12 lg:mx-auto p-3 md:w-screen md:mx-auto items-center md:items-center lg:items-start sm:w-6/12 sm:mx-auto sm:w-screen">
-          <h1 className="text-yellow-300 leading-relaxed tracking-wider xl:text-left text-5xl">
-            What we do?
-          </h1>
-          <h3 className="text-gray-500 text-xl md:text-left">
-            Ukrainian Canadian Social Services helps people who need help both
-            in Canada and abroad
-          </h3>
-          <div className="flex flex-col items-start space-y-2 mt-5 w-12/12 sm:w-12/12 md:w-7/12 lg:w-10/12 xl:w-7/12">
-            <Link to="/" className="w-100">
-              <button
-                className="btn px-4 py-2 font-semibold text-gray-100
-             shadow-sm bg-green-600 transition hover:text-white 
-             hover:bg-green-500 w-full"
-              >
-                Find out how we can help you
-              </button>
-            </Link>
-            <Link to="/contact" className="w-100">
-              <button
-                className="btn px-4 py-2 font-semibold text-gray-100
-             shadow-sm bg-blue-600 transition hover:text-white
-              hover:bg-blue-500 w-full"
-              >
-                Contact us now
-              </button>
-            </Link>
-          </div>
-        </div>
-        {/* <span className="absolute inset-x-0 bottom-0 flex justify-center mb-5">
-          <button
-            // onClick={() => {
-            //   handleScroll(3);
-            // }}
-            className="p-1"
-          >
-            <svg
-              className="animate-bounce text-white w-6 h-6"
-              xmlns="http://www.w3.org/2000/svg"
-              fillRule="evenodd"
-              clipRule="evenodd"
-            >
-              <path d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z" />
-            </svg>
-          </button>
-        </span> 
-      </div> */}
-      {/* <div
-        className="relative h-screen bg-yellow-200 flex flex-col lg:flex-row justify-center items-center"
-        id="third-section"
-      >
-        <div className="text-center">
-          <h1 className="text-blue-300 mb-4 leading-relaxed tracking-wide font-extrabold text-5xl">
-            We Help People
-          </h1>
-        </div>
-        <div className="w-full px-2 lg:w-5/12 md:w-10/12 sm:w-full m-3 text-center justify-center items-center rounded-lg p-0 ">
-          <div className="bg-gray-100 text-left p-5 rounded-xl shadow transition transform">
-            <h2>Our Reviews</h2>
-            <blockquote>
-              <p className="text-lg mt-3 leading-relaxed tracking-wide review">
-                <cite>
-                  Я не можу словами передати свою безмежну вдячність за це. Але
-                  Бог все бачить! І Він сторицею віддячить їм, а також їхнім
-                  родинам за їх допомогу. Я зустріла добрих, щирих чуйних людей,
-                  які стали мені як сім’я. Ця організація, а точніше люди, які
-                  там працюють, вони рятують життя. Ще раз дякую за все!!!
-                </cite>
-              </p>
-            </blockquote>
-
-            <Link to="/stories">
-              <button className="btn px-3 py-2 bg-blue-300 text-white font-semibold mt-3 transition hover:bg-blue-200">
-                Read More
-              </button>
-            </Link>
-          </div>
-        </div>
-        {/* <span className="absolute inset-x-0 bottom-5 flex justify-center mb-5">
-          <button
-            // onClick={() => {
-            //   handleScroll(1);
-            // }}
-            className="p-1"
-          >
-            <svg
-              className="animate-bounce text-white w-6 h-6"
-              xmlns="http://www.w3.org/2000/svg"
-              fillRule="evenodd"
-              clipRule="evenodd"
-            >
-              <path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z" />
-            </svg>
-          </button>
-        </span> *
-      </div> */}
     </section>
   );
 };

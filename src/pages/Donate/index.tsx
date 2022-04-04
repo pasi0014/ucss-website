@@ -1,12 +1,11 @@
 import React, { useState, useEffect, useContext } from "react";
-import { FormattedMessage, useIntl } from "react-intl";
 import { Context } from "../../components/Wrappper/index";
-
+import { FormattedMessage, useIntl } from "react-intl";
 import messages from "./messages";
-import DonateDrawer from "../../components/DonateDrawer/index";
-import useModal from "../../utils/useModal";
-
-import interacLogo from "../../assets/images/interac.svg";
+// import DonateDrawer from "../../components/DonateDrawer/index";
+// import useModal from "../../utils/useModal";
+import { images } from "../../utils/importImages";
+import ControlledCarousel from "../../components/ControlledCarousel";
 
 export const Donate = () => {
   const { formatMessage } = useIntl();
@@ -25,9 +24,9 @@ export const Donate = () => {
     setIsCopied(true);
   };
 
-  useEffect(() => {
-    window.scrollTo({ top: 500, behavior: "smooth" });
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo({ top: 500, behavior: "smooth" });
+  // }, []);
 
   useEffect(() => {
     if (classTrigger) {
@@ -147,12 +146,19 @@ export const Donate = () => {
             </div>
           </div>
         </div>
-        {/* <button
-          className="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
-          onClick={toggleMenu}
+        <a
+          href={
+            context.locale === "en"
+              ? "https://forms.gle/GKWiFwgi13p6aHhx5"
+              : "https://forms.gle/42rwjQ5zABN7TEga8"
+          }
+          target="_blank"
+          rel="noreferrer"
         >
-          Donate
-        </button> */}
+          <button className="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+            {formatMessage({ ...messages.googleForm })}
+          </button>
+        </a>
       </div>
       <div
         className={
@@ -180,7 +186,11 @@ export const Donate = () => {
               ),
             }}
           />
-          <img src={interacLogo} alt="interac" className="w-40 mx-auto" />
+          <img
+            src={images.interacLogo}
+            alt="interac"
+            className="w-40 mx-auto"
+          />
           {isCopied && (
             <div
               className="py-3 px-5 mb-4 bg-green-100 text-green-900 text-sm rounded-md border border-green-200 transition-all duration-500"
@@ -191,6 +201,48 @@ export const Donate = () => {
           )}
         </p>
       </div>
+      {/* <div className="w-full mx-auto bg-blue-300">
+        <h2 className="text-center py-5 text-gray-700">
+          {formatMessage({ ...messages.donationWeReceived })}
+        </h2>
+        <ControlledCarousel />
+      </div> */}
+      {/* <div className="container mx-auto h-50">
+        <div className="grid-cols-3 sm:p-20 md:p-5 space-y-2 bg-yellow-200 lg:space-y-0 lg:grid lg:gap-3 lg:grid-rows-3">
+          <div className="w-full rounded">
+            <img
+              src={images.medicine_3}
+              alt="baby formulas and baby food"
+            />
+          </div>
+          <div className="w-full col-span-2 rounded">
+            <img
+              src={images.medicine_1}
+              className="w-100 h-100"
+              alt="band aids"
+            />
+          </div>
+          <div className="w-full rounded">
+            <img
+              src={images.medicine_2}
+              className="w-100 h-100"
+              alt="tactical first aid kits"
+            />
+          </div>
+          <div className="w-full rounded">
+            <img
+              src={images.child_support}
+              alt="image3"
+            />
+          </div>
+          <div className="w-full rounded">
+            <img
+              src={images.received_help}
+              alt="image2"
+            />
+          </div>
+        </div>
+      </div> */}
       {/* {isOpen && (
         <main
           className={

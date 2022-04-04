@@ -9,11 +9,11 @@ export default class NavbarLinks {
         link: "/home",
         isActive: false,
       },
-      {
-        title: messages.about,
-        link: "/about",
-        isActive: false,
-      },
+      // {
+      //   title: messages.about,
+      //   link: "/about",
+      //   isActive: false,
+      // },
       // {
       //   title: messages.howWeCanHelpYou,
       //   link: "/how-we-can-help-you",

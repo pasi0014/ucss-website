@@ -22,6 +22,26 @@
     "app.pages.About.vpName": "Михайло Риндзак",
     "app.pages.About.coordinatorTitle": "Координатор Суспільної Служби Українців Канади в Оттаві",
     "app.pages.About.coordinatorName": "Назар Пасіка",
+    "app.pages.About.lvivTitle": "Наші представники у Львові",
+    "app.pages.About.artashes": "Маркарян Арташес",
+    "app.pages.About.lvivGanna": "Ганна Надточій",
+    "app.pages.About.lvivVP": "Заступник командира по роботі з особовим складом підполковник",
+
+    "app.components.ContactInfo.presidentName": "Марина Попович",
+    "app.components.ContactInfo.presidentTitle": "Голова Суспільної Служби Українців Канади в Оттаві",
+    "app.components.ContactInfo.vpTitle": "Заступник голови Суспільної Служби Українців Канади в Оттаві",
+    "app.components.ContactInfo.vpName": "Михайло Риндзак",
+    "app.components.ContactInfo.coordinatorTitle": "Координатор Суспільної Служби Українців Канади в Оттаві",
+    "app.components.ContactInfo.coordinatorName": "Назар Пасіка",
+    "app.components.ContactInfo.lvivTitle": "Наші представники у Львові",
+    "app.components.ContactInfo.artashes": "Маркарян Арташес",
+    "app.components.ContactInfo.lvivGanna": "Ганна Надточій",
+    "app.components.ContactInfo.volonteersTitle": "Волонтер",
+    "app.components.ContactInfo.lvivVP": "Заступник командира по роботі з особовим складом підполковник",
+    "app.components.ContactInfo.facebookTitle": "Наша Facebook сторінка",
+    "app.components.ContactInfo.contactInfo": "Контакти",
+
+
 
     "app.components.NavBar.home": "Головна",
     "app.components.NavBar.about": "Про Нас",
@@ -56,5 +76,20 @@
     "app.components.Donate.translator": "Надати послуги перекладу для Суспільної Служби Українців Канади (Оттава)",
     "app.components.Donate.donationInfoTitle": "Інформація для пожертвування",
     "app.components.Donate.donationInfoText": "Ви можете зробити E-transfer на рахунок нашої організації. Наш email на який ви можете подати платіж : {email}",
-    "app.components.Donate.emailCopied": "Email скопійовано"
+    "app.components.Donate.emailCopied": "Email скопійовано",
+    "app.components.Donate.googleForm": "Заповніть форму, щоб взяти участь у нашій волонтерській програмі",
+    "app.components.Donate.donationWeReceived": "Отримана допомога",
+
+    "app.pages.Home.aboutUsTitle": "Про нас",
+    "app.pages.Home.aboutUsParagraphTitle": "Що таке Суспільна Служба Українців Канади (Оттава)?",
+    "app.pages.Home.aboutUsParagraph": "Суспільна Служба Українців Канади (Оттава) – це неприбуткова благодійна організація, яка обслуговує українську громаду в Оттаві. Керуючись потребами окремих людей та сімей української громади, які відчувають мовні та культурні бар’єри. Ми надаємо широкий спектр послуг підтримки.",
+    "app.pages.Home.googleForm": "Заповніть форму, щоб взяти участь у нашій волонтерській програмі",
+    "app.pages.Home.howYouCanHelp": "Дізнайтесь як ви можете допомогти переселенцям з України",
+    "app.pages.Home.eventsTitle": "Майбутні події",
+    "app.pages.Home.donationWeReceived": "Отримана допомога",
+
+    "app.components.ControlledCarousel.received_help_title": "Доставлена нами допомога вже прибула в Польщу",
+    "app.components.ControlledCarousel.received_help_subtitle": "Наші волонтери у Польщі отримали допомогу, і передали її в Україну",
+    "app.components.ControlledCarousel.medicine_1_title": "Медичні пожертви",
+    "app.components.ControlledCarousel.aid_kits": "Аптечки з джгутами"
 }

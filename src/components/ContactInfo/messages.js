@@ -1,23 +1,11 @@
 import { defineMessages } from "@formatjs/intl";
 
-const scope = "app.pages.About";
+const scope = "app.components.ContactInfo";
 
 export default defineMessages({
-    aboutUsTitle: {
-        id: `${scope}.aboutUsTitle`,
-        defaultMessage: "About Us",
-    },
-    aboutUsParagraphTitle: {
-        id: `${scope}.aboutUsParagraphTitle`,
-        defaultMessage: "What is Ukrainian Canadian Social Services - Ottawa Branch?",
-    },
-    aboutUsParagraph: {
-        id: `${scope}.aboutUsParagraph`,
-        defaultMessage: "Ukrainian Canadian Social Services - Ottawa Branch is a non-profit charitable organization serving the Ukrainian community in Ottawa. Guided by the needs of individuals and families of Ukrainian community, who experience language and cultural barriers. We provide a range of support services."
-    },
-    aboutUsExtra: {
-        id: `${scope}.aboutUsExtra`,
-        defaultMessage: "At this challenging time for Ukraine, we are committed to the humanitarian help to both Ukrainian refugees and people in Ukraine."
+    contactInfo: {
+        id: `${scope}.contactInfo`,
+        defaultMessage: "Contact Information",
     },
     presidentName: {
         id: `${scope}.presidentName`,
@@ -47,6 +35,10 @@ export default defineMessages({
         id: `${scope}.lvivGanna`,
         defaultMessage: "Ganna Nadtochii",
     },
+    volonteersTitle: {
+        id: `${scope}.volonteersTitle`,
+        defaultMessage: "Volonteer",
+    },
     lvivVP: {
         id: `${scope}.lvivVP`,
         defaultMessage: "Deputy Commander for Personnel, Lieutenant Colonel",
@@ -59,4 +51,8 @@ export default defineMessages({
         id: `${scope}.coordinatorName`,
         defaultMessage: "Nazar Pasika",
     },
-})
+    facebookTitle: {
+        id: `${scope}.facebookTitle`,
+        defaultMessage: "Our Facebook page",
+    }
+});
