@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.345d6bb6.chunk.css",
-    "main.js": "/static/js/main.c5b921a8.chunk.js",
-    "main.js.map": "/static/js/main.c5b921a8.chunk.js.map",
+    "main.js": "/static/js/main.f4b32a21.chunk.js",
+    "main.js.map": "/static/js/main.f4b32a21.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.bf8f77c6.js",
     "runtime-main.js.map": "/static/js/runtime-main.bf8f77c6.js.map",
     "static/js/2.f4f2cef7.chunk.js": "/static/js/2.f4f2cef7.chunk.js",
@@ -18,13 +18,12 @@
     "static/media/medicine_2.152240d1.jpg": "/static/media/medicine_2.152240d1.jpg",
     "static/media/medicine_3.bd0cab59.jpg": "/static/media/medicine_3.bd0cab59.jpg",
     "static/media/index.css": "/static/media/ottawa.383ddf98.jpg",
-    "static/media/paska-ad.55a16252.jpg": "/static/media/paska-ad.55a16252.jpg",
     "static/media/received_help.07086d92.jpg": "/static/media/received_help.07086d92.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.bf8f77c6.js",
     "static/js/2.f4f2cef7.chunk.js",
     "static/css/main.345d6bb6.chunk.css",
-    "static/js/main.c5b921a8.chunk.js"
+    "static/js/main.f4b32a21.chunk.js"
   ]
 }
