@@ -27,9 +27,9 @@ export const ContactForm = () => {
 
   const intl = useIntl();
 
-  useEffect(() => {
-    window.scrollTo({ top: 500, behavior: "smooth" });
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo({ top: 500, behavior: "smooth" });
+  // }, []);
 
   useEffect(() => {
     if (success) {

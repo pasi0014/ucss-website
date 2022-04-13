@@ -91,5 +91,7 @@
     "app.components.ControlledCarousel.received_help_title": "Доставлена нами допомога вже прибула в Польщу",
     "app.components.ControlledCarousel.received_help_subtitle": "Наші волонтери у Польщі отримали допомогу, і передали її в Україну",
     "app.components.ControlledCarousel.medicine_1_title": "Медичні пожертви",
-    "app.components.ControlledCarousel.aid_kits": "Аптечки з джгутами"
+    "app.components.ControlledCarousel.aid_kits": "Аптечки з джгутами",
+
+    "app.components.Events.eventsTitle": "Майбутні події"
 }

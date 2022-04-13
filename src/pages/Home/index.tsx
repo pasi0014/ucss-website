@@ -3,22 +3,22 @@ import { useIntl } from "react-intl";
 import { Context } from "../../components/Wrappper/index";
 import { Link } from "react-router-dom";
 import aboutImage from "../../assets/images/aboutImg.jpg";
-import paskaAd from '../../assets/images/paska-ad.jpg';
+import paskaAd from "../../assets/images/paska-ad.jpg";
 // TODO: enable this when we have a camp text
 // import oselyaPic from "../../assets/images/oselya-pic.jpg";
 
 import messages from "./messages";
 import ContactInfo from "../../components/ContactInfo";
 import ControlledCarousel from "../../components/ControlledCarousel";
-
+import Events from "../../components/Events";
 
 const Home = () => {
   const context = useContext(Context);
   const { formatMessage } = useIntl();
 
-  useEffect(() => {
-    window.scrollTo({ top: 500, behavior: "smooth" });
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo({ top: 500, behavior: "smooth" });
+  // }, []);
 
   return (
     <main className="flex-1 overflow-x-hidden overflow-y-auto bg-yellow-100">
@@ -65,12 +65,8 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="lg:w-full w-full bg-gray-100 rounded-xl shadow-md mx-auto my-3 sm:p-16 py-5 lg:p-16">
-            <h1 className="font-medium mb-5 text-center w-full">
-              {formatMessage({ ...messages.eventsTitle })}
-            </h1>
-            <img alt="Ad for masterclass" src={paskaAd} className="w-8/12 mx-auto"/>
-          </div>
+          {/* TODO: Enable when we have a new events */}
+          {/* <Events /> */}
 
           <div className="flex flex-col md:flex-row md:space-x-2 justify-center rounded-xl">
             <div className="w-full mx-auto bg-blue-300 rounded-xl shadow-md sm:p-10">
