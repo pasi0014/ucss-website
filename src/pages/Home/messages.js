@@ -39,4 +39,16 @@ export default defineMessages({
         id: `${scope}.eventsTitle`,
         defaultMessage: "Upcoming Events",
     },
+    summerCampTitle: {
+        id: `${scope}.summerCampTitle`,
+        defaultMessage: "UCSS Ottawa orginizes summer camp for displaced children from Ukraine",
+    },
+    summerCampText: {
+        id: `${scope}.summerCampText`,
+        defaultMessage: "We are organizing a summer camp for children from Ukraine who are displaced by the war in Ukraine. This is a great opportunity to help them improve their mental health and distract themselves from the terrible events in Ukraine."
+    },
+    learnMore: {
+        id: `${scope}.learnMore`,
+        defaultMessage: "Learn more about this camp",
+    },
 })

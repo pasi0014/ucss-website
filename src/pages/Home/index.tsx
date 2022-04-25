@@ -1,24 +1,20 @@
-import React, { useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import { useIntl } from "react-intl";
 import { Context } from "../../components/Wrappper/index";
 import { Link } from "react-router-dom";
 import aboutImage from "../../assets/images/aboutImg.jpg";
-import paskaAd from "../../assets/images/paska-ad.jpg";
+// import paskaAd from "../../assets/images/paska-ad.jpg";
 // TODO: enable this when we have a camp text
-// import oselyaPic from "../../assets/images/oselya-pic.jpg";
+import oselyaPic from "../../assets/images/oselya-pic.jpg";
 
 import messages from "./messages";
 import ContactInfo from "../../components/ContactInfo";
 import ControlledCarousel from "../../components/ControlledCarousel";
-import Events from "../../components/Events";
+// import Events from "../../components/Events";
 
 const Home = () => {
   const context = useContext(Context);
   const { formatMessage } = useIntl();
-
-  // useEffect(() => {
-  //   window.scrollTo({ top: 500, behavior: "smooth" });
-  // }, []);
 
   return (
     <main className="flex-1 overflow-x-hidden overflow-y-auto bg-yellow-100">
@@ -45,9 +41,9 @@ const Home = () => {
           </div>
 
           <div className="lg:w-full w-full bg-gray-100 rounded-xl shadow-md mx-auto my-3 sm:p-16 py-5 lg:p-16">
-            <h1 className="font-medium mb-2 text-center w-full">
+            <h2 className="font-medium text-4xl mb-2 text-center w-full">
               {formatMessage({ ...messages.howYouCanHelp })}
-            </h1>
+            </h2>
             <div className="container mx-auto text-center flex justify-center">
               <a
                 href={
@@ -68,6 +64,33 @@ const Home = () => {
           {/* TODO: Enable when we have a new events */}
           {/* <Events /> */}
 
+          {/* TODO: To be enabled when we have text for camp ad */}
+          <div className="w-full mb-3 shadow-md">
+            <div className="h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
+              <img
+                className="transform lg:h-48 md:h-36 w-full object-cover object-center scale-110 transition-all duration-700 hover:scale-100"
+                src={oselyaPic}
+                alt="Summer camp for displaced Ukrainian children"
+              />
+              <div className="p-6">
+                <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                  {formatMessage({ ...messages.eventsTitle })}
+                </h2>
+                <h1 className="title-font text-lg font-medium text-gray-600 mb-3">
+                  {formatMessage({ ...messages.summerCampTitle })}
+                </h1>
+                <p className="leading-relaxed mb-3">
+                  {formatMessage({ ...messages.summerCampText })}
+                </p>
+                <Link to="/camp">
+                  <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 hover:scale-105 drop-shadow-md  shadow-cla-blue px-4 py-1 rounded-lg">
+                    {formatMessage({ ...messages.learnMore })}
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </div>
+
           <div className="flex flex-col md:flex-row md:space-x-2 justify-center rounded-xl">
             <div className="w-full mx-auto bg-blue-300 rounded-xl shadow-md sm:p-10">
               <h2 className="text-center py-5 text-yellow-200">
@@ -75,16 +98,6 @@ const Home = () => {
               </h2>
               <ControlledCarousel />
             </div>
-            {/* TODO: To be enabled when we have text for camp ad */}
-            {/* <div className="w-full bg-gray-100 rounded-lg shadow-sm mt-1">
-              <img alt="camp ambience" src={oselyaPic} className="sm:w-8/12 w-full mx-auto"/>
-              <h2 className="text-center font-medium mt-5 mb-2">
-                Camp for displaced Ukrainian children
-              </h2>
-              <p className="p-4">
-                This summer UCSS will organize a camp for displaced children from the Ukraine. 
-              </p>
-            </div> */}
 
             {/* <div className="w-full bg-yellow-400 shadow-sm rounded-lg mt-1">
               <h1 className="text-2xl text-center font-medium mb-2 p-10">

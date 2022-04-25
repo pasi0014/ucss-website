@@ -25,6 +25,11 @@ export default class NavbarLinks {
         isActive: false,
       },
       {
+        title: messages.reviews,
+        link: "/news",
+        isActive: false,
+      },
+      {
         title: messages.contact,
         link: "/contact",
         isActive: false,

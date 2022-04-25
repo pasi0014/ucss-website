@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { Context } from "../../components/Wrappper/index";
 import { FormattedMessage, useIntl } from "react-intl";
 import messages from "./messages";
-// import DonateDrawer from "../../components/DonateDrawer/index";
+import DonateDrawer from "../../components/DonateDrawer/index";
 // import useModal from "../../utils/useModal";
 import { images } from "../../utils/importImages";
 import ControlledCarousel from "../../components/ControlledCarousel";
@@ -146,19 +146,6 @@ export const Donate = () => {
             </div>
           </div>
         </div>
-        <a
-          href={
-            context.locale === "en"
-              ? "https://forms.gle/GKWiFwgi13p6aHhx5"
-              : "https://forms.gle/42rwjQ5zABN7TEga8"
-          }
-          target="_blank"
-          rel="noreferrer"
-        >
-          <button className="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-            {formatMessage({ ...messages.googleForm })}
-          </button>
-        </a>
       </div>
       <div
         className={
@@ -172,6 +159,12 @@ export const Donate = () => {
         <h2 className="py-5">
           {formatMessage({ ...messages.donationInfoTitle })}
         </h2>
+        {/* <button
+          className="flex mx-auto mt-1 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+          onClick={toggleMenu}
+        >
+          {formatMessage({ ...messages.donateNow })}
+        </button> */}
         <p className="text-lg leading-relaxed font-medium font-sans xl:w-2/4 lg:w-3/4 mx-auto text-gray-600 py-5">
           <FormattedMessage
             {...messages.donationInfoText}
@@ -201,49 +194,7 @@ export const Donate = () => {
           )}
         </p>
       </div>
-      {/* <div className="w-full mx-auto bg-blue-300">
-        <h2 className="text-center py-5 text-gray-700">
-          {formatMessage({ ...messages.donationWeReceived })}
-        </h2>
-        <ControlledCarousel />
-      </div> */}
-      {/* <div className="container mx-auto h-50">
-        <div className="grid-cols-3 sm:p-20 md:p-5 space-y-2 bg-yellow-200 lg:space-y-0 lg:grid lg:gap-3 lg:grid-rows-3">
-          <div className="w-full rounded">
-            <img
-              src={images.medicine_3}
-              alt="baby formulas and baby food"
-            />
-          </div>
-          <div className="w-full col-span-2 rounded">
-            <img
-              src={images.medicine_1}
-              className="w-100 h-100"
-              alt="band aids"
-            />
-          </div>
-          <div className="w-full rounded">
-            <img
-              src={images.medicine_2}
-              className="w-100 h-100"
-              alt="tactical first aid kits"
-            />
-          </div>
-          <div className="w-full rounded">
-            <img
-              src={images.child_support}
-              alt="image3"
-            />
-          </div>
-          <div className="w-full rounded">
-            <img
-              src={images.received_help}
-              alt="image2"
-            />
-          </div>
-        </div>
-      </div> */}
-      {/* {isOpen && (
+      {isOpen && (
         <main
           className={
             " fixed overflow-hidden z-10 bg-gray-900 bg-opacity-25 inset-0 transform ease-in-out " +
@@ -261,7 +212,7 @@ export const Donate = () => {
             <article className="relative w-screen max-w-lg pb-10 flex flex-col space-y-6 overflow-y-scroll h-full">
               <div className="flex justify-between">
                 <h2 className="p-4 font-bold text-lg text-center mt-3">
-                  Donate
+                  {formatMessage({ ...messages.donateTitle })}
                 </h2>
                 <button
                   className="p-4 font-bold text-lg text-center mt-3"
@@ -269,6 +220,9 @@ export const Donate = () => {
                 >
                   X
                 </button>
+              </div>
+              <div className="px-4 text-center text-indigo-400">
+                <h3>{formatMessage({ ...messages.subtitle })}</h3>
               </div>
               <DonateDrawer isOpen={isOpen} />
             </article>
@@ -280,7 +234,7 @@ export const Donate = () => {
             }}
           ></section>
         </main>
-      )} */}
+      )}
     </section>
   );
 };

@@ -66,5 +66,17 @@ export default defineMessages({
     donationWeReceived: {
         id: `${scope}.donationWeReceived`,
         defaultMessage: "Donations we already received",
-    }
+    },
+    donateNow: {
+        id: `${scope}.donateNow`,
+        defaultMessage: "Donate now",
+    },
+    donateTitle: {
+        id: `${scope}.donateTitle`,
+        defaultMessage: "Donate",
+    },
+    subtitle: {
+        id: `${scope}.subtitle`,
+        defaultMessage: "Select the amount you would like to donate",
+    },
 })

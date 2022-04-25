@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { send } from "emailjs-com";
 import validator from "validator";
 import LoadingOverlay from "react-loading-overlay-ts";
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { injectIntl, useIntl } from "react-intl";
 import messages from "./messages";
 
@@ -27,10 +26,6 @@ export const ContactForm = () => {
 
   const intl = useIntl();
 
-  // useEffect(() => {
-  //   window.scrollTo({ top: 500, behavior: "smooth" });
-  // }, []);
-
   useEffect(() => {
     if (success) {
       setTimeout(() => {
@@ -47,7 +42,7 @@ export const ContactForm = () => {
         process.env.REACT_APP_EMAIL_SERVICE_ID as string,
         process.env.REACT_APP_EMAIL_TEMPLATE_ID as string,
         toSend,
-        process.env.REACT_APP_EMAIL_USER_ID as string,
+        process.env.REACT_APP_EMAIL_USER_ID as string
       );
       setIsLoading(false);
       if (response.status === 200) {
@@ -244,17 +239,10 @@ export const ContactForm = () => {
                 </div>
                 <div className="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
                   <a
-                    href="mailto:ucss@xata.ca"
+                    href="mailto:info@ucssottawa.com"
                     className="text-blue-500"
                   >
-                    ucss@xata.ca
-                  </a>
-                  <br />
-                  <a
-                    href="mailto:nazar@ucssottawa.com"
-                    className="text-blue-500"
-                  >
-                    nazar@ucssottawa.com
+                    info@ucssottawa.com
                   </a>
                   <p className="leading-normal my-5">
                     37 Ridgefield Crescent, Ottawa, ON K2H 6S3

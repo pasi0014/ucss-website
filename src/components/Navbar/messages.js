@@ -27,4 +27,8 @@ export default defineMessages({
         id: `${scope}.contact`,
         defaultMessage: `Contact`,
     },
+    reviews: {
+        id: `${scope}.reviews`,
+        defaultMessage: `News`,
+    }
 })

@@ -11,9 +11,11 @@ import Success from "./pages/Success/index";
 import NotFound from "./pages/NotFound";
 // import HowWeCanHelpYou from "./pages/HowWeCanHelpYou";
 import Home from "./pages/Home/index";
-import About from "./pages/About/index";
+// import About from "./pages/About/index";
 
 import "./App.css";
+import Reviews from "./pages/Reviews";
+import Camp from "./pages/Camp";
 
 function App() {
   return (
@@ -32,7 +34,8 @@ function App() {
                 <Switch>
                   <Route path="/" exact component={Home} />
                   <Route path="/home" exact component={Home} />
-                  {/* <Route path="/about" exact component={About} /> */}
+                  <Route path="/news" exact component={Reviews} />
+                  <Route path="/camp" exact component={Camp} />
                   <Route path="/donate" exact component={Donate} />
                   <Route path="/donate/success" exact component={Success} />
                   <Route path="/contact" exact component={ContactForm} />
