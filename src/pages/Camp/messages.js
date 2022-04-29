@@ -80,4 +80,44 @@ export default defineMessages({
         id: `${scope}.certificates`,
         defaultMessage: "The presence of certificates is welcomed.",
     },
+    donationTitle: {
+        id: `${scope}.donationTitle`,
+        defaultMessage: "What we need for the camp",
+    },
+    donationItem_1: {
+        id: `${scope}.donationItem_1`,
+        defaultMessage: "We need lots of interior mold resistant paint.",
+    },
+    donationItem_2: {
+        id: `${scope}.donationItem_2`,
+        defaultMessage: "Lots of plywood and 2x4 wood",
+    },
+    donationItem_3: {
+        id: `${scope}.donationItem_3`,
+        defaultMessage: "Hygiene amd sanitary supplies",
+    },
+    donationItem_4: {
+        id: `${scope}.donationItem_4`,
+        defaultMessage: "Towels, pillows and warm blankets",
+    },
+    donationItem_5: {
+        id: `${scope}.donationItem_5`,
+        defaultMessage: "12 single bed mattresses",
+    },
+    donationItem_6: {
+        id: `${scope}.donationItem_6`,
+        defaultMessage: "Bedside table and drawer carts",
+    },
+    donationItem_7: {
+        id: `${scope}.donationItem_7`,
+        defaultMessage: "Stuff for outdoor activities",
+    },
+    donationItem_8: {
+        id: `${scope}.donationItem_8`,
+        defaultMessage: "We also accept food donations.",
+    },
+    donationItem_9: {
+        id: `${scope}.donationItem_9`,
+        defaultMessage: "We are also looking for a storage for donated supplies",
+    },
 });
