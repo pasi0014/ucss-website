@@ -23,8 +23,8 @@ const DonateDrawer = (props: any) => {
         },
       ],
       mode: "payment",
-      successUrl: "https://ucssottawa.com/donate",
-      cancelUrl: "https://ucssottawa.com/donate",
+      successUrl: "https://ucssottawa.com/donate/success",
+      cancelUrl: "https://ucssottawa.com/donate/failure",
     });
   };
 

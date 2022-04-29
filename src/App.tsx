@@ -17,6 +17,7 @@ import Home from "./pages/Home/index";
 import "./App.css";
 import Reviews from "./pages/Reviews";
 import Camp from "./pages/Camp";
+import Failure from "./pages/Failure";
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
                   <Route path="/camp" exact component={Camp} />
                   <Route path="/donate" exact component={Donate} />
                   <Route path="/donate/success" exact component={Success} />
+                  <Route path="/donate/failure" exact component={Failure} />
                   <Route path="/contact" exact component={ContactForm} />
                   <Route path="*" component={NotFound} />
                 </Switch>
