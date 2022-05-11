@@ -26,7 +26,7 @@ export default defineMessages({
     },
     whoContent: {
         id: `${scope}.whoContent`,
-        defaultMessage: "Children from ages 7 to 13 can register for the camp. {tag} We are also looking for volunteers (age 14+) and volunteer counselors (age 16+) to assist with running the camp (see below)."
+        defaultMessage: "Children from ages 8 to 13 can register for the camp. {tag} We are also looking for volunteers (age 14+) and volunteer counselors (age 16+) to assist with running the camp (see below)."
     },
     when: {
         id: `${scope}.when`,
