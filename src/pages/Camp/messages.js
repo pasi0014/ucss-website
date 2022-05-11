@@ -58,7 +58,7 @@ export default defineMessages({
     },
     costContent: {
         id: `${scope}.costContent`,
-        defaultMessage: "Displaced children from Ukraine: FREE. {tag} Other children from 7-13: $600",
+        defaultMessage: "Displaced children from Ukraine: FREE. {tag} Other children from 8-13: $600",
     },
     programming: {
         id: `${scope}.programming`,
