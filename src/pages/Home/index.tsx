@@ -7,6 +7,7 @@ import aboutImage from "../../assets/images/aboutImg.jpg";
 // import paskaAd from "../../assets/images/paska-ad.jpg";
 // TODO: enable this when we have a camp text
 import oselyaPic from "../../assets/images/oselya-pic.jpg";
+import campPic from "../../assets/images/camp.png";
 
 import messages from "./messages";
 import ContactInfo from "../../components/ContactInfo";
@@ -83,8 +84,8 @@ const Home = () => {
             <div className="w-full mb-3 shadow-md">
               <div className="h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
                 <img
-                  className="transform lg:h-48 md:h-36 w-full object-cover object-center scale-110 transition-all duration-700 hover:scale-100"
-                  src={oselyaPic}
+                  className="transform w-full object-cover object-center scale-90 transition-all duration-700 hover:scale-100"
+                  src={campPic}
                   alt="Summer camp for displaced Ukrainian children"
                 />
                 <div className="p-6">

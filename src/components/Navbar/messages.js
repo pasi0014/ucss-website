@@ -11,6 +11,10 @@ export default defineMessages({
         id: `${scope}.about`,
         defaultMessage: "About",
     },
+    camp: {
+        id: `${scope}.camp`,
+        defaultMessage: "Camp",
+    },
     howWeCanHelpYou: {
         id: `${scope}.howWeCanHelpYou`,
         defaultMessage: 'How We Can Help You'
