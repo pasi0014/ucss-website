@@ -5,7 +5,7 @@ const scope = "app.pages.Camp";
 export default defineMessages({
     title: {
         id: `${scope}.title`,
-        defaultMessage: "Soniashnyk Summer Camp",
+        defaultMessage: "Sunflower Summer Camp",
     },
     date: {
         id: `${scope}.date`,
@@ -14,7 +14,7 @@ export default defineMessages({
     content: {
         id: `${scope}.content`,
         defaultMessage:
-            "Ukrainian Canadian Social Services – Ottawa Branch (UCSS Ottawa) is pleased to announce that it will be running “Soniashnyk Summer Camp,” an overnight camp in July 2022. It will be a safe, healthy, supervised, and inclusive environment led by a team of dedicated UCSS Ottawa volunteers.",
+            "Ukrainian Canadian Social Services – Ottawa Branch (UCSS Ottawa) is pleased to announce that it will be running “Sunflower Summer Camp,” an overnight camp in July 2022. It will be a safe, healthy, supervised, and inclusive environment led by a team of dedicated UCSS Ottawa volunteers.",
     },
     campDetails: {
         id: `${scope}.campDetails`,

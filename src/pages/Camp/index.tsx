@@ -14,7 +14,7 @@ function Camp(props: any) {
     <React.Fragment>
       <Helmet>
         <title>
-          Ukrainian Canadian Social Services organizes camp for displaced
+          Camp - Ukrainian Canadian Social Services organizes camp for displaced
           children from Ukraine
         </title>
         <meta
