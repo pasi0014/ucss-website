@@ -1,0 +1,50 @@
+import { defineMessages } from "@formatjs/intl";
+
+const scope = "app.pages.Reviews";
+
+export default defineMessages({
+    title: {
+        id: `${scope}.title`,
+        defaultMessage: "News",
+    },
+    title_bazar: {
+        id: `${scope}.title_bazar`,
+        defaultMessage: "Ukrainian Easter Bazar at the St. John the Baptist Ukrainian Catholic Shrine",
+    },
+    date_bazar: {
+        id: `${scope}.date_bazar`,
+        defaultMessage: "April 10, 2022",
+    },
+    content_bazar: {
+        id: `${scope}.content_bazar`,
+        defaultMessage: "On Sunday, April 10, the Ukrainian Bazar was held at the Ukrainian Catholic Shrine of St. John the Baptist. All proceeds from the event will go to a summer camp for displaced children from Ukraine.",
+    },
+    title_embassy: {
+        id: `${scope}.title_embassy`,
+        defaultMessage: `"Thank You" from Ukrainian Community in Canada to Polish people`,
+    },
+    content_embassy: {
+        id: `${scope}.content_embassy`,
+        defaultMessage: `A lovely reception at the Embassy of Poland, Ottawa. A simple "Thank You" for all that empathetic Poles here and back at home did and do for displaced and distressed Ukrainian elderly, mothers and children running away from the brutality of war waged on them by Russia... In words of the Charge d'affairs - Krzysztof Lewandowski: "Poland is in full solidarity with Ukrainian people, and ready to help in any way to lessen the pain of displacement"... Thank you to Ukrainian Canadian Social Services (UCSS) - Ottawa Branch, Montreal Ukrainian Community, Plast Ottawa and Ukrainian Catholic Women’s League of Canada - Ottawa for organizing this worthwhile event. Because we need to give thanks, where thanks are due... Dziękujemy! `,
+    },
+    date_embassy: {
+        id: `${scope}.date_embassy`,
+        defaultMessage: "April 14, 2022",
+    },
+    readMore: {
+        id: `${scope}.readMore`,
+        defaultMessage: "Read more",
+    },
+    upcomingEvents: {
+        id: `${scope}.upcomingEvents`,
+        defaultMessage: "Upcoming event",
+    },
+    summerCampTitle: {
+        id: `${scope}.summerCampTitle`,
+        defaultMessage: "Ukrainian Canadian Social Services Ottawa orginizes summer camp for displaced children from Ukraine",
+    },
+    summerCampContent: {
+        id: `${scope}.summerCampContent`,
+        defaultMessage: "We are organizing a summer camp for children from Ukraine who are displaced by the war in Ukraine. This is a great opportunity to help them improve their mental health and distract themselves from the terrible events in Ukraine.",
+    },
+});

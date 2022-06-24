@@ -9,11 +9,11 @@ export default class NavbarLinks {
         link: "/home",
         isActive: false,
       },
-      {
-        title: messages.about,
-        link: "/about",
-        isActive: false,
-      },
+      // {
+      //   title: messages.about,
+      //   link: "/about",
+      //   isActive: false,
+      // },
       // {
       //   title: messages.howWeCanHelpYou,
       //   link: "/how-we-can-help-you",
@@ -22,6 +22,16 @@ export default class NavbarLinks {
       {
         title: messages.donate,
         link: "/donate",
+        isActive: false,
+      },
+      {
+        title: messages.camp,
+        link: "/camp",
+        isActive: false,
+      },
+      {
+        title: messages.reviews,
+        link: "/news",
         isActive: false,
       },
       {

@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { injectIntl } from "react-intl";
+import { Helmet } from "react-helmet";
 
 import Navbar from "./components/Navbar/index";
 import Footer from "./components/Footer/index";
@@ -11,13 +12,23 @@ import Success from "./pages/Success/index";
 import NotFound from "./pages/NotFound";
 // import HowWeCanHelpYou from "./pages/HowWeCanHelpYou";
 import Home from "./pages/Home/index";
-import About from "./pages/About/index";
+// import About from "./pages/About/index";
 
 import "./App.css";
+import Reviews from "./pages/Reviews";
+import Camp from "./pages/Camp";
+import Failure from "./pages/Failure";
 
 function App() {
   return (
     <Router>
+      <Helmet>
+        <title>Ukrainian Social Services Ottawa</title>
+        <meta
+          name="description"
+          content="Ukrainian Canadian Social Services - Ottawa Branch is a non-profit charitable organization serving the Ukrainian community in Ottawa. Guided by the needs of individuals and families of Ukrainian community, who experience language and cultural barriers. We provide a range of support services."
+        />
+      </Helmet>
       <div className="mx-auto">
         <Banner animateTitle={true} animateBackgroundImage={true} />
         <Navbar animateNavbar={true} />
@@ -32,9 +43,11 @@ function App() {
                 <Switch>
                   <Route path="/" exact component={Home} />
                   <Route path="/home" exact component={Home} />
-                  <Route path="/about" exact component={About} />
+                  <Route path="/news" exact component={Reviews} />
+                  <Route path="/camp" exact component={Camp} />
                   <Route path="/donate" exact component={Donate} />
                   <Route path="/donate/success" exact component={Success} />
+                  <Route path="/donate/failure" exact component={Failure} />
                   <Route path="/contact" exact component={ContactForm} />
                   <Route path="*" component={NotFound} />
                 </Switch>
