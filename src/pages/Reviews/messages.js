@@ -21,7 +21,7 @@ export default defineMessages({
     },
     title_embassy: {
         id: `${scope}.title_embassy`,
-        defaultMessage: `"Thank You" from Ukrainian Community in Canada to Polish people`,
+        defaultMessage: `"Thank You" from Ukrainian Community in Canada to the people of Poland`,
     },
     content_embassy: {
         id: `${scope}.content_embassy`,
@@ -47,4 +47,17 @@ export default defineMessages({
         id: `${scope}.summerCampContent`,
         defaultMessage: "We are organizing a summer camp for children from Ukraine who are displaced by the war in Ukraine. This is a great opportunity to help them improve their mental health and distract themselves from the terrible events in Ukraine.",
     },
+    date_fundraizer: {
+        id: `${scope}.date_fundraizer`,
+        defaultMessage: `June 4, 2022`
+    },
+    fundraizerText: {
+        id: `${scope}.fundraizerText`,
+        defaultMessage: 'Today we were doing a fundraizer for the "Sunflower" Summer Camp for displaced children from Ukraine. Thank you everyone who helped us to organize such event. Special thanks for coffee to Duke Fine Food, Buzzing Carnaval and many volunteers!'
+    },
+    fundraizerTitle: {
+        id: `${scope}.fundraizerTitle`,
+        defaultMessage: 'Ukrainian Canadian Social Services Ottawa Branch organized a fundraiser for the summer camp'
+    },
+
 });

@@ -44,12 +44,12 @@ function Camp(props: any) {
                   alt="Lake on the camp"
                 />
                 <div className="p-6">
-                    <h1 className="title-font text-3xl font-medium text-gray-600 mb-3">
-                      {formatMessage({ ...messages.title })}
-                    </h1>
-                    <p className="leading-relaxed mb-3">
-                      {formatMessage({ ...messages.content })}
-                    </p>
+                  <h1 className="title-font text-3xl font-medium text-gray-600 mb-3">
+                    {formatMessage({ ...messages.title })}
+                  </h1>
+                  <p className="leading-relaxed mb-3">
+                    {formatMessage({ ...messages.content })}
+                  </p>
                   <div className="rounded-xl mt-5 text-blue-400">
                     <h2>{formatMessage({ ...messages.campDetails })}</h2>
                   </div>
@@ -113,10 +113,7 @@ function Camp(props: any) {
                       {formatMessage({ ...messages.cost })}
                     </h3>
                     <p className="leading-relaxed mt-3">
-                      <FormattedMessage
-                        {...messages.costContent}
-                        values={{ tag: <br /> }}
-                      />
+                      <FormattedMessage {...messages.costContent} />
                     </p>
                   </div>
 
