@@ -56,7 +56,7 @@ function Camp(props: any) {
                   <div className="rounded-xl mt-5 text-blue-400">
                     <h2>{formatMessage({ ...messages.campDetails })}</h2>
                   </div>
-                  <div className="mt-5 before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-pink-500 ">
+                  {/* <div className="mt-5 before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-pink-500 ">
                     <h3 className="text-gray-500">
                       {formatMessage({ ...messages.who })}
                     </h3>
@@ -73,7 +73,7 @@ function Camp(props: any) {
                         }}
                       />
                     </p>
-                  </div>
+                  </div> */}
 
                   <div className="mt-3">
                     <h3 className="text-gray-500">
@@ -254,14 +254,14 @@ function Camp(props: any) {
                     </p>
                   </div>
 
-                  <div className="mt-3">
+                  {/* <div className="mt-3">
                     <h3 className="text-gray-500 text-xl">
                       {formatMessage({ ...messages.volunteers })}
                     </h3>
                     <p className="leading-relaxed mt-3">
                       {formatMessage({ ...messages.volunteersContent })}
                     </p>
-                  </div>
+                  </div> */}
 
                   <div className="mt-3">
                     <h3 className="text-gray-500 text-xl">
