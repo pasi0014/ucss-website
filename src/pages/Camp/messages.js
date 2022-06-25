@@ -3,6 +3,10 @@ import { defineMessages } from "@formatjs/intl";
 const scope = "app.pages.Camp";
 
 export default defineMessages({
+    warning: {
+        id: `${scope}.warning`,
+        defaultMessage: 'Registration is closed. All spaces at Sunflower Summer Camp are curerntly filled.'
+    },
     title: {
         id: `${scope}.title`,
         defaultMessage: "Sunflower Summer Camp",
