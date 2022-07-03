@@ -8,6 +8,7 @@ import embassyMain from "../../assets/images/poland-embassy-1.jpg";
 import oselyaPic from "../../assets/images/oselya-pic.jpg";
 import localBenefit from "../../assets/images/local-concert.jpg";
 import fundraiserMain from "../../assets/images/fundraized-event-1.jpg";
+import groupPhoto from "../../assets/images/group-photo.jpeg";
 
 import messages from "./messages";
 
@@ -143,6 +144,35 @@ function Reviews(props: any) {
               </div>
             </div>
 
+            {/* Lions club event */}
+            <div className="p-4 md:w-5/12">
+              <div className="h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
+                <img
+                  className="transform lg:h-48 md:h-36 w-full object-cover object-center scale-110 transition-all duration-700 hover:scale-100"
+                  src={groupPhoto}
+                  alt="Fundraizer event at Buzzing Carnaval"
+                />
+                <div className="p-6">
+                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                    {formatMessage({ ...messages.date_lions })}
+                  </h2>
+                  <h1 className="title-font text-lg font-medium text-gray-600 mb-3">
+                    {formatMessage({ ...messages.lionsTitle })}
+                  </h1>
+                  <p className="leading-relaxed mb-3">
+                    {formatMessage({ ...messages.lionsTextBlurb })}
+                  </p>
+                  <div>
+
+                  </div>
+                  <Link to="/news/continental-marathon">
+                    <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 hover:scale-105 drop-shadow-md  shadow-cla-blue px-4 py-1 rounded-lg">
+                      {formatMessage({ ...messages.readMore })}
+                    </button>
+                  </Link>
+                </div>
+              </div>
+            </div>
           {/* Local Benefit Concert  */}
             <div className="p-4 md:w-5/12">
               <div className="h-full rounded-xl cursor-pointer shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden" onClick={() => window.open('https://ottawa.ctvnews.ca/video?cid=sm%3Atrueanthem%3Actvottawa%3Atwitterpost&clipId=2437050&taid=62770f1241582d0001992ce5&utm_campaign=trueAnthem%3A%20Trending%20Content&utm_medium=trueAnthem&utm_source=twitter')}>

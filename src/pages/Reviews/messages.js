@@ -59,5 +59,16 @@ export default defineMessages({
         id: `${scope}.fundraizerTitle`,
         defaultMessage: 'Ukrainian Canadian Social Services Ottawa Branch organized a fundraiser for the summer camp'
     },
-
+    date_lions: {
+        id: `${scope}.date_lions`,
+        defaultMessage: 'June 23, 2022',
+    },
+    lionsTextBlurb: {
+        id: `${scope}.lionsTextBlurb`,
+        defaultMessage: `The Marathon from Chicago to Montreal, Via: London Ontario, Hamilton, Toronto, Kingston, and Ottawa. This is a jubilee - the 10th Anniversary of the Freedom Charity Run. All funds, raised this year, will be donated to help children who have suffered because of Russia's aggression against Ukraine. The event was well supported by the representatives of the embassies of Poland, Germany, Lithuania, Ukraine as well as the mayor’s office of the City of Ottawa...`,
+    },
+    lionsTitle: {
+        id: `${scope}.lionsTitle`,
+        defaultMessage: 'UCSS (Ukrainian Canadian Social Services), Ottawa branch have been invited to participate in the Continental Run Marathon organized by the prestigious Lions Club.'
+    }
 });

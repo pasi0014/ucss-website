@@ -18,6 +18,7 @@ import "./App.css";
 import Reviews from "./pages/Reviews";
 import Camp from "./pages/Camp";
 import Failure from "./pages/Failure";
+import Marathon from "./pages/Marathon";
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
                   <Route path="/" exact component={Home} />
                   <Route path="/home" exact component={Home} />
                   <Route path="/news" exact component={Reviews} />
+                  <Route path="/news/continental-marathon" exact component={Marathon} />
                   <Route path="/camp" exact component={Camp} />
                   <Route path="/donate" exact component={Donate} />
                   <Route path="/donate/success" exact component={Success} />
