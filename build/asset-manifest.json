@@ -1,21 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.33304614.chunk.css",
-    "main.js": "/static/js/main.b3623905.chunk.js",
-    "main.js.map": "/static/js/main.b3623905.chunk.js.map",
+    "main.css": "/static/css/main.39e858b2.chunk.css",
+    "main.js": "/static/js/main.d00b6884.chunk.js",
+    "main.js.map": "/static/js/main.d00b6884.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.bf8f77c6.js",
     "runtime-main.js.map": "/static/js/runtime-main.bf8f77c6.js.map",
-    "static/js/2.704d02e1.chunk.js": "/static/js/2.704d02e1.chunk.js",
-    "static/js/2.704d02e1.chunk.js.map": "/static/js/2.704d02e1.chunk.js.map",
+    "static/js/2.60aca0b1.chunk.js": "/static/js/2.60aca0b1.chunk.js",
+    "static/js/2.60aca0b1.chunk.js.map": "/static/js/2.60aca0b1.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.33304614.chunk.css.map": "/static/css/main.33304614.chunk.css.map",
-    "static/js/2.704d02e1.chunk.js.LICENSE.txt": "/static/js/2.704d02e1.chunk.js.LICENSE.txt",
+    "static/css/main.39e858b2.chunk.css.map": "/static/css/main.39e858b2.chunk.css.map",
+    "static/js/2.60aca0b1.chunk.js.LICENSE.txt": "/static/js/2.60aca0b1.chunk.js.LICENSE.txt",
     "static/media/aboutImg.70d1740f.jpg": "/static/media/aboutImg.70d1740f.jpg",
     "static/media/bazar-main.bbea257e.jpg": "/static/media/bazar-main.bbea257e.jpg",
     "static/media/camp.556a0f13.png": "/static/media/camp.556a0f13.png",
     "static/media/child_support.ee409c26.jpg": "/static/media/child_support.ee409c26.jpg",
+    "static/media/embassadors.2ae30c25.jpeg": "/static/media/embassadors.2ae30c25.jpeg",
     "static/media/fundraized-event-1.6f2ce88d.jpg": "/static/media/fundraized-event-1.6f2ce88d.jpg",
+    "static/media/group-photo.9f87cf88.jpeg": "/static/media/group-photo.9f87cf88.jpeg",
     "static/media/interac.ffd3542f.svg": "/static/media/interac.ffd3542f.svg",
+    "static/media/lions-club.f98ff014.jpeg": "/static/media/lions-club.f98ff014.jpeg",
+    "static/media/lions-marathon.6a37d0a7.jpeg": "/static/media/lions-marathon.6a37d0a7.jpeg",
     "static/media/local-concert.05e48ee0.jpg": "/static/media/local-concert.05e48ee0.jpg",
     "static/media/logo.20270243.png": "/static/media/logo.20270243.png",
     "static/media/medicine_1.3c9f04a7.jpg": "/static/media/medicine_1.3c9f04a7.jpg",
@@ -24,12 +28,17 @@
     "static/media/oselya-pic.8ca2b916.jpg": "/static/media/oselya-pic.8ca2b916.jpg",
     "static/media/index.css": "/static/media/ottawa.383ddf98.jpg",
     "static/media/poland-embassy-1.0eb61ae8.jpg": "/static/media/poland-embassy-1.0eb61ae8.jpg",
-    "static/media/received_help.07086d92.jpg": "/static/media/received_help.07086d92.jpg"
+    "static/media/polish-embassador.bb649088.jpeg": "/static/media/polish-embassador.bb649088.jpeg",
+    "static/media/received_help.07086d92.jpg": "/static/media/received_help.07086d92.jpg",
+    "static/media/ucss.893fe5fa.jpeg": "/static/media/ucss.893fe5fa.jpeg",
+    "static/media/ukraine-embassador.08728870.jpeg": "/static/media/ukraine-embassador.08728870.jpeg",
+    "static/media/war-memorial-1.10904700.jpeg": "/static/media/war-memorial-1.10904700.jpeg",
+    "static/media/war-memorial-2.8ca25461.jpeg": "/static/media/war-memorial-2.8ca25461.jpeg"
   },
   "entrypoints": [
     "static/js/runtime-main.bf8f77c6.js",
-    "static/js/2.704d02e1.chunk.js",
-    "static/css/main.33304614.chunk.css",
-    "static/js/main.b3623905.chunk.js"
+    "static/js/2.60aca0b1.chunk.js",
+    "static/css/main.39e858b2.chunk.css",
+    "static/js/main.d00b6884.chunk.js"
   ]
 }
