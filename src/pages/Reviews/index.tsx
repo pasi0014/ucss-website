@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { injectIntl } from "react-intl";
 import { Link } from "react-router-dom";
@@ -14,6 +14,11 @@ import messages from "./messages";
 
 function Reviews(props: any) {
   const { formatMessage } = props.intl;
+
+  useEffect(() => {
+    window.scrollTo({ top: 500, behavior: "smooth" });
+  }, []);
+
   return (
     <React.Fragment>
       <Helmet>
@@ -162,9 +167,6 @@ function Reviews(props: any) {
                   <p className="leading-relaxed mb-3">
                     {formatMessage({ ...messages.lionsTextBlurb })}
                   </p>
-                  <div>
-
-                  </div>
                   <Link to="/news/continental-marathon">
                     <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 hover:scale-105 drop-shadow-md  shadow-cla-blue px-4 py-1 rounded-lg">
                       {formatMessage({ ...messages.readMore })}
@@ -173,9 +175,16 @@ function Reviews(props: any) {
                 </div>
               </div>
             </div>
-          {/* Local Benefit Concert  */}
+            {/* Local Benefit Concert  */}
             <div className="p-4 md:w-5/12">
-              <div className="h-full rounded-xl cursor-pointer shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden" onClick={() => window.open('https://ottawa.ctvnews.ca/video?cid=sm%3Atrueanthem%3Actvottawa%3Atwitterpost&clipId=2437050&taid=62770f1241582d0001992ce5&utm_campaign=trueAnthem%3A%20Trending%20Content&utm_medium=trueAnthem&utm_source=twitter')}>
+              <div
+                className="h-full rounded-xl cursor-pointer shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden"
+                onClick={() =>
+                  window.open(
+                    "https://ottawa.ctvnews.ca/video?cid=sm%3Atrueanthem%3Actvottawa%3Atwitterpost&clipId=2437050&taid=62770f1241582d0001992ce5&utm_campaign=trueAnthem%3A%20Trending%20Content&utm_medium=trueAnthem&utm_source=twitter"
+                  )
+                }
+              >
                 <img
                   className="transform lg:h-48 md:h-36 w-full object-cover object-center scale-110 transition-all duration-700 hover:scale-100"
                   src={localBenefit}

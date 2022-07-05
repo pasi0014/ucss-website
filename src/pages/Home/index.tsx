@@ -4,15 +4,13 @@ import { useIntl } from "react-intl";
 import { Context } from "../../components/Wrappper/index";
 import { Link } from "react-router-dom";
 import aboutImage from "../../assets/images/aboutImg.jpg";
-// import paskaAd from "../../assets/images/paska-ad.jpg";
-// TODO: enable this when we have a camp text
-import oselyaPic from "../../assets/images/oselya-pic.jpg";
+// import oselyaPic from "../../assets/images/oselya-pic.jpg";
 import campPic from "../../assets/images/camp.png";
+import groupPhoto from "../../assets/images/group-photo.jpeg";
 
 import messages from "./messages";
 import ContactInfo from "../../components/ContactInfo";
 import ControlledCarousel from "../../components/ControlledCarousel";
-// import Events from "../../components/Events";
 
 const Home = () => {
   const context = useContext(Context);
@@ -77,9 +75,6 @@ const Home = () => {
               </div>
             </div>
 
-            {/* TODO: Enable when we have a new events */}
-            {/* <Events /> */}
-
             {/* TODO: To be enabled when we have text for camp ad */}
             <div className="w-full mb-3 shadow-md">
               <div className="h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
@@ -106,44 +101,90 @@ const Home = () => {
                 </div>
               </div>
             </div>
-
-            <div className="flex flex-col md:flex-row md:space-x-2 justify-center rounded-xl">
-              <div className="w-full mx-auto bg-blue-300 rounded-xl shadow-md sm:p-10">
-                <h2 className="text-center py-5 text-yellow-200">
-                  {formatMessage({ ...messages.donationWeReceived })}
-                </h2>
-                <ControlledCarousel />
-              </div>
-
-              {/* <div className="w-full bg-yellow-400 shadow-sm rounded-lg mt-1">
-              <h1 className="text-2xl text-center font-medium mb-2 p-10">
-                Recent Headlines
-              </h1>
-              <p className="p-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
-                ipsa neque ea quia? Accusantium molestiae quo excepturi quod
-                esse perspiciatis, corrupti officiis amet sunt asperiores beatae
-                est blanditiis in perferendis.
-              </p>
-            </div>
-
-            <div className="w-full bg-green-300 shadow-sm rounded-lg mt-1">
-              <h1 className="text-2xl text-center font-medium mb-2 p-10">
-                Recent Headlines
-              </h1>
-              <p className="p-4">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis
-                cum iste corrupti amet officia. Corrupti aperiam laborum animi
-                ullam totam molestias doloribus expedita, modi exercitationem
-                quis laboriosam quae, enim dolor!
-              </p>
-            </div> */}
-            </div>
           </div>
 
           <div className="flex flex-col w-full h-full lg:w-5/12">
             <ContactInfo />
           </div>
+        </div>
+
+        <div className="container">
+          {/* Latest News */}
+          <div className="mt-5 mb-5 p-3">
+            <h2 className="text-center mb-4 text-4xl">{formatMessage({...messages.recentNewsTitle})}</h2>
+            <div className="flex flex-col md:flex-row md:space-x-2 justify-center rounded-xl">
+              {/* Lions club event */}
+              <div className="md:w-8/12 shadow-md">
+                <div className="h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
+                  <img
+                    className="transform lg:h-48 md:h-36 w-full object-cover object-center scale-110 transition-all duration-700 hover:scale-100"
+                    src={groupPhoto}
+                    alt="Members of UCSS and Lions Club"
+                  />
+                  <div className="p-6">
+                    <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                      {formatMessage({ ...messages.date_lions })}
+                    </h2>
+                    <h3 className="title-font text-lg font-bold text-gray-600 mb-3">
+                      {formatMessage({ ...messages.lionsTitle })}
+                    </h3>
+                    <p className="leading-relaxed mb-3">
+                      {formatMessage({ ...messages.lionsTextBlurb })}
+                    </p>
+                    <Link to="/news/continental-marathon">
+                      <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 text-white font-medium px-4 py-1 rounded-lg">
+                        {formatMessage({ ...messages.readMore })}
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
+              {/* Gratidute from hospital */}
+              {/* <div className="md:w-11/12 shadow-md">
+                <div className="h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
+                  <img
+                    className="transform lg:h-48 md:h-36 w-full object-cover object-center scale-110 transition-all duration-700 hover:scale-100"
+                    src="https://scontent-yyz1-1.xx.fbcdn.net/v/t39.30808-6/278893210_2825694661068056_3343143635443493953_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=5cd70e&_nc_ohc=k2hUe9xvK2kAX-6_sWS&_nc_ht=scontent-yyz1-1.xx&oh=00_AT_cCguWxyWEuifxEL_Sg5vJyjNRcxa4XOyFGRLSbFobvw&oe=62C7F102"
+                    alt="Members of UCSS and Lions Club"
+                  />
+                  <div className="p-6">
+                    <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                      {formatMessage({ ...messages.date_lions })}
+                    </h2>
+                    <h3 className="title-font text-lg font-bold text-gray-600 mb-3">
+                      {formatMessage({ ...messages.hospitalGratiduteTitle })}
+                    </h3>
+                    <p className="leading-relaxed mb-3">
+                      {formatMessage({ ...messages.hospitalGratiduteTextBlurb })}
+                    </p>
+                    <Link to="/news/gratidute-from-hospital">
+                      <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 text-white font-medium px-4 py-1 rounded-lg">
+                        {formatMessage({ ...messages.readMore })}
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+              </div> */}
+            </div>
+            <div className="mx-auto text-center mt-5 mb-5 sm:w-5/12 w-full">
+              <Link to="/news">
+                <button className="sm:w-8/12 w-full bg-blue-500 p-3 rounded-xl text-white font-medium transition-all hover:bg-blue-400 hover:shadow-md duration-300">
+                  {formatMessage({...messages.loadMore})}
+                </button>
+              </Link>
+            </div>
+          </div>
+
+          <div className="flex flex-col md:flex-row md:space-x-2 justify-center rounded-xl sm:w-8/12 w-full mx-auto mb-5">
+            <div className="w-full mx-auto bg-blue-300 rounded-xl shadow-md sm:p-10">
+              <h2 className="text-center py-5 text-yellow-200">
+                {formatMessage({ ...messages.donationWeReceived })}
+              </h2>
+              <ControlledCarousel />
+            </div>
+          </div>
+
         </div>
       </main>
     </React.Fragment>

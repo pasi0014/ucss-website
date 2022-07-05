@@ -245,14 +245,14 @@ function Camp(props: any) {
                     </p>
                   </div> */}
 
-                  <div className="mt-3">
+                  {/* <div className="mt-3">
                     <h3 className="text-blue-400">
                       {formatMessage({ ...messages.callForVolunteers })}
                     </h3>
                     <p className="leading-relaxed mt-3">
                       {formatMessage({ ...messages.callForVolunteersContent })}
                     </p>
-                  </div>
+                  </div> */}
 
                   {/* <div className="mt-3">
                     <h3 className="text-gray-500 text-xl">
@@ -263,16 +263,16 @@ function Camp(props: any) {
                     </p>
                   </div> */}
 
-                  <div className="mt-3">
+                  {/* <div className="mt-3">
                     <h3 className="text-gray-500 text-xl">
                       {formatMessage({ ...messages.duties })}
                     </h3>
                     <p className="leading-relaxed mt-3">
                       {formatMessage({ ...messages.dutiesContent })}
                     </p>
-                  </div>
+                  </div> */}
 
-                  <div className="mt-3">
+                  {/* <div className="mt-3">
                     <h3 className="text-gray-500 text-xl">
                       {formatMessage({ ...messages.becomeAVolunteer })}
                     </h3>
@@ -294,18 +294,18 @@ function Camp(props: any) {
                     <p className="leading-relaxed mt-3">
                       {formatMessage({ ...messages.becomeAVolunteerNote })}
                     </p>
-                  </div>
+                  </div> */}
 
-                  <div className="mt-3">
+                  {/* <div className="mt-3">
                     <h3 className="text-gray-500 text-xl">
                       {formatMessage({ ...messages.volunteerCounselor })}
                     </h3>
                     <p className="leading-relaxed mt-3">
                       {formatMessage({ ...messages.volunteerCounselorContent })}
                     </p>
-                  </div>
+                  </div> */}
 
-                  <div className="mt-3">
+                  {/* <div className="mt-3">
                     <h3 className="text-gray-500 text-xl">
                       {formatMessage({ ...messages.positionRequirements })}
                     </h3>
@@ -348,9 +348,9 @@ function Camp(props: any) {
                         </li>
                       </ul>
                     </p>
-                  </div>
+                  </div> */}
 
-                  <div className="mt-3">
+                  {/* <div className="mt-3">
                     <h3 className="text-gray-500 text-xl">
                       {formatMessage({ ...messages.apply })}
                     </h3>
@@ -369,7 +369,7 @@ function Camp(props: any) {
                         }}
                       />
                     </p>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

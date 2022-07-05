@@ -19,12 +19,13 @@ import Reviews from "./pages/Reviews";
 import Camp from "./pages/Camp";
 import Failure from "./pages/Failure";
 import Marathon from "./pages/Marathon";
+import GratiduteFromHospital from "./pages/GratiduteFromHospital";
 
 function App() {
   return (
     <Router>
       <Helmet>
-        <title>Ukrainian Social Services Ottawa</title>
+        <title>Ukrainian Canadian Social Services Ottawa branch</title>
         <meta
           name="description"
           content="Ukrainian Canadian Social Services - Ottawa Branch is a non-profit charitable organization serving the Ukrainian community in Ottawa. Guided by the needs of individuals and families of Ukrainian community, who experience language and cultural barriers. We provide a range of support services."
@@ -46,6 +47,7 @@ function App() {
                   <Route path="/home" exact component={Home} />
                   <Route path="/news" exact component={Reviews} />
                   <Route path="/news/continental-marathon" exact component={Marathon} />
+                  <Route path="/news/gratidute-from-hospital" exact component={GratiduteFromHospital} />
                   <Route path="/camp" exact component={Camp} />
                   <Route path="/donate" exact component={Donate} />
                   <Route path="/donate/success" exact component={Success} />
