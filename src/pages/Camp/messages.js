@@ -5,7 +5,11 @@ const scope = "app.pages.Camp";
 export default defineMessages({
     warning: {
         id: `${scope}.warning`,
-        defaultMessage: 'Registration is closed. All spaces at Sunflower Summer Camp are curerntly filled.'
+        defaultMessage: `Registration is closed. All spaces at Sunflower Summer Camp are curerntly filled.`
+    },
+    warning_1: {
+        id: `${scope}.warning_1`,
+        defaultMessage: `You can still send us an email at {email} and you will be placed at the waiting list.`
     },
     title: {
         id: `${scope}.title`,

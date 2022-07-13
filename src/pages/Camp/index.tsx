@@ -39,7 +39,21 @@ function Camp(props: any) {
             <div className="p-4 md:w-12/12">
               <div className="h-full rounded-xl shadow-cla-blue bg-gradient-to-r from-indigo-50 to-blue-50 overflow-hidden">
                 <div className="w-full rounded-lg shadow-md bg-orange-200 p-5 text-center flex flex-col">
-                  <span className="text-xl font-medium text-orange-700">{formatMessage({ ...messages.warning })}</span>
+                  <span className="text-xl font-medium text-orange-700">
+                    {formatMessage({ ...messages.warning })}
+                  </span>
+                  <span className="text-xl font-medium text-orange-700">
+                    {formatMessage(
+                      { ...messages.warning_1 },
+                      {
+                        email: (
+                          <a href="mailto:camp@ucssottawa.com">
+                            camp@ucssottawa.com
+                          </a>
+                        ),
+                      }
+                    )}
+                  </span>
                 </div>
                 <img
                   className="sm:block hidden transform w-full object-cover object-center scale-90"
@@ -221,7 +235,7 @@ function Camp(props: any) {
                       />
                     </p>
                   </div>
-                  
+
                   {/* Registration Info */}
                   {/* <div className="mt-3">
                     <h3 className="text-blue-400">
