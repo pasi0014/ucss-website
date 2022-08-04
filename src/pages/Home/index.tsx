@@ -108,11 +108,60 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="container">
+        <div className="container space-x-5">
           {/* Latest News */}
           <div className="mt-5 mb-5 p-3">
-            <h2 className="text-center mb-4 text-4xl">{formatMessage({...messages.recentNewsTitle})}</h2>
+            <h2 className="text-center mb-4 text-4xl">
+              {formatMessage({ ...messages.recentNewsTitle })}
+            </h2>
             <div className="flex flex-col md:flex-row md:space-x-2 justify-center rounded-xl">
+              {/* Camp report */}
+              <div className="md:w-8/12 shadow-md">
+                <div className="h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
+                  <img
+                    className="transform lg:h-48 md:h-36 w-full object-cover object-center scale-110 transition-all duration-700 hover:scale-100"
+                    src="https://smartcdn.gprod.postmedia.digital/ottawacitizen/wp-content/uploads/2022/08/ukrainian-camp1_271763994-w.jpg?quality=90&strip=all&w=1128&h=846&type=webp"
+                    alt="Children sitting in front of the fireplace"
+                  />
+                  <div className="p-6">
+                    <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                      August 2, 2022
+                    </h2>
+                    <h3 className="title-font text-lg font-bold text-gray-600 mb-2">
+                      'An unbelievable experience': Community support bolsters
+                      Outaouais summer camp for displaced Ukrainian children
+                    </h3>
+                    <p className="leading-relaxed mb-3">
+                      {/* {formatMessage({ ...messages.lionsTextBlurb })} */}
+                      <span className="italic font-medium leading-relaxed">
+                        Michael Ryndzak hopes to provide the same experience to
+                        other children affected by the war after seeing how the
+                        camp shaped the children who celebrated what they had
+                        despite what they had lost.
+                      </span>
+                      <p className="mt-2">
+                        A group of Ukrainian children displaced by war were able
+                        to play, sing and dance at a local summer camp thanks to
+                        contributions from the Ottawa community, its organizer
+                        said. Michael Ryndzak, who in May issued a plea for
+                        support to help repair and maintain an aging summer camp
+                        in the Outaouais hills which has served local
+                        Ukrainians...
+                      </p>
+                    </p>
+                    <a
+                      href="https://ottawacitizen.com/news/local-news/an-unbelievable-experience-community-support-bolsters-outaouais-summer-camp-for-displaced-ukrainian-children?fbclid=IwAR261wEFwDaNGvZKRfSy8INfY5uS99JZMmBRFKBQq7BRMPCtoKCJzIbdCTU"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 text-white font-medium px-4 py-1 rounded-lg">
+                        {formatMessage({ ...messages.readMore })}
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
               {/* Lions club event */}
               <div className="md:w-8/12 shadow-md">
                 <div className="h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
@@ -141,7 +190,7 @@ const Home = () => {
               </div>
 
               {/* Gratidute from hospital */}
-              {/* <div className="md:w-11/12 shadow-md">
+              {/* <div className="md:w-8/12 shadow-md">
                 <div className="h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
                   <img
                     className="transform lg:h-48 md:h-36 w-full object-cover object-center scale-110 transition-all duration-700 hover:scale-100"
@@ -156,7 +205,9 @@ const Home = () => {
                       {formatMessage({ ...messages.hospitalGratiduteTitle })}
                     </h3>
                     <p className="leading-relaxed mb-3">
-                      {formatMessage({ ...messages.hospitalGratiduteTextBlurb })}
+                      {formatMessage({
+                        ...messages.hospitalGratiduteTextBlurb,
+                      })}
                     </p>
                     <Link to="/news/gratidute-from-hospital">
                       <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 text-white font-medium px-4 py-1 rounded-lg">
@@ -170,7 +221,7 @@ const Home = () => {
             <div className="mx-auto text-center mt-5 mb-5 sm:w-5/12 w-full">
               <Link to="/news">
                 <button className="sm:w-8/12 w-full bg-blue-500 p-3 rounded-xl text-white font-medium transition-all hover:bg-blue-400 hover:shadow-md duration-300">
-                  {formatMessage({...messages.loadMore})}
+                  {formatMessage({ ...messages.loadMore })}
                 </button>
               </Link>
             </div>
@@ -184,7 +235,6 @@ const Home = () => {
               <ControlledCarousel />
             </div>
           </div>
-
         </div>
       </main>
     </React.Fragment>

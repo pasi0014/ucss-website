@@ -40,6 +40,52 @@ function Reviews(props: any) {
             <h1>{formatMessage({ ...messages.title })}</h1>
           </div>
           <div className="flex flex-wrap -m-4 justify-center">
+            {/* Camp report */}
+            <div className="md:w-5/12 p-4">
+              <div className="h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
+                <img
+                  className="transform lg:h-48 md:h-36 w-full object-cover object-center scale-110 transition-all duration-700 hover:scale-100"
+                  src="https://smartcdn.gprod.postmedia.digital/ottawacitizen/wp-content/uploads/2022/08/ukrainian-camp1_271763994-w.jpg?quality=90&strip=all&w=1128&h=846&type=webp"
+                  alt="Members of UCSS and Lions Club"
+                />
+                <div className="p-6">
+                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                    August 2, 2022
+                  </h2>
+                  <h3 className="title-font text-lg font-bold text-gray-600 mb-2">
+                    'An unbelievable experience': Community support bolsters
+                    Outaouais summer camp for displaced Ukrainian children
+                  </h3>
+                  <p className="leading-relaxed mb-3">
+                    {/* {formatMessage({ ...messages.lionsTextBlurb })} */}
+                    <span className="italic font-medium leading-relaxed">
+                      Michael Ryndzak hopes to provide the same experience to
+                      other children affected by the war after seeing how the
+                      camp shaped the children who celebrated what they had
+                      despite what they had lost.
+                    </span>
+                    <p className="mt-2">
+                      A group of Ukrainian children displaced by war were able
+                      to play, sing and dance at a local summer camp thanks to
+                      contributions from the Ottawa community, its organizer
+                      said. Michael Ryndzak, who in May issued a plea for
+                      support to help repair and maintain an aging summer camp
+                      in the Outaouais hills which has served local
+                      Ukrainians...
+                    </p>
+                  </p>
+                  <a
+                    href="https://ottawacitizen.com/news/local-news/an-unbelievable-experience-community-support-bolsters-outaouais-summer-camp-for-displaced-ukrainian-children?fbclid=IwAR261wEFwDaNGvZKRfSy8INfY5uS99JZMmBRFKBQq7BRMPCtoKCJzIbdCTU"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 text-white font-medium px-4 py-1 rounded-lg">
+                      {formatMessage({ ...messages.readMore })}
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
             {/* Bazar */}
             <div className="p-4 md:w-5/12">
               <div className="h-full rounded-xl shadow-cla-blue bg-gradient-to-r from-indigo-50 to-blue-50 overflow-hidden">
