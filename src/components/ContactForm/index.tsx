@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { send } from "emailjs-com";
 import validator from "validator";
 import LoadingOverlay from "react-loading-overlay-ts";
-import { injectIntl, useIntl } from "react-intl";
+import { injectIntl } from "react-intl";
 import messages from "./messages";
 import { Helmet } from "react-helmet";
 
@@ -12,7 +12,9 @@ interface IValidationErrors {
   messageError: string;
 }
 
-export const ContactForm = () => {
+export const ContactForm = (props: any) => {
+  const { scrollFlag, intl } = props;
+  
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [success, setSuccess] = useState<boolean>(false);
   const [requestError, setRequestError] = useState<boolean>(false);
@@ -25,7 +27,13 @@ export const ContactForm = () => {
     reply_to: "",
   });
 
-  const intl = useIntl();
+
+
+  useEffect(() => {
+    if (!scrollFlag) {
+      window.scrollTo({ top: 500, behavior: "smooth" });
+    }
+  }, [scrollFlag]);
 
   useEffect(() => {
     if (success) {
@@ -115,7 +123,7 @@ export const ContactForm = () => {
           content="contact ucss ottawa, ukrainian charitable organization, ukrainian social services contact"
         />
       </Helmet>
-      <section className="text-gray-600 body-font relative bg-gray-200">
+      <section className="text-gray-600 body-font font-montserrat relative bg-gray-200">
         <LoadingOverlay active={isLoading} spinner text="Loading...">
           <div className="container px-5 py-24 lg:w-8/12 mx-auto rounded-lg shadow-lg bg-white">
             <div className="flex flex-col text-center w-full mb-12 border-red-300">

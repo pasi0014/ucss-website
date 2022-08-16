@@ -55,7 +55,7 @@ export const Donate = () => {
           content="donate camp, ukrainian charitable organization, ucss camp"
         />
       </Helmet>
-      <section className="text-gray-400 bg-yellow-100 body-font">
+      <section className="text-gray-400 bg-yellow-100 body-font font-montserrat">
         <div className="mx-auto text-center border-red-600 bg-red-400 p-5 rounded-lg">
           <h1 className="sm:text-3xl text-2xl font-semibold title-font text-gray-800 mb-4">
             {formatMessage({ ...messages.title })}
@@ -74,7 +74,7 @@ export const Donate = () => {
           <div className="flex mt-6 justify-center"></div>
         </div>
 
-        <div className="container mt-20 mx-auto shadow-md bg-orange-300 h-full rounded-lg px-5 py-24 text-gray-600 text-xl text-center leading-loose">
+        {/* <div className="container mt-20 mx-auto shadow-md bg-orange-300 h-full rounded-lg px-5 py-24 text-gray-600 text-xl text-center leading-loose">
           <p className="p-10">
             {formatMessage({ ...messages.campAd_1 })}
             <Link to="/camp">
@@ -94,7 +94,7 @@ export const Donate = () => {
           >
             {formatMessage({ ...messages.donateNow })}
           </button>
-        </div>
+        </div> */}
 
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-wrap justify-center sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6 bg-blue-400 rounded-lg p-5">

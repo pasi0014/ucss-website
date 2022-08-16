@@ -5,7 +5,7 @@ const scope = "app.components.ContactInfo";
 export default defineMessages({
     contactInfo: {
         id: `${scope}.contactInfo`,
-        defaultMessage: "Contact Information",
+        defaultMessage: "Our team",
     },
     presidentName: {
         id: `${scope}.presidentName`,

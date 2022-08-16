@@ -24,11 +24,11 @@ export default class NavbarLinks {
         link: "/donate",
         isActive: false,
       },
-      {
-        title: messages.camp,
-        link: "/camp",
-        isActive: false,
-      },
+      // {
+      //   title: messages.camp,
+      //   link: "/camp",
+      //   isActive: false,
+      // },
       {
         title: messages.reviews,
         link: "/news",

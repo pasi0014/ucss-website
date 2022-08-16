@@ -16,7 +16,7 @@ import Home from "./pages/Home/index";
 
 import "./App.css";
 import Reviews from "./pages/Reviews";
-import Camp from "./pages/Camp";
+// import Camp from "./pages/Camp";
 import Failure from "./pages/Failure";
 import Marathon from "./pages/Marathon";
 import GratiduteFromHospital from "./pages/GratiduteFromHospital";
@@ -48,7 +48,7 @@ function App() {
                   <Route path="/news" exact component={Reviews} />
                   <Route path="/news/continental-marathon" exact component={Marathon} />
                   <Route path="/news/gratidute-from-hospital" exact component={GratiduteFromHospital} />
-                  <Route path="/camp" exact component={Camp} />
+                  {/* <Route path="/camp" exact component={Camp} /> */}
                   <Route path="/donate" exact component={Donate} />
                   <Route path="/donate/success" exact component={Success} />
                   <Route path="/donate/failure" exact component={Failure} />

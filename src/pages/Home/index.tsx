@@ -1,19 +1,21 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Helmet } from "react-helmet";
-import { useIntl } from "react-intl";
-import { Context } from "../../components/Wrappper/index";
+import { injectIntl, useIntl } from "react-intl";
 import { Link } from "react-router-dom";
-import aboutImage from "../../assets/images/aboutImg.jpg";
-// import oselyaPic from "../../assets/images/oselya-pic.jpg";
-import campPic from "../../assets/images/camp.png";
+import about from "../../assets/images/about.JPG";
+// import campPic from "../../assets/images/IMG_3184.JPG";
 import groupPhoto from "../../assets/images/group-photo.jpeg";
 
 import messages from "./messages";
 import ContactInfo from "../../components/ContactInfo";
-import ControlledCarousel from "../../components/ControlledCarousel";
+// import ControlledCarousel from "../../components/ControlledCarousel";
+import ContactForm from "../../components/ContactForm";
+import WaitingList from "../../components/WaitingList";
+
+
+// TODO: add our vision and values to the website
 
 const Home = () => {
-  const context = useContext(Context);
   const { formatMessage } = useIntl();
 
   return (
@@ -31,29 +33,39 @@ const Home = () => {
           content="donate camp, ukrainian charitable organization, ucss camp, ucss ottawa news"
         />
       </Helmet>
-      <main className="flex-1 overflow-x-hidden overflow-y-auto bg-yellow-100">
-        <div className="lg:flex lg:mx-auto w-full lg:w-10/12 mb-4 mt-4 justify-center lg:space-x-3 p-3">
-          <div className="flex flex-col lg:w-10/12 sm:w-12/12">
-            <div className="lg:w-full bg-blue-300 shadow-sm rounded-lg text-gray-200 text-base mx-auto my-3 sm:p-12 md:p-2 lg:p-5">
-              <h1 className="font-medium text-center sm:text-3xl text-xl text-gray-700">
-                {formatMessage({ ...messages.aboutUsParagraphTitle })}
-              </h1>
-              <div className="md:flex mx-auto rounded-xl md:place-items-center sm:h-full">
-                <img
-                  className="sm:w-34 md:w-72 md:h-52 lg:w-4/12 lg:h-auto w-40 h-32 md:rounded-xl rounded-full mx-auto"
-                  src={aboutImage}
-                  alt="Flags waving in the wind"
-                />
-                <div className="text-left space-y-4">
-                  <blockquote className="bg-gray-100 border-l-6 border-yellow-300 rounded-lg lg:p-5">
-                    <p className="text-lg text-gray-600">
-                      {formatMessage({ ...messages.aboutUsParagraph })}
-                    </p>
-                  </blockquote>
-                </div>
-              </div>
-            </div>
+      <main className="font-montserrat flex-1 overflow-x-hidden overflow-y-auto bg-yellow-100">
+        {/* About Section */}
+        <div className="w-full bg-sky-300 md:p-24 p-10 flex lg:flex-row flex-col-reverse lg:space-x-7 justify-center">
+          <div className="flex flex-col w-full lg:w-4/12">
+            <h1 className="font-bold sm:text-4xl text-xl ">
+              {formatMessage({ ...messages.aboutUsParagraphTitle })}
+            </h1>
+            <hr className="border-4 border-orange-300 my-3 w-2/12" />
+            <p className="text-lg text-gray-700">
+              {formatMessage({ ...messages.aboutUsParagraph })}
+            </p>
+          </div>
+          <div className="flex flex-col w-full lg:w-5/12 mb-5 lg:mb-0">
+            <img
+              src={about}
+              alt="Kids drawing on paper"
+              className="rounded-xl shadow-md"
+            />
+          </div>
+        </div>
 
+      <div className="w-full">
+        <ContactInfo />
+      </div>
+
+        {/* Waiting List Feature */}
+        <div className="w-full shadow-md bg-gray-100">
+          <WaitingList />
+        </div>
+
+        {/* Main Content */}
+        {/* <div className="lg:flex lg:mx-auto w-full lg:w-10/12 mb-4 mt-4 justify-center lg:space-x-3 p-3">
+          <div className="flex flex-col lg:w-10/12 sm:w-12/12">
             <div className="lg:w-full w-full bg-gray-100 rounded-xl shadow-md mx-auto my-3 sm:p-16 py-5 lg:p-16">
               <h2 className="font-medium text-4xl mb-2 text-center w-full">
                 {formatMessage({ ...messages.howYouCanHelp })}
@@ -74,123 +86,93 @@ const Home = () => {
                 </a>
               </div>
             </div>
-
-            {/* TODO: To be enabled when we have text for camp ad */}
-            <div className="w-full mb-3 shadow-md">
-              <div className="h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
-                <img
-                  className="transform w-full object-cover object-center scale-90 transition-all duration-700 hover:scale-100"
-                  src={campPic}
-                  alt="Summer camp for displaced Ukrainian children"
-                />
-                <div className="p-6">
-                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                    {formatMessage({ ...messages.eventsTitle })}
-                  </h2>
-                  <h1 className="title-font text-lg font-medium text-gray-600 mb-3">
-                    {formatMessage({ ...messages.summerCampTitle })}
-                  </h1>
-                  <p className="leading-relaxed mb-3">
-                    {formatMessage({ ...messages.summerCampText })}
-                  </p>
-                  <Link to="/camp">
-                    <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 hover:scale-105 drop-shadow-md  shadow-cla-blue px-4 py-1 rounded-lg">
-                      {formatMessage({ ...messages.learnMore })}
-                    </button>
-                  </Link>
-                </div>
-              </div>
-            </div>
           </div>
+        </div> */}
 
-          <div className="flex flex-col w-full h-full lg:w-5/12">
-            <ContactInfo />
-          </div>
-        </div>
-
-        <div className="container space-x-5">
-          {/* Latest News */}
-          <div className="mt-5 mb-5 p-3">
-            <h2 className="text-center mb-4 text-4xl">
-              {formatMessage({ ...messages.recentNewsTitle })}
-            </h2>
-            <div className="flex flex-col md:flex-row md:space-x-2 justify-center rounded-xl">
-              {/* Camp report */}
-              <div className="md:w-8/12 shadow-md">
-                <div className="h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
-                  <img
-                    className="transform lg:h-48 md:h-36 w-full object-cover object-center scale-110 transition-all duration-700 hover:scale-100"
-                    src="https://smartcdn.gprod.postmedia.digital/ottawacitizen/wp-content/uploads/2022/08/ukrainian-camp1_271763994-w.jpg?quality=90&strip=all&w=1128&h=846&type=webp"
-                    alt="Children sitting in front of the fireplace"
-                  />
-                  <div className="p-6">
-                    <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                      August 2, 2022
-                    </h2>
-                    <h3 className="title-font text-lg font-bold text-gray-600 mb-2">
-                      'An unbelievable experience': Community support bolsters
-                      Outaouais summer camp for displaced Ukrainian children
-                    </h3>
-                    <p className="leading-relaxed mb-3">
-                      {/* {formatMessage({ ...messages.lionsTextBlurb })} */}
-                      <span className="italic font-medium leading-relaxed">
-                        Michael Ryndzak hopes to provide the same experience to
-                        other children affected by the war after seeing how the
-                        camp shaped the children who celebrated what they had
-                        despite what they had lost.
-                      </span>
-                      <p className="mt-2">
-                        A group of Ukrainian children displaced by war were able
-                        to play, sing and dance at a local summer camp thanks to
-                        contributions from the Ottawa community, its organizer
-                        said. Michael Ryndzak, who in May issued a plea for
-                        support to help repair and maintain an aging summer camp
-                        in the Outaouais hills which has served local
-                        Ukrainians...
+        <div className="bg-sky-200">
+          <div className="container">
+            {/* Latest News */}
+            <div className="p-3">
+              <h2 className="text-center mb-4 text-4xl p-5">
+                {formatMessage({ ...messages.recentNewsTitle })}
+              </h2>
+              <div className="flex flex-col md:flex-row  sm:space-y-0 space-y-16 lg:space-x-16 justify-center rounded-xl">
+                {/* Camp report */}
+                <div className="md:w-7/12 shadow-md">
+                  <div className="h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
+                    <img
+                      className="transform lg:h-80 md:h-36 w-full object-cover object-center scale-110 transition-all duration-700 hover:scale-100"
+                      src="https://smartcdn.gprod.postmedia.digital/ottawacitizen/wp-content/uploads/2022/08/ukrainian-camp1_271763994-w.jpg?quality=90&strip=all&w=1128&h=846&type=webp"
+                      alt="Children sitting in front of the fireplace"
+                    />
+                    <div className="p-6">
+                      <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-3 mt-3">
+                        August 2, 2022
+                      </h2>
+                      <h3 className="title-font text-lg font-bold text-gray-600 mb-2">
+                        'An unbelievable experience': Community support bolsters
+                        Outaouais summer camp for displaced Ukrainian children
+                      </h3>
+                      <p className="leading-relaxed mb-3">
+                        {/* {formatMessage({ ...messages.lionsTextBlurb })} */}
+                        <span className="italic font-medium leading-relaxed">
+                          Michael Ryndzak hopes to provide the same experience
+                          to other children affected by the war after seeing how
+                          the camp shaped the children who celebrated what they
+                          had despite what they had lost.
+                        </span>
+                        <p className="mt-2">
+                          A group of Ukrainian children displaced by war were
+                          able to play, sing and dance at a local summer camp
+                          thanks to contributions from the Ottawa community, its
+                          organizer said. Michael Ryndzak, who in May issued a
+                          plea for support to help repair and maintain an aging
+                          summer camp in the Outaouais hills which has served
+                          local Ukrainians...
+                        </p>
                       </p>
-                    </p>
-                    <a
-                      href="https://ottawacitizen.com/news/local-news/an-unbelievable-experience-community-support-bolsters-outaouais-summer-camp-for-displaced-ukrainian-children?fbclid=IwAR261wEFwDaNGvZKRfSy8INfY5uS99JZMmBRFKBQq7BRMPCtoKCJzIbdCTU"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 text-white font-medium px-4 py-1 rounded-lg">
-                        {formatMessage({ ...messages.readMore })}
-                      </button>
-                    </a>
+                      <a
+                        href="https://ottawacitizen.com/news/local-news/an-unbelievable-experience-community-support-bolsters-outaouais-summer-camp-for-displaced-ukrainian-children?fbclid=IwAR261wEFwDaNGvZKRfSy8INfY5uS99JZMmBRFKBQq7BRMPCtoKCJzIbdCTU"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 text-white font-medium px-4 py-1 rounded-lg">
+                          {formatMessage({ ...messages.readMore })}
+                        </button>
+                      </a>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              {/* Lions club event */}
-              <div className="md:w-8/12 shadow-md">
-                <div className="h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
-                  <img
-                    className="transform lg:h-48 md:h-36 w-full object-cover object-center scale-110 transition-all duration-700 hover:scale-100"
-                    src={groupPhoto}
-                    alt="Members of UCSS and Lions Club"
-                  />
-                  <div className="p-6">
-                    <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                      {formatMessage({ ...messages.date_lions })}
-                    </h2>
-                    <h3 className="title-font text-lg font-bold text-gray-600 mb-3">
-                      {formatMessage({ ...messages.lionsTitle })}
-                    </h3>
-                    <p className="leading-relaxed mb-3">
-                      {formatMessage({ ...messages.lionsTextBlurb })}
-                    </p>
-                    <Link to="/news/continental-marathon">
-                      <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 text-white font-medium px-4 py-1 rounded-lg">
-                        {formatMessage({ ...messages.readMore })}
-                      </button>
-                    </Link>
+                {/* Lions club event */}
+                <div className="md:w-7/12 shadow-md">
+                  <div className="h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
+                    <img
+                      className="transform lg:h-80 md:h-36 w-full object-cover object-center scale-110 transition-all duration-700 hover:scale-100"
+                      src={groupPhoto}
+                      alt="Members of UCSS and Lions Club"
+                    />
+                    <div className="p-6">
+                      <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-3 mt-3">
+                        {formatMessage({ ...messages.date_lions })}
+                      </h2>
+                      <h3 className="title-font text-lg font-bold text-gray-600 mb-3">
+                        {formatMessage({ ...messages.lionsTitle })}
+                      </h3>
+                      <p className="leading-relaxed mb-3">
+                        {formatMessage({ ...messages.lionsTextBlurb })}
+                      </p>
+                      <Link to="/news/continental-marathon">
+                        <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 text-white font-medium px-4 py-1 rounded-lg">
+                          {formatMessage({ ...messages.readMore })}
+                        </button>
+                      </Link>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              {/* Gratidute from hospital */}
-              {/* <div className="md:w-8/12 shadow-md">
+                {/* Gratidute from hospital */}
+                {/* <div className="md:w-8/12 shadow-md">
                 <div className="h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
                   <img
                     className="transform lg:h-48 md:h-36 w-full object-cover object-center scale-110 transition-all duration-700 hover:scale-100"
@@ -217,28 +199,34 @@ const Home = () => {
                   </div>
                 </div>
               </div> */}
+              </div>
+              <div className="mx-auto text-center mt-5 mb-5 sm:w-5/12 w-full">
+                <Link to="/news">
+                  <button className="sm:w-8/12 w-full bg-blue-500 p-3 rounded-xl text-white font-medium transition-all hover:bg-blue-400 hover:shadow-md duration-300">
+                    {formatMessage({ ...messages.loadMore })}
+                  </button>
+                </Link>
+              </div>
             </div>
-            <div className="mx-auto text-center mt-5 mb-5 sm:w-5/12 w-full">
-              <Link to="/news">
-                <button className="sm:w-8/12 w-full bg-blue-500 p-3 rounded-xl text-white font-medium transition-all hover:bg-blue-400 hover:shadow-md duration-300">
-                  {formatMessage({ ...messages.loadMore })}
-                </button>
-              </Link>
-            </div>
-          </div>
 
-          <div className="flex flex-col md:flex-row md:space-x-2 justify-center rounded-xl sm:w-8/12 w-full mx-auto mb-5">
-            <div className="w-full mx-auto bg-blue-300 rounded-xl shadow-md sm:p-10">
-              <h2 className="text-center py-5 text-yellow-200">
-                {formatMessage({ ...messages.donationWeReceived })}
-              </h2>
-              <ControlledCarousel />
-            </div>
+            {/* Picture Carousel */}
+            {/* <div className="flex flex-col md:flex-row md:space-x-2 justify-center rounded-xl sm:w-8/12 w-full mx-auto mb-5">
+              <div className="w-full mx-auto bg-blue-300 rounded-xl shadow-md sm:p-10">
+                <h2 className="text-center py-5 text-yellow-200">
+                  {formatMessage({ ...messages.donationWeReceived })}
+                </h2>
+                <ControlledCarousel />
+              </div>
+            </div> */}
           </div>
+        </div>
+
+        <div id="contact-form">
+          <ContactForm scrollFlag />
         </div>
       </main>
     </React.Fragment>
   );
 };
 
-export default Home;
+export default injectIntl(Home);

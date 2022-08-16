@@ -7,6 +7,10 @@ export default defineMessages({
     id: `${scope}.title`,
     defaultMessage: "About Us",
   },
+  register: {
+    id: `${scope}.register`,
+    defaultMessage: 'Register',
+  },
   loadMore: {
     id: `${scope}.loadMore`,
     defaultMessage: 'Load more news'  

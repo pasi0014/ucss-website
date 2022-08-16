@@ -34,7 +34,7 @@ function Marathon(props: any) {
           content="summer camp, camp, camp for ukrainian children, ucss camp"
         />
       </Helmet>
-      <article className="container py-12 mt-4 mb-4 bg-gray-100 rounded-xl shadow-lg w-full">
+      <article className="container font-montserrat  py-12 mt-4 mb-4 bg-gray-100 rounded-xl shadow-lg w-full">
         <div className="flex flex-col md:flex-row">
           <div className="flex flex-col md:w-6/12 w-full sm:mt-4 mt-0 mb-4">
             <h1 className="text-3xl text-relaxed w-full sm:w-10/12">

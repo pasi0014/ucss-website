@@ -34,7 +34,7 @@ function Reviews(props: any) {
           content="donate camp, ukrainian charitable organization, ucss camp, ucss ottawa news"
         />
       </Helmet>
-      <section className="text-gray-600 body-font">
+      <section className="text-gray-600 body-font font-montserrat">
         <div className="container sm:px-5 py-20 mx-auto">
           <div className="flex justify-center mb-5">
             <h1>{formatMessage({ ...messages.title })}</h1>

@@ -9,7 +9,7 @@ export default function Footer() {
   const { formatMessage } = useIntl();
   return (
     <>
-      <footer className="relative bg-gray-700 pt-8 pb-6 text-gray-200">
+      <footer className="font-montserrat bg-gray-700 pt-8 pb-6 text-gray-200">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap">
             <div className="w-full lg:w-4/12 px-4 py-5">
