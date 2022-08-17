@@ -14,7 +14,7 @@ interface IValidationErrors {
 
 export const ContactForm = (props: any) => {
   const { scrollFlag, intl } = props;
-  
+
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [success, setSuccess] = useState<boolean>(false);
   const [requestError, setRequestError] = useState<boolean>(false);
@@ -26,8 +26,6 @@ export const ContactForm = (props: any) => {
     message: "",
     reply_to: "",
   });
-
-
 
   useEffect(() => {
     if (!scrollFlag) {
@@ -110,19 +108,23 @@ export const ContactForm = (props: any) => {
 
   return (
     <React.Fragment>
-      <Helmet>
-        <title>
-          Contact Form - Ukrainian Canadian Social Services Ottawa (UCSS Ottawa)
-        </title>
-        <meta
-          name="description"
-          content="Ukrainian Canadian Social Services - Ottawa Branch is a non-profit charitable organization serving the Ukrainian community in Ottawa. Guided by the needs of individuals and families of Ukrainian community, who experience language and cultural barriers. We provide a range of support services."
-        />
-        <meta
-          name="keywords"
-          content="contact ucss ottawa, ukrainian charitable organization, ukrainian social services contact"
-        />
-      </Helmet>
+      {!scrollFlag && (
+        <Helmet>
+          <title>
+            Contact Form - Ukrainian Canadian Social Services Ottawa (UCSS
+            Ottawa)
+          </title>
+          <meta
+            name="description"
+            content="Ukrainian Canadian Social Services - Ottawa Branch is a non-profit charitable organization serving the Ukrainian community in Ottawa. Guided by the needs of individuals and families of Ukrainian community, who experience language and cultural barriers. We provide a range of support services."
+          />
+          <meta
+            name="keywords"
+            content="contact ucss ottawa, ukrainian charitable organization, ukrainian social services contact"
+          />
+        </Helmet>
+      )}
+
       <section className="text-gray-600 body-font font-montserrat relative bg-gray-200">
         <LoadingOverlay active={isLoading} spinner text="Loading...">
           <div className="container px-5 py-24 lg:w-8/12 mx-auto rounded-lg shadow-lg bg-white">
