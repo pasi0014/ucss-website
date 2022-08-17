@@ -127,7 +127,7 @@ export const ContactForm = (props: any) => {
 
       <section className="text-gray-600 body-font font-montserrat relative bg-gray-200">
         <LoadingOverlay active={isLoading} spinner text="Loading...">
-          <div className="container px-5 py-24 lg:w-8/12 mx-auto rounded-lg shadow-lg bg-white">
+          <div className="px-5 py-24 lg:w-12/12 mx-auto rounded-lg shadow-lg bg-white">
             <div className="flex flex-col text-center w-full mb-12 border-red-300">
               <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
                 {intl.formatMessage({ ...messages.contactUs })}

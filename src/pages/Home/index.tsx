@@ -59,7 +59,7 @@ const Home = () => {
       </div>
 
         {/* Waiting List Feature */}
-        <div className="w-full shadow-md bg-gray-100">
+        <div className="w-full shadow-md bg-gray-100" id="waiting-list">
           <WaitingList />
         </div>
 
