@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.5eebc63b.chunk.css",
-    "main.js": "/static/js/main.70cf5be2.chunk.js",
-    "main.js.map": "/static/js/main.70cf5be2.chunk.js.map",
+    "main.css": "/static/css/main.fee64ec7.chunk.css",
+    "main.js": "/static/js/main.8be90e08.chunk.js",
+    "main.js.map": "/static/js/main.8be90e08.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.bf8f77c6.js",
     "runtime-main.js.map": "/static/js/runtime-main.bf8f77c6.js.map",
-    "static/js/2.3b2b75f8.chunk.js": "/static/js/2.3b2b75f8.chunk.js",
-    "static/js/2.3b2b75f8.chunk.js.map": "/static/js/2.3b2b75f8.chunk.js.map",
+    "static/js/2.661806a9.chunk.js": "/static/js/2.661806a9.chunk.js",
+    "static/js/2.661806a9.chunk.js.map": "/static/js/2.661806a9.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.5eebc63b.chunk.css.map": "/static/css/main.5eebc63b.chunk.css.map",
-    "static/js/2.3b2b75f8.chunk.js.LICENSE.txt": "/static/js/2.3b2b75f8.chunk.js.LICENSE.txt",
+    "static/css/main.fee64ec7.chunk.css.map": "/static/css/main.fee64ec7.chunk.css.map",
+    "static/js/2.661806a9.chunk.js.LICENSE.txt": "/static/js/2.661806a9.chunk.js.LICENSE.txt",
     "static/media/IMG_3184.9488e182.JPG": "/static/media/IMG_3184.9488e182.JPG",
     "static/media/about.c05d6b0f.JPG": "/static/media/about.c05d6b0f.JPG",
+    "static/media/backpack-1.28ce33c3.jpeg": "/static/media/backpack-1.28ce33c3.jpeg",
     "static/media/bazar-main.bbea257e.jpg": "/static/media/bazar-main.bbea257e.jpg",
     "static/media/child_support.ee409c26.jpg": "/static/media/child_support.ee409c26.jpg",
     "static/media/embassadors.2ae30c25.jpeg": "/static/media/embassadors.2ae30c25.jpeg",
@@ -30,6 +31,7 @@
     "static/media/poland-embassy-1.0eb61ae8.jpg": "/static/media/poland-embassy-1.0eb61ae8.jpg",
     "static/media/polish-embassador.bb649088.jpeg": "/static/media/polish-embassador.bb649088.jpeg",
     "static/media/received_help.07086d92.jpg": "/static/media/received_help.07086d92.jpg",
+    "static/media/supplies-1.545783df.jpeg": "/static/media/supplies-1.545783df.jpeg",
     "static/media/ucss.893fe5fa.jpeg": "/static/media/ucss.893fe5fa.jpeg",
     "static/media/ukraine-embassador.08728870.jpeg": "/static/media/ukraine-embassador.08728870.jpeg",
     "static/media/war-memorial-1.10904700.jpeg": "/static/media/war-memorial-1.10904700.jpeg",
@@ -37,8 +39,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.bf8f77c6.js",
-    "static/js/2.3b2b75f8.chunk.js",
-    "static/css/main.5eebc63b.chunk.css",
-    "static/js/main.70cf5be2.chunk.js"
+    "static/js/2.661806a9.chunk.js",
+    "static/css/main.fee64ec7.chunk.css",
+    "static/js/main.8be90e08.chunk.js"
   ]
 }
