@@ -3,7 +3,11 @@ import { send } from "emailjs-com";
 import validator from "validator";
 import { injectIntl, useIntl } from "react-intl";
 
+import Carousel from "react-bootstrap/Carousel";
+
 import campPic from "../../assets/images/IMG_3184.JPG";
+import backpacks from "../../assets/images/backpack-1.jpeg";
+import supplies from "../../assets/images/supplies-1.jpeg";
 import messages from "./messages";
 
 interface IValidationErrors {
@@ -22,6 +26,8 @@ function WaitingList() {
     {} as IValidationErrors
   );
 
+  const [index, setIndex] = useState(0);
+
   const [emailInfo, setEmailInfo] = useState({
     from_name: "",
     message: "",
@@ -30,6 +36,10 @@ function WaitingList() {
   });
 
   const { formatMessage } = useIntl();
+
+  const handleSelect = (selectedIndex: any, e: any) => {
+    setIndex(selectedIndex);
+  };
 
   const validate = () => {
     let validationErrors = {} as IValidationErrors;
@@ -67,7 +77,7 @@ function WaitingList() {
           process.env.REACT_APP_WAITING_LIST_SERVICE_ID as string,
           process.env.REACT_APP_WAITING_LIST_TEMPLATE_ID as string,
           emailInfo,
-          process.env.REACT_APP_WAITING_USER_ID as string
+          process.env.REACT_APP_EMAIL_USER_ID as string
         );
         console.log({ response });
         setLoading(false);
@@ -144,8 +154,8 @@ function WaitingList() {
   }, [trigger]);
 
   return (
-    <div>
-      <div className="h-full rounded-xl shadow-cla-pink sm:p-24 flex lg:flex-row flex-col-reverse justify-start">
+    <div id="waitingList">
+      <div className="h-full font-montserrat rounded-xl shadow-cla-pink sm:p-24 flex lg:flex-row flex-col-reverse justify-start">
         <div className="p-6 flex flex-col lg:w-8/12 w-full">
           <h3 className="title-font text-3xl font-bold text-gray-600 mb-3 mt-5 px-3">
             {formatMessage({ ...messages.title })}
@@ -179,13 +189,67 @@ function WaitingList() {
           />
         </div>
       </div>
+
+      <div className="w-full h-full sm:p-24 bg-yellow-100 font-montserrat">
+        <div className="text-center mb-10 p-6">
+          <h3 className="text-3xl">
+            {formatMessage({ ...messages.backcpacksTitle })}
+          </h3>
+        </div>
+        <div className="flex lg:flex-row flex-col justify-center mt-7 p-6">
+          <div className="lg:w-8/12 w-full mx-auto sm:mt-7">
+            <p className="text-lg leading-relaxed mb-3 p-3 lg:w-10/12 w-full">
+              {formatMessage({ ...messages.backpack_1 })}
+              <br /> <br />
+              {formatMessage({ ...messages.backpack_2 })}
+            </p>
+            <div className="flex justify-start mx-3">
+              <button
+                className="lg:w-6/12 md:w-4/12 w-full bg-blue-500 p-3 rounded-xl text-white font-medium transition-all hover:bg-blue-400 hover:shadow-md duration-300"
+                onClick={() => {
+                  setTrigger(true);
+                  document
+                    .getElementById("contentToShow")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                  document
+                    .getElementById("nameFocus")
+                    ?.focus({ preventScroll: true });
+                }}
+              >
+                {formatMessage({ ...messages.ctaButton })}
+              </button>
+            </div>
+          </div>
+          <Carousel
+            activeIndex={index}
+            onSelect={handleSelect}
+            as="div"
+            className="lg:w-8/12 w-full p-5 bg-blue-200 mx-auto rounded-xl shadow-lg mt-10"
+          >
+            <Carousel.Item as="div">
+              <img
+                src={backpacks}
+                alt="Event"
+                className="w-96 mx-auto rounded-xl"
+              />
+            </Carousel.Item>
+            <Carousel.Item as="div">
+              <img
+                src={supplies}
+                alt="Event"
+                className="w-96 mx-auto rounded-xl"
+              />
+            </Carousel.Item>
+          </Carousel>
+        </div>
+      </div>
       {/* Registration Block */}
       <div
         id="contentToShow"
         className={
           !trigger
             ? "hidden"
-            : "sm:p-10 md:p-20 bg-orange-300 transition-all duration-200 ease"
+            : "sm:p-10 md:p-20 bg-orange-300 transition-all duration-200 ease font-montserrat"
         }
       >
         <div className="h-full rounded-xl shadow-cla-pink sm:p-15 flex lg:flex-row flex-col justify-start">
@@ -194,8 +258,6 @@ function WaitingList() {
               {formatMessage({ ...messages.waitingListTitle })}
             </h3>
           </div>
-          {/* {success && ( */}
-          {/* )} */}
           {/* Waiting list Form */}
           <form
             className="bg-gray-100 lg:shadow-sm shadow-lg rounded-xl p-10 lg:w-9/12 w-full space-y-5"
@@ -296,9 +358,9 @@ function WaitingList() {
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                       d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                      clip-rule="evenodd"
+                      clipRule="evenodd"
                     ></path>
                   </svg>
                   <span className="sr-only">Error icon</span>

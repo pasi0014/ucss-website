@@ -15,6 +15,22 @@ export default defineMessages({
     id: `${scope}.ctaButton`,
     defaultMessage: "Register",
   },
+  backcpacksTitle: {
+    id: `${scope}.backpacksTitle`,
+    defaultMessage:
+      "Get ready for school with Free backpack with school supplies",
+  },
+  backpack_1: {
+    id: `${scope}.backpack_1`,
+    defaultMessage: `To receive these suplies you need to register on our waiting list
+    and in the message section mention that you would like to get a
+    backpack. There are options available for both girls and boys.`,
+  },
+  backpack_2: {
+    id: `${scope}.backpack_2`,
+    defaultMessage: `Make sure to also include name of the kid and parent information,
+    so we could contact you to give you the supplies.`,
+  },
   waitingListTitle: {
     id: `${scope}.waitingListTitle`,
     defaultMessage:

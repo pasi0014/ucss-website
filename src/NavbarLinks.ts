@@ -14,14 +14,14 @@ export default class NavbarLinks {
       //   link: "/about",
       //   isActive: false,
       // },
-      // {
-      //   title: messages.howWeCanHelpYou,
-      //   link: "/how-we-can-help-you",
-      //   isActive: false,
-      // },
       {
         title: messages.donate,
         link: "/donate",
+        isActive: false,
+      },
+      {
+        title: messages.waitingList,
+        link: "/waiting-list",
         isActive: false,
       },
       // {

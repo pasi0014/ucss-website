@@ -20,6 +20,7 @@ import Reviews from "./pages/Reviews";
 import Failure from "./pages/Failure";
 import Marathon from "./pages/Marathon";
 import GratiduteFromHospital from "./pages/GratiduteFromHospital";
+import WaitingList from "./components/WaitingList";
 
 function App() {
   return (
@@ -46,9 +47,22 @@ function App() {
                   <Route path="/" exact component={Home} />
                   <Route path="/home" exact component={Home} />
                   <Route path="/news" exact component={Reviews} />
-                  <Route path="/news/continental-marathon" exact component={Marathon} />
-                  <Route path="/news/gratidute-from-hospital" exact component={GratiduteFromHospital} />
+                  <Route
+                    path="/news/continental-marathon"
+                    exact
+                    component={Marathon}
+                  />
+                  {/* <Route
+                    path="/news/gratidute-from-hospital"
+                    exact
+                    component={GratiduteFromHospital}
+                  /> */}
                   {/* <Route path="/camp" exact component={Camp} /> */}
+                  <Route
+                    path="/waiting-list"
+                    exact
+                    render={() => <WaitingList />}
+                  />
                   <Route path="/donate" exact component={Donate} />
                   <Route path="/donate/success" exact component={Success} />
                   <Route path="/donate/failure" exact component={Failure} />

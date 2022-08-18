@@ -15,6 +15,10 @@ export default defineMessages({
     id: `${scope}.camp`,
     defaultMessage: "Camp",
   },
+  waitingList: {
+    id: `${scope}.waitingList`,
+    defaultMessage: "Waiting List",
+  },
   howWeCanHelpYou: {
     id: `${scope}.howWeCanHelpYou`,
     defaultMessage: "How We Can Help You",

@@ -12,7 +12,6 @@ import ContactInfo from "../../components/ContactInfo";
 import ContactForm from "../../components/ContactForm";
 import WaitingList from "../../components/WaitingList";
 
-
 // TODO: add our vision and values to the website
 
 const Home = () => {
@@ -54,12 +53,12 @@ const Home = () => {
           </div>
         </div>
 
-      <div className="w-full">
-        <ContactInfo />
-      </div>
+        <div className="w-full">
+          <ContactInfo />
+        </div>
 
         {/* Waiting List Feature */}
-        <div className="w-full shadow-md bg-gray-100" id="waiting-list">
+        <div className="w-full shadow-md bg-gray-100">
           <WaitingList />
         </div>
 
