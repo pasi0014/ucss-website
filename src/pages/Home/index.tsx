@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import about from "../../assets/images/about.JPG";
 // import campPic from "../../assets/images/IMG_3184.JPG";
 import groupPhoto from "../../assets/images/group-photo.jpeg";
-
+import vyshyvankaPic from "../../assets/images/vyshyvanka.jpg";
 import messages from "./messages";
 import ContactInfo from "../../components/ContactInfo";
 // import ControlledCarousel from "../../components/ControlledCarousel";
@@ -52,16 +52,13 @@ const Home = () => {
             />
           </div>
         </div>
-
         <div className="w-full">
           <ContactInfo />
         </div>
-
         {/* Waiting List Feature */}
-        <div className="w-full shadow-md bg-gray-100">
+        {/* <div className="w-full shadow-md bg-gray-100">
           <WaitingList />
-        </div>
-
+        </div> */}
         {/* Main Content */}
         {/* <div className="lg:flex lg:mx-auto w-full lg:w-10/12 mb-4 mt-4 justify-center lg:space-x-3 p-3">
           <div className="flex flex-col lg:w-10/12 sm:w-12/12">
@@ -87,6 +84,14 @@ const Home = () => {
             </div>
           </div>
         </div> */}
+        <div className="w-full">
+          <h2 className="text-center mt-5">
+            {formatMessage({ ...messages.upcomingEvents })}
+          </h2>
+          <div className="container flex justify-center mx-auto my-5">
+            <img src={vyshyvankaPic} alt="Vyshyvanka Event" />
+          </div>
+        </div>
 
         <div className="bg-sky-200">
           <div className="container">
@@ -219,7 +224,6 @@ const Home = () => {
             </div> */}
           </div>
         </div>
-
         <div id="contact-form">
           <ContactForm scrollFlag />
         </div>

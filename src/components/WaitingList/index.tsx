@@ -79,15 +79,16 @@ function WaitingList() {
           emailInfo,
           process.env.REACT_APP_EMAIL_USER_ID as string
         );
-        console.log({ response });
+
         setLoading(false);
+        
         if (response.status === 200) {
           console.info(`Email has been sent successfully`, {
             component: `components/WaitingList/index.onSubmit`,
             params: emailInfo,
             response: response,
           });
-          console.log("SET SUCCESS");
+
           setSuccess(true);
           setRequestError(false);
           setEmailInfo({ from_name: "", message: "", reply_to: "", age: "" });
@@ -190,7 +191,7 @@ function WaitingList() {
         </div>
       </div>
 
-      <div className="w-full h-full sm:p-24 bg-yellow-100 font-montserrat">
+      {/* <div className="w-full h-full sm:p-24 bg-yellow-100 font-montserrat">
         <div className="text-center mb-10 p-6">
           <h3 className="text-3xl">
             {formatMessage({ ...messages.backcpacksTitle })}
@@ -242,7 +243,7 @@ function WaitingList() {
             </Carousel.Item>
           </Carousel>
         </div>
-      </div>
+      </div> */}
       {/* Registration Block */}
       <div
         id="contentToShow"

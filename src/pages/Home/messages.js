@@ -7,6 +7,10 @@ export default defineMessages({
     id: `${scope}.title`,
     defaultMessage: "About Us",
   },
+  upcomingEvents: {
+    id: `${scope}.upcomingEvents`,
+    defaultMessage: 'Upcoming Events',
+  },
   register: {
     id: `${scope}.register`,
     defaultMessage: 'Register',
