@@ -91,6 +91,17 @@ const Home = () => {
           <div className="container flex justify-center mx-auto my-5">
             <img src={vyshyvankaPic} alt="Vyshyvanka Event" />
           </div>
+
+          <div className="container w-full flex justify-center mb-5">
+            <iframe
+              width="660"
+              height="415"
+              src="https://www.youtube.com/embed/yz3ye_cjCGY?start=2903"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
         </div>
 
         <div className="bg-sky-200">
