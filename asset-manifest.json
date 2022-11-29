@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.fee64ec7.chunk.css",
-    "main.js": "/static/js/main.fc3d5ab3.chunk.js",
-    "main.js.map": "/static/js/main.fc3d5ab3.chunk.js.map",
+    "main.css": "/static/css/main.2703aaf2.chunk.css",
+    "main.js": "/static/js/main.19156dbe.chunk.js",
+    "main.js.map": "/static/js/main.19156dbe.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.bf8f77c6.js",
     "runtime-main.js.map": "/static/js/runtime-main.bf8f77c6.js.map",
     "static/js/2.7844ecd7.chunk.js": "/static/js/2.7844ecd7.chunk.js",
     "static/js/2.7844ecd7.chunk.js.map": "/static/js/2.7844ecd7.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.fee64ec7.chunk.css.map": "/static/css/main.fee64ec7.chunk.css.map",
+    "static/css/main.2703aaf2.chunk.css.map": "/static/css/main.2703aaf2.chunk.css.map",
     "static/js/2.7844ecd7.chunk.js.LICENSE.txt": "/static/js/2.7844ecd7.chunk.js.LICENSE.txt",
     "static/media/IMG_3184.9488e182.JPG": "/static/media/IMG_3184.9488e182.JPG",
     "static/media/about.c05d6b0f.JPG": "/static/media/about.c05d6b0f.JPG",
@@ -26,6 +26,7 @@
     "static/media/medicine_1.3c9f04a7.jpg": "/static/media/medicine_1.3c9f04a7.jpg",
     "static/media/medicine_2.152240d1.jpg": "/static/media/medicine_2.152240d1.jpg",
     "static/media/medicine_3.bd0cab59.jpg": "/static/media/medicine_3.bd0cab59.jpg",
+    "static/media/mykolay-ad.371e1485.jpeg": "/static/media/mykolay-ad.371e1485.jpeg",
     "static/media/oselya-pic.8ca2b916.jpg": "/static/media/oselya-pic.8ca2b916.jpg",
     "static/media/index.css": "/static/media/ottawa.383ddf98.jpg",
     "static/media/poland-embassy-1.0eb61ae8.jpg": "/static/media/poland-embassy-1.0eb61ae8.jpg",
@@ -34,14 +35,13 @@
     "static/media/ucss.893fe5fa.jpeg": "/static/media/ucss.893fe5fa.jpeg",
     "static/media/ukraine-embassador.08728870.jpeg": "/static/media/ukraine-embassador.08728870.jpeg",
     "static/media/volunteers.723a8467.jpeg": "/static/media/volunteers.723a8467.jpeg",
-    "static/media/vyshyvanka.61fba782.jpg": "/static/media/vyshyvanka.61fba782.jpg",
     "static/media/war-memorial-1.10904700.jpeg": "/static/media/war-memorial-1.10904700.jpeg",
     "static/media/war-memorial-2.8ca25461.jpeg": "/static/media/war-memorial-2.8ca25461.jpeg"
   },
   "entrypoints": [
     "static/js/runtime-main.bf8f77c6.js",
     "static/js/2.7844ecd7.chunk.js",
-    "static/css/main.fee64ec7.chunk.css",
-    "static/js/main.fc3d5ab3.chunk.js"
+    "static/css/main.2703aaf2.chunk.css",
+    "static/js/main.19156dbe.chunk.js"
   ]
 }
