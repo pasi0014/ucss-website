@@ -19,8 +19,9 @@ import Reviews from "./pages/Reviews";
 // import Camp from "./pages/Camp";
 import Failure from "./pages/Failure";
 import Marathon from "./pages/Marathon";
-import GratiduteFromHospital from "./pages/GratiduteFromHospital";
+// import GratiduteFromHospital from "./pages/GratiduteFromHospital";
 import WaitingList from "./components/WaitingList";
+import Acknowledgments from "./pages/Acknowledgments";
 
 function App() {
   return (
@@ -52,11 +53,11 @@ function App() {
                     exact
                     component={Marathon}
                   />
-                  {/* <Route
-                    path="/news/gratidute-from-hospital"
+                  <Route
+                    path="/acknowledgments"
                     exact
-                    component={GratiduteFromHospital}
-                  /> */}
+                    component={Acknowledgments}
+                  />
                   {/* <Route path="/camp" exact component={Camp} /> */}
                   <Route
                     path="/waiting-list"

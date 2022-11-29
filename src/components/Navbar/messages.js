@@ -11,6 +11,10 @@ export default defineMessages({
     id: `${scope}.about`,
     defaultMessage: "About",
   },
+  acknowledgments: {
+    id: `${scope}.acknowledgments`,
+    defaultMessage: 'Acknowledgments',
+  },
   camp: {
     id: `${scope}.camp`,
     defaultMessage: "Camp",

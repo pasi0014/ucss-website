@@ -9,11 +9,6 @@ export default class NavbarLinks {
         link: "/home",
         isActive: false,
       },
-      // {
-      //   title: messages.about,
-      //   link: "/about",
-      //   isActive: false,
-      // },
       {
         title: messages.donate,
         link: "/donate",
@@ -32,6 +27,11 @@ export default class NavbarLinks {
       {
         title: messages.reviews,
         link: "/news",
+        isActive: false,
+      },
+      {
+        title: messages.acknowledgments,
+        link: "/acknowledgments",
         isActive: false,
       },
       {

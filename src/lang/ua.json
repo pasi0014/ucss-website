@@ -27,6 +27,8 @@
   "app.pages.About.lvivGanna": "Ганна Надточій",
   "app.pages.About.lvivVP": "Заступник командира по роботі з особовим складом підполковник",
 
+  "app.pages.Acknowledgments.header": "Подяки",
+
   "app.components.ContactInfo.presidentName": "Марина Попович",
   "app.components.ContactInfo.presidentTitle": "Голова Суспільної Служби Українців Канади в Оттаві",
   "app.components.ContactInfo.vpTitle": "Заступник голови Суспільної Служби Українців Канади в Оттаві",
@@ -44,6 +46,7 @@
   "app.components.NavBar.home": "Головна",
   "app.components.NavBar.about": "Про Нас",
   "app.components.NavBar.howWeCanHelpYou": "Допомога",
+  "app.components.NavBar.acknowledgments": "Подяки",
   "app.components.NavBar.stories": "Наші Історії",
   "app.components.NavBar.donate": "Пожертвування",
   "app.components.NavBar.reviews": "Новини",
