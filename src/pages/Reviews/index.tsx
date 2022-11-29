@@ -9,6 +9,8 @@ import oselyaPic from "../../assets/images/oselya-pic.jpg";
 import localBenefit from "../../assets/images/local-concert.jpg";
 import fundraiserMain from "../../assets/images/fundraized-event-1.jpg";
 import groupPhoto from "../../assets/images/group-photo.jpeg";
+import volunteers from "../../assets/images/volunteers.jpeg";
+import backpack from "../../assets/images/backpack.jpeg";
 
 import messages from "./messages";
 
@@ -39,7 +41,66 @@ function Reviews(props: any) {
           <div className="flex justify-center mb-5">
             <h1>{formatMessage({ ...messages.title })}</h1>
           </div>
+
           <div className="flex flex-wrap -m-4 justify-center">
+            <div className="md:w-5/12 p-4">
+              <div className="h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
+                <img
+                  className="transform lg:h-48 md:h-36 w-full object-cover object-center scale-110 transition-all duration-700 hover:scale-100"
+                  src={backpack}
+                  alt="Members of UCSS and Lions Club"
+                />
+                <div className="p-6">
+                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                    Вересень 1, 2022
+                  </h2>
+                  <h3 className="title-font text-lg font-bold text-gray-600 mb-2">
+                    Суспільна Служба Українсців Канади підтримує новоприбулих
+                    дітей з рюкзаками
+                  </h3>
+                  <p className="leading-relaxed mb-3">
+                    <p className="mt-2">
+                      Напередодні початку шкільного року, Суспільна Служба
+                      вирішила провести ініціативу, для того щоб допомогти
+                      діткам підготуватись до школи. Дітки мали змогу отримати
+                      рюкзачок з усім необхідним для початку навчального року.
+                    </p>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="md:w-5/12 p-4">
+              <div className="h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
+                <img
+                  className="transform lg:h-48 md:h-36 w-full object-cover object-center scale-110 transition-all duration-700 hover:scale-100"
+                  src={volunteers}
+                  alt="Members of UCSS and Lions Club"
+                />
+                <div className="p-6">
+                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                    Вересень 11, 2022
+                  </h2>
+                  <h3 className="title-font text-lg font-bold text-gray-600 mb-2">
+                    Подяка Волонтерам табору "Соняшник"
+                  </h3>
+                  <p className="leading-relaxed mb-3">
+                    <p className="mt-2">
+                      Як же гарно зібратися разом з волонтерами тобору 'Соняшник
+                      ' та висловити велику подяку за їхню важку працю. Нажаль
+                      не всі змогли бути присутніми, але ми вас всіх пам'ятаємо.
+                      Ще раз вам всім велика подяка.Лідери дитячих груп справді
+                      неймовірні. Давайте розвиватися і твотити багато ще добрих
+                      справ. Кухарі - Ви неперевершені. Лікарка супер креативна
+                      і творча, каноє незабутнє, художник і школа танців на
+                      висоті, ритмічна гімнастика - олімпійська… усім
+                      велитенська подяка і титанічна повага!
+                    </p>
+                  </p>
+                </div>
+              </div>
+            </div>
+
             {/* Camp report */}
             <div className="md:w-5/12 p-4">
               <div className="h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
