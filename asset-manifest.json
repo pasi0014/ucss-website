@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.fee64ec7.chunk.css",
-    "main.js": "/static/js/main.5858297c.chunk.js",
-    "main.js.map": "/static/js/main.5858297c.chunk.js.map",
+    "main.js": "/static/js/main.fc3d5ab3.chunk.js",
+    "main.js.map": "/static/js/main.fc3d5ab3.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.bf8f77c6.js",
     "runtime-main.js.map": "/static/js/runtime-main.bf8f77c6.js.map",
     "static/js/2.7844ecd7.chunk.js": "/static/js/2.7844ecd7.chunk.js",
@@ -12,6 +12,7 @@
     "static/js/2.7844ecd7.chunk.js.LICENSE.txt": "/static/js/2.7844ecd7.chunk.js.LICENSE.txt",
     "static/media/IMG_3184.9488e182.JPG": "/static/media/IMG_3184.9488e182.JPG",
     "static/media/about.c05d6b0f.JPG": "/static/media/about.c05d6b0f.JPG",
+    "static/media/backpack.584b1630.jpeg": "/static/media/backpack.584b1630.jpeg",
     "static/media/bazar-main.bbea257e.jpg": "/static/media/bazar-main.bbea257e.jpg",
     "static/media/child_support.ee409c26.jpg": "/static/media/child_support.ee409c26.jpg",
     "static/media/embassadors.2ae30c25.jpeg": "/static/media/embassadors.2ae30c25.jpeg",
@@ -32,6 +33,7 @@
     "static/media/received_help.07086d92.jpg": "/static/media/received_help.07086d92.jpg",
     "static/media/ucss.893fe5fa.jpeg": "/static/media/ucss.893fe5fa.jpeg",
     "static/media/ukraine-embassador.08728870.jpeg": "/static/media/ukraine-embassador.08728870.jpeg",
+    "static/media/volunteers.723a8467.jpeg": "/static/media/volunteers.723a8467.jpeg",
     "static/media/vyshyvanka.61fba782.jpg": "/static/media/vyshyvanka.61fba782.jpg",
     "static/media/war-memorial-1.10904700.jpeg": "/static/media/war-memorial-1.10904700.jpeg",
     "static/media/war-memorial-2.8ca25461.jpeg": "/static/media/war-memorial-2.8ca25461.jpeg"
@@ -40,6 +42,6 @@
     "static/js/runtime-main.bf8f77c6.js",
     "static/js/2.7844ecd7.chunk.js",
     "static/css/main.fee64ec7.chunk.css",
-    "static/js/main.5858297c.chunk.js"
+    "static/js/main.fc3d5ab3.chunk.js"
   ]
 }
