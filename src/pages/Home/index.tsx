@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import about from "../../assets/images/about.JPG";
 // import campPic from "../../assets/images/IMG_3184.JPG";
 import groupPhoto from "../../assets/images/group-photo.jpeg";
-import vyshyvankaPic from "../../assets/images/vyshyvanka.jpg";
+import mykolay from "../../assets/images/mykolay-ad.jpeg";
 import messages from "./messages";
 import ContactInfo from "../../components/ContactInfo";
 // import ControlledCarousel from "../../components/ControlledCarousel";
@@ -88,11 +88,31 @@ const Home = () => {
           <h2 className="text-center mt-5">
             {formatMessage({ ...messages.upcomingEvents })}
           </h2>
-          <div className="container flex justify-center mx-auto my-5">
-            <img src={vyshyvankaPic} alt="Vyshyvanka Event" />
+          <div className="container flex flex-col sm:w-7/12 w-full justify-center mx-auto my-5">
+            <img src={mykolay} alt="Vyshyvanka Event" className="rounded-xl shadow-md"/>
+            <div className="rounded-xl bg-white p-4 mt-3 flex flex-col shadow-sm">
+              <p>
+                In partnership with UCSS, we are organizing a concert for
+                children in Ottawa. Register to attend the show and get a
+                present for your child. We encourage you to show support and
+                kindness to Ukrainian children in these difficult circumstances!
+                Please bring NEW warm clothes or something you think might be
+                useful for kids in Ukraine!Our partner UCSS will send your
+                donations to Ukraine!
+              </p>
+              <a
+                href="https://www.eventbrite.com/e/st-nicholas-kids-show-tickets-471969331977"
+                target="_blank"
+                className="mx-auto text-center mt-3 sm:w-4/12 w-full bg-blue-500 p-3 rounded-xl text-white font-medium transition-all hover:bg-blue-400 hover:shadow-md duration-300"
+                rel="noreferrer"
+              >
+                Register
+              </a>
+            </div>
           </div>
 
-          <div className="container w-full flex justify-center mb-5">
+          {/* TODO - do delete this video ad */}
+          {/* <div className="container w-full flex justify-center mb-5">
             <iframe
               width="660"
               height="415"
@@ -101,7 +121,7 @@ const Home = () => {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
-          </div>
+          </div> */}
         </div>
 
         <div className="bg-sky-200">

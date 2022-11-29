@@ -50,32 +50,6 @@ function ContactInfo() {
             <a href="mailto:nazar@ucssottawa.com">nazar@ucssottawa.com</a>
           </span>
         </div>
-        {/* 4 */}
-        <div className="p-3 rounded-lg shadow-sm bg-white">
-          <h5 className="text-gray-900 text-xl leading-tight font-medium mb-2">
-            {formatMessage({ ...messages.artashes })}
-          </h5>
-          <p className="text-gray-700 text-base mb-4">
-            {formatMessage({ ...messages.lvivVP })}
-          </p>
-          <span className="flex flex-col">
-            <a href="tel:380974710045">+380 97 471 0045</a>
-            <a href="mailto:bolzen777@gmail.com">bolzen777@gmail.com</a>
-          </span>
-        </div>
-        {/* 5 */}
-        <div className="p-3 rounded-lg shadow-sm bg-white">
-          <h5 className="text-gray-900 text-xl leading-tight font-medium mb-2">
-            {formatMessage({ ...messages.lvivGanna })}
-          </h5>
-          <p className="text-gray-700 text-base mb-4">
-            {formatMessage({ ...messages.volonteersTitle })}
-          </p>
-          <span className="flex flex-col">
-            <a href="tel:380672557073">+380 67 255 7073</a>
-            <a href="mailto:a.nadtochii@gmail.com">a.nadtochii@gmail.com</a>
-          </span>
-        </div>
       </div>
     </div>
   );
