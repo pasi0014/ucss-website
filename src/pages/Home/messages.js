@@ -7,6 +7,10 @@ export default defineMessages({
     id: `${scope}.title`,
     defaultMessage: "About Us",
   },
+  mykolay: {
+    id: `${scope}.mykolay`,
+    defaultMessage: "UCSS in partnership with Ukrainian Orthodox Church are organizing a concert for children in Ottawa. All are invited. Please, register how many children and of what age are going to participate at the show as St. Mykolay need to know how many presents to prepare. We encourage you to show support and kindness to Ukrainian children in these difficult circumstances! Please bring NEW warm clothes or something you think might be useful for kids in Ukraine! UCSS will send your donations to Ukraine!",
+  },
   upcomingEvents: {
     id: `${scope}.upcomingEvents`,
     defaultMessage: 'Upcoming Events',
