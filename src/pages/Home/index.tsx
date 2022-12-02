@@ -89,17 +89,13 @@ const Home = () => {
             {formatMessage({ ...messages.upcomingEvents })}
           </h2>
           <div className="container flex flex-col sm:w-7/12 w-full justify-center mx-auto my-5">
-            <img src={mykolay} alt="Vyshyvanka Event" className="rounded-xl shadow-md"/>
+            <img
+              src={mykolay}
+              alt="Vyshyvanka Event"
+              className="rounded-xl shadow-md"
+            />
             <div className="rounded-xl bg-white p-4 mt-3 flex flex-col shadow-sm">
-              <p>
-                In partnership with UCSS, we are organizing a concert for
-                children in Ottawa. Register to attend the show and get a
-                present for your child. We encourage you to show support and
-                kindness to Ukrainian children in these difficult circumstances!
-                Please bring NEW warm clothes or something you think might be
-                useful for kids in Ukraine!Our partner UCSS will send your
-                donations to Ukraine!
-              </p>
+              <p>{formatMessage({ ...messages.mykolay })}</p>
               <a
                 href="https://www.eventbrite.com/e/st-nicholas-kids-show-tickets-471969331977"
                 target="_blank"
