@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Document, Page } from "react-pdf";
-import pdf from "../assets/static/document.pdf";
+import pdf from "../assets/static/thank-you-rideau.pdf";
 import { pdfjs } from "react-pdf";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 

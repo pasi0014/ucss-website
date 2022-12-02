@@ -11,6 +11,7 @@ import fundraiserMain from "../../assets/images/fundraized-event-1.jpg";
 import groupPhoto from "../../assets/images/group-photo.jpeg";
 import volunteers from "../../assets/images/volunteers.jpeg";
 import backpack from "../../assets/images/backpack.jpeg";
+import dragonboat from "../../assets/images/dragonboat.jpeg";
 
 import messages from "./messages";
 
@@ -43,6 +44,50 @@ function Reviews(props: any) {
           </div>
 
           <div className="flex flex-wrap -m-4 justify-center">
+            <div className="md:w-5/12 p-4">
+              <div className="h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
+                <img
+                  className="transform lg:h-48 md:h-36 w-full object-cover object-center scale-110 transition-all duration-700 hover:scale-100"
+                  src={dragonboat}
+                  alt="Members of UCSS and Lions Club"
+                />
+                <div className="p-6">
+                  {/* <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                    Вересень 1, 2022
+                  </h2> */}
+                  <h3 className="title-font text-lg font-bold text-gray-600 mb-2">
+                    Суспільна Служба організувала прогулянку для дітей на
+                    dragonboat
+                  </h3>
+                  <p className="leading-relaxed mb-3">
+                    <p className="mt-2">
+                      "Для багатьох українців волонтерство стало способом життя з
+                      2014-го. Для канадійців-українців це було доброю звичкою
+                      завжди. А для моїх родичів тітки Тамари й дядька Івана -
+                      просто постійна потреба. Живуть за принципом: прокинувся й
+                      спитай себе, що ти зробив для України і українців?... Тож
+                      як випала нагода влаштувати новоприбулим дітям веслярський
+                      івент, покинули все й ентузіазмом взялися реалізовувати
+                      чудову ідею. І на зміну сірому холодному ранкові прийшов
+                      сонячний яскравий день з новими незабутніми емоціями.
+                      Дехто вперше взяв весло до рук, дехто уже мав нещодавній
+                      таборовий досвід веслування. Та всі хотіли зловити ритм
+                      човна-дракона (dragon boat) і відчути одне одного! У цьому
+                      якнайкраще допомогли мої славні Тамара Руденко-Хараламбій
+                      та Іван Хараламбій( між іншим, професійний спортсмен,
+                      олімпієць) Доєднався до команди тренерів і Олексій Моргун,
+                      голова юніорської комісії EDBF. З такими наставниками сіли
+                      в човни не лише діти, а й батьки. І ще не знати, хто
+                      тішився більше) Гребли ми всі старанно, тож замовлена піца
+                      й солодощі (дяка Maryna Popovych та Михайло й Наталя
+                      Риндзаки) дуже й дуже смакували!!! І на хвильку здалося,
+                      що ми знову в таборі й час готувати щось малим на вечерю))"
+                    </p>
+                  </p>
+                </div>
+              </div>
+            </div>
+
             <div className="md:w-5/12 p-4">
               <div className="h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
                 <img

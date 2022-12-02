@@ -34,20 +34,49 @@ const Acknowledgments = (props: any) => {
                   Серпень 27, 2022
                 </h2>
                 <h3 className="title-font text-lg font-bold text-gray-600 mb-2">
-                  Прогулянка на dragonboat для дітей
+                  Sincere thank you to{" "}
+                  <a
+                    href="https://www.rideaucanoeclub.ca/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-underline"
+                  >
+                    Rideau Canoe Club
+                  </a>
                 </h3>
                 <p className="leading-relaxed mb-3">
                   <p className="mt-2">
-                    Суспільна Служба Українсців Канади з колоборацією з{" "}
-                    <a
-                      href="https://www.rideaucanoeclub.ca/"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-underline"
-                    >
-                      Rideau Canoe Club
-                    </a>{" "}
-                    організувала для дітей прогулянку на dragonboat
+                    Ukrainian Canadian Social Services, Ottawa branch are
+                    enormously thankful for your most generous contribution to
+                    the displaced children's summer camp "Soniashnyk".
+                    <br />
+                    <br />
+                    We highly value your humanitarian support that able us ti
+                    provide recreational activities for the childre effected by
+                    this unjustifiable, destructive, genocidal war of russian
+                    tyranny against the people of Ukraine.
+                    <br />
+                    <br />
+                    You have offered to those children an unforgettable Canadian
+                    summer experience, helping them to recover from stress of
+                    relocation and uncertainty.
+                    <br />
+                    <br />
+                    We sincerely thank you, each and every member of your Club,
+                    for genuine care, and love making a difference in the
+                    innocent life of a child.
+                    <br />
+                    <br />
+                    Despite of the variety of offered activities most of our
+                    children admitted that the canoe experience was favoured and
+                    loved immensely. Please, accept our kindliest appreciation,
+                    <br />
+                    <br />
+                    Cordially,
+                    <br />
+                    <br />
+                    Maryna Popovych, Mike Ryndzak, Nazar Pasika, on behalf of
+                    UCSS Ottawa
                   </p>
                 </p>
               </div>
