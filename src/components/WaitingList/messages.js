@@ -5,11 +5,15 @@ const scope = "app.components.WaitingList";
 export default defineMessages({
   title: {
     id: `${scope}.title`,
-    defaultMessage: "Register for our waiting list",
+    defaultMessage: "Register",
   },
   details: {
     id: `${scope}.details`,
     defaultMessage: `We are extremely glad that we managed to successfully organize the "Sunflower Camp" for displaced children from Ukraine. Unfortunately, we could not accommodate all the children who wanted to attend the camp. Therefore, we are planning additional activities for these children, as well as for children who have recently arrived in Ottawa. If you would like to be placed on our waiting list, please fill out our form.`,
+  },
+  detailsRegister: {
+    id: `${scope}.detailsRegister`,
+    defaultMessage: `UCSS are planning additional activities for displaced children from Ukraine. If you would like to register for the events, please fill out our form.`,
   },
   ctaButton: {
     id: `${scope}.ctaButton`,
@@ -38,11 +42,11 @@ export default defineMessages({
   },
   namePlaceholder: {
     id: `${scope}.namePlaceholder`,
-    defaultMessage: "Enter full name",
+    defaultMessage: "Parent / Guardian name",
   },
   agePlaceholder: {
     id: `${scope}.agePlaceholder`,
-    defaultMessage: "Enter age",
+    defaultMessage: "Enter kids age",
   },
   emailPlaceholder: {
     id: `${scope}.emailPlaceholder`,

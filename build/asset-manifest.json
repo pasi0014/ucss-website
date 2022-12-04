@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.30c8d001.chunk.css",
-    "main.js": "/static/js/main.2822ee96.chunk.js",
-    "main.js.map": "/static/js/main.2822ee96.chunk.js.map",
+    "main.js": "/static/js/main.b5ce6519.chunk.js",
+    "main.js.map": "/static/js/main.b5ce6519.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.bf8f77c6.js",
     "runtime-main.js.map": "/static/js/runtime-main.bf8f77c6.js.map",
     "static/js/2.c2d45df8.chunk.js": "/static/js/2.c2d45df8.chunk.js",
@@ -10,7 +10,6 @@
     "index.html": "/index.html",
     "static/css/main.30c8d001.chunk.css.map": "/static/css/main.30c8d001.chunk.css.map",
     "static/js/2.c2d45df8.chunk.js.LICENSE.txt": "/static/js/2.c2d45df8.chunk.js.LICENSE.txt",
-    "static/media/IMG_3184.9488e182.JPG": "/static/media/IMG_3184.9488e182.JPG",
     "static/media/about.c05d6b0f.JPG": "/static/media/about.c05d6b0f.JPG",
     "static/media/backpack.584b1630.jpeg": "/static/media/backpack.584b1630.jpeg",
     "static/media/bazar-main.bbea257e.jpg": "/static/media/bazar-main.bbea257e.jpg",
@@ -35,6 +34,7 @@
     "static/media/received_help.07086d92.jpg": "/static/media/received_help.07086d92.jpg",
     "static/media/thank-you-2.271c44e2.jpeg": "/static/media/thank-you-2.271c44e2.jpeg",
     "static/media/thank-you-3.1c1b9199.jpeg": "/static/media/thank-you-3.1c1b9199.jpeg",
+    "static/media/thank-you-bd.2a6e1b5e.jpeg": "/static/media/thank-you-bd.2a6e1b5e.jpeg",
     "static/media/ucss.893fe5fa.jpeg": "/static/media/ucss.893fe5fa.jpeg",
     "static/media/ukraine-embassador.08728870.jpeg": "/static/media/ukraine-embassador.08728870.jpeg",
     "static/media/volunteers.723a8467.jpeg": "/static/media/volunteers.723a8467.jpeg",
@@ -45,6 +45,6 @@
     "static/js/runtime-main.bf8f77c6.js",
     "static/js/2.c2d45df8.chunk.js",
     "static/css/main.30c8d001.chunk.css",
-    "static/js/main.2822ee96.chunk.js"
+    "static/js/main.b5ce6519.chunk.js"
   ]
 }

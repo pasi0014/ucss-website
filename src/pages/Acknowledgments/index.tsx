@@ -4,6 +4,7 @@ import { injectIntl } from "react-intl";
 import dragonboat from "../../assets/images/dragonboat.jpeg";
 import militaryHospital from "../../assets/images/thank-you-2.jpeg";
 import thankYou from "../../assets/images/thank-you-3.jpeg";
+import thankYouBD from "../../assets/images/thank-you-bd.jpeg";
 
 import messages from "./messages";
 
@@ -22,6 +23,39 @@ const Acknowledgments = (props: any) => {
         </div>
 
         <div className="flex flex-wrap -m-4 justify-center">
+          {/* Bydychnist */}
+          <div className="md:w-5/12 p-4">
+            <div className="h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
+              <img
+                className="transform lg:h-80 md:h-56 w-full object-cover object-center scale-110 transition-all duration-700 hover:scale-100"
+                src={thankYouBD}
+                alt="Members of UCSS collecting backpacks provided by Bydychnist bank"
+              />
+              <div className="p-6">
+                {/* <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                  Ливень 27, 2022
+                </h2> */}
+                <h3 className="title-font text-lg font-bold text-gray-600 mb-2">
+                  Подяка банку Будучність за підтримку табору "Соняшник"
+                </h3>
+                <div className="w-full mx-auto text-left mb-3 mt-3">
+                  <p className="mt-2">
+                    Суспільна Служба виявляє величезне вдячність банку{" "}
+                    <a
+                      href="https://bcufinancial.com/uk/home-%D1%83%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D1%81%D1%8C%D0%BA%D0%B0/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      "Будучність"
+                    </a>{" "}
+                    за надані рюкзаки, які ми мали нагоду подарувати прекрасним
+                    дітям у таборі Соняшник.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className="md:w-5/12 p-4">
             <div className="h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
               <img

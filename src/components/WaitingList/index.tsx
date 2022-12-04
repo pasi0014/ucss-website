@@ -8,6 +8,7 @@ import Carousel from "react-bootstrap/Carousel";
 import campPic from "../../assets/images/IMG_3184.JPG";
 import backpacks from "../../assets/images/backpack-1.jpeg";
 import supplies from "../../assets/images/supplies-1.jpeg";
+import mykolay from "../../assets/images/mykolay-ad.jpeg";
 import messages from "./messages";
 
 interface IValidationErrors {
@@ -31,7 +32,7 @@ function WaitingList() {
   const [emailInfo, setEmailInfo] = useState({
     from_name: "",
     message: "",
-    age: "",
+    // age: "",
     reply_to: "",
   });
 
@@ -60,9 +61,9 @@ function WaitingList() {
         ...messages.errorMessage,
       });
     }
-    if (emailInfo.age.length === 0) {
-      validationErrors.ageError = formatMessage({ ...messages.errorAge });
-    }
+    // if (emailInfo.age.length === 0) {
+    //   validationErrors.ageError = formatMessage({ ...messages.errorAge });
+    // }
 
     setErrors(validationErrors);
     return !Object.keys(validationErrors).length;
@@ -81,7 +82,7 @@ function WaitingList() {
         );
 
         setLoading(false);
-        
+
         if (response.status === 200) {
           console.info(`Email has been sent successfully`, {
             component: `components/WaitingList/index.onSubmit`,
@@ -91,7 +92,7 @@ function WaitingList() {
 
           setSuccess(true);
           setRequestError(false);
-          setEmailInfo({ from_name: "", message: "", reply_to: "", age: "" });
+          setEmailInfo({ from_name: "", message: "", reply_to: "" });
         } else {
           setSuccess(false);
           setRequestError(true);
@@ -128,7 +129,7 @@ function WaitingList() {
       emailError: "",
       messageError: "",
     });
-    setEmailInfo({ from_name: "", message: "", reply_to: "", age: "" });
+    setEmailInfo({ from_name: "", message: "", reply_to: "" });
   };
 
   /**
@@ -163,7 +164,7 @@ function WaitingList() {
           </h3>
           <hr className="border-4 border-orange-300 my-3 mx-3 w-2/12" />
           <span className="leading-relaxed mb-3 p-3 lg:w-10/12 w-full">
-            {formatMessage({ ...messages.details })}
+            {formatMessage({ ...messages.detailsRegister })}
           </span>
           <div className="flex justify-start mx-3">
             <button
@@ -185,7 +186,7 @@ function WaitingList() {
         <div className="bg-blue-300 rounded-xl p-10 lg:w-9/12 w-full">
           <img
             className="transform lg:h-82 w-full object-cover object-center scale-100 transition-all duration-700 hover:scale-110"
-            src={campPic}
+            src={mykolay}
             alt="Children dancing next to the fireplace"
           />
         </div>
@@ -280,7 +281,7 @@ function WaitingList() {
                 </span>
               )}
             </div>
-            <div className="w-full">
+            {/* <div className="w-full">
               <input
                 type="number"
                 name="age"
@@ -294,7 +295,7 @@ function WaitingList() {
                   {errors.ageError}
                 </span>
               )}
-            </div>
+            </div> */}
 
             <div className="w-full">
               <input
@@ -330,6 +331,7 @@ function WaitingList() {
             <div className="flex sm:flex-row flex-col sm:space-x-5 lg:justify-start justify-center">
               <button
                 type="submit"
+                onClick={(event) => onSubmit(event)}
                 className="sm:w-4/12 w-full bg-blue-500 p-2 sm:mb-0 mb-3 rounded-xl text-white font-medium transition-all hover:bg-blue-400 hover:shadow-md duration-300"
               >
                 {formatMessage({ ...messages.submit })}
