@@ -85,8 +85,7 @@ export default defineMessages({
   },
   vyshyvankaTextBlurb: {
     id: `${scope}.vyshyvankaTextBlurb`,
-    defaultMessage:
-      "Незабутній «Вишиваний вечір» був підготовлений за ініціативи благодійної організації UCSS та злагодженого гурту волонтерів. Особлива подяка - комітетові Української Православної Церкви за надання залу для проведення заходу. Усі кошти, зібрані під час вечора, будуть використані на благодійність. Вони допоможуть забезпечити теплими речами дітей, що втратили батьків і потребують нашого піклування. До того ж, підтримають Св. Отця Миколая у прагненні зберегти дитячу віру в диво й підготувати малечі подарунки до Різдвяних свят. ",
+    defaultMessage: `The unforgettable "Embroidered Evening" was prepared on the initiative of the UCSS charity organization and a well-coordinated group of volunteers. Special thanks to the committee of the Ukrainian Orthodox Church for providing the hall for the event. All funds raised during the evening will be used for charity. They will help provide warm things to children who have lost their parents and need our care. In addition, they will support St. Father Nicholas in his desire to preserve children's faith in miracles and prepare children's gifts for the Christmas holidays.`,
   },
   vyshyvankaTitle: {
     id: `${scope}.vyshyvankaTitle`,
