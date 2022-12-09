@@ -9,23 +9,24 @@ export default defineMessages({
   },
   mykolay: {
     id: `${scope}.mykolay`,
-    defaultMessage: "UCSS in partnership with Ukrainian Orthodox Church are organizing a concert for children in Ottawa. All are invited. Please, register how many children and of what age are going to participate at the show as St. Mykolay need to know how many presents to prepare. We encourage you to show support and kindness to Ukrainian children in these difficult circumstances! Please bring NEW warm clothes or something you think might be useful for kids in Ukraine! UCSS will send your donations to Ukraine!",
+    defaultMessage:
+      "UCSS in partnership with Ukrainian Orthodox Church are organizing a concert for children in Ottawa. All are invited. Please, register how many children and of what age are going to participate at the show as St. Mykolay need to know how many presents to prepare. We encourage you to show support and kindness to Ukrainian children in these difficult circumstances! Please bring NEW warm clothes or something you think might be useful for kids in Ukraine! UCSS will send your donations to Ukraine!",
   },
   upcomingEvents: {
     id: `${scope}.upcomingEvents`,
-    defaultMessage: 'Upcoming Events',
+    defaultMessage: "Upcoming Events",
   },
   register: {
     id: `${scope}.register`,
-    defaultMessage: 'Register',
+    defaultMessage: "Register",
   },
   loadMore: {
     id: `${scope}.loadMore`,
-    defaultMessage: 'Load more news'  
+    defaultMessage: "Load more news",
   },
   recentNewsTitle: {
-      id: `${scope}.recentNewsTitle`,
-      defaultMessage: 'Recent News',
+    id: `${scope}.recentNewsTitle`,
+    defaultMessage: "Recent News",
   },
   googleForm: {
     id: `${scope}.googleForm`,
@@ -77,6 +78,19 @@ export default defineMessages({
   learnMore: {
     id: `${scope}.learnMore`,
     defaultMessage: "Learn more about this camp",
+  },
+  date_vyshyvanka: {
+    id: `${scope}.date_vyshyvanka`,
+    defaultMessage: "November 26, 2022",
+  },
+  vyshyvankaTextBlurb: {
+    id: `${scope}.vyshyvankaTextBlurb`,
+    defaultMessage:
+      "Незабутній «Вишиваний вечір» був підготовлений за ініціативи благодійної організації UCSS та злагодженого гурту волонтерів. Особлива подяка - комітетові Української Православної Церкви за надання залу для проведення заходу. Усі кошти, зібрані під час вечора, будуть використані на благодійність. Вони допоможуть забезпечити теплими речами дітей, що втратили батьків і потребують нашого піклування. До того ж, підтримають Св. Отця Миколая у прагненні зберегти дитячу віру в диво й підготувати малечі подарунки до Різдвяних свят. ",
+  },
+  vyshyvankaTitle: {
+    id: `${scope}.vyshyvankaTitle`,
+    defaultMessage: "Embroidery Event presented to you by UCSS",
   },
   date_lions: {
     id: `${scope}.date_lions`,

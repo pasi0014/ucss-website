@@ -21,7 +21,7 @@ export default defineMessages({
   },
   waitingList: {
     id: `${scope}.waitingList`,
-    defaultMessage: "Waiting List",
+    defaultMessage: "Register",
   },
   howWeCanHelpYou: {
     id: `${scope}.howWeCanHelpYou`,

@@ -22,6 +22,7 @@ import Marathon from "./pages/Marathon";
 // import GratiduteFromHospital from "./pages/GratiduteFromHospital";
 import WaitingList from "./components/WaitingList";
 import Acknowledgments from "./pages/Acknowledgments";
+import Vyshyvanka from "./pages/Vyshyvanka";
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
               >
                 <Switch>
                   <Route path="/" exact component={Home} />
+                  <Route path="/news/vyshyvanka-vechir" exact component={Vyshyvanka}/>
                   <Route path="/home" exact component={Home} />
                   <Route path="/news" exact component={Reviews} />
                   <Route

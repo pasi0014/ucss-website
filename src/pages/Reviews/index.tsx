@@ -12,6 +12,8 @@ import groupPhoto from "../../assets/images/group-photo.jpeg";
 import volunteers from "../../assets/images/volunteers.jpeg";
 import backpack from "../../assets/images/backpack.jpeg";
 import dragonboat from "../../assets/images/dragonboat.jpeg";
+import vyshyvanka from "../../assets/images/vyshyvanka-logo.jpeg";
+
 
 import messages from "./messages";
 
@@ -44,10 +46,36 @@ function Reviews(props: any) {
           </div>
 
           <div className="flex flex-wrap -m-4 justify-center">
+            {/* Vushyvanka */}
+            <div className="p-4 md:w-5/12">
+              <div className="h-full rounded-xl shadow-cla-blue bg-gradient-to-r from-indigo-50 to-blue-50 overflow-hidden">
+                <img
+                  className="transform lg:h-72 md:h-48 w-full object-cover object-center scale-110 transition-all duration-700 hover:scale-100"
+                  src={vyshyvanka}
+                  alt="Ukrainian Easter Bazar at the St. John the Baptist Ukrainian Catholic Shrine"
+                />
+                <div className="p-6">
+                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                    {formatMessage({ ...messages.date_vyshyvanka })}
+                  </h2>
+                  <h1 className="title-font text-lg font-medium text-gray-600 mb-3">
+                    {formatMessage({ ...messages.vyshyvankaTitle })}
+                  </h1>
+                  <p className="leading-relaxed mb-3">
+                    {formatMessage({ ...messages.vyshyvankaTextBlurb })}
+                  </p>
+                  <Link to="/news/vyshyvanka-vechir">
+                    <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 hover:scale-105 drop-shadow-md  shadow-cla-blue px-4 py-1 rounded-lg">
+                      {formatMessage({ ...messages.readMore })}
+                    </button>
+                  </Link>
+                </div>
+              </div>
+            </div>
             <div className="md:w-5/12 p-4">
               <div className="h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
                 <img
-                  className="transform lg:h-48 md:h-36 w-full object-cover object-center scale-110 transition-all duration-700 hover:scale-100"
+                  className="transform lg:h-72 md:h-48 w-full object-cover object-center scale-110 transition-all duration-700 hover:scale-100"
                   src={dragonboat}
                   alt="Members of UCSS and Lions Club"
                 />

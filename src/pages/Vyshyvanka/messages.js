@@ -1,0 +1,27 @@
+import { defineMessages } from "@formatjs/intl";
+
+const scope = "app.components.Vyshyvanka";
+
+export default defineMessages({
+  heading: {
+    id: `${scope}.heading`,
+    defaultMessage: "UCSS organized the cultural event 'Embroidered Evening'",
+},
+  date: {
+    id: `${scope}.date`,
+    defaultMessage: "November 26, 2022",
+  },
+  morePicture: {
+    id: `${scope}.morePicture`,
+    defaultMessage: "More pictures of the event",
+  },
+  text: {
+    id: `${scope}.text`,
+    defaultMessage:
+      "In Ukrainian Vyshyvanka - will, struggle and victory. There is an indomitable spirit, devoted love for the land where he was born, where his mother sang you songs. It has home comfort, golden fields and the bottomless blue of the sky. All this is coded, sewn in Ukrainian embroidered cloth, in towels decorated with ornaments, which are hung above the images, placed under the holy bread and under the feet of the newlyweds at the wedding. I want to share this wealth with others. That is why the charitable 'Embroidery Evening' held in the Ukrainian Orthodox Church on November 26 became a real holiday not only for the community, but also for Canadians who were interested in learning about the history of Ukrainian embroidery, its diversity and sacred significance for national culture. And there was really a lot to see there! Unique collections of amazing art from all corners of Ukraine, made in various techniques and colors, impressed the visitors the most. The light blue Volyn patterns were created by the careful hands of Mrs. Anna Chaykivska from Ottawa. The craftswoman is 103 years old and keeps a sincere love for her relics in her heart. Embroidered shirts in the Borshchiv style from the Ternopil region, provided by Mrs. Lyuba Paterson, breathe history and warmth, as if each has its own living soul. Vintage towels of Mrs. Angelina Reshitnyk made of home-woven fabric and unique sewing are priceless relics that are more than a hundred years old. A skillful craftswoman, in love with her work, Hrystia Momryk held master classes for guests and demonstrated various techniques of the ancient art of embroidery. Ms. Rosalia Fedak provided a priceless collection of women's shirts embroidered with lace and decorated with unique ornaments for the exhibition. Vyshyvanka is also a modern weapon in a terrible, hellish war. This is exactly what the visitors saw in the painting, where the girl puts blood-red and ominous black threads on the canvas. In her sad, but unconquered eyes, there is calm determination. The poignant picture of Olga Nazarkina, an artist with a big heart and delicate taste, is a symbol of a new page in world history, which is being written right now with the blood of Ukrainians. No one was left indifferent by a children's drawing, where Ukraine is stitched together from scraps of individual lives. It was painted by young immigrants at a summer camp created by the UCSS charity. Everyone left something private there. In it - pain and despair, longing for home, but even more - strength and determination, hope and love. Yes, it was the hope for recovery and sincere childlike love for life that drove the organizers of the evening. The host of the evening was the outstanding entertainer Mykhailo Ryndzak. The Cantabile Duet (Mikhail Rykov and Vlada Shametska) and the Bibik Duet (Natalia Bibik and Anna Bakhcheeva) created a wonderful chamber atmosphere at the beginning of the event. Instrumental classical music and arrangements of modern Ukrainian works were played on the stage. The duet The Sharms (Olga Kirchanova and Yurii Saidmambyetov) performed musical covers of modern Ukrainian pop music. And when it became noisy and cheerful, as if relatives had gathered for a feast, of course the song flowed. Opera baritone Oleksiy Fishchuk made everyone freeze for a second, because his voice penetrates through. And 'Red Viburnum', performed with his son, Orest Fyschuk, was met with enthusiasm, pride and loud applause. But it is not accepted among Ukrainians to only sing, without a fiery dance. The 'Svitanok' ensemble helped here, combining lyricism, beauty and Cossack character in a tank. At the end of the program, pieces from the operas of S. Gulak-Artemovsky 'Zaporozhets za Danube' and D. Verdi's 'La Traviata' were performed. But what is a feast without dumplings, pies, sausages, lard with black bread and other snacks? Everything that was prepared by the careful hands of kitchen volunteers tasted flawless and Ukrainian. November 26 is also a day when the whole world honors Ukrainians innocently tortured during the Holodomor. Everyone present remembered those terrible times with a moment of silence, a memorial candle near the golden ear of corn, and a prayer for each lost soul. The times when they once again tried to exterminate us as a nation, as a single original people. Decades have passed, and that terrible enemy is once again sowing death and suffering, killing our children and destroying homes. And only together we will overcome the darkness and Horde hordes, which have already driven us from our holy land more than once. And let's get dressed again in embroidered clothes - the clothes of free and brave people. We will once again invite everyone who cares to visit us to bow down and thank us for our help. In the meantime, we must hold fast to each other and do a common thing. Until victory! Everything will be Ukraine!",
+  },
+  loadPictures: {
+    id: `${scope}.loadPictures`,
+    defaultMessage: 'Load more pictures of the event'
+  }
+});

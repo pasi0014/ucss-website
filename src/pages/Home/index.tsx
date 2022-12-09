@@ -6,6 +6,7 @@ import about from "../../assets/images/about.JPG";
 // import campPic from "../../assets/images/IMG_3184.JPG";
 import groupPhoto from "../../assets/images/group-photo.jpeg";
 import mykolay from "../../assets/images/mykolay-ad.jpeg";
+import vyshyvanka from "../../assets/images/vyshyvanka-logo.jpeg";
 import messages from "./messages";
 import ContactInfo from "../../components/ContactInfo";
 // import ControlledCarousel from "../../components/ControlledCarousel";
@@ -127,7 +128,7 @@ const Home = () => {
               <h2 className="text-center mb-4 text-4xl p-5">
                 {formatMessage({ ...messages.recentNewsTitle })}
               </h2>
-              <div className="flex flex-col md:flex-row  sm:space-y-0 space-y-16 lg:space-x-16 justify-center rounded-xl">
+              <div className="flex flex-col md:flex-row sm:space-y-0 space-y-16 lg:space-x-16 justify-center rounded-xl">
                 {/* Camp report */}
                 <div className="md:w-7/12 shadow-md">
                   <div className="h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
@@ -230,6 +231,32 @@ const Home = () => {
                   </div>
                 </div>
               </div> */}
+              </div>
+              {/* Vyshyvanka */}
+              <div className="md:w-7/12 shadow-md mx-auto mt-5">
+                <div className="h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
+                  <img
+                    className="transform lg:h-80 md:h-36 w-full object-cover object-center scale-100 transition-all duration-700 hover:scale-110"
+                    src={vyshyvanka}
+                    alt="Embroidery Event"
+                  />
+                  <div className="p-6">
+                    <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-3 mt-3">
+                      {formatMessage({ ...messages.date_vyshyvanka })}
+                    </h2>
+                    <h3 className="title-font text-lg font-bold text-gray-600 mb-3">
+                      {formatMessage({ ...messages.vyshyvankaTitle })}
+                    </h3>
+                    <p className="leading-relaxed mb-3">
+                      {formatMessage({ ...messages.vyshyvankaTextBlurb })}
+                    </p>
+                    <Link to="/news/vyshyvanka-vechir">
+                      <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 text-white font-medium px-4 py-1 rounded-lg">
+                        {formatMessage({ ...messages.readMore })}
+                      </button>
+                    </Link>
+                  </div>
+                </div>
               </div>
               <div className="mx-auto text-center mt-5 mb-5 sm:w-5/12 w-full">
                 <Link to="/news">
