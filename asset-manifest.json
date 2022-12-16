@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.5071cc6b.chunk.css",
-    "main.js": "/static/js/main.29e8673f.chunk.js",
-    "main.js.map": "/static/js/main.29e8673f.chunk.js.map",
+    "main.css": "/static/css/main.29441c4d.chunk.css",
+    "main.js": "/static/js/main.d223a8cf.chunk.js",
+    "main.js.map": "/static/js/main.d223a8cf.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.bf8f77c6.js",
     "runtime-main.js.map": "/static/js/runtime-main.bf8f77c6.js.map",
     "static/js/2.874c8823.chunk.js": "/static/js/2.874c8823.chunk.js",
     "static/js/2.874c8823.chunk.js.map": "/static/js/2.874c8823.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.5071cc6b.chunk.css.map": "/static/css/main.5071cc6b.chunk.css.map",
+    "static/css/main.29441c4d.chunk.css.map": "/static/css/main.29441c4d.chunk.css.map",
     "static/js/2.874c8823.chunk.js.LICENSE.txt": "/static/js/2.874c8823.chunk.js.LICENSE.txt",
     "static/media/about.c05d6b0f.JPG": "/static/media/about.c05d6b0f.JPG",
     "static/media/backpack.584b1630.jpeg": "/static/media/backpack.584b1630.jpeg",
@@ -31,6 +31,7 @@
     "static/media/index.css": "/static/media/ottawa.383ddf98.jpg",
     "static/media/poland-embassy-1.0eb61ae8.jpg": "/static/media/poland-embassy-1.0eb61ae8.jpg",
     "static/media/polish-embassador.bb649088.jpeg": "/static/media/polish-embassador.bb649088.jpeg",
+    "static/media/preview-toys.bc97f36b.jpeg": "/static/media/preview-toys.bc97f36b.jpeg",
     "static/media/received_help.07086d92.jpg": "/static/media/received_help.07086d92.jpg",
     "static/media/svitanok-1.65545e93.jpeg": "/static/media/svitanok-1.65545e93.jpeg",
     "static/media/thank-you-2.271c44e2.jpeg": "/static/media/thank-you-2.271c44e2.jpeg",
@@ -51,7 +52,7 @@
   "entrypoints": [
     "static/js/runtime-main.bf8f77c6.js",
     "static/js/2.874c8823.chunk.js",
-    "static/css/main.5071cc6b.chunk.css",
-    "static/js/main.29e8673f.chunk.js"
+    "static/css/main.29441c4d.chunk.css",
+    "static/js/main.d223a8cf.chunk.js"
   ]
 }
