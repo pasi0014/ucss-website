@@ -7,6 +7,7 @@ import about from "../../assets/images/about.JPG";
 import groupPhoto from "../../assets/images/group-photo.jpeg";
 import mykolay from "../../assets/images/mykolay-ad.jpeg";
 import vyshyvanka from "../../assets/images/vyshyvanka-logo.jpeg";
+import previewToys from "../../assets/images/preview-toys.jpeg";
 import messages from "./messages";
 import ContactInfo from "../../components/ContactInfo";
 // import ControlledCarousel from "../../components/ControlledCarousel";
@@ -105,6 +106,36 @@ const Home = () => {
               >
                 Register
               </a>
+            </div>
+
+            <div className="conteiner w-full p-3 flex">
+              <div className="w-12/12 shadow-md mx-auto">
+                <div className="h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
+                  <img
+                    className="transform lg:h-80 md:h-80 w-full object-cover object-center scale-100 transition-all duration-700 hover:scale-110"
+                    src={previewToys}
+                    alt="Children sitting in front of the fireplace"
+                  />
+                  <div className="p-6">
+                    <h3 className="title-font text-lg font-bold text-gray-600 mb-2">
+                      Toys for Ukrainian refugee kids
+                    </h3>
+                    <p className="leading-relaxed mb-3">
+                      Toy Mountain supports families who have fled the war in
+                      Ukraine. CTV's Dave Charbonneau reports.
+                    </p>
+                    <a
+                      href="https://ottawa.ctvnews.ca/video?clipId=2585411"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 text-white font-medium px-4 py-1 rounded-lg">
+                        {formatMessage({ ...messages.readMore })}
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
