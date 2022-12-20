@@ -86,7 +86,10 @@ const Home = () => {
             </div>
           </div>
         </div> */}
-        <div className="w-full">
+
+        {/* UPCOMING EVENTS HERE */}
+
+        {/* <div className="w-full">
           <h2 className="text-center mt-5">
             {formatMessage({ ...messages.upcomingEvents })}
           </h2>
@@ -138,19 +141,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-
-          {/* TODO - do delete this video ad */}
-          {/* <div className="container w-full flex justify-center mb-5">
-            <iframe
-              width="660"
-              height="415"
-              src="https://www.youtube.com/embed/yz3ye_cjCGY?start=2903"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-          </div> */}
-        </div>
+        </div> */}
 
         <div className="bg-sky-200">
           <div className="container">

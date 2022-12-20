@@ -13,7 +13,10 @@ import volunteers from "../../assets/images/volunteers.jpeg";
 import backpack from "../../assets/images/backpack.jpeg";
 import dragonboat from "../../assets/images/dragonboat.jpeg";
 import vyshyvanka from "../../assets/images/vyshyvanka-logo.jpeg";
-
+import previewToys from "../../assets/images/preview-toys.jpeg";
+import madame from "../../assets/images/news-1.jpeg";
+import mykolay from "../../assets/images/news-2.jpeg";
+import vip from "../../assets/images/news-3.jpeg";
 
 import messages from "./messages";
 
@@ -46,6 +49,147 @@ function Reviews(props: any) {
           </div>
 
           <div className="flex flex-wrap -m-4 justify-center">
+            {/* VIP Учасники Української Суспільної Служби в Оттаві подарували відомому гурту  VIP Тернопіль фудболку нашого товариства розписану гаслами перемоги і побажаннями миру Україні. Принагідно усі фонди зібрані від донатів з концерту Украінськоі Школи Танців, у сумі 500$, було передано у фонд підтримки наших дорогих гостей. */}
+            <div className="p-4 md:w-5/12">
+              <div className="h-full rounded-xl shadow-cla-blue bg-gradient-to-r from-indigo-50 to-blue-50 overflow-hidden">
+                <img
+                  className="transform lg:h-72 md:h-48 w-full object-cover object-center scale-110 transition-all duration-700 hover:scale-100"
+                  src={vip}
+                  alt="Ukrainian Easter Bazar at the St. John the Baptist Ukrainian Catholic Shrine"
+                />
+                <div className="p-6">
+                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                    {/* {formatMessage({ ...messages.date_vyshyvanka })} */}
+                    December 11, 2022
+                  </h2>
+                  <p className="leading-relaxed mb-3">
+                    Учасники Української Суспільної Служби в Оттаві подарували
+                    відомому гурту VIP Тернопіль футболку нашого товариства
+                    розписану гаслами перемоги і побажаннями миру Україні.
+                    Принагідно усі фонди зібрані від донатів з концерту
+                    Украінськоі Школи Танців, у сумі 500$, було передано у фонд
+                    підтримки наших дорогих гостей.
+                    <a
+                      href="https://www.facebook.com/maryna.popovych/posts/pfbid026qcuq6n8h71vkjRmKrdw3ZRvrom7LhPL4bab8Yo8bDtMT1duCfGhYAEQyhNzFhrYl"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 text-white font-medium px-4 py-1 rounded-lg">
+                        {formatMessage({ ...messages.readMore })}
+                      </button>
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            {/* Mykolay */}
+            <div className="p-4 md:w-5/12">
+              <div className="h-full rounded-xl shadow-cla-blue bg-gradient-to-r from-indigo-50 to-blue-50 overflow-hidden">
+                <img
+                  className="transform lg:h-72 md:h-48 w-full object-cover object-center scale-110 transition-all duration-700 hover:scale-100"
+                  src={mykolay}
+                  alt="Ukrainian Easter Bazar at the St. John the Baptist Ukrainian Catholic Shrine"
+                />
+                <div className="p-6">
+                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                    {/* {formatMessage({ ...messages.date_vyshyvanka })} */}
+                    December 19, 2022
+                  </h2>
+                  <h1 className="title-font text-lg font-bold text-gray-600 mb-3">
+                    {/* {formatMessage({ ...messages.vyshyvankaTitle })} */}
+                    До діточок України завітав Святий Миколай
+                  </h1>
+                  <p className="leading-relaxed mb-3">
+                    {/* {formatMessage({ ...messages.vyshyvankaTextBlurb })} */}
+                    До діточок України завітав Святий Миколай в Оттаві. Кожна
+                    дитина отримала не тільки подаруночки але і заряд гарного
+                    святкового настрою з яким всі ми будемо зустрічати свято
+                    Різдва Христового. Щира подяка всім хто причинився до нашого
+                    свята, а саме: Украінській Суспільній Службі, Українській
+                    Православній Церкві, ангелам помічникам і Отцю Миколаю, а
+                    також КУК Оттави, дорогій пані Мерлін Томас, Toy Mountain і
+                    добродійці Хпистині Робіллард.
+                    <p className="mt-3">
+                      Sincere thank you Rev. Father Taras Kinakh , Ms Olia
+                      Kinakh, Mr. Oleksij Fishuk and most importantly Toy
+                      Mounain, CUC Ottawa, and Madam Marlene Thomas and
+                      Christine Robillard for in-lighting our children with joy
+                      and smile, creating a moment of excitement for ever
+                      lasting memory.
+                    </p>
+                    <a
+                      href="https://www.facebook.com/maryna.popovych/posts/pfbid02xGbyDY5eFYaBjjsSNes4hzfHKLwhTW9q2aovusb7WZfkzwPFPSJyzr1qjEUYanFQl"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 text-white font-medium px-4 py-1 rounded-lg">
+                        {formatMessage({ ...messages.readMore })}
+                      </button>
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            {/* News */}
+            <div className="p-4 md:w-5/12">
+              <div className="h-full rounded-xl shadow-cla-blue bg-gradient-to-r from-indigo-50 to-blue-50 overflow-hidden">
+                <img
+                  className="transform lg:h-72 md:h-48 w-full object-cover object-center scale-110 transition-all duration-700 hover:scale-100"
+                  src={madame}
+                  alt="Ukrainian Easter Bazar at the St. John the Baptist Ukrainian Catholic Shrine"
+                />
+                <div className="p-6">
+                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                    {/* {formatMessage({ ...messages.date_vyshyvanka })} */}
+                    December 19, 2022
+                  </h2>
+                  <h1 className="title-font text-lg font-bold text-gray-600 mb-3">
+                    {/* {formatMessage({ ...messages.vyshyvankaTitle })} */}
+                    Truly miracle worker!
+                  </h1>
+                  <p className="leading-relaxed mb-3">
+                    {/* {formatMessage({ ...messages.vyshyvankaTextBlurb })} */}
+                    Honoured Madam Thomas in cooperation with Toy Mountain
+                    delivered hundreds of toys to help St. Nicholas creating
+                    cheerful smile and to ensure that each Ukrainian child,
+                    effected by war, receive a present for Christmas. Our
+                    greatest appreciation goes to you a wonderful people with
+                    kindest hearts. It is truly inspiring and great example to
+                    follow.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* REPORT */}
+            <div className="p-4 md:w-5/12">
+              <div className="h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
+                <img
+                  className="transform lg:h-80 md:h-80 w-full object-cover object-center scale-100 transition-all duration-700 hover:scale-110"
+                  src={previewToys}
+                  alt="Children sitting in front of the fireplace"
+                />
+                <div className="p-6">
+                  <span className="text-lg font-bold text-gray-600 mb-2">
+                    Toys for Ukrainian refugee kids
+                  </span>
+                  <p className="leading-relaxed mb-3">
+                    Toy Mountain supports families who have fled the war in
+                    Ukraine. CTV's Dave Charbonneau reports.
+                  </p>
+                  <a
+                    href="https://ottawa.ctvnews.ca/video?clipId=2585411"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 text-white font-medium px-4 py-1 rounded-lg">
+                      {formatMessage({ ...messages.readMore })}
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+
             {/* Vushyvanka */}
             <div className="p-4 md:w-5/12">
               <div className="h-full rounded-xl shadow-cla-blue bg-gradient-to-r from-indigo-50 to-blue-50 overflow-hidden">
@@ -89,8 +233,8 @@ function Reviews(props: any) {
                   </h3>
                   <p className="leading-relaxed mb-3">
                     <p className="mt-2">
-                      "Для багатьох українців волонтерство стало способом життя з
-                      2014-го. Для канадійців-українців це було доброю звичкою
+                      "Для багатьох українців волонтерство стало способом життя
+                      з 2014-го. Для канадійців-українців це було доброю звичкою
                       завжди. А для моїх родичів тітки Тамари й дядька Івана -
                       просто постійна потреба. Живуть за принципом: прокинувся й
                       спитай себе, що ти зробив для України і українців?... Тож
@@ -109,7 +253,8 @@ function Reviews(props: any) {
                       тішився більше) Гребли ми всі старанно, тож замовлена піца
                       й солодощі (дяка Maryna Popovych та Михайло й Наталя
                       Риндзаки) дуже й дуже смакували!!! І на хвильку здалося,
-                      що ми знову в таборі й час готувати щось малим на вечерю))"
+                      що ми знову в таборі й час готувати щось малим на
+                      вечерю))"
                     </p>
                   </p>
                 </div>

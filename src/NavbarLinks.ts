@@ -14,11 +14,11 @@ export default class NavbarLinks {
         link: "/donate",
         isActive: false,
       },
-      {
-        title: messages.waitingList,
-        link: "/waiting-list",
-        isActive: false,
-      },
+      // {
+      //   title: messages.waitingList,
+      //   link: "/waiting-list",
+      //   isActive: false,
+      // },
       // {
       //   title: messages.camp,
       //   link: "/camp",

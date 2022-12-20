@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.29441c4d.chunk.css",
-    "main.js": "/static/js/main.d223a8cf.chunk.js",
-    "main.js.map": "/static/js/main.d223a8cf.chunk.js.map",
+    "main.js": "/static/js/main.154bab3c.chunk.js",
+    "main.js.map": "/static/js/main.154bab3c.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.bf8f77c6.js",
     "runtime-main.js.map": "/static/js/runtime-main.bf8f77c6.js.map",
     "static/js/2.874c8823.chunk.js": "/static/js/2.874c8823.chunk.js",
@@ -27,6 +27,9 @@
     "static/media/medicine_2.152240d1.jpg": "/static/media/medicine_2.152240d1.jpg",
     "static/media/medicine_3.bd0cab59.jpg": "/static/media/medicine_3.bd0cab59.jpg",
     "static/media/mykolay-ad.371e1485.jpeg": "/static/media/mykolay-ad.371e1485.jpeg",
+    "static/media/news-1.f787a728.jpeg": "/static/media/news-1.f787a728.jpeg",
+    "static/media/news-2.f725c256.jpeg": "/static/media/news-2.f725c256.jpeg",
+    "static/media/news-3.7abe654e.jpeg": "/static/media/news-3.7abe654e.jpeg",
     "static/media/oselya-pic.8ca2b916.jpg": "/static/media/oselya-pic.8ca2b916.jpg",
     "static/media/index.css": "/static/media/ottawa.383ddf98.jpg",
     "static/media/poland-embassy-1.0eb61ae8.jpg": "/static/media/poland-embassy-1.0eb61ae8.jpg",
@@ -53,6 +56,6 @@
     "static/js/runtime-main.bf8f77c6.js",
     "static/js/2.874c8823.chunk.js",
     "static/css/main.29441c4d.chunk.css",
-    "static/js/main.d223a8cf.chunk.js"
+    "static/js/main.154bab3c.chunk.js"
   ]
 }
