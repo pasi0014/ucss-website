@@ -79,6 +79,18 @@ export default defineMessages({
     id: `${scope}.learnMore`,
     defaultMessage: "Learn more about this camp",
   },
+  campTitle: {
+    id: `${scope}.campTitle`,
+    defaultMessage: "'An unbelievable experience': Community support bolsters Outaouais summer camp for displaced Ukrainian children"
+  },
+  campText1: {
+    id: `${scope}.campText1`,
+    defaultMessage: 'Michael Ryndzak hopes to provide the same experience to other children affected by the war after seeing how the camp shaped the children who celebrated what they had despite what they had lost.'
+  },
+  campText2: {
+    id: `${scope}.campText2`,
+    defaultMessage: 'A group of Ukrainian children displaced by war were able to play, sing and dance at a local summer camp thanks to contributions from the Ottawa community, its organizer said. Michael Ryndzak, who in May issued a plea for support to help repair and maintain an aging summer camp in the Outaouais hills which has served local Ukrainians...'
+  },
   date_vyshyvanka: {
     id: `${scope}.date_vyshyvanka`,
     defaultMessage: "November 26, 2022",
