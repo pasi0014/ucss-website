@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { injectIntl } from "react-intl";
 import { Link } from "react-router-dom";
@@ -19,10 +19,12 @@ import mykolay from "../../assets/images/news-2.jpeg";
 import vip from "../../assets/images/news-3.jpeg";
 
 import messages from "./messages";
+// import NewsCard from "../../components/NewsCard";
 
 function Reviews(props: any) {
   const { formatMessage } = props.intl;
 
+  
   useEffect(() => {
     window.scrollTo({ top: 500, behavior: "smooth" });
   }, []);
@@ -30,16 +32,14 @@ function Reviews(props: any) {
   return (
     <React.Fragment>
       <Helmet>
-        <title>
-          News - Ukrainian Canadian Social Services Ottawa (UCSS Ottawa)
-        </title>
+        <title>{formatMessage({ ...messages.metaTitle })}</title>
         <meta
           name="description"
           content="The Ukrainian Canadian Social Services Ottawa (UCSS Ottawa) is raising money to organize a summer camp for children who have been displaced by war in Ukraine. The goal of the camp is to provide a safe environment for children to play, learn and socialize with other children from Ottawa."
         />
         <meta
           name="keywords"
-          content="donate camp, ukrainian charitable organization, ucss camp, ucss ottawa news"
+          content="dxonate camp, ukrainian charitable organization, ucss camp, ucss ottawa news"
         />
       </Helmet>
       <section className="text-gray-600 body-font font-montserrat">
@@ -47,8 +47,38 @@ function Reviews(props: any) {
           <div className="flex justify-center mb-5">
             <h1>{formatMessage({ ...messages.title })}</h1>
           </div>
-
           <div className="flex flex-wrap -m-4 justify-center">
+            {/* Hotties */}
+          <div className="p-4 md:w-5/12">
+              <div className="h-full rounded-xl shadow-cla-blue bg-gradient-to-r from-indigo-50 to-blue-50 overflow-hidden">
+                <img
+                  className="transform lg:h-92 md:h-80 w-full object-cover object-center scale-100 transition-all duration-700 hover:scale-110"
+                  src="https://scontent.fxds1-1.fna.fbcdn.net/v/t39.30808-6/326113369_1329317551236116_6020467842659496863_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5cd70e&_nc_ohc=0QkzayXfEVkAX9ugmHK&_nc_ht=scontent.fxds1-1.fna&oh=00_AfB8KHdX1GHdNoIOigerWS7L0Cq8a2NL5lU2oEy1-ySX7Q&oe=63D08418"
+                  alt="Ukrainian Easter Bazar at the St. John the Baptist Ukrainian Catholic Shrine"
+                />
+                <div className="p-6">
+                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-2 mt-2">
+                    {formatMessage({ ...messages.date_hotties })}
+                  </h2>
+                  <h1 className="title-font text-lg font-bold text-gray-600 mb-3">
+                    {formatMessage({ ...messages.hottiesTitle })}
+                  </h1>
+                  <p className="leading-relaxed mb-3">
+                    {formatMessage({...messages.hottiesBody})}
+                    <a
+                      href="https://www.facebook.com/groups/3189837834631563/?multi_permalinks=3434297586852252&ref=share"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 text-white font-medium px-4 py-1 rounded-lg mt-3">
+                        {formatMessage({ ...messages.readMore })}
+                      </button>
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+
             {/* VIP Учасники Української Суспільної Служби в Оттаві подарували відомому гурту  VIP Тернопіль фудболку нашого товариства розписану гаслами перемоги і побажаннями миру Україні. Принагідно усі фонди зібрані від донатів з концерту Украінськоі Школи Танців, у сумі 500$, було передано у фонд підтримки наших дорогих гостей. */}
             <div className="p-4 md:w-5/12">
               <div className="h-full rounded-xl shadow-cla-blue bg-gradient-to-r from-indigo-50 to-blue-50 overflow-hidden">

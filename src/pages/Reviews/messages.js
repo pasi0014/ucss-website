@@ -3,6 +3,14 @@ import { defineMessages } from "@formatjs/intl";
 const scope = "app.pages.Reviews";
 
 export default defineMessages({
+  metaTitle: {
+    id: `${scope}.metaTitle`,
+    defaultMessage: "News - Ukrainian Canadian Social Services (Ottawa branch)",
+  },
+  metaDesc: {
+    id: `${scope}.metaDesc`,
+    defaultMessage: "",
+  },
   title: {
     id: `${scope}.title`,
     defaultMessage: "News",
@@ -89,5 +97,18 @@ export default defineMessages({
   vyshyvankaTitle: {
     id: `${scope}.vyshyvankaTitle`,
     defaultMessage: "UCSS organized the cultural event 'Embroidered Evening'",
+  },
+  date_hotties: {
+    id: `${scope}.date_hotties`,
+    defaultMessage: "20 January, 2023",
+  },
+  hottiesTitle: {
+    id: `${scope}.hottiesTitle`,
+    defaultMessage: "UCSS are warming Ukrainian Defenders",
+  },
+  hottiesBody: {
+    id: `${scope}.hottiesBody`,
+    defaultMessage:
+      "Dear friends! I would like to thank you Ukrainian Canadian Social Services (UCSS) - Ottawa Branch for financial support in procuring toe and hand warmers for Ukrainian servicemen and servicewomen in Bakhmut and Soledar and covering $4000 shipping fee of 10!!! parcels with hotties. Thank you for your generosity and Slava Ukraini! 💙💛",
   },
 });
