@@ -17,6 +17,8 @@ import previewToys from "../../assets/images/preview-toys.jpeg";
 import madame from "../../assets/images/news-1.jpeg";
 import mykolay from "../../assets/images/news-2.jpeg";
 import vip from "../../assets/images/news-3.jpeg";
+import hotties from "../../assets/images/hotties-1.jpeg";
+import carols from "../../assets/images/carols.jpeg";
 
 import messages from "./messages";
 // import NewsCard from "../../components/NewsCard";
@@ -24,7 +26,6 @@ import messages from "./messages";
 function Reviews(props: any) {
   const { formatMessage } = props.intl;
 
-  
   useEffect(() => {
     window.scrollTo({ top: 500, behavior: "smooth" });
   }, []);
@@ -48,12 +49,54 @@ function Reviews(props: any) {
             <h1>{formatMessage({ ...messages.title })}</h1>
           </div>
           <div className="flex flex-wrap -m-4 justify-center">
-            {/* Hotties */}
-          <div className="p-4 md:w-5/12">
+            {/*  */}
+            <div className="p-4 md:w-5/12">
               <div className="h-full rounded-xl shadow-cla-blue bg-gradient-to-r from-indigo-50 to-blue-50 overflow-hidden">
                 <img
                   className="transform lg:h-92 md:h-80 w-full object-cover object-center scale-100 transition-all duration-700 hover:scale-110"
-                  src="https://scontent.fxds1-1.fna.fbcdn.net/v/t39.30808-6/326113369_1329317551236116_6020467842659496863_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5cd70e&_nc_ohc=0QkzayXfEVkAX9ugmHK&_nc_ht=scontent.fxds1-1.fna&oh=00_AfB8KHdX1GHdNoIOigerWS7L0Cq8a2NL5lU2oEy1-ySX7Q&oe=63D08418"
+                  src={carols}
+                  alt="Ukrainian Easter Bazar at the St. John the Baptist Ukrainian Catholic Shrine"
+                />
+                <div className="p-6">
+                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-2 mt-2">
+                    {/* {formatMessage({ ...messages.date_hotties })} */}
+                    February 7, 2023
+                  </h2>
+                  <h1 className="title-font text-lg font-bold text-gray-600 mb-3">
+                    {/* {formatMessage({ ...messages.hottiesTitle })} */}
+                  </h1>
+                  <p className="leading-relaxed mb-3">
+                    Цьогорічного Різдва вся Оттавська громада урочисто
+                    відсвяткувала Фестеваль Колядок і Щедрівок. В переповненому
+                    залі Української Православної Церкви гостей вітали різні
+                    хори та дитячий колектив очолюваний паном Олексієм Фіщуком.
+                    Наймогутніше усіх вразив виступ хору студентів Оттавського
+                    Університету під керівництвом маестро Лаврентія Івашка.
+                    Родзинкою глибини і щирості їхніх старань, без сумніву, став
+                    той факт, що жоден виконавець славетних українських колядок
+                    не розмовляє в побуті украінською мовою. Їх просто надихає
+                    чарівність і мелодійність виконуваних творів а слухачам
+                    западав до душі правдивий камертон магічності бездоганного
+                    виконання. Неймовірно смачними смаколиками частували гостей
+                    фестивалю добровольці Українськоі Суспільноі Служби нашого
+                    міста. ... Шалена подяка усім хто приклав своїх зусиль до
+                    організації і проведення довгоочікуваного фестивалю коляди,
+                    особливо вельмишановній пані Джейн Колбі. Наша культура
+                    багатюща і колоритна і ми раді збагачувати нею край в якому
+                    ми живемо , а тому вдячність належить ще й телевізійній
+                    компанії Rogers яка вела трансляцію всього заходу і його
+                    можна переглянути на каналі 22 - Rogers TV.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Hotties */}
+            <div className="p-4 md:w-5/12">
+              <div className="h-full rounded-xl shadow-cla-blue bg-gradient-to-r from-indigo-50 to-blue-50 overflow-hidden">
+                <img
+                  className="transform lg:h-92 md:h-80 w-full object-cover object-center scale-100 transition-all duration-700 hover:scale-110"
+                  src={hotties}
                   alt="Ukrainian Easter Bazar at the St. John the Baptist Ukrainian Catholic Shrine"
                 />
                 <div className="p-6">
@@ -64,7 +107,7 @@ function Reviews(props: any) {
                     {formatMessage({ ...messages.hottiesTitle })}
                   </h1>
                   <p className="leading-relaxed mb-3">
-                    {formatMessage({...messages.hottiesBody})}
+                    {formatMessage({ ...messages.hottiesBody })}
                     <a
                       href="https://www.facebook.com/groups/3189837834631563/?multi_permalinks=3434297586852252&ref=share"
                       target="_blank"

@@ -23,6 +23,39 @@ const Acknowledgments = (props: any) => {
         </div>
 
         <div className="flex flex-wrap -m-4 justify-center">
+          {/* Hotties */}
+          <div className="md:w-5/12 p-4">
+            <div className="h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
+              {/* <img
+                className="transform lg:h-80 md:h-56 w-full object-cover object-center scale-110 transition-all duration-700 hover:scale-100"
+                src={thankYouBD}
+                alt="Members of UCSS collecting backpacks provided by Bydychnist bank"
+              /> */}
+              <div className="p-6">
+                February 7, 2023
+                <h3 className="title-font text-lg font-bold text-gray-600 mb-2">
+                  Дяка за підтримку
+                </h3>
+                <div className="w-full mx-auto text-left mb-3 mt-3">
+                  <span className="font-bold mt-3 font-italic">Марина Попович</span>
+                  <p className="mt-2">
+                    Дуже дякую всій моїй каманді і всім хто нас підтримує!!!! Ми
+                    сила!!! Скільки зможемо стільки і будемо допомогати!!! Ми
+                    незламні!!! Слава Україні!!!!
+                  </p>
+                  <a
+                    href="https://www.facebook.com/100048307747259/videos/576476517676123/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-3 font-bold"
+                  >
+                    Побачити більше
+                  </a>{" "}
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Bydychnist */}
           <div className="md:w-5/12 p-4">
             <div className="h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
