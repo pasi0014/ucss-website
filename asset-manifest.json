@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.b3ab623b.chunk.css",
-    "main.js": "/static/js/main.b521c235.chunk.js",
-    "main.js.map": "/static/js/main.b521c235.chunk.js.map",
+    "main.js": "/static/js/main.aba1b11c.chunk.js",
+    "main.js.map": "/static/js/main.aba1b11c.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.c5931aa0.js",
     "runtime-main.js.map": "/static/js/runtime-main.c5931aa0.js.map",
     "static/js/2.45d93da4.chunk.js": "/static/js/2.45d93da4.chunk.js",
@@ -42,6 +42,7 @@
     "static/media/thank-you-2.271c44e2.jpeg": "/static/media/thank-you-2.271c44e2.jpeg",
     "static/media/thank-you-3.1c1b9199.jpeg": "/static/media/thank-you-3.1c1b9199.jpeg",
     "static/media/thank-you-bd.2a6e1b5e.jpeg": "/static/media/thank-you-bd.2a6e1b5e.jpeg",
+    "static/media/turkey.0ff80d5b.jpeg": "/static/media/turkey.0ff80d5b.jpeg",
     "static/media/ucss.893fe5fa.jpeg": "/static/media/ucss.893fe5fa.jpeg",
     "static/media/ukraine-embassador.08728870.jpeg": "/static/media/ukraine-embassador.08728870.jpeg",
     "static/media/volunteers.723a8467.jpeg": "/static/media/volunteers.723a8467.jpeg",
@@ -58,6 +59,6 @@
     "static/js/runtime-main.c5931aa0.js",
     "static/js/2.45d93da4.chunk.js",
     "static/css/main.b3ab623b.chunk.css",
-    "static/js/main.b521c235.chunk.js"
+    "static/js/main.aba1b11c.chunk.js"
   ]
 }
