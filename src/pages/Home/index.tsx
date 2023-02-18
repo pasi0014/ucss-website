@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 import { injectIntl, useIntl } from "react-intl";
 import { Link } from "react-router-dom";
@@ -14,11 +14,15 @@ import ContactInfo from "../../components/ContactInfo";
 import ContactForm from "../../components/ContactForm";
 import WaitingList from "../../components/WaitingList";
 
+import ucu from "../../assets/images/ucu.png";
+import bcu from "../../assets/images/bcu.jpeg";
+import ucc from "../../assets/images/ucc.png";
+import embassy from "../../assets/images/eouic.png";
+
 // TODO: add our vision and values to the website
 
 const Home = () => {
   const { formatMessage } = useIntl();
-
   return (
     <React.Fragment>
       <Helmet>
@@ -56,6 +60,25 @@ const Home = () => {
         </div>
         <div className="w-full">
           <ContactInfo />
+        </div>
+        <div className="container bg-white shadow-xl rounded-xl mb-5 mt-5 p-5">
+          <h2 className="text-center m-3 pb-5">
+            {formatMessage({ ...messages.sponsors })}
+          </h2>
+          <div className="flex flex-col sm:flex-row flex-nowrap sm:flex-wrap">
+            <div className="w-8/12 flex justify-center">
+              <img src={ucu} alt="UCU" className="h-16" />
+            </div>
+            <div className="w-8/12 flex justify-center">
+              <img src={bcu} alt="BCU" className="h-16" />
+            </div>
+            <div className="w-8/12 flex justify-center">
+              <img src={embassy} alt="Embassy" className="h-16" />
+            </div>
+            <div className="w-8/12 flex justify-center">
+              <img src={ucc} alt="UCC" className="h-16" />
+            </div>
+          </div>
         </div>
         {/* Waiting List Feature */}
         {/* <div className="w-full shadow-md bg-gray-100">

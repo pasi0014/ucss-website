@@ -7,6 +7,10 @@ export default defineMessages({
     id: `${scope}.title`,
     defaultMessage: "About Us",
   },
+  sponsors: {
+    id: `${scope}.sponsors`,
+    defaultMessage: 'Our Sponsors',
+  },
   mykolay: {
     id: `${scope}.mykolay`,
     defaultMessage:
