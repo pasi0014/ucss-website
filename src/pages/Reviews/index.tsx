@@ -213,22 +213,13 @@ function Reviews(props: any) {
                 />
                 <div className="p-6">
                   <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                    {/* {formatMessage({ ...messages.date_vyshyvanka })} */}
-                    December 19, 2022
+                    {formatMessage({ ...messages.miracleWorkerDate })}
                   </h2>
                   <h1 className="title-font text-lg font-bold text-gray-600 mb-3">
-                    {/* {formatMessage({ ...messages.vyshyvankaTitle })} */}
-                    Truly miracle worker!
+                    {formatMessage({ ...messages.miracleWorkerTitle })}
                   </h1>
                   <p className="leading-relaxed mb-3">
-                    {/* {formatMessage({ ...messages.vyshyvankaTextBlurb })} */}
-                    Honoured Madam Thomas in cooperation with Toy Mountain
-                    delivered hundreds of toys to help St. Nicholas creating
-                    cheerful smile and to ensure that each Ukrainian child,
-                    effected by war, receive a present for Christmas. Our
-                    greatest appreciation goes to you a wonderful people with
-                    kindest hearts. It is truly inspiring and great example to
-                    follow.
+                    {formatMessage({ ...messages.miracleWorkerText })}
                   </p>
                 </div>
               </div>
@@ -405,25 +396,15 @@ function Reviews(props: any) {
                     August 2, 2022
                   </h2>
                   <h3 className="title-font text-lg font-bold text-gray-600 mb-2">
-                    'An unbelievable experience': Community support bolsters
-                    Outaouais summer camp for displaced Ukrainian children
+                    {formatMessage({ ...messages.campTitle })}
                   </h3>
                   <p className="leading-relaxed mb-3">
                     {/* {formatMessage({ ...messages.lionsTextBlurb })} */}
                     <span className="italic font-medium leading-relaxed">
-                      Michael Ryndzak hopes to provide the same experience to
-                      other children affected by the war after seeing how the
-                      camp shaped the children who celebrated what they had
-                      despite what they had lost.
+                      {formatMessage({ ...messages.campText1 })}
                     </span>
                     <p className="mt-2">
-                      A group of Ukrainian children displaced by war were able
-                      to play, sing and dance at a local summer camp thanks to
-                      contributions from the Ottawa community, its organizer
-                      said. Michael Ryndzak, who in May issued a plea for
-                      support to help repair and maintain an aging summer camp
-                      in the Outaouais hills which has served local
-                      Ukrainians...
+                      {formatMessage({ ...messages.campText2 })}
                     </p>
                   </p>
                   <a

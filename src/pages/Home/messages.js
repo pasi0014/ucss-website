@@ -11,6 +11,10 @@ export default defineMessages({
     id: `${scope}.sponsors`,
     defaultMessage: 'Our Sponsors',
   },
+  achievements: {
+    id: `${scope}.achievements`,
+    defaultMessage: "Our Achievements",
+  },
   mykolay: {
     id: `${scope}.mykolay`,
     defaultMessage:

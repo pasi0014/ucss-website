@@ -111,4 +111,28 @@ export default defineMessages({
     defaultMessage:
       "Dear friends! I would like to thank you Ukrainian Canadian Social Services (UCSS) - Ottawa Branch for financial support in procuring toe and hand warmers for Ukrainian servicemen and servicewomen in Bakhmut and Soledar and covering $4000 shipping fee of 10!!! parcels with hotties. Thank you for your generosity and Slava Ukraini! 💙💛",
   },
+  campTitle: {
+    id: `${scope}.campTitle`,
+    defaultMessage: "'An unbelievable experience': Community support bolsters Outaouais summer camp for displaced Ukrainian children"
+  },
+  campText1: {
+    id: `${scope}.campText1`,
+    defaultMessage: 'Michael Ryndzak hopes to provide the same experience to other children affected by the war after seeing how the camp shaped the children who celebrated what they had despite what they had lost.'
+  },
+  campText2: {
+    id: `${scope}.campText2`,
+    defaultMessage: 'A group of Ukrainian children displaced by war were able to play, sing and dance at a local summer camp thanks to contributions from the Ottawa community, its organizer said. Michael Ryndzak, who in May issued a plea for support to help repair and maintain an aging summer camp in the Outaouais hills which has served local Ukrainians...'
+  },
+  miracleWorkerTitle: {
+    id: `${scope}.miracleWorkerTitle`,
+    defaultMessage: "Truly miracle worker!",
+  },
+  miracleWorkerText: {
+    id: `${scope}.miracleWorkerText`,
+    defaultMessage: "Honoured Madam Thomas in cooperation with Toy Mountain delivered hundreds of toys to help St. Nicholas creating cheerful smile and to ensure that each Ukrainian child, effected by war, receive a present for Christmas. Our greatest appreciation goes to you a wonderful people with kindest hearts. It is truly inspiring and great example to follow.",
+  },
+  miracleWorkerDate: {
+    id: `${scope}.miracleWorkerDate`,
+    defaultMessage: "December 19, 2022",
+  },
 });
