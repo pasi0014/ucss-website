@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.a9008726.chunk.css",
-    "main.js": "/static/js/main.6bdc0563.chunk.js",
-    "main.js.map": "/static/js/main.6bdc0563.chunk.js.map",
+    "main.css": "/static/css/main.94d9ab89.chunk.css",
+    "main.js": "/static/js/main.383fe0f5.chunk.js",
+    "main.js.map": "/static/js/main.383fe0f5.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.bf8f77c6.js",
     "runtime-main.js.map": "/static/js/runtime-main.bf8f77c6.js.map",
-    "static/js/2.874c8823.chunk.js": "/static/js/2.874c8823.chunk.js",
-    "static/js/2.874c8823.chunk.js.map": "/static/js/2.874c8823.chunk.js.map",
+    "static/js/2.ba5c8739.chunk.js": "/static/js/2.ba5c8739.chunk.js",
+    "static/js/2.ba5c8739.chunk.js.map": "/static/js/2.ba5c8739.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.a9008726.chunk.css.map": "/static/css/main.a9008726.chunk.css.map",
-    "static/js/2.874c8823.chunk.js.LICENSE.txt": "/static/js/2.874c8823.chunk.js.LICENSE.txt",
+    "static/css/main.94d9ab89.chunk.css.map": "/static/css/main.94d9ab89.chunk.css.map",
+    "static/js/2.ba5c8739.chunk.js.LICENSE.txt": "/static/js/2.ba5c8739.chunk.js.LICENSE.txt",
     "static/media/about.c05d6b0f.JPG": "/static/media/about.c05d6b0f.JPG",
     "static/media/backpack.584b1630.jpeg": "/static/media/backpack.584b1630.jpeg",
     "static/media/bazar-main.bbea257e.jpg": "/static/media/bazar-main.bbea257e.jpg",
@@ -19,6 +19,8 @@
     "static/media/dragonboat.b30fc37d.jpeg": "/static/media/dragonboat.b30fc37d.jpeg",
     "static/media/embassadors.2ae30c25.jpeg": "/static/media/embassadors.2ae30c25.jpeg",
     "static/media/fundraized-event-1.6f2ce88d.jpg": "/static/media/fundraized-event-1.6f2ce88d.jpg",
+    "static/media/gramota-1.639df248.jpg": "/static/media/gramota-1.639df248.jpg",
+    "static/media/gramota-2.56822151.jpg": "/static/media/gramota-2.56822151.jpg",
     "static/media/group-photo.9f87cf88.jpeg": "/static/media/group-photo.9f87cf88.jpeg",
     "static/media/hotties-1.f46561e4.jpeg": "/static/media/hotties-1.f46561e4.jpeg",
     "static/media/interac.ffd3542f.svg": "/static/media/interac.ffd3542f.svg",
@@ -60,8 +62,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.bf8f77c6.js",
-    "static/js/2.874c8823.chunk.js",
-    "static/css/main.a9008726.chunk.css",
-    "static/js/main.6bdc0563.chunk.js"
+    "static/js/2.ba5c8739.chunk.js",
+    "static/css/main.94d9ab89.chunk.css",
+    "static/js/main.383fe0f5.chunk.js"
   ]
 }
