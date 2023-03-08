@@ -157,4 +157,103 @@ export default defineMessages({
     defaultMessage:
       "Sincere thank you Rev. Father Taras Kinakh , Ms Olia Kinakh, Mr. Oleksij Fishuk and most importantly Toy Mounain, CUC Ottawa, and Madam Marlene Thomas and Christine Robillard for in-lighting our children with joy and smile, creating a moment of excitement for ever lasting memory.",
   },
+  date_miracleWorker: {
+    id: `${scope}.date_miracleWorker`,
+    defaultMessage: "December 19, 2022",
+  },
+  miracleWorkerTitle: {
+    id: `${scope}.miracleWorkerTitle`,
+    defaultMessage: "Truly miracle worker!",
+  },
+  miracleWorkerText: {
+    id: `${scope}.miracleWorkerText`,
+    defaultMessage:
+      "Honoured Madam Thomas in cooperation with Toy Mountain delivered hundreds of toys to help St. Nicholas creating cheerful smile and to ensure that each Ukrainian child, effected by war, receive a present for Christmas. Our greatest appreciation goes to you a wonderful people with kindest hearts. It is truly inspiring and great example to follow.",
+  },
+  date_toysForKids: {
+    id: `${scope}.date_toysForKids`,
+    defaultMessage: "December 18, 2022",
+  },
+  toysForKidsTitle: {
+    id: `${scope}.toysForKidsTitle`,
+    defaultMessage: "Toys for Ukrainian refugee kids",
+  },
+  toysForKidsText: {
+    id: `${scope}.toysForKidsText`,
+    defaultMessage:
+      "Toy Mountain supports families who have fled the war in Ukraine. CTV's Dave Charbonneau reports.",
+  },
+  date_dragonboat: {
+    id: `${scope}.date_dragonboat`,
+    defaultMessage: "September 1, 2022",
+  },
+  dragonboatTitle: {
+    id: `${scope}.dragonboatTitle`,
+    defaultMessage:
+      "The Social Service organized a dragon boat ride for children",
+  },
+  dragonboatText: {
+    id: `${scope}.dragonboatText`,
+    defaultMessage:
+      "For many Ukrainians, volunteering has become a way of life since 2014. For Ukrainian-Canadians, it has always been a good habit. And for my relatives, Aunt Tamara and Uncle Ivan, it's just a constant need. They live by the principle: wake up and ask yourself what you have done for Ukraine and Ukrainians today? So when the opportunity arose to organize a dragon boat event for newly arrived children, they left everything and enthusiastically set out to realize this wonderful idea. And in place of a dull, cold morning, a sunny and bright day with new unforgettable emotions arrived. Some took an oar in their hands for the first time, while others had recent experience with rowing in a summer camp. But everyone wanted to catch the rhythm of the dragon boat and feel each other! My wonderful Tamara Rudenko-Kharalambi and Ivan Kharalambi (who, by the way, is a professional athlete and Olympian) helped with this the most. Also joining the team of coaches was Oleksiy Morgun, the head of the junior commission of the EDBF. With such mentors, not only children but also parents got into the boats. And it's still not clear who enjoyed it more). We all rowed diligently, so the ordered pizza and sweets (thanks to Maryna Popovych and Mykhailo and Natalia Ryndzaki) tasted very, very good!!! And for a moment, it seemed like we were back at summer camp and it was time to prepare something for the kids' dinner))",
+  },
+  date_school: {
+    id: `${scope}.date_school`,
+    defaultMessage: "September 1, 2022",
+  },
+  schoolTitle: {
+    id: `${scope}.schoolTitle`,
+    defaultMessage:
+      "Ukrainian Canadian Social Services supports newcomer children with backpacks",
+  },
+  schoolText: {
+    id: `${scope}.schoolText`,
+    defaultMessage:
+      "On the eve of the start of the school year, the Ukrainian Canadian Social Services decided to launch an initiative to help children prepare for school. Children had the opportunity to receive a backpack with everything necessary for the start of the academic year.",
+  },
+  date_campThanks: {
+    id: `${scope}.date_campThanks`,
+    defaultMessage: "September 11, 2022",
+  },
+  campThanksTitle: {
+    id: `${scope}.campThanksTitle`,
+    defaultMessage: 'Thank You to the Volunteers of "Sunflower" Camp',
+  },
+  campThanksText: {
+    id: `${scope}.campThanksText`,
+    defaultMessage:
+      "It was wonderful to gather with the volunteers of the 'Sunflower' camp and express our immense gratitude for their hard work. Unfortunately, not everyone could be present, but we remember all of you. Once again, a big thank you to all of you. The leaders of the children's groups are truly incredible. Let's continue to grow and do many more good deeds. Chefs, you are unparalleled. The doctor is super creative and imaginative, the canoeing was unforgettable, the artist and dance school are top-notch, rhythmic gymnastics is Olympic-worthy...to all, a gigantic thank you and tremendous respect!",
+  },
+  date_campReport: {
+    id: `${scope}.date_campReport`,
+    defaultMessage: "August 2, 2022",
+  },
+  campReportTitle: {
+    id: `${scope}.campReportTitle`,
+    defaultMessage:
+      "'An unbelievable experience': Community support bolsters Outaouais summer camp for displaced Ukrainian children",
+  },
+  campReportSubTitle: {
+    id: `${scope}.campReportSubTitle`,
+    defaultMessage:
+      "Michael Ryndzak hopes to provide the same experience to other children affected by the war after seeing how the camp shaped the children who celebrated what they had despite what they had lost.",
+  },
+  campReportText: {
+    id: `${scope}.campReportText`,
+    defaultMessage:
+      "A group of Ukrainian children displaced by war were able to play, sing and dance at a local summer camp thanks to contributions from the Ottawa community, its organizer said. Michael Ryndzak, who in May issued a plea for support to help repair and maintain an aging summer camp in the Outaouais hills which has served local Ukrainians...",
+  },
+  date_localConcert: {
+    id: `${scope}.date_localConcert`,
+    defaultMessage: "23 June, 2022",
+  },
+  localConcertTitle: {
+    id: `${scope}.localConcertTitle`,
+    defaultMessage: "Local benefit concert for Ukraine",
+  },
+  localConcertText: {
+    id: `${scope}.localConcertText`,
+    defaultMessage:
+      "CTV's Jackie Perez with the Ukrainian Canadians making harmonious efforts to raise funds with a concert at Lansdowne Park.",
+  },
 });

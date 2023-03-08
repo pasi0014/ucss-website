@@ -61,9 +61,9 @@ function Reviews(props: any) {
                   <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-2 mt-2">
                     {formatMessage({ ...messages.date_carols })}
                   </h2>
-                  <h1 className="title-font text-lg font-bold text-gray-600 mb-3">
+                  <h3 className="title-font text-lg font-bold text-gray-600 mb-3">
                     {formatMessage({ ...messages.carolsTitle })}
-                  </h1>
+                  </h3>
                   <p className="leading-relaxed mb-3">
                     {formatMessage({ ...messages.carolsText })}
                   </p>
@@ -83,9 +83,9 @@ function Reviews(props: any) {
                   <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-2 mt-2">
                     {formatMessage({ ...messages.date_hotties })}
                   </h2>
-                  <h1 className="title-font text-lg font-bold text-gray-600 mb-3">
+                  <h3 className="title-font text-lg font-bold text-gray-600 mb-3">
                     {formatMessage({ ...messages.hottiesTitle })}
-                  </h1>
+                  </h3>
                   <p className="leading-relaxed mb-3">
                     {formatMessage({ ...messages.hottiesBody })}
                     <a
@@ -114,9 +114,9 @@ function Reviews(props: any) {
                   <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-2 mt-2">
                     {formatMessage({ ...messages.date_vip })}
                   </h2>
-                  <h1 className="title-font text-lg font-bold text-gray-600 mb-3">
+                  <h3 className="title-font text-lg font-bold text-gray-600 mb-3">
                     {formatMessage({ ...messages.vipTitle })}
-                  </h1>
+                  </h3>
                   <p className="leading-relaxed mb-3">
                     {formatMessage({ ...messages.vipText })}
                   </p>
@@ -144,24 +144,21 @@ function Reviews(props: any) {
                   <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-2 mt-2">
                     {formatMessage({ ...messages.date_mykolay })}
                   </h2>
-                  <h1 className="title-font text-lg font-bold text-gray-600 mb-3">
+                  <h3 className="title-font text-lg font-bold text-gray-600 mb-3">
                     {formatMessage({ ...messages.mykolayTitle })}
-                  </h1>
+                  </h3>
                   <p className="leading-relaxed mb-3">
                     {formatMessage({ ...messages.mykolayText })}
-                    <p className="mt-3">
-                      {formatMessage({ ...messages.mykolayThanks })}
-                    </p>
-                    <a
-                      href="https://www.facebook.com/maryna.popovych/posts/pfbid02xGbyDY5eFYaBjjsSNes4hzfHKLwhTW9q2aovusb7WZfkzwPFPSJyzr1qjEUYanFQl"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 text-white font-medium px-4 py-1 rounded-lg">
-                        {formatMessage({ ...messages.readMore })}
-                      </button>
-                    </a>
                   </p>
+                  <a
+                    href="https://www.facebook.com/maryna.popovych/posts/pfbid02xGbyDY5eFYaBjjsSNes4hzfHKLwhTW9q2aovusb7WZfkzwPFPSJyzr1qjEUYanFQl"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 text-white font-medium px-4 py-1 rounded-lg">
+                      {formatMessage({ ...messages.readMore })}
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -175,22 +172,13 @@ function Reviews(props: any) {
                 />
                 <div className="p-6">
                   <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-2 mt-2">
-                    {/* {formatMessage({ ...messages.date_vyshyvanka })} */}
-                    December 19, 2022
+                    {formatMessage({ ...messages.date_miracleWorker })}
                   </h2>
-                  <h1 className="title-font text-lg font-bold text-gray-600 mb-3">
-                    {/* {formatMessage({ ...messages.vyshyvankaTitle })} */}
-                    Truly miracle worker!
-                  </h1>
+                  <h3 className="title-font text-lg font-bold text-gray-600 mb-3">
+                    {formatMessage({ ...messages.miracleWorkerTitle })}
+                  </h3>
                   <p className="leading-relaxed mb-3">
-                    {/* {formatMessage({ ...messages.vyshyvankaTextBlurb })} */}
-                    Honoured Madam Thomas in cooperation with Toy Mountain
-                    delivered hundreds of toys to help St. Nicholas creating
-                    cheerful smile and to ensure that each Ukrainian child,
-                    effected by war, receive a present for Christmas. Our
-                    greatest appreciation goes to you a wonderful people with
-                    kindest hearts. It is truly inspiring and great example to
-                    follow.
+                    {formatMessage({ ...messages.miracleWorkerText })}
                   </p>
                 </div>
               </div>
@@ -205,12 +193,14 @@ function Reviews(props: any) {
                   alt="Children sitting in front of the fireplace"
                 />
                 <div className="p-6">
-                  <span className="text-lg font-bold text-gray-600 mb-2">
-                    Toys for Ukrainian refugee kids
-                  </span>
+                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-2 mt-2">
+                    {formatMessage({ ...messages.date_toysForKids })}
+                  </h2>
+                  <h3 className="title-font text-lg font-bold text-gray-600 mb-3">
+                    {formatMessage({ ...messages.toysForKidsTitle })}
+                  </h3>
                   <p className="leading-relaxed mb-3">
-                    Toy Mountain supports families who have fled the war in
-                    Ukraine. CTV's Dave Charbonneau reports.
+                    {formatMessage({ ...messages.toysForKidsText })}
                   </p>
                   <a
                     href="https://ottawa.ctvnews.ca/video?clipId=2585411"
@@ -234,12 +224,12 @@ function Reviews(props: any) {
                   alt="Ukrainian Easter Bazar at the St. John the Baptist Ukrainian Catholic Shrine"
                 />
                 <div className="p-6">
-                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-2 mt-2">
                     {formatMessage({ ...messages.date_vyshyvanka })}
                   </h2>
-                  <h1 className="title-font text-lg font-medium text-gray-600 mb-3">
+                  <h3 className="title-font text-lg font-medium text-gray-600 mb-3">
                     {formatMessage({ ...messages.vyshyvankaTitle })}
-                  </h1>
+                  </h3>
                   <p className="leading-relaxed mb-3">
                     {formatMessage({ ...messages.vyshyvankaTextBlurb })}
                   </p>
@@ -259,37 +249,15 @@ function Reviews(props: any) {
                   alt="Members of UCSS and Lions Club"
                 />
                 <div className="p-6">
-                  {/* <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                    Вересень 1, 2022
-                  </h2> */}
+                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-2 mt-2">
+                    {formatMessage({ ...messages.date_dragonboat })}
+                  </h2>
                   <h3 className="title-font text-lg font-bold text-gray-600 mb-2">
-                    Суспільна Служба організувала прогулянку для дітей на
-                    dragonboat
+                    {formatMessage({ ...messages.dragonboatTitle })}
                   </h3>
                   <p className="leading-relaxed mb-3">
                     <p className="mt-2">
-                      "Для багатьох українців волонтерство стало способом життя
-                      з 2014-го. Для канадійців-українців це було доброю звичкою
-                      завжди. А для моїх родичів тітки Тамари й дядька Івана -
-                      просто постійна потреба. Живуть за принципом: прокинувся й
-                      спитай себе, що ти зробив для України і українців?... Тож
-                      як випала нагода влаштувати новоприбулим дітям веслярський
-                      івент, покинули все й ентузіазмом взялися реалізовувати
-                      чудову ідею. І на зміну сірому холодному ранкові прийшов
-                      сонячний яскравий день з новими незабутніми емоціями.
-                      Дехто вперше взяв весло до рук, дехто уже мав нещодавній
-                      таборовий досвід веслування. Та всі хотіли зловити ритм
-                      човна-дракона (dragon boat) і відчути одне одного! У цьому
-                      якнайкраще допомогли мої славні Тамара Руденко-Хараламбій
-                      та Іван Хараламбій( між іншим, професійний спортсмен,
-                      олімпієць) Доєднався до команди тренерів і Олексій Моргун,
-                      голова юніорської комісії EDBF. З такими наставниками сіли
-                      в човни не лише діти, а й батьки. І ще не знати, хто
-                      тішився більше) Гребли ми всі старанно, тож замовлена піца
-                      й солодощі (дяка Maryna Popovych та Михайло й Наталя
-                      Риндзаки) дуже й дуже смакували!!! І на хвильку здалося,
-                      що ми знову в таборі й час готувати щось малим на
-                      вечерю))"
+                      {formatMessage({ ...messages.dragonboatText })}
                     </p>
                   </p>
                 </div>
@@ -305,18 +273,14 @@ function Reviews(props: any) {
                 />
                 <div className="p-6">
                   <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                    Вересень 1, 2022
+                    {formatMessage({ ...messages.date_school })}
                   </h2>
                   <h3 className="title-font text-lg font-bold text-gray-600 mb-2">
-                    Суспільна Служба Українсців Канади підтримує новоприбулих
-                    дітей з рюкзаками
+                    {formatMessage({ ...messages.schoolTitle })}
                   </h3>
                   <p className="leading-relaxed mb-3">
                     <p className="mt-2">
-                      Напередодні початку шкільного року, Суспільна Служба
-                      вирішила провести ініціативу, для того щоб допомогти
-                      діткам підготуватись до школи. Дітки мали змогу отримати
-                      рюкзачок з усім необхідним для початку навчального року.
+                      {formatMessage({ ...messages.schoolText })}
                     </p>
                   </p>
                 </div>
@@ -332,22 +296,14 @@ function Reviews(props: any) {
                 />
                 <div className="p-6">
                   <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                    Вересень 11, 2022
+                    {formatMessage({ ...messages.date_campThanks })}
                   </h2>
                   <h3 className="title-font text-lg font-bold text-gray-600 mb-2">
-                    Подяка Волонтерам табору "Соняшник"
+                    {formatMessage({ ...messages.campThanksTitle })}
                   </h3>
                   <p className="leading-relaxed mb-3">
                     <p className="mt-2">
-                      Як же гарно зібратися разом з волонтерами тобору 'Соняшник
-                      ' та висловити велику подяку за їхню важку працю. Нажаль
-                      не всі змогли бути присутніми, але ми вас всіх пам'ятаємо.
-                      Ще раз вам всім велика подяка.Лідери дитячих груп справді
-                      неймовірні. Давайте розвиватися і твотити багато ще добрих
-                      справ. Кухарі - Ви неперевершені. Лікарка супер креативна
-                      і творча, каноє незабутнє, художник і школа танців на
-                      висоті, ритмічна гімнастика - олімпійська… усім
-                      велитенська подяка і титанічна повага!
+                      {formatMessage({ ...messages.campThanksText })}
                     </p>
                   </p>
                 </div>
@@ -364,28 +320,17 @@ function Reviews(props: any) {
                 />
                 <div className="p-6">
                   <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                    August 2, 2022
+                    {formatMessage({ ...messages.date_campReport })}
                   </h2>
                   <h3 className="title-font text-lg font-bold text-gray-600 mb-2">
-                    'An unbelievable experience': Community support bolsters
-                    Outaouais summer camp for displaced Ukrainian children
+                    {formatMessage({ ...messages.campReportTitle })}
                   </h3>
                   <p className="leading-relaxed mb-3">
-                    {/* {formatMessage({ ...messages.lionsTextBlurb })} */}
                     <span className="italic font-medium leading-relaxed">
-                      Michael Ryndzak hopes to provide the same experience to
-                      other children affected by the war after seeing how the
-                      camp shaped the children who celebrated what they had
-                      despite what they had lost.
+                      {formatMessage({ ...messages.campReportSubTitle })}
                     </span>
                     <p className="mt-2">
-                      A group of Ukrainian children displaced by war were able
-                      to play, sing and dance at a local summer camp thanks to
-                      contributions from the Ottawa community, its organizer
-                      said. Michael Ryndzak, who in May issued a plea for
-                      support to help repair and maintain an aging summer camp
-                      in the Outaouais hills which has served local
-                      Ukrainians...
+                      {formatMessage({ ...messages.campReportText })}
                     </p>
                   </p>
                   <a
@@ -456,7 +401,7 @@ function Reviews(props: any) {
               </div>
             </div>
             {/* Summer Camp */}
-            <div className="p-4 md:w-5/12">
+            {/* <div className="p-4 md:w-5/12">
               <div className="h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
                 <img
                   className="transform lg:h-48 md:h-36 w-full object-cover object-center scale-110 transition-all duration-700 hover:scale-100"
@@ -480,7 +425,7 @@ function Reviews(props: any) {
                   </Link>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/* Fundraiser event blog */}
             <div className="p-4 md:w-5/12">
@@ -552,16 +497,13 @@ function Reviews(props: any) {
                 />
                 <div className="p-6">
                   <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                    {/* {formatMessage({ ...messages.upcomingEvents })} */}
+                    {formatMessage({ ...messages.date_localConcert })}
                   </h2>
                   <h2 className="title-font text-lg font-medium text-gray-600 mb-3">
-                    {/* {formatMessage({ ...messages.summerCampTitle })} */}
-                    Local benefit concert for Ukraine
+                    {formatMessage({ ...messages.localConcertTitle })}
                   </h2>
                   <p className="leading-relaxed mb-3">
-                    CTV's Jackie Perez with the Ukrainian Canadians making
-                    harmonious efforts to raise funds with a concert at
-                    Lansdowne Park.
+                    {formatMessage({ ...messages.localConcertText })}
                   </p>
 
                   <div className="flex items-center w-full text-center mt-5">
