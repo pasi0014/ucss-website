@@ -111,4 +111,50 @@ export default defineMessages({
     defaultMessage:
       "Dear friends! I would like to thank you Ukrainian Canadian Social Services (UCSS) - Ottawa Branch for financial support in procuring toe and hand warmers for Ukrainian servicemen and servicewomen in Bakhmut and Soledar and covering $4000 shipping fee of 10!!! parcels with hotties. Thank you for your generosity and Slava Ukraini! 💙💛",
   },
+  date_carols: {
+    id: `${scope}.date_carols`,
+    defaultMessage: "February 7, 2023",
+  },
+  carolsTitle: {
+    id: `${scope}.carolsTitle`,
+    defaultMessage:
+      "Ottawa Community Celebrates Festival of Carols and Shchedrivkas with Vibrant Music and Culture at Ukrainian Orthodox Church",
+  },
+  carolsText: {
+    id: `${scope}.carolsText`,
+    defaultMessage:
+      "The Ottawa community celebrated the Festival of Carols and Shchedrivkas this Christmas with great pomp and grandeur. Various choirs and a children's group led by Mr. Oleksiy Fischuk greeted guests in the packed hall of the Ukrainian Orthodox Church. However, it was the powerful performance by the student choir of the University of Ottawa under the direction of Maestro Laurentiy Ivashka that left the most profound impression on everyone What made their efforts truly remarkable was the fact that not a single performer of these famous Ukrainian carols spoke the Ukrainian language in their daily life. Rather, they were inspired by the enchanting melodies of the music they performed, and the audience was captivated by the sincere and genuine tone of their flawless performance. The volunteers of the Ukrainian Social Services in our city treated guests to incredibly delicious treats, making the festival an even more memorable experience. Grateful thanks were extended to everyone who contributed to the organization and execution of this highly anticipated carol festival, especially to the esteemed Ms. Jane Colby. Our culture is rich and vibrant, and we are delighted to enrich the community in which we live with it. We are also thankful to Rogers TV, who broadcasted the entire event on channel 22, allowing even more people to enjoy this wonderful celebration of music and culture.",
+  },
+  date_vip: {
+    id: `${scope}.date_vip`,
+    defaultMessage: "December 11, 2022",
+  },
+  vipTitle: {
+    id: `${scope}.vipTitle`,
+    defaultMessage:
+      "Ukrainian Canadian Social Service in Ottawa Donates Funds and Gifts to VIP Ternopil Band with Victory T-Shirt and Well-Wishes for Peace in Ukraine",
+  },
+  vipText: {
+    id: `${scope}.vipText`,
+    defaultMessage:
+      "Participants of the Ukrainian Community Service in Ottawa gifted the renowned VIP Ternopil band with a t-shirt adorned with slogans of victory and well-wishes for peace in Ukraine. On this occasion, all funds collected from donations at the Ukrainian Dance School concert, totaling $500, were also donated to the support fund for our beloved guests.",
+  },
+  date_mykolay: {
+    id: `${scope}.date_mykolay`,
+    defaultMessage: "December 19, 2022",
+  },
+  mykolayTitle: {
+    id: `${scope}.mykolayTitle`,
+    defaultMessage: "Saint Nicholas Visits Children of Ukraine in Ottawa",
+  },
+  mykolayText: {
+    id: `${scope}.mykolayText`,
+    defaultMessage:
+      "In a heartwarming celebration, Saint Nicholas made a special appearance for the children of Ukraine in Ottawa. Each child not only received a gift, but also a boost of festive spirit that we will all carry into the Christmas season. The Ukrainian community expressed their gratitude to all who contributed to the event, including the Ukrainian Social Services, Ukrainian Orthodox Church, assistant angels, and Father Nicholas, as well as the Ottawa Ukrainian Women's League, the dear Mrs. Merlin Thomas, Toy Mountain, and the philanthropist Hlystyne Robillard. The event brought joy and happiness to the children, providing them with memories they will cherish for years to come. It is a testament to the power of community and the spirit of giving, especially during the holiday season.",
+  },
+  mykolayThanks: {
+    id: `${scope}.mykolayThanks`,
+    defaultMessage:
+      "Sincere thank you Rev. Father Taras Kinakh , Ms Olia Kinakh, Mr. Oleksij Fishuk and most importantly Toy Mounain, CUC Ottawa, and Madam Marlene Thomas and Christine Robillard for in-lighting our children with joy and smile, creating a moment of excitement for ever lasting memory.",
+  },
 });

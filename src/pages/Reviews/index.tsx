@@ -59,33 +59,13 @@ function Reviews(props: any) {
                 />
                 <div className="p-6">
                   <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-2 mt-2">
-                    {/* {formatMessage({ ...messages.date_hotties })} */}
-                    February 7, 2023
+                    {formatMessage({ ...messages.date_carols })}
                   </h2>
                   <h1 className="title-font text-lg font-bold text-gray-600 mb-3">
-                    {/* {formatMessage({ ...messages.hottiesTitle })} */}
+                    {formatMessage({ ...messages.carolsTitle })}
                   </h1>
                   <p className="leading-relaxed mb-3">
-                    Цьогорічного Різдва вся Оттавська громада урочисто
-                    відсвяткувала Фестеваль Колядок і Щедрівок. В переповненому
-                    залі Української Православної Церкви гостей вітали різні
-                    хори та дитячий колектив очолюваний паном Олексієм Фіщуком.
-                    Наймогутніше усіх вразив виступ хору студентів Оттавського
-                    Університету під керівництвом маестро Лаврентія Івашка.
-                    Родзинкою глибини і щирості їхніх старань, без сумніву, став
-                    той факт, що жоден виконавець славетних українських колядок
-                    не розмовляє в побуті украінською мовою. Їх просто надихає
-                    чарівність і мелодійність виконуваних творів а слухачам
-                    западав до душі правдивий камертон магічності бездоганного
-                    виконання. Неймовірно смачними смаколиками частували гостей
-                    фестивалю добровольці Українськоі Суспільноі Служби нашого
-                    міста. ... Шалена подяка усім хто приклав своїх зусиль до
-                    організації і проведення довгоочікуваного фестивалю коляди,
-                    особливо вельмишановній пані Джейн Колбі. Наша культура
-                    багатюща і колоритна і ми раді збагачувати нею край в якому
-                    ми живемо , а тому вдячність належить ще й телевізійній
-                    компанії Rogers яка вела трансляцію всього заходу і його
-                    можна переглянути на каналі 22 - Rogers TV.
+                    {formatMessage({ ...messages.carolsText })}
                   </p>
                 </div>
               </div>
@@ -131,27 +111,24 @@ function Reviews(props: any) {
                   alt="Ukrainian Easter Bazar at the St. John the Baptist Ukrainian Catholic Shrine"
                 />
                 <div className="p-6">
-                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                    {/* {formatMessage({ ...messages.date_vyshyvanka })} */}
-                    December 11, 2022
+                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-2 mt-2">
+                    {formatMessage({ ...messages.date_vip })}
                   </h2>
+                  <h1 className="title-font text-lg font-bold text-gray-600 mb-3">
+                    {formatMessage({ ...messages.vipTitle })}
+                  </h1>
                   <p className="leading-relaxed mb-3">
-                    Учасники Української Суспільної Служби в Оттаві подарували
-                    відомому гурту VIP Тернопіль футболку нашого товариства
-                    розписану гаслами перемоги і побажаннями миру Україні.
-                    Принагідно усі фонди зібрані від донатів з концерту
-                    Украінськоі Школи Танців, у сумі 500$, було передано у фонд
-                    підтримки наших дорогих гостей.
-                    <a
-                      href="https://www.facebook.com/maryna.popovych/posts/pfbid026qcuq6n8h71vkjRmKrdw3ZRvrom7LhPL4bab8Yo8bDtMT1duCfGhYAEQyhNzFhrYl"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 text-white font-medium px-4 py-1 rounded-lg">
-                        {formatMessage({ ...messages.readMore })}
-                      </button>
-                    </a>
+                    {formatMessage({ ...messages.vipText })}
                   </p>
+                  <a
+                    href="https://www.facebook.com/maryna.popovych/posts/pfbid026qcuq6n8h71vkjRmKrdw3ZRvrom7LhPL4bab8Yo8bDtMT1duCfGhYAEQyhNzFhrYl"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 text-white font-medium px-4 py-1 rounded-lg">
+                      {formatMessage({ ...messages.readMore })}
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -164,31 +141,16 @@ function Reviews(props: any) {
                   alt="Ukrainian Easter Bazar at the St. John the Baptist Ukrainian Catholic Shrine"
                 />
                 <div className="p-6">
-                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                    {/* {formatMessage({ ...messages.date_vyshyvanka })} */}
-                    December 19, 2022
+                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-2 mt-2">
+                    {formatMessage({ ...messages.date_mykolay })}
                   </h2>
                   <h1 className="title-font text-lg font-bold text-gray-600 mb-3">
-                    {/* {formatMessage({ ...messages.vyshyvankaTitle })} */}
-                    До діточок України завітав Святий Миколай
+                    {formatMessage({ ...messages.mykolayTitle })}
                   </h1>
                   <p className="leading-relaxed mb-3">
-                    {/* {formatMessage({ ...messages.vyshyvankaTextBlurb })} */}
-                    До діточок України завітав Святий Миколай в Оттаві. Кожна
-                    дитина отримала не тільки подаруночки але і заряд гарного
-                    святкового настрою з яким всі ми будемо зустрічати свято
-                    Різдва Христового. Щира подяка всім хто причинився до нашого
-                    свята, а саме: Украінській Суспільній Службі, Українській
-                    Православній Церкві, ангелам помічникам і Отцю Миколаю, а
-                    також КУК Оттави, дорогій пані Мерлін Томас, Toy Mountain і
-                    добродійці Хпистині Робіллард.
+                    {formatMessage({ ...messages.mykolayText })}
                     <p className="mt-3">
-                      Sincere thank you Rev. Father Taras Kinakh , Ms Olia
-                      Kinakh, Mr. Oleksij Fishuk and most importantly Toy
-                      Mounain, CUC Ottawa, and Madam Marlene Thomas and
-                      Christine Robillard for in-lighting our children with joy
-                      and smile, creating a moment of excitement for ever
-                      lasting memory.
+                      {formatMessage({ ...messages.mykolayThanks })}
                     </p>
                     <a
                       href="https://www.facebook.com/maryna.popovych/posts/pfbid02xGbyDY5eFYaBjjsSNes4hzfHKLwhTW9q2aovusb7WZfkzwPFPSJyzr1qjEUYanFQl"
@@ -212,7 +174,7 @@ function Reviews(props: any) {
                   alt="Ukrainian Easter Bazar at the St. John the Baptist Ukrainian Catholic Shrine"
                 />
                 <div className="p-6">
-                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-2 mt-2">
                     {/* {formatMessage({ ...messages.date_vyshyvanka })} */}
                     December 19, 2022
                   </h2>
