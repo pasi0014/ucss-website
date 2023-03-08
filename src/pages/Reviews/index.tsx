@@ -3,6 +3,8 @@ import { Helmet } from "react-helmet";
 import { injectIntl } from "react-intl";
 import { Link } from "react-router-dom";
 
+import NewsCard from "../../components/NewsCard";
+
 import bazarMain from "../../assets/images/bazar-main.jpg";
 import embassyMain from "../../assets/images/poland-embassy-1.jpg";
 import oselyaPic from "../../assets/images/oselya-pic.jpg";
@@ -21,13 +23,35 @@ import hotties from "../../assets/images/hotties-1.jpeg";
 import carols from "../../assets/images/carols.jpeg";
 
 import messages from "./messages";
-// import NewsCard from "../../components/NewsCard";
+import Loading from "../../components/Loading";
 
 function Reviews(props: any) {
   const { formatMessage } = props.intl;
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState<Boolean>(false);
+  const [error, setError] = useState<Boolean>(true);
+
+  const getPosts = async () => {
+    try {
+      setLoading(true);
+      setError(false);
+      const response = await fetch(
+        `https://cdn.contentful.com/spaces/nsh1rgbpuq0v/environments/master/entries?access_token=${process.env.REACT_APP_CONTENTFUL_ACCESS_TOKEN}`
+      );
+      const data = await response.json();
+      setPosts(data.items);
+    } catch (error: any) {
+      setError(true);
+      console.error(error.message);
+    }
+    await setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  };
 
   useEffect(() => {
     window.scrollTo({ top: 500, behavior: "smooth" });
+    getPosts();
   }, []);
 
   return (
@@ -48,29 +72,34 @@ function Reviews(props: any) {
           <div className="flex justify-center mb-5">
             <h1>{formatMessage({ ...messages.title })}</h1>
           </div>
-          <div className="flex flex-wrap -m-4 justify-center">
-            {/*  */}
-            <div className="p-4 md:w-5/12">
-              <div className="h-full rounded-xl shadow-cla-blue bg-gradient-to-r from-indigo-50 to-blue-50 overflow-hidden">
-                <img
-                  className="transform lg:h-92 md:h-80 w-full object-cover object-center scale-100 transition-all duration-700 hover:scale-110"
-                  src={carols}
-                  alt="Ukrainian Easter Bazar at the St. John the Baptist Ukrainian Catholic Shrine"
-                />
-                <div className="p-6">
-                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-2 mt-2">
-                    {formatMessage({ ...messages.date_carols })}
-                  </h2>
-                  <h1 className="title-font text-lg font-bold text-gray-600 mb-3">
-                    {formatMessage({ ...messages.carolsTitle })}
-                  </h1>
-                  <p className="leading-relaxed mb-3">
-                    {formatMessage({ ...messages.carolsText })}
-                  </p>
-                </div>
+
+          {error && (
+            <div className="container w-8/12 flex flex-col justify-center mx-auto bg-red-100 p-10 rounded-xl shadow-md my-5">
+              <div>
+                <p className="text-center">
+                  Oops. There was an error while trying to get posts
+                </p>
+              </div>
+              <div className="text-center">
+                <button
+                  className="bg-blue-300 p-2 text-white font-bold rounded-xl w-2/12 mt-3"
+                  onClick={() => getPosts()}
+                >
+                  Refresh
+                </button>
               </div>
             </div>
+          )}
 
+          {loading && <Loading />}
+
+          <div className="flex flex-wrap -m-4 justify-center">
+            {posts &&
+              posts.length &&
+              !loading &&
+              posts.map((iPost: any) => {
+                return <NewsCard post={iPost} isLink={false} />;
+              })}
             {/* Hotties */}
             <div className="p-4 md:w-5/12">
               <div className="h-full rounded-xl shadow-cla-blue bg-gradient-to-r from-indigo-50 to-blue-50 overflow-hidden">
