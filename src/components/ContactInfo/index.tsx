@@ -92,10 +92,10 @@ function ContactInfo() {
           <p className="text-gray-700 text-base mb-4">
             {formatMessage({ ...messages.fundraiserTitle })}
           </p>
-          <span className="flex flex-col">
+          {/* <span className="flex flex-col">
             <a href="tel:6135583893">613-558-3893</a>
             <a href="mailto:nazar@ucssottawa.com">nazar@ucssottawa.com</a>
-          </span>
+          </span> */}
         </div>
       </div>
 
@@ -114,10 +114,10 @@ function ContactInfo() {
           <p className="text-gray-700 text-base mb-4 mt-3">
             {formatMessage({ ...messages.volunteerTitle })}
           </p>
-          <span className="flex flex-col">
+          {/* <span className="flex flex-col">
             <a href="tel:6132227373">613-222-7373</a>
             <a href="mailto:oksana.kavera@gmail.com">oksana.kavera@gmail.com</a>
-          </span>
+          </span> */}
         </div>
         {/* 2 */}
         <div className="p-3 rounded-xl shadow-sm bg-white lg:w-4/12 w-full">
@@ -128,8 +128,10 @@ function ContactInfo() {
             {formatMessage({ ...messages.volunteerTitle })}
           </p>
           <span className="flex flex-col">
-            <a href="tel:6138294935">613-829-4935</a>
-            <a href="mailto:mamarayisa@yahoo.ca">mamarayisa@yahoo.ca</a>
+            {/* <a href="tel:6138294935">613-829-4935</a> */}
+            <a href="mailto:sadanenko.olga@gmail.com">
+              sadanenko.olga@gmail.com
+            </a>
           </span>
         </div>
         {/* 3 */}
@@ -141,8 +143,8 @@ function ContactInfo() {
             {formatMessage({ ...messages.volunteerTitle })}
           </p>
           <span className="flex flex-col">
-            <a href="tel:6135583893">613-558-3893</a>
-            <a href="mailto:nazar@ucssottawa.com">nazar@ucssottawa.com</a>
+            {/* <a href="tel:6135583893">613-558-3893</a> */}
+            <a href="mailto:iryna_pyetkova@yahoo.ca">iryna_pyetkova@yahoo.ca</a>
           </span>
         </div>
       </div>
