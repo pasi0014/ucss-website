@@ -1,11 +1,9 @@
-import React, { useContext } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 import { useIntl } from "react-intl";
-import { Context } from "../Wrappper";
 import messages from "./messages";
 
 export default function Footer() {
-  const context = useContext(Context);
   const { formatMessage } = useIntl();
   return (
     <>

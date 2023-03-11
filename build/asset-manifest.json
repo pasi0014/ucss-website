@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.a9008726.chunk.css",
-    "main.js": "/static/js/main.6bdc0563.chunk.js",
-    "main.js.map": "/static/js/main.6bdc0563.chunk.js.map",
+    "main.css": "/static/css/main.305d4af7.chunk.css",
+    "main.js": "/static/js/main.c59e93db.chunk.js",
+    "main.js.map": "/static/js/main.c59e93db.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.bf8f77c6.js",
     "runtime-main.js.map": "/static/js/runtime-main.bf8f77c6.js.map",
-    "static/js/2.874c8823.chunk.js": "/static/js/2.874c8823.chunk.js",
-    "static/js/2.874c8823.chunk.js.map": "/static/js/2.874c8823.chunk.js.map",
+    "static/js/2.b7e24030.chunk.js": "/static/js/2.b7e24030.chunk.js",
+    "static/js/2.b7e24030.chunk.js.map": "/static/js/2.b7e24030.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.a9008726.chunk.css.map": "/static/css/main.a9008726.chunk.css.map",
-    "static/js/2.874c8823.chunk.js.LICENSE.txt": "/static/js/2.874c8823.chunk.js.LICENSE.txt",
+    "static/css/main.305d4af7.chunk.css.map": "/static/css/main.305d4af7.chunk.css.map",
+    "static/js/2.b7e24030.chunk.js.LICENSE.txt": "/static/js/2.b7e24030.chunk.js.LICENSE.txt",
     "static/media/about.c05d6b0f.JPG": "/static/media/about.c05d6b0f.JPG",
     "static/media/backpack.584b1630.jpeg": "/static/media/backpack.584b1630.jpeg",
     "static/media/bazar-main.bbea257e.jpg": "/static/media/bazar-main.bbea257e.jpg",
@@ -33,7 +33,6 @@
     "static/media/news-1.f787a728.jpeg": "/static/media/news-1.f787a728.jpeg",
     "static/media/news-2.f725c256.jpeg": "/static/media/news-2.f725c256.jpeg",
     "static/media/news-3.7abe654e.jpeg": "/static/media/news-3.7abe654e.jpeg",
-    "static/media/oselya-pic.8ca2b916.jpg": "/static/media/oselya-pic.8ca2b916.jpg",
     "static/media/index.css": "/static/media/ottawa.383ddf98.jpg",
     "static/media/poland-embassy-1.0eb61ae8.jpg": "/static/media/poland-embassy-1.0eb61ae8.jpg",
     "static/media/polish-embassador.bb649088.jpeg": "/static/media/polish-embassador.bb649088.jpeg",
@@ -60,8 +59,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.bf8f77c6.js",
-    "static/js/2.874c8823.chunk.js",
-    "static/css/main.a9008726.chunk.css",
-    "static/js/main.6bdc0563.chunk.js"
+    "static/js/2.b7e24030.chunk.js",
+    "static/css/main.305d4af7.chunk.css",
+    "static/js/main.c59e93db.chunk.js"
   ]
 }

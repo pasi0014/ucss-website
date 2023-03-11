@@ -65,17 +65,17 @@ const Home = () => {
           <h2 className="text-center m-3 pb-5">
             {formatMessage({ ...messages.sponsors })}
           </h2>
-          <div className="flex flex-col sm:flex-row flex-nowrap sm:flex-wrap">
-            <div className="w-8/12 flex justify-center">
+          <div className="flex flex-col md:flex-row flex-nowrap sm:flex-wrap">
+            <div className="w-8/12 flex justify-center mx-auto md:mt-0 mt-5">
               <img src={ucu} alt="UCU" className="h-16" />
             </div>
-            <div className="w-8/12 flex justify-center">
+            <div className="w-8/12 flex justify-center mx-auto mt-5">
               <img src={bcu} alt="BCU" className="h-16" />
             </div>
-            <div className="w-8/12 flex justify-center">
+            <div className="w-8/12 flex justify-center mx-auto mt-5">
               <img src={embassy} alt="Embassy" className="h-16" />
             </div>
-            <div className="w-8/12 flex justify-center">
+            <div className="w-8/12 flex justify-center mx-auto mt-5">
               <img src={ucc} alt="UCC" className="h-16" />
             </div>
           </div>
