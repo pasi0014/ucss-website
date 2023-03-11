@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.305d4af7.chunk.css",
-    "main.js": "/static/js/main.c59e93db.chunk.js",
-    "main.js.map": "/static/js/main.c59e93db.chunk.js.map",
+    "main.js": "/static/js/main.73d74d24.chunk.js",
+    "main.js.map": "/static/js/main.73d74d24.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.bf8f77c6.js",
     "runtime-main.js.map": "/static/js/runtime-main.bf8f77c6.js.map",
     "static/js/2.b7e24030.chunk.js": "/static/js/2.b7e24030.chunk.js",
@@ -19,6 +19,8 @@
     "static/media/dragonboat.b30fc37d.jpeg": "/static/media/dragonboat.b30fc37d.jpeg",
     "static/media/embassadors.2ae30c25.jpeg": "/static/media/embassadors.2ae30c25.jpeg",
     "static/media/fundraized-event-1.6f2ce88d.jpg": "/static/media/fundraized-event-1.6f2ce88d.jpg",
+    "static/media/gramota-1.639df248.jpg": "/static/media/gramota-1.639df248.jpg",
+    "static/media/gramota-2.56822151.jpg": "/static/media/gramota-2.56822151.jpg",
     "static/media/group-photo.9f87cf88.jpeg": "/static/media/group-photo.9f87cf88.jpeg",
     "static/media/hotties-1.f46561e4.jpeg": "/static/media/hotties-1.f46561e4.jpeg",
     "static/media/interac.ffd3542f.svg": "/static/media/interac.ffd3542f.svg",
@@ -61,6 +63,6 @@
     "static/js/runtime-main.bf8f77c6.js",
     "static/js/2.b7e24030.chunk.js",
     "static/css/main.305d4af7.chunk.css",
-    "static/js/main.c59e93db.chunk.js"
+    "static/js/main.73d74d24.chunk.js"
   ]
 }

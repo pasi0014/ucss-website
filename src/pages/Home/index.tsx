@@ -18,6 +18,8 @@ import ucu from "../../assets/images/ucu.png";
 import bcu from "../../assets/images/bcu.jpeg";
 import ucc from "../../assets/images/ucc.png";
 import embassy from "../../assets/images/eouic.png";
+import gramota1 from "../../assets/images/gramota-1.jpg";
+import gramota2 from "../../assets/images/gramota-2.jpg";
 
 // TODO: add our vision and values to the website
 
@@ -61,6 +63,7 @@ const Home = () => {
         <div className="w-full">
           <ContactInfo />
         </div>
+        {/* Sponsors */}
         <div className="container bg-white shadow-xl rounded-xl mb-5 mt-5 p-5">
           <h2 className="text-center m-3 pb-5">
             {formatMessage({ ...messages.sponsors })}
@@ -77,6 +80,26 @@ const Home = () => {
             </div>
             <div className="w-8/12 flex justify-center mx-auto mt-5">
               <img src={ucc} alt="UCC" className="h-16" />
+            </div>
+          </div>
+        </div>
+        {/* Special Thanks */}
+        <div className="container bg-white shadow-lg mx-auto my-5 rounded-lg p-5 text-center">
+          <h2>{formatMessage({ ...messages.achievements })}</h2>
+          <div className="flex md:flex-row flex-col mt-4">
+            <div className="w-full p-2 flex justify-center">
+              <img
+                src={gramota1}
+                className="transform w-10/12 h-full space-y-5 object-cover object-center scale-100 transition-all duration-700 hover:scale-110 rounded-xl shadow-sm cursor-pointer"
+                alt="Gramota"
+              />
+            </div>
+            <div className="w-full flex justify-center p-2">
+              <img
+                src={gramota2}
+                className="transform w-10/12 h-full space-y-5 object-cover object-center scale-100 transition-all duration-700 hover:scale-110 rounded-xl shadow-sm cursor-pointer"
+                alt="Gramota"
+              />
             </div>
           </div>
         </div>
