@@ -22,7 +22,7 @@ export default defineMessages({
   },
   vpName: {
     id: `${scope}.vpName`,
-    defaultMessage: "Michael Rynzak",
+    defaultMessage: "Mike Rynzak",
   },
   artashes: {
     id: `${scope}.artashes`,
@@ -71,7 +71,7 @@ export default defineMessages({
   },
   fundraiserName: {
     id: `${scope}.fundraiserName`,
-    defaultMessage: "Merilyn Thomas",
+    defaultMessage: "Marlene Thomas",
   },
   volunteerTitle: {
     id: `${scope}.volunteerTitle`,

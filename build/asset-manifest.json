@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.305d4af7.chunk.css",
-    "main.js": "/static/js/main.f251730f.chunk.js",
-    "main.js.map": "/static/js/main.f251730f.chunk.js.map",
+    "main.css": "/static/css/main.2b183579.chunk.css",
+    "main.js": "/static/js/main.ec667433.chunk.js",
+    "main.js.map": "/static/js/main.ec667433.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.bf8f77c6.js",
     "runtime-main.js.map": "/static/js/runtime-main.bf8f77c6.js.map",
-    "static/js/2.b7e24030.chunk.js": "/static/js/2.b7e24030.chunk.js",
-    "static/js/2.b7e24030.chunk.js.map": "/static/js/2.b7e24030.chunk.js.map",
+    "static/js/2.752defcf.chunk.js": "/static/js/2.752defcf.chunk.js",
+    "static/js/2.752defcf.chunk.js.map": "/static/js/2.752defcf.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.305d4af7.chunk.css.map": "/static/css/main.305d4af7.chunk.css.map",
-    "static/js/2.b7e24030.chunk.js.LICENSE.txt": "/static/js/2.b7e24030.chunk.js.LICENSE.txt",
+    "static/css/main.2b183579.chunk.css.map": "/static/css/main.2b183579.chunk.css.map",
+    "static/js/2.752defcf.chunk.js.LICENSE.txt": "/static/js/2.752defcf.chunk.js.LICENSE.txt",
     "static/media/about.c05d6b0f.JPG": "/static/media/about.c05d6b0f.JPG",
     "static/media/backpack.584b1630.jpeg": "/static/media/backpack.584b1630.jpeg",
     "static/media/bazar-main.bbea257e.jpg": "/static/media/bazar-main.bbea257e.jpg",
@@ -28,6 +28,7 @@
     "static/media/lions-marathon.6a37d0a7.jpeg": "/static/media/lions-marathon.6a37d0a7.jpeg",
     "static/media/local-concert.05e48ee0.jpg": "/static/media/local-concert.05e48ee0.jpg",
     "static/media/logo.20270243.png": "/static/media/logo.20270243.png",
+    "static/media/main.2082f081.jpeg": "/static/media/main.2082f081.jpeg",
     "static/media/medicine_1.3c9f04a7.jpg": "/static/media/medicine_1.3c9f04a7.jpg",
     "static/media/medicine_2.152240d1.jpg": "/static/media/medicine_2.152240d1.jpg",
     "static/media/medicine_3.bd0cab59.jpg": "/static/media/medicine_3.bd0cab59.jpg",
@@ -61,8 +62,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.bf8f77c6.js",
-    "static/js/2.b7e24030.chunk.js",
-    "static/css/main.305d4af7.chunk.css",
-    "static/js/main.f251730f.chunk.js"
+    "static/js/2.752defcf.chunk.js",
+    "static/css/main.2b183579.chunk.css",
+    "static/js/main.ec667433.chunk.js"
   ]
 }

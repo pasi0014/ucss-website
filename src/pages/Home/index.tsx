@@ -21,6 +21,8 @@ import embassy from "../../assets/images/eouic.png";
 import gramota1 from "../../assets/images/gramota-1.jpg";
 import gramota2 from "../../assets/images/gramota-2.jpg";
 
+import vyshyvankaPic from "../../assets/images/main.jpeg";
+
 // TODO: add our vision and values to the website
 
 const Home = () => {
@@ -108,86 +110,39 @@ const Home = () => {
           <WaitingList />
         </div> */}
         {/* Main Content */}
-        {/* <div className="lg:flex lg:mx-auto w-full lg:w-10/12 mb-4 mt-4 justify-center lg:space-x-3 p-3">
-          <div className="flex flex-col lg:w-10/12 sm:w-12/12">
-            <div className="lg:w-full w-full bg-gray-100 rounded-xl shadow-md mx-auto my-3 sm:p-16 py-5 lg:p-16">
-              <h2 className="font-medium text-4xl mb-2 text-center w-full">
-                {formatMessage({ ...messages.howYouCanHelp })}
-              </h2>
-              <div className="container mx-auto text-center flex justify-center">
-                <a
-                  href={
-                    context.locale === "en"
-                      ? "https://forms.gle/GKWiFwgi13p6aHhx5"
-                      : "https://forms.gle/42rwjQ5zABN7TEga8"
-                  }
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <button className="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-                    {formatMessage({ ...messages.googleForm })}
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div> */}
 
         {/* UPCOMING EVENTS HERE */}
 
-        {/* <div className="w-full">
-          <h2 className="text-center mt-5">
+        <div className="w-full bg-green-100 rounded-lg p-3">
+          <h2 className="text-center text-4xl text-gray-500 mt-5">
             {formatMessage({ ...messages.upcomingEvents })}
           </h2>
-          <div className="container flex flex-col sm:w-7/12 w-full justify-center mx-auto my-5">
+          <div className="container flex flex-col sm:w-7/12 w-full justify-center mx-auto my-5 bg-white rounded-xl shadow-lg p-3">
             <img
-              src={mykolay}
-              alt="Vyshyvanka Event"
+              src={vyshyvankaPic}
+              alt="Embroidery Event Ad"
               className="rounded-xl shadow-md"
             />
-            <div className="rounded-xl bg-white p-4 mt-3 flex flex-col shadow-sm">
-              <p>{formatMessage({ ...messages.mykolay })}</p>
+            <div className="rounded-xl bg-white p-4 mt-3 flex flex-col shadow-md">
+              <span className="mx-auto font-bold text-3xl mt-2 mb-3">{formatMessage({...messages.embroideryTitle})}</span>
+              <p>{formatMessage({ ...messages.embroideryText },  {
+                  br: (
+                    <>
+                      <br /> <br />
+                    </>
+                  ),
+                })}</p>
               <a
-                href="https://www.eventbrite.com/e/st-nicholas-kids-show-tickets-471969331977"
+                href="https://www.eventbrite.com/e/ukrainian-cultural-embroidery-event-tickets-597322466577?aff=ebdssbdestsearch"
                 target="_blank"
                 className="mx-auto text-center mt-3 sm:w-4/12 w-full bg-blue-500 p-3 rounded-xl text-white font-medium transition-all hover:bg-blue-400 hover:shadow-md duration-300"
                 rel="noreferrer"
               >
-                Register
+                Register now
               </a>
             </div>
-
-            <div className="conteiner w-full p-3 flex">
-              <div className="w-12/12 shadow-md mx-auto">
-                <div className="h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
-                  <img
-                    className="transform lg:h-80 md:h-80 w-full object-cover object-center scale-100 transition-all duration-700 hover:scale-110"
-                    src={previewToys}
-                    alt="Children sitting in front of the fireplace"
-                  />
-                  <div className="p-6">
-                    <h3 className="title-font text-lg font-bold text-gray-600 mb-2">
-                      Toys for Ukrainian refugee kids
-                    </h3>
-                    <p className="leading-relaxed mb-3">
-                      Toy Mountain supports families who have fled the war in
-                      Ukraine. CTV's Dave Charbonneau reports.
-                    </p>
-                    <a
-                      href="https://ottawa.ctvnews.ca/video?clipId=2585411"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 text-white font-medium px-4 py-1 rounded-lg">
-                        {formatMessage({ ...messages.readMore })}
-                      </button>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
-        </div> */}
+        </div>
 
         <div className="bg-sky-200">
           <div className="container">
