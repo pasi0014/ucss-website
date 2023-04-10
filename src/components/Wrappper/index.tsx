@@ -2,10 +2,8 @@ import React, { useState } from "react";
 import { IntlProvider } from "react-intl";
 
 import { LOCALES } from "../../i18n/locales";
-// import French from "../../lang/fr.json";
 import Ukrainian from "../../lang/ua.json";
 import English from "../../lang/en.json";
-// import Russian from "../../lang/ru.json";
 
 export const Context = React.createContext({
   value: { locale: "en", selectLanguage: () => {} },

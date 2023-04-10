@@ -4,9 +4,9 @@ import { loadStripe } from "@stripe/stripe-js";
 const DonateDrawer = (props: any) => {
   const [stripePromise, setStripePromise] = useState<any>(null);
   useEffect(() => {
-      setStripePromise(
-        loadStripe(process.env.REACT_APP_PUBLISHABLE_KEY as string)
-      );
+    setStripePromise(
+      loadStripe(process.env.REACT_APP_PUBLISHABLE_KEY as string)
+    );
     // If `redirectToCheckout` fails due to a browser or network
     // error, display the localized error message to your customer
     // using `error.message`.
@@ -15,6 +15,7 @@ const DonateDrawer = (props: any) => {
   const handleClick = async (priceId: string) => {
     // When the customer clicks on the button, redirect them to Checkout.
     const stripe = await stripePromise;
+    console.log({ priceId });
     await stripe?.redirectToCheckout({
       lineItems: [
         {
@@ -33,8 +34,7 @@ const DonateDrawer = (props: any) => {
       <div className="w-full flex md:flex-row flex-col items-center justify-center">
         <div
           className="w-full transition-all hover:scale-125 ease-in hover:bg-blue-300 cursor-pointer shadow-md rounded-lg mt-5 sm:mr-5"
-          onClick={() => handleClick(process.env.REACT_APP_5 as string)}
-        >
+          onClick={() => handleClick(process.env.REACT_APP_5 as string)}>
           <div className="md:flex p-8">
             <h2 className="text-2xl font-semibold leading-6 text-gray-800">
               $5
@@ -44,8 +44,7 @@ const DonateDrawer = (props: any) => {
 
         <div
           className="w-full transition-all hover:scale-125 ease-in hover:bg-blue-300 cursor-pointer shadow-md rounded-lg mt-5 sm:mr-5"
-          onClick={() => handleClick(process.env.REACT_APP_10 as string)}
-        >
+          onClick={() => handleClick(process.env.REACT_APP_10 as string)}>
           <div className="md:flex p-8">
             <h2 className="text-2xl font-semibold leading-6 text-gray-800">
               $10
@@ -55,8 +54,7 @@ const DonateDrawer = (props: any) => {
 
         <div
           className="w-full transition-all hover:scale-125 ease-in hover:bg-blue-300 cursor-pointer shadow-md rounded-lg mt-5 sm:mr-5"
-          onClick={() => handleClick(process.env.REACT_APP_25 as string)}
-        >
+          onClick={() => handleClick(process.env.REACT_APP_25 as string)}>
           <div className="md:flex items-center justify-center p-8">
             <h2 className="text-2xl font-semibold leading-6 text-gray-800">
               $25
@@ -66,8 +64,7 @@ const DonateDrawer = (props: any) => {
 
         <div
           className="w-full transition-all hover:scale-125 ease-in hover:bg-blue-300 cursor-pointer shadow-md rounded-lg mt-5 sm:mr-5"
-          onClick={() => handleClick(process.env.REACT_APP_50 as string)}
-        >
+          onClick={() => handleClick(process.env.REACT_APP_50 as string)}>
           <div className="md:flex items-center justify-center p-8">
             <h2 className="text-2xl font-semibold leading-6 text-gray-800">
               $50
@@ -77,8 +74,7 @@ const DonateDrawer = (props: any) => {
 
         <div
           className="w-full transition-all hover:scale-125 ease-in hover:bg-blue-300 cursor-pointer shadow-md rounded-lg  mt-5 sm:mr-0"
-          onClick={() => handleClick(process.env.REACT_APP_100 as string)}
-        >
+          onClick={() => handleClick(process.env.REACT_APP_100 as string)}>
           <div className="md:flex items-center justify-center p-8">
             <h2 className="text-2xl font-semibold leading-6 text-gray-800">
               $100
@@ -86,6 +82,17 @@ const DonateDrawer = (props: any) => {
           </div>
         </div>
       </div>
+      {/* <div
+        className="w-full transition-all hover:scale-125 ease-in hover:bg-blue-300 cursor-pointer shadow-md rounded-lg  mt-5 sm:mr-0"
+        onClick={() =>
+          handleClick(process.env.REACT_APP_CUSTOM_PRICE as string)
+        }>
+        <div className="md:flex items-center justify-center p-8">
+          <h2 className="text-2xl font-semibold leading-6 text-gray-800">
+            Enter the amount you wish to donate
+          </h2>
+        </div>
+      </div> */}
     </div>
   );
 };

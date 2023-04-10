@@ -19,11 +19,11 @@ export default class NavbarLinks {
       //   link: "/waiting-list",
       //   isActive: false,
       // },
-      // {
-      //   title: messages.camp,
-      //   link: "/camp",
-      //   isActive: false,
-      // },
+      {
+        title: messages.events,
+        link: "/events",
+        isActive: false,
+      },
       {
         title: messages.reviews,
         link: "/news",

@@ -22,9 +22,9 @@ export const Donate = () => {
     setIsCopied(true);
   };
 
-  // useEffect(() => {
-  //   window.scrollTo({ top: 500, behavior: "smooth" });
-  // }, []);
+  useEffect(() => {
+    window.scrollTo({ top: 500, behavior: "smooth" });
+  }, []);
 
   useEffect(() => {
     if (classTrigger) {

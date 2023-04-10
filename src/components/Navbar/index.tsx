@@ -72,7 +72,7 @@ const Navbar = (props: NavbarProps) => {
                       className="text-gray-300 bg-gray-700 hover:bg-gray-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                     >
                       <option value={LOCALES.ENGLISH}>English</option>
-                      <option value={LOCALES.UKRAINIAN}>Ukrainian</option>
+                      <option value={LOCALES.UKRAINIAN}>Українська</option>
                     </select>
                   </div>
                 </div>
@@ -145,9 +145,7 @@ const Navbar = (props: NavbarProps) => {
                   className="text-gray-300 w-full bg-gray-700 hover:bg-gray-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                 >
                   <option value={LOCALES.ENGLISH}>English</option>
-                  <option value={LOCALES.UKRAINIAN}>Ukrainian</option>
-                  {/* <option value={LOCALES.RUSSIAN}>Russian</option> */}
-                  {/* <option value={LOCALES.FRENCH}>French</option> */}
+                  <option value={LOCALES.UKRAINIAN}>Українська</option>
                 </select>
               </div>
             </Disclosure.Panel>
