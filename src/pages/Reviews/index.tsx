@@ -3,6 +3,8 @@ import { Helmet } from "react-helmet";
 import { injectIntl } from "react-intl";
 import { Link } from "react-router-dom";
 
+import NewsCard from "../../components/NewsCard";
+
 import bazarMain from "../../assets/images/bazar-main.jpg";
 import embassyMain from "../../assets/images/poland-embassy-1.jpg";
 import oselyaPic from "../../assets/images/oselya-pic.jpg";
@@ -21,13 +23,35 @@ import hotties from "../../assets/images/hotties-1.jpeg";
 import carols from "../../assets/images/carols.jpeg";
 
 import messages from "./messages";
-// import NewsCard from "../../components/NewsCard";
+import Loading from "../../components/Loading";
 
 function Reviews(props: any) {
   const { formatMessage } = props.intl;
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState<Boolean>(false);
+  const [error, setError] = useState<Boolean>(true);
+
+  const getPosts = async () => {
+    try {
+      setLoading(true);
+      setError(false);
+      const response = await fetch(
+        `https://cdn.contentful.com/spaces/nsh1rgbpuq0v/environments/master/entries?access_token=${process.env.REACT_APP_CONTENTFUL_ACCESS_TOKEN}`
+      );
+      const data = await response.json();
+      setPosts(data.items);
+    } catch (error: any) {
+      setError(true);
+      console.error(error.message);
+    }
+    await setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  };
 
   useEffect(() => {
     window.scrollTo({ top: 500, behavior: "smooth" });
+    getPosts();
   }, []);
 
   return (
@@ -48,8 +72,35 @@ function Reviews(props: any) {
           <div className="flex justify-center mb-5">
             <h1>{formatMessage({ ...messages.title })}</h1>
           </div>
+
+          {error && (
+            <div className="container w-8/12 flex flex-col justify-center mx-auto bg-red-100 p-10 rounded-xl shadow-md my-5">
+              <div>
+                <p className="text-center">
+                  Oops. There was an error while trying to get posts
+                </p>
+              </div>
+              <div className="text-center">
+                <button
+                  className="bg-blue-300 p-2 text-white font-bold rounded-xl w-2/12 mt-3"
+                  onClick={() => getPosts()}>
+                  Refresh
+                </button>
+              </div>
+            </div>
+          )}
+
+          {loading && <Loading />}
+
           <div className="flex flex-wrap -m-4 justify-center">
-            {/*  */}
+            {posts &&
+              posts.length &&
+              !loading &&
+              posts.map((iPost: any) => {
+                return <NewsCard post={iPost} isLink={false} />;
+              })}
+
+            {/* Carols */}
             <div className="p-4 md:w-5/12">
               <div className="h-full rounded-xl shadow-cla-blue bg-gradient-to-r from-indigo-50 to-blue-50 overflow-hidden">
                 <img
@@ -91,8 +142,7 @@ function Reviews(props: any) {
                     <a
                       href="https://www.facebook.com/groups/3189837834631563/?multi_permalinks=3434297586852252&ref=share"
                       target="_blank"
-                      rel="noreferrer"
-                    >
+                      rel="noreferrer">
                       <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 text-white font-medium px-4 py-1 rounded-lg mt-3">
                         {formatMessage({ ...messages.readMore })}
                       </button>
@@ -123,8 +173,7 @@ function Reviews(props: any) {
                   <a
                     href="https://www.facebook.com/maryna.popovych/posts/pfbid026qcuq6n8h71vkjRmKrdw3ZRvrom7LhPL4bab8Yo8bDtMT1duCfGhYAEQyhNzFhrYl"
                     target="_blank"
-                    rel="noreferrer"
-                  >
+                    rel="noreferrer">
                     <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 text-white font-medium px-4 py-1 rounded-lg">
                       {formatMessage({ ...messages.readMore })}
                     </button>
@@ -153,8 +202,7 @@ function Reviews(props: any) {
                   <a
                     href="https://www.facebook.com/maryna.popovych/posts/pfbid02xGbyDY5eFYaBjjsSNes4hzfHKLwhTW9q2aovusb7WZfkzwPFPSJyzr1qjEUYanFQl"
                     target="_blank"
-                    rel="noreferrer"
-                  >
+                    rel="noreferrer">
                     <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 text-white font-medium px-4 py-1 rounded-lg">
                       {formatMessage({ ...messages.readMore })}
                     </button>
@@ -205,8 +253,7 @@ function Reviews(props: any) {
                   <a
                     href="https://ottawa.ctvnews.ca/video?clipId=2585411"
                     target="_blank"
-                    rel="noreferrer"
-                  >
+                    rel="noreferrer">
                     <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 text-white font-medium px-4 py-1 rounded-lg">
                       {formatMessage({ ...messages.readMore })}
                     </button>
@@ -336,8 +383,7 @@ function Reviews(props: any) {
                   <a
                     href="https://ottawacitizen.com/news/local-news/an-unbelievable-experience-community-support-bolsters-outaouais-summer-camp-for-displaced-ukrainian-children?fbclid=IwAR261wEFwDaNGvZKRfSy8INfY5uS99JZMmBRFKBQq7BRMPCtoKCJzIbdCTU"
                     target="_blank"
-                    rel="noreferrer"
-                  >
+                    rel="noreferrer">
                     <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 text-white font-medium px-4 py-1 rounded-lg">
                       {formatMessage({ ...messages.readMore })}
                     </button>
@@ -392,8 +438,7 @@ function Reviews(props: any) {
                       href="https://www.cbc.ca/news/canada/ottawa/ukrainians-thank-poland-for-support-1.6421428"
                       target="_blank"
                       rel="noreferrer"
-                      className="w-full bg-gradient-to-r from-orange-300 to-amber-400 hover:scale-105 drop-shadow-md shadow-cla-violate px-4 py-1 rounded-lg"
-                    >
+                      className="w-full bg-gradient-to-r from-orange-300 to-amber-400 hover:scale-105 drop-shadow-md shadow-cla-violate px-4 py-1 rounded-lg">
                       {formatMessage({ ...messages.readMore })}
                     </a>
                   </div>
@@ -488,8 +533,7 @@ function Reviews(props: any) {
                   window.open(
                     "https://ottawa.ctvnews.ca/video?cid=sm%3Atrueanthem%3Actvottawa%3Atwitterpost&clipId=2437050&taid=62770f1241582d0001992ce5&utm_campaign=trueAnthem%3A%20Trending%20Content&utm_medium=trueAnthem&utm_source=twitter"
                   )
-                }
-              >
+                }>
                 <img
                   className="transform lg:h-48 md:h-36 w-full object-cover object-center scale-110 transition-all duration-700 hover:scale-100"
                   src={localBenefit}
@@ -511,8 +555,7 @@ function Reviews(props: any) {
                       href="https://ottawa.ctvnews.ca/video?cid=sm%3Atrueanthem%3Actvottawa%3Atwitterpost&clipId=2437050&taid=62770f1241582d0001992ce5&utm_campaign=trueAnthem%3A%20Trending%20Content&utm_medium=trueAnthem&utm_source=twitter"
                       target="_blank"
                       className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 hover:scale-105 drop-shadow-md  shadow-cla-blue px-4 py-1 rounded-lg"
-                      rel="noreferrer"
-                    >
+                      rel="noreferrer">
                       {formatMessage({ ...messages.readMore })}
                     </a>
                   </div>
