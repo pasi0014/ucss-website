@@ -13,7 +13,7 @@ export default defineMessages({
   },
   title: {
     id: `${scope}.title`,
-    defaultMessage: "News",
+    defaultMessage: "Updates",
   },
   title_bazar: {
     id: `${scope}.title_bazar`,

@@ -28,8 +28,7 @@ const Navbar = (props: NavbarProps) => {
         opacity={[0, 1]}
         easing={"easeInOutQuart"}
         duration={3000}
-        delay={200}
-      >
+        delay={200}>
         {element}
       </Anime>
     );
@@ -54,12 +53,7 @@ const Navbar = (props: NavbarProps) => {
                         <NavLink to={item.link} activeClassName="activeLink">
                           <button
                             key={index}
-                            className={
-                              item.link !== "/donate"
-                                ? "btn text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium "
-                                : "btn text-gray-800 bg-yellow-300 hover:bg-yellow-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                            }
-                          >
+                            className="btn text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium ">
                             {formatMessage({ ...item.title })}
                           </button>
                         </NavLink>
@@ -69,8 +63,7 @@ const Navbar = (props: NavbarProps) => {
                       value={context.locale}
                       defaultValue={context.locale}
                       onChange={context.selectLanguage}
-                      className="text-gray-300 bg-gray-700 hover:bg-gray-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                    >
+                      className="text-gray-300 bg-gray-700 hover:bg-gray-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                       <option value={LOCALES.ENGLISH}>English</option>
                       <option value={LOCALES.UKRAINIAN}>Українська</option>
                     </select>
@@ -89,8 +82,7 @@ const Navbar = (props: NavbarProps) => {
                       enterTo="opacity-100 rotate-180"
                       leave="transform transition ease-out duration-500"
                       leaveFrom="opacity-100"
-                      leaveTo="opacity-0"
-                    >
+                      leaveTo="opacity-0">
                       <XIcon className="block h-6 w-6" aria-hidden="true" />
                     </Transition>
                   ) : (
@@ -101,8 +93,7 @@ const Navbar = (props: NavbarProps) => {
                       enterTo="opacity-100 -rotate-180"
                       leave="transform transition ease-out duration-400"
                       leaveFrom="opacity-100 scale-100"
-                      leaveTo="opacity-0 scale-80"
-                    >
+                      leaveTo="opacity-0 scale-80">
                       <MenuIcon className="block h-6 w-6" aria-hidden="true" />
                     </Transition>
                   )}
@@ -118,8 +109,7 @@ const Navbar = (props: NavbarProps) => {
             enterTo="opacity-100 translate-y-0 scale-100"
             leave="transform translate transition duration-400 ease"
             leaveFrom="opacity-100 translate-y-0 scale-100 "
-            leaveTo="opacity-0 -translate-y-24 scale-50 "
-          >
+            leaveTo="opacity-0 -translate-y-24 scale-50 ">
             <Disclosure.Panel static className="md:hidden">
               <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 navLinks">
                 {activeLink.map((item: any) => (
@@ -127,12 +117,7 @@ const Navbar = (props: NavbarProps) => {
                     <NavLink to={item.link} activeClassName="activeLink">
                       <span
                         key={formatMessage({ ...item.title })}
-                        className={
-                          item.link !== "/donate"
-                            ? "text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium hover:no-underline"
-                            : "text-gray-800 bg-yellow-300 hover:bg-yellow-600 hover:text-white px-3 py-2 rounded-md block text-base font-medium hover:no-underline"
-                        }
-                      >
+                        className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium hover:no-underline">
                         {formatMessage({ ...item.title })}
                       </span>
                     </NavLink>
@@ -142,8 +127,7 @@ const Navbar = (props: NavbarProps) => {
                   value={context.locale}
                   defaultValue={context.locale}
                   onChange={context.selectLanguage}
-                  className="text-gray-300 w-full bg-gray-700 hover:bg-gray-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                >
+                  className="text-gray-300 w-full bg-gray-700 hover:bg-gray-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                   <option value={LOCALES.ENGLISH}>English</option>
                   <option value={LOCALES.UKRAINIAN}>Українська</option>
                 </select>

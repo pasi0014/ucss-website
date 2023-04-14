@@ -1,11 +1,11 @@
 import { defineMessages } from "@formatjs/intl";
 
-const scope = "app.pages.Acknowledgments";
+const scope = "app.pages.Testimonials";
 
 export default defineMessages({
   header: {
     id: `${scope}.header`,
-    defaultMessage: `Acknowledgments`,
+    defaultMessage: `Testimonials`,
   },
   date_turkey: {
     id: `${scope}.date_turkey`,

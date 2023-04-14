@@ -83,7 +83,7 @@ export default defineMessages({
   },
   volunteerName1: {
     id: `${scope}.volunteerName1`,
-    defaultMessage: "Natalya Ryndzak",
+    defaultMessage: "Natalya Serdynska",
   },
   volunteerName2: {
     id: `${scope}.volunteerName2`,
@@ -91,6 +91,6 @@ export default defineMessages({
   },
   volunteerName3: {
     id: `${scope}.volunteerName3`,
-    defaultMessage: "Iryna Pietkova",
+    defaultMessage: "Iryna Pyetkova",
   },
 });

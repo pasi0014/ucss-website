@@ -11,9 +11,9 @@ export default defineMessages({
     id: `${scope}.about`,
     defaultMessage: "About",
   },
-  acknowledgments: {
-    id: `${scope}.acknowledgments`,
-    defaultMessage: "Acknowledgments",
+  testimonials: {
+    id: `${scope}.Testimonials`,
+    defaultMessage: "Testimonials",
   },
   camp: {
     id: `${scope}.camp`,
@@ -41,7 +41,7 @@ export default defineMessages({
   },
   reviews: {
     id: `${scope}.reviews`,
-    defaultMessage: `News`,
+    defaultMessage: `Updates`,
   },
   events: {
     id: `${scope}.events`,

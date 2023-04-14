@@ -9,11 +9,6 @@ export default class NavbarLinks {
         link: "/home",
         isActive: false,
       },
-      {
-        title: messages.donate,
-        link: "/donate",
-        isActive: false,
-      },
       // {
       //   title: messages.waitingList,
       //   link: "/waiting-list",
@@ -30,8 +25,13 @@ export default class NavbarLinks {
         isActive: false,
       },
       {
-        title: messages.acknowledgments,
-        link: "/acknowledgments",
+        title: messages.testimonials,
+        link: "/testimonials",
+        isActive: false,
+      },
+      {
+        title: messages.donate,
+        link: "/donate",
         isActive: false,
       },
       {

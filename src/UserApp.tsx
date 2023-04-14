@@ -17,7 +17,7 @@ import Reviews from "./pages/Reviews";
 import Failure from "./pages/Failure";
 import Marathon from "./pages/Marathon";
 import WaitingList from "./components/WaitingList";
-import Acknowledgments from "./pages/Acknowledgments";
+import Testimonials from "./pages/Testmonials";
 import Vyshyvanka from "./pages/Vyshyvanka";
 import Events from "./pages/Events";
 import Camp from "./pages/Camp";
@@ -25,7 +25,7 @@ import Camp from "./pages/Camp";
 
 function UserApp() {
   return (
-    <Router>
+    <Router basename="/">
       <Helmet>
         <title>Ukrainian Canadian Social Services Ottawa branch</title>
         <meta
@@ -56,9 +56,9 @@ function UserApp() {
                     component={Marathon}
                   />
                   <Route
-                    path="/acknowledgments"
+                    path="/testimonials"
                     exact
-                    component={Acknowledgments}
+                    component={Testimonials}
                   />
                   <Route path="/events/sunflower-camp" exact component={Camp} />
                   <Route
@@ -70,7 +70,7 @@ function UserApp() {
                   <Route path="/donate/success" exact component={Success} />
                   <Route path="/donate/failure" exact component={Failure} />
                   <Route path="/contact" exact component={ContactForm} />
-                  <Route path="*" component={NotFound} />
+                  <Route component={NotFound} />
                 </Switch>
               </CSSTransition>
             </TransitionGroup>
