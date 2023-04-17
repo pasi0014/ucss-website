@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { ReactNode, useContext } from "react";
 import Anime from "react-anime";
 import { useIntl } from "react-intl";
 import { Fragment } from "react";
@@ -21,7 +21,7 @@ const Navbar = (props: NavbarProps) => {
   const { formatMessage } = useIntl();
   const activeLink: any = NavbarLinks.GetNavigationLinks();
 
-  function renderAnimatedNavbar(element: any) {
+  function renderAnimatedNavbar(children: ReactNode) {
     return (
       <Anime
         translateY={[-100, 0]}
@@ -29,7 +29,7 @@ const Navbar = (props: NavbarProps) => {
         easing={"easeInOutQuart"}
         duration={3000}
         delay={200}>
-        {element}
+        {children}
       </Anime>
     );
   }

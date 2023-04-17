@@ -6,7 +6,7 @@ import messages from "./messages";
 function Loading(props: any) {
   const { formatMessage } = props.intl;
   return (
-    <div className="flex justify-center flex-col items-center">
+    <div className="flex justify-center flex-col items-center mx-auto">
       <div
         className="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full"
         role="status"

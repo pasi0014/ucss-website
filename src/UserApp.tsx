@@ -21,7 +21,7 @@ import Testimonials from "./pages/Testmonials";
 import Vyshyvanka from "./pages/Vyshyvanka";
 import Events from "./pages/Events";
 import Camp from "./pages/Camp";
-
+import { PostPage } from "./pages/PostPage";
 
 function UserApp() {
   return (
@@ -35,31 +35,32 @@ function UserApp() {
       </Helmet>
       <div className="mx-auto">
         <Banner animateTitle={true} animateBackgroundImage={true} />
-        <Navbar animateNavbar={true} />
+        <Navbar animateNavbar={false} />
         <Route
           render={(location) => (
             <TransitionGroup>
               <CSSTransition
                 key={location.location.key}
-                timeout={400}
-                classNames="fade"
-              >
+                timeout={1000}
+                classNames="fade">
                 <Switch>
                   <Route path="/" exact component={Home} />
-                  <Route path="/news/vyshyvanka-vechir" exact component={Vyshyvanka}/>
+                  <Route
+                    path="/news/vyshyvanka-vechir"
+                    exact
+                    component={Vyshyvanka}
+                  />
                   <Route path="/home" exact component={Home} />
                   <Route path="/news" exact component={Reviews} />
+                  <Route path="/temp" component={PostPage} />
                   <Route path="/events" exact component={Events} />
+                  <Route path="/events/:slug" component={Events} />
                   <Route
                     path="/news/continental-marathon"
                     exact
                     component={Marathon}
                   />
-                  <Route
-                    path="/testimonials"
-                    exact
-                    component={Testimonials}
-                  />
+                  <Route path="/testimonials" exact component={Testimonials} />
                   <Route path="/events/sunflower-camp" exact component={Camp} />
                   <Route
                     path="/waiting-list"

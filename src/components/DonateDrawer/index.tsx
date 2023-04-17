@@ -15,7 +15,6 @@ const DonateDrawer = (props: any) => {
   const handleClick = async (priceId: string) => {
     // When the customer clicks on the button, redirect them to Checkout.
     const stripe = await stripePromise;
-    console.log({ priceId });
     await stripe?.redirectToCheckout({
       lineItems: [
         {

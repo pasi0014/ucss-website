@@ -1,133 +1,196 @@
-import React, { useEffect, useState } from "react";
+// Reference for the card --> https://codepen.io/steainsworth/full/PoJWXzr
+// <!-- Container -->
+// <div class="container mt-32 mx-auto p-4 md:p-0">
+
+//   <!-- Card wrapper -->
+//   <div class="shadow-lg flex flex-wrap w-full lg:w-4/5 mx-auto">
+
+//     <!-- Card image -->
+//     <div class="bg-cover bg-bottom border w-full md:w-1/3 h-64 md:h-auto relative" style="background-image:url('https://images7.alphacoders.com/347/347549.jpg')">
+//       <div class="absolute text-xl">
+//         <i class="fa fa-heart text-white hover:text-red-light ml-4 mt-4 cursor-pointer"></i>
+//       </div>
+//     </div>
+//     <!-- ./Card image -->
+
+//     <!-- Card body -->
+//     <div class="bg-white w-full md:w-2/3">
+//       <!-- Card body - outer wrapper -->
+//       <div class="h-full mx-auto px-6 md:px-0 md:pt-6 md:-ml-6 relative">
+//         <!-- Card body - inner wrapper -->
+//         <div class="bg-white lg:h-full p-6 -mt-6 md:mt-0 relative mb-4 md:mb-0 flex flex-wrap md:flex-wrap items-center">
+//           <!-- Card title and subtitle -->
+//           <div class="w-full lg:w-1/5 lg:border-right lg:border-solid text-center md:text-left">
+//             <h3>Saint Basil's Cathedral</h3>
+//             <p class="mb-0 mt-3 text-grey-dark text-sm italic">Moscow - Russia</p>
+//             <hr class="w-1/4 md:ml-0 mt-4  border lg:hidden">
+//           </div>
+//           <!-- ./Card title and subtitle -->
+
+//           <!-- Card description -->
+//           <div class="w-full lg:w-3/5 lg:px-3">
+//             <p class="text-md mt-4 lg:mt-0 text-justify md:text-left text-sm">
+//             The Cathedral of Vasily the Blessed (Russian: Собор Василия Блаженного, Sobor Vasiliya Blazhennogo), commonly known as Saint Basil's Cathedral, is a church in Red Square in Moscow, Russia. The building, now a museum, is officially known as the Cathedral of the Intercession of the Most Holy Theotokos on the Moat (Russian: Собор Покрова Пресвятой Богородицы, что на Рву, Sobor Pokrova Presvyatoy Bogoroditsy, chto na Rvu) or Pokrovsky Cathedral (Russian: Покровский собор).[5] It was built from 1555–1561 on orders from Ivan the Terrible and commemorates the capture of Kazan and Astrakhan.
+//             </p>
+//           </div>
+//           <!-- ./Card description -->
+
+//           <!-- Call to action button -->
+//           <div class="w-full lg:w-1/5 mt-6 lg:mt-0 lg:px-4 text-center md:text-left">
+//             <button class="bg-white hover:bg-grey-darker hover:text-white border border-solid border-grey w-1/3 lg:w-full py-2">Visit now</button>
+//           </div>
+//           <!-- ./Call to action button -->
+//         </div>
+//         <!-- ./Card body - inner wrapper -->
+//       </div>
+//       <!-- ./Card body - outer wrapper -->
+//     </div>
+//     <!-- ./Card body -->
+//   </div>
+//   <!-- ./Card wrapper -->
+// </div>
+// <!-- ./Container -->
+
+/* TODO make it as a drawer witht he full article in the format below */
+
+/*            <div className="bg-white w-full md:w-2/3">
+                <div className="h-full mx-auto px-6 md:px-0 md:pt-6 md:-ml-6 relative">
+                  <div className="bg-white lg:h-full p-6 -mt-6 md:mt-0 relative mb-4 md:mb-0 flex flex-col items-center">
+                    <div className="w-full lg:border-right lg:border-solid text-center md:text-left">
+                      <h3>
+                        "Thank You" from Ukrainian Community in Canada to the
+                        people of Poland
+                      </h3>
+                      <p className="mb-0 mt-3 text-grey-dark text-sm italic">
+                        {formatMessage({ ...messages.date_hotties })}
+                      </p>
+                    </div>
+
+                    <div className="w-full lg:w-3/5 lg:px-3">
+                      <p className="text-md mt-4 lg:mt-0 text-justify md:text-left text-sm">
+                        The Ottawa community celebrated the Festival of Carols
+                        and Shchedrivkas this Christmas with great pomp and
+                        grandeur. Various choirs and a children's group led by
+                        Mr. Oleksiy Fischuk greeted guests in the packed hall of
+                        the Ukrainian Orthodox Church.
+                        <br />
+                        <br /> However, it was the powerful performance by the
+                        student choir of the University of Ottawa under the
+                        direction of Maestro Laurentiy Ivashka that left the
+                        most profound impression on everyone What made their
+                        efforts truly remarkable was the fact that not a single
+                        performer of these famous Ukrainian carols spoke the
+                        Ukrainian language in their daily life. Rather, they
+                        were inspired by the enchanting melodies of the music
+                        they performed, and the audience was captivated by the
+                        sincere and genuine tone of their flawless performance.
+                        <br />
+                        <br /> The volunteers of the Ukrainian Social Services
+                        in our city treated guests to incredibly delicious
+                        treats, making the festival an even more memorable
+                        experience. Grateful thanks were extended to everyone
+                        who contributed to the organization and execution of
+                        this highly anticipated carol festival, especially to
+                        the esteemed Ms. Jane Colby. Our culture is rich and
+                        vibrant, and we are delighted to enrich the community in
+                        which we live with it.
+                        <br /> <br /> We are also thankful to Rogers TV, who
+                        broadcasted the entire event on channel 22, allowing
+                        even more people to enjoy this wonderful celebration of
+                        music and culture.
+                      </p>
+                    </div>
+                    <div className="w-full lg:w-1/5 mt-6 lg:mt-0 lg:px-4 text-center md:text-left">
+                      <button className="bg-white hover:bg-grey-darker hover:text-white border border-solid border-grey w-1/3 lg:w-full py-2">
+                        Visit now
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> */
+
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { injectIntl } from "react-intl";
-import Anime from "react-anime";
+import { FormattedDate, IntlShape, injectIntl } from "react-intl";
 
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import slugify from "slugify";
 
+import RichTextContent from "../RichText";
 import messages from "./messages";
 
-function NewsCard(props: any) {
-  const [loading, setLoading] = useState(false);
-  const [asset, setAsset] = useState("");
-  const [content, setContent] = useState<any>();
-  const [date, setDate] = useState<any>();
-  const [title, setTitle] = useState<String>("");
-  const [pageLink, setPageLink] = useState<any>(null);
+export interface INewsCardProps {
+  id: string;
+  title: string;
+  date: Date;
+  image: any;
+  content: Object;
+  intl: IntlShape;
+  isLink: boolean;
+  reactPageLink: string;
+  onOpen: (args: string) => void;
+}
 
-  const [error, setError] = useState(false);
-
-  const { formatMessage } = props.intl;
-
-  const fetchAssets = async (assetKeys: Array<any>) => {
-    try {
-      setLoading(true);
-      setError(false);
-      await assetKeys.reduce(async (iPrevRequest, iAssetKey) => {
-        await iPrevRequest;
-        console.log({ iAssetKey });
-
-        const response = await fetch(
-          `https://cdn.contentful.com/spaces/nsh1rgbpuq0v/environments/master/assets/${iAssetKey.sys.id}?access_token=${process.env.REACT_APP_CONTENTFUL_ACCESS_TOKEN}`
-        );
-        const tempAsset = await response.json();
-        setAsset(tempAsset.fields.file.url.slice(2));
-      }, Promise.resolve());
-    } catch (error) {
-      console.error("Unexpected error while trying to fetch an asset", {
-        error,
-      });
-      setError(true);
-    }
-    setLoading(false);
-  };
-
+function NewsCard({
+  id,
+  title,
+  date,
+  image,
+  content,
+  intl,
+  isLink,
+  reactPageLink,
+  onOpen,
+}: INewsCardProps) {
+  const [slug, setSlug] = useState("");
+  const { formatMessage } = intl;
   useEffect(() => {
-    console.log({
-      props: props.intl.locale.slice(0, 2).toString().toUpperCase(),
-    });
-
-    if (props.post.fields.postImages) {
-      fetchAssets(props.post.fields.postImages);
-    }
-
-    // Set link
-    if (props.post.fields.isPage && props.post.fields.reactPageLink) {
-      setPageLink(props.post.fields.reactPageLink);
-    }
-
-    // Set content By locale
-    setContent(
-      props.post.fields[
-        `content${props.intl.locale.slice(0, 2).toString().toUpperCase()}`
-      ]
-    );
-    // Set Date
-    if (props.post.fields.date) {
-      const postDate = new Date(props.post.fields.date);
-      setDate(postDate.toLocaleDateString("en-CA"));
-    }
-
-    if (props.post.fields.titleEN || props.post.fields.titleUK) {
-      setTitle(
-        props.post.fields[
-          `title${props.intl.locale.slice(0, 2).toString().toUpperCase()}`
-        ]
-      );
-    }
-  }, [props.intl.locale, props.post.fields, props.post.fields.postImages]);
+    if (title) setSlug(slugify(title.toLowerCase()));
+  }, [title]);
 
   return (
-    <div className="p-4 md:w-5/12">
-      <Anime
-        translateY={[100, 0]}
-        easing={"easeOutSine"}
-        opacity={[0, 1]}
-        duration={1000}
-      >
-        <div className="h-full rounded-xl shadow-cla-blue bg-gradient-to-r from-indigo-50 to-blue-50 overflow-hidden">
-          {asset && (
-            <img
-              className="transform lg:h-92 md:h-80 w-full object-cover object-center scale-100 transition-all duration-700 hover:scale-110"
-              src={`https://${asset}`}
-              alt="Ukrainian Easter Bazar at the St. John the Baptist Ukrainian Catholic Shrine"
-            />
-          )}
-
-          <div className="p-6">
-            <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-2 mt-2">
-              {date}
-              {/* {formatMessage({ ...messages.date_hotties })} */}
-            </h2>
-            <h1 className="title-font text-lg font-bold text-gray-600 mb-3">
-              {title}
-              {/* {formatMessage({ ...messages.hottiesTitle })} */}
-            </h1>
-
-            <p className="leading-relaxed mb-3">
-              {documentToReactComponents(content)}
-              {pageLink && pageLink.length && (
-                <Link to={pageLink}>
-                  <button className="w-full my-3 bg-gradient-to-r from-cyan-400 to-blue-400 hover:scale-105 drop-shadow-md  shadow-cla-blue px-4 py-1 rounded-lg">
-                    {formatMessage({ ...messages.readMore })}
-                  </button>
-                </Link>
-              )}
-              {props.isLink && (
-                <a
-                  href="https://www.facebook.com/groups/3189837834631563/?multi_permalinks=3434297586852252&ref=share"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 text-white font-medium px-4 py-1 rounded-lg mt-3">
-                    {/* {formatMessage({ ...messages.readMore })} */}
-                  </button>
-                </a>
-              )}
-            </p>
+    <div className="w-full lg:w-9/12 lg:h-96 md:h-auto flex md:flex-row flex-col justify-end mx-auto overflow-hidden shadow rounded-xl mt-5">
+      <div className="md:w-6/12 w-full">
+        {image && (
+          <img
+            className="transform lg:h-96 md:h-full w-full object-cover object-center scale-100 transition-all duration-700"
+            src={`https:${image.file.url}`}
+            alt={image.title}
+          />
+        )}
+      </div>
+      <div className="w-full">
+        <div className="h-full mx-auto px-6 md:px-0 md:pt-6 md:-ml-6">
+          <div className="lg:h-full md:h-96 p-6 -mt-6 md:mt-0 mb-4 md:mb-0 flex flex-col items-center">
+            <div className="w-full lg:border-right lg:border-solid text-left md:text-center mb-4 px-3">
+              <h3 className="mt-3 sm:text-2xl text-xl">{title}</h3>
+              <p className="mb-0 mt-3 text-grey-dark text-sm italic">
+                <FormattedDate
+                  value={date}
+                  year="numeric"
+                  month="long"
+                  day="numeric"
+                />
+              </p>
+            </div>
+            {/* Content */}
+            <div className="w-full lg:px-3 overflow-hidden mb-0 relative">
+              <p className="text-md lg:mt-0 text-justify md:text-left text-sm">
+                <RichTextContent content={content} />
+              </p>
+              <div className="absolute -bottom-1.5 w-full h-16 bg-gradient-to-t from-white via-white to-transparent"></div>
+            </div>
+            <div className="w-full lg:w-2/5 mt-6 lg:mt-0 lg:px-4 text-center md:text-left">
+              <button
+                className="bg-white hover:text-gray-500 border border-solid border-grey w-1/3 lg:w-full py-2 rounded-xl"
+                onClick={() => onOpen(id)}>
+                {formatMessage({ ...messages.readMore })}
+              </button>
+            </div>
           </div>
         </div>
-      </Anime>
+      </div>
     </div>
   );
 }

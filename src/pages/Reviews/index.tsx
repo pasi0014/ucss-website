@@ -5,6 +5,11 @@ import { Link } from "react-router-dom";
 
 import NewsCard from "../../components/NewsCard";
 
+import {
+  ChevronDoubleRightIcon,
+  ArrowsExpandIcon,
+} from "@heroicons/react/solid";
+
 import bazarMain from "../../assets/images/bazar-main.jpg";
 import embassyMain from "../../assets/images/poland-embassy-1.jpg";
 import oselyaPic from "../../assets/images/oselya-pic.jpg";
@@ -24,34 +29,39 @@ import carols from "../../assets/images/carols.jpeg";
 
 import messages from "./messages";
 import Loading from "../../components/Loading";
+import { client } from "../../utils/Contentful";
+import Card from "../../components/EventCard";
+import Drawer from "../../components/Drawer";
+import Anime from "react-anime";
+import DrawerContent from "../../components/DrawerContent";
 
 function Reviews(props: any) {
   const { formatMessage } = props.intl;
-  const [posts, setPosts] = useState([]);
-  const [loading, setLoading] = useState<Boolean>(false);
-  const [error, setError] = useState<Boolean>(true);
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedPost, setSelectedPost] = useState();
+  const [entries, setEntries] = useState<any>();
+  const [entryId, setEntryId] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
-  const getPosts = async () => {
+  const doFetchEntries = async () => {
+    setLoading(true);
     try {
-      setLoading(true);
-      setError(false);
-      const response = await fetch(
-        `https://cdn.contentful.com/spaces/nsh1rgbpuq0v/environments/master/entries?access_token=${process.env.REACT_APP_CONTENTFUL_ACCESS_TOKEN}`
-      );
-      const data = await response.json();
-      setPosts(data.items);
-    } catch (error: any) {
+      const response = await client.getEntries({
+        content_type: "post",
+        include: 10,
+      });
+      setEntries(response.items);
+    } catch (error) {
       setError(true);
-      console.error(error.message);
+      console.error("Unexpected error while trying to fetch the Entries");
     }
-    await setTimeout(() => {
-      setLoading(false);
-    }, 2000);
+    setLoading(false);
   };
 
   useEffect(() => {
-    window.scrollTo({ top: 500, behavior: "smooth" });
-    getPosts();
+    // window.scrollTo({ top: 500, behavior: "smooth" });
+    doFetchEntries();
   }, []);
 
   return (
@@ -64,11 +74,11 @@ function Reviews(props: any) {
         />
         <meta
           name="keywords"
-          content="dxonate camp, ukrainian charitable organization, ucss camp, ucss ottawa news"
+          content="donate camp, ukrainian charitable organization, ucss camp, ucss ottawa news"
         />
       </Helmet>
       <section className="text-gray-600 body-font font-montserrat">
-        <div className="container sm:px-5 py-20 mx-auto">
+        <div className="container lg:block py-20 mx-auto">
           <div className="flex justify-center mb-5">
             <h1>{formatMessage({ ...messages.title })}</h1>
           </div>
@@ -83,7 +93,7 @@ function Reviews(props: any) {
               <div className="text-center">
                 <button
                   className="bg-blue-300 p-2 text-white font-bold rounded-xl w-2/12 mt-3"
-                  onClick={() => getPosts()}>
+                  onClick={() => doFetchEntries()}>
                   Refresh
                 </button>
               </div>
@@ -92,36 +102,112 @@ function Reviews(props: any) {
 
           {loading && <Loading />}
 
-          <div className="flex flex-wrap -m-4 justify-center">
-            {posts &&
-              posts.length &&
-              !loading &&
-              posts.map((iPost: any) => {
-                return <NewsCard post={iPost} isLink={false} />;
-              })}
+          <Drawer isOpen={isOpen} setIsOpen={setIsOpen}>
+            <DrawerContent
+              onClose={() => {
+                setIsOpen(false);
+                setEntryId("");
+              }}
+              entryId={entryId}
+              post={selectedPost}
+            />
+          </Drawer>
 
-            {/* Carols */}
-            <div className="p-4 md:w-5/12">
-              <div className="h-full rounded-xl shadow-cla-blue bg-gradient-to-r from-indigo-50 to-blue-50 overflow-hidden">
-                <img
-                  className="transform lg:h-92 md:h-80 w-full object-cover object-center scale-100 transition-all duration-700 hover:scale-110"
-                  src={carols}
-                  alt="Ukrainian Easter Bazar at the St. John the Baptist Ukrainian Catholic Shrine"
-                />
-                <div className="p-6">
-                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-2 mt-2">
-                    {formatMessage({ ...messages.date_carols })}
-                  </h2>
-                  <h3 className="title-font text-lg font-bold text-gray-600 mb-3">
-                    {formatMessage({ ...messages.carolsTitle })}
-                  </h3>
-                  <p className="leading-relaxed mb-3">
-                    {formatMessage({ ...messages.carolsText })}
-                  </p>
+          {/* TEMP CARD */}
+          <div className="w-full lg:w-9/12 lg:h-96 md:h-auto flex md:flex-row flex-col justify-end mx-auto overflow-hidden shadow rounded-xl">
+            <div className="md:w-6/12 w-full">
+              <img
+                className="transform lg:h-96 md:h-full w-full object-cover object-center scale-100 transition-all duration-700"
+                src={embassyMain}
+                alt="Ukrainian Easter Bazar at the St. John the Baptist Ukrainian Catholic Shrine"
+              />
+            </div>
+
+            <div className="w-full">
+              <div className="h-full mx-auto px-6 md:px-0 md:pt-6 md:-ml-6">
+                <div className="lg:h-full md:h-96 p-6 -mt-6 md:mt-0 mb-4 md:mb-0 flex flex-col items-center">
+                  <div className="w-full lg:border-right lg:border-solid text-left md:text-center mb-4 sm:px-3">
+                    <h3 className="mt-3">
+                      "Thank You" from Ukrainian Community in Canada to the
+                      people of Poland
+                    </h3>
+                    <p className="mb-0 mt-3 text-grey-dark text-sm italic">
+                      {formatMessage({ ...messages.date_hotties })}
+                    </p>
+                  </div>
+
+                  <div className="w-full lg:px-3 overflow-hidden mb-3 relative">
+                    <p className="text-md lg:mt-0 text-justify md:text-left text-sm">
+                      The Ottawa community celebrated the Festival of Carols and
+                      Shchedrivkas this Christmas with great pomp and grandeur.
+                      Various choirs and a children's group led by Mr. Oleksiy
+                      Fischuk greeted guests in the packed hall of the Ukrainian
+                      Orthodox Church.
+                      <br /> However, it was the powerful performance by the
+                      student choir of the University of Ottawa under the
+                      direction of Maestro Laurentiy Ivashka that left the most
+                      profound impression on everyone What made their efforts
+                      truly remarkable was the fact that not a single performer
+                      of these famous Ukrainian carols spoke the Ukrainian
+                      language in their daily life. Rather, they were inspired
+                      by the enchanting melodies of the music they performed,
+                      and the audience was captivated by the sincere and genuine
+                      tone of their flawless performance.
+                      <br />
+                    </p>
+                    <div className="absolute -bottom-1.5 w-full h-16 bg-gradient-to-t from-white via-white to-transparent"></div>
+                  </div>
+                  <div className="w-full lg:w-2/5 mt-6 lg:mt-0 lg:px-4 text-center md:text-left">
+                    <button
+                      className="bg-white hover:text-gray-500 border border-solid border-grey w-1/3 lg:w-full py-2 rounded-xl"
+                      onClick={() => setIsOpen(!isOpen)}>
+                      {formatMessage({ ...messages.readMore })}
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
+          </div>
 
+          {entries &&
+            entries.length &&
+            !loading &&
+            entries.map((iPost: any) => {
+              return (
+                <NewsCard
+                  id={iPost.sys.id}
+                  title={
+                    iPost.fields[
+                      `title${props.intl.locale
+                        .slice(0, 2)
+                        .toString()
+                        .toUpperCase()}`
+                    ]
+                  }
+                  image={iPost.fields.postImage?.fields}
+                  content={
+                    iPost.fields[
+                      `content${props.intl.locale
+                        .slice(0, 2)
+                        .toString()
+                        .toUpperCase()}`
+                    ]
+                  }
+                  date={iPost.fields.date}
+                  isLink={iPost.fields?.isPage}
+                  reactPageLink={iPost.fields?.reactPageLink}
+                  onOpen={(entryId) => {
+                    setIsOpen(true);
+                    setEntryId(entryId);
+                    setSelectedPost(
+                      entries.find((iEntry: any) => iEntry.sys.id === entryId)
+                    );
+                  }}
+                />
+              );
+            })}
+
+          <div className="flex flex-wrap -m-4 justify-center">
             {/* Hotties */}
             <div className="p-4 md:w-5/12">
               <div className="h-full rounded-xl shadow-cla-blue bg-gradient-to-r from-indigo-50 to-blue-50 overflow-hidden">

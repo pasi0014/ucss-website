@@ -26,6 +26,9 @@ module.exports = {
       // => @media (min-width: 1536px) { ... }
     },
     extend: {
+      height: {
+        128: "32rem",
+      },
       colors: {
         inherit: colors.inherit,
         current: colors.current,
