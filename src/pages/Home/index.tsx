@@ -3,14 +3,10 @@ import { Helmet } from "react-helmet";
 import { injectIntl, useIntl } from "react-intl";
 import { Link } from "react-router-dom";
 import about from "../../assets/images/about.JPG";
-// import campPic from "../../assets/images/IMG_3184.JPG";
 import groupPhoto from "../../assets/images/group-photo.jpeg";
-import mykolay from "../../assets/images/mykolay-ad.jpeg";
 import vyshyvanka from "../../assets/images/vyshyvanka-logo.jpeg";
-import previewToys from "../../assets/images/preview-toys.jpeg";
 import messages from "./messages";
 import ContactInfo from "../../components/ContactInfo";
-// import ControlledCarousel from "../../components/ControlledCarousel";
 import ContactForm from "../../components/ContactForm";
 import WaitingList from "../../components/WaitingList";
 
@@ -22,6 +18,7 @@ import gramota1 from "../../assets/images/gramota-1.jpg";
 import gramota2 from "../../assets/images/gramota-2.jpg";
 
 import vyshyvankaPic from "../../assets/images/main.jpeg";
+import campPic from "../../assets/images/flyer-min.png";
 
 // TODO: add our vision and values to the website
 
@@ -62,6 +59,109 @@ const Home = () => {
             />
           </div>
         </div>
+
+        {/* UPCOMING EVENTS HERE */}
+
+        <div className="w-full bg-green-100 rounded-lg p-3">
+          <h2 className="text-center text-4xl text-gray-500 mt-5">
+            {formatMessage({ ...messages.upcomingEvents })}
+          </h2>
+          <div className="flex flex-nowrap w-full lg:flex-row flex-col p-3">
+            {/* Event Card */}
+            <div className="lg:w-8/12 w-full">
+              <div className="shadow lg:w-8/12 w-full rounded-xl mx-auto bg-white">
+                <img
+                  className="w-full h-64 object-cover rounded-t-xl"
+                  src={campPic}
+                  alt="Sunflower camp"
+                />
+                <div className="w-full px-6 py-4">
+                  <div className="font-bold text-xl mb-2">
+                    {formatMessage({ ...messages.campTitle1 })}
+                  </div>
+                  <p className="text-base mb-2 py-1 text-gray-400">
+                    {formatMessage({ ...messages.campDate1 })}
+                  </p>
+                  <p className="text-gray-700 text-base py-2">
+                    {formatMessage(
+                      { ...messages.campText_1 },
+                      {
+                        br: (
+                          <>
+                            <br /> <br />
+                          </>
+                        ),
+                      }
+                    )}
+                  </p>
+                  <div className="mx-auto flex flex-col my-5">
+                    {/* TODO: Finish camp page - NP */}
+                    {/* <Link
+                    to="/events/sunflower-camp"
+                    className="w-8/12 mx-auto mb-3">
+                    <button className="transition duration-200 ease hover:shadow-lg w-full bg-gradient-to-r from-cyan-400 to-blue-400 hover:from-cyan-300 hover:to-blue-300 text-white font-medium px-5 py-2 rounded-xl">
+                      {formatMessage({ ...messages.learnMore })}
+                    </button>
+                  </Link> */}
+                    <Link to="/donate" className="text-center">
+                      <button className="transform transition-all duration-200 ease hover:shadow-lg  w-8/12 bg-gradient-to-r from-red-400 to-yellow-400 text-white font-medium px-5 py-2 rounded-xl mx-auto">
+                        {formatMessage({ ...messages.donate })}
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Vyshyvanks 2.0 */}
+            <div className="lg:w-8/12 w-full lg:mt-0 mt-6">
+              <div className="lg:w-8/12 w-full rounded-xl shadow mx-auto hover:shadow-xl bg-white">
+                <img
+                  className="w-full lg:h-72 h-auto object-cover rounded-t-xl"
+                  src={vyshyvankaPic}
+                  alt="Event"
+                />
+                <div className="w-full px-6 py-4">
+                  <div className="font-bold text-xl mb-2">
+                    {formatMessage({ ...messages.embroideryTitle })}
+                  </div>
+                  <p className="text-gray-400 text-base mb-2">
+                    {formatMessage({ ...messages.embroideryDate })}
+                  </p>
+                  <p className="text-gray-700 text-base">
+                    {formatMessage(
+                      { ...messages.embroideryText },
+                      {
+                        br: (
+                          <>
+                            <br />
+                            <br />
+                          </>
+                        ),
+                      }
+                    )}
+                  </p>
+                  <div className="mx-auto flex flex-col my-5">
+                    <a
+                      href="https://www.eventbrite.com/e/ukrainian-cultural-embroidery-event-tickets-597322466577"
+                      className="w-8/12 mx-auto mb-3"
+                      target="_blank">
+                      <button className="transition duration-200 ease hover:shadow-lg w-full bg-gradient-to-r from-cyan-400 to-blue-400 hover:from-cyan-300 hover:to-blue-300 text-white font-medium px-5 py-2 rounded-xl">
+                        {formatMessage({ ...messages.learnMore })}
+                      </button>
+                    </a>
+                    <Link to="/donate" className="text-center">
+                      <button className="transform transition-all duration-200 ease hover:shadow-lg w-8/12 bg-gradient-to-r from-red-400 to-yellow-400 text-white font-medium px-5 py-2 rounded-xl mx-auto">
+                        {formatMessage({ ...messages.donate })}
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="w-full">
           <ContactInfo />
         </div>
@@ -111,39 +211,6 @@ const Home = () => {
         </div> */}
         {/* Main Content */}
 
-        {/* UPCOMING EVENTS HERE */}
-
-        <div className="w-full bg-green-100 rounded-lg p-3">
-          <h2 className="text-center text-4xl text-gray-500 mt-5">
-            {formatMessage({ ...messages.upcomingEvents })}
-          </h2>
-          <div className="container flex flex-col sm:w-7/12 w-full justify-center mx-auto my-5 bg-white rounded-xl shadow-lg p-3">
-            <img
-              src={vyshyvankaPic}
-              alt="Embroidery Event Ad"
-              className="rounded-xl shadow-md"
-            />
-            <div className="rounded-xl bg-white p-4 mt-3 flex flex-col shadow-md">
-              <span className="mx-auto font-bold text-3xl mt-2 mb-3">{formatMessage({...messages.embroideryTitle})}</span>
-              <p>{formatMessage({ ...messages.embroideryText },  {
-                  br: (
-                    <>
-                      <br /> <br />
-                    </>
-                  ),
-                })}</p>
-              <a
-                href="https://www.eventbrite.com/e/ukrainian-cultural-embroidery-event-tickets-597322466577?aff=ebdssbdestsearch"
-                target="_blank"
-                className="mx-auto text-center mt-3 sm:w-4/12 w-full bg-blue-500 p-3 rounded-xl text-white font-medium transition-all hover:bg-blue-400 hover:shadow-md duration-300"
-                rel="noreferrer"
-              >
-                Register now
-              </a>
-            </div>
-          </div>
-        </div>
-
         <div className="bg-sky-200">
           <div className="container">
             {/* Latest News */}
@@ -179,8 +246,7 @@ const Home = () => {
                       <a
                         href="https://ottawacitizen.com/news/local-news/an-unbelievable-experience-community-support-bolsters-outaouais-summer-camp-for-displaced-ukrainian-children?fbclid=IwAR261wEFwDaNGvZKRfSy8INfY5uS99JZMmBRFKBQq7BRMPCtoKCJzIbdCTU"
                         target="_blank"
-                        rel="noreferrer"
-                      >
+                        rel="noreferrer">
                         <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 text-white font-medium px-4 py-1 rounded-lg">
                           {formatMessage({ ...messages.readMore })}
                         </button>

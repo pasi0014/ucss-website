@@ -9,7 +9,7 @@ export default defineMessages({
   },
   sponsors: {
     id: `${scope}.sponsors`,
-    defaultMessage: 'Our Sponsors',
+    defaultMessage: "Our Sponsors",
   },
   achievements: {
     id: `${scope}.achievements`,
@@ -22,7 +22,8 @@ export default defineMessages({
   },
   embroideryText: {
     id: `${scope}.embroideryText`,
-    defaultMessage: "Experience the vibrant and rich culture of Ukraine at our upcoming Ukrainian Embroidery Cultural Event. Join us for an unforgettable evening of music and entertainment featuring a talented lineup of performers, including sound producer Gregory Dikal, The Sharms on piano, guitar, and vocals, violinist Anna Baksheeva, pianist Nataliya Bibik, baritone Oleksii Fishchuk, and the Ottawa Ukrainian Children's Ensemble. {br} Satisfy your appetite with delectable snacks and refreshing drinks available at our cash bar. This event promises to be a celebration of Ukrainian culture that you won't want to miss. Immerse yourself in the art of embroidery and experience the joy and enchantment of Ukrainian music and cuisine. Join us for an unforgettable night of celebration and cultural immersion."
+    defaultMessage:
+      "Experience the vibrant and rich culture of Ukraine at our upcoming Ukrainian Embroidery Cultural Event. Join us for an unforgettable evening of music and entertainment featuring a talented lineup of performers, including sound producer Gregory Dikal, The Sharms on piano, guitar, and vocals, violinist Anna Baksheeva, pianist Nataliya Bibik, baritone Oleksii Fishchuk, and the Ottawa Ukrainian Children's Ensemble. {br} Satisfy your appetite with delectable snacks and refreshing drinks available at our cash bar. This event promises to be a celebration of Ukrainian culture that you won't want to miss. Immerse yourself in the art of embroidery and experience the joy and enchantment of Ukrainian music and cuisine. Join us for an unforgettable night of celebration and cultural immersion.",
   },
   embroideryTitle: {
     id: `${scope}.embroideryTitle`,
@@ -97,15 +98,18 @@ export default defineMessages({
   },
   campTitle: {
     id: `${scope}.campTitle`,
-    defaultMessage: "'An unbelievable experience': Community support bolsters Outaouais summer camp for displaced Ukrainian children"
+    defaultMessage:
+      "'An unbelievable experience': Community support bolsters Outaouais summer camp for displaced Ukrainian children",
   },
   campText1: {
     id: `${scope}.campText1`,
-    defaultMessage: 'Michael Ryndzak hopes to provide the same experience to other children affected by the war after seeing how the camp shaped the children who celebrated what they had despite what they had lost.'
+    defaultMessage:
+      "Michael Ryndzak hopes to provide the same experience to other children affected by the war after seeing how the camp shaped the children who celebrated what they had despite what they had lost.",
   },
   campText2: {
     id: `${scope}.campText2`,
-    defaultMessage: 'A group of Ukrainian children displaced by war were able to play, sing and dance at a local summer camp thanks to contributions from the Ottawa community, its organizer said. Michael Ryndzak, who in May issued a plea for support to help repair and maintain an aging summer camp in the Outaouais hills which has served local Ukrainians...'
+    defaultMessage:
+      "A group of Ukrainian children displaced by war were able to play, sing and dance at a local summer camp thanks to contributions from the Ottawa community, its organizer said. Michael Ryndzak, who in May issued a plea for support to help repair and maintain an aging summer camp in the Outaouais hills which has served local Ukrainians...",
   },
   date_vyshyvanka: {
     id: `${scope}.date_vyshyvanka`,
@@ -154,4 +158,50 @@ export default defineMessages({
     them not only to our hospital, but also to mobile
     hospitals and units operating...`,
   },
+  learnMore: {
+    id: `${scope}.learnMore`,
+    defaultMessage: "Learn more",
+  },
+  donate: {
+    id: `${scope}.donate`,
+    defaultMessage: "Donate now",
+  },
+  upcomingEvent: {
+    id: `${scope}.upcomingEvent`,
+    defaultMessage: "Upcoming Event",
+  },
+  campTitle1: {
+    id: `${scope}.campTitle1`,
+    defaultMessage: `Welcome to "Sonyashnyk" summer camp, hosted by Ukrainian Canadian Social Services Ottawa!`,
+  },
+  campText_1: {
+    id: `${scope}.campText_1`,
+    defaultMessage: `"Sonyashnyk" summer camp is a safe and welcoming space for Ukrainian children affected by the war in Ukraine. The camp
+    offers a wide range of outdoor activities including sports,
+    dancing, canoeing, singing, and drawing, which help the
+    children build confidence, teamwork skills, and develop a
+    positive attitude towards life.{br} 
+    The camp is seeking volunteers to create a memorable
+    experience for the campers. Your donation, no matter how
+    small, can make a big difference in the lives of these
+    children. Join us this summer at "Sonyashnyk" summer camp and
+    help us create lasting memories for our campers!`,
+  },
+  embroideryTitle: {
+    id: `${scope}.embroideryTitle`,
+    defaultMessage: "Ukrainian Cultural Embroidery Event",
+  },
+  embroideryDate: {
+    id: `${scope}.embroideryDate`,
+    defaultMessage: "20 May, 2023",
+  },
+  embroideryText: {
+    id: `${scope}.embroideryText`,
+    defaultMessage:
+      "Experience the vibrant and rich culture of Ukraine at our upcoming Ukrainian Embroidery Cultural Event.{br} Join us for an unforgettable evening of music and entertainment featuring a talented lineup of performers, including sound producer Gregory Dikal, The Sharms on piano, guitar, and vocals, violinist Anna Baksheeva, pianist Nataliya Bibik, baritone Oleksii Fishchuk, and the Ottawa Ukrainian Children's Ensemble.{br} Satisfy your appetite with delectable snacks and refreshing drinks available at our cash bar. This event promises to be a celebration of Ukrainian culture that you won't want to miss. Immerse yourself in the art of embroidery and experience the joy and enchantment of Ukrainian music and cuisine. Join us for an unforgettable night of celebration and cultural immersion.",
+  },
+  campDate1: {
+    id: `${scope}.campDate1`,
+    defaultMessage: 'July 30 - August 6'
+  }
 });

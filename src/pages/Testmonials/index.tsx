@@ -157,7 +157,7 @@ const Testimonials = (props: any) => {
             <div className="md:w-5/12 p-4">
               <div className="h-auto rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
                 <img
-                  className="transform lg:h-80 md:h-56 w-full object-cover object-center scale-110 transition-all duration-700 hover:scale-100"
+                  className="transform lg:h-80 md:h-56 w-full object-cover object-center transition-all duration-700 hover:scale-100"
                   src={turkey}
                   alt="Turkey in a shopping cart"
                 />
@@ -180,11 +180,6 @@ const Testimonials = (props: any) => {
             {/* Hotties */}
             <div className="md:w-5/12 p-4">
               <div className="h-auto rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
-                {/* <img
-                className="transform lg:h-80 md:h-56 w-full object-cover object-center scale-110 transition-all duration-700 hover:scale-100"
-                src={thankYouBD}
-                alt="Members of UCSS collecting backpacks provided by Bydychnist bank"
-              /> */}
                 <div className="p-6">
                   February 7, 2023
                   <h3 className="title-font text-lg font-bold text-gray-600 mb-2">

@@ -1,25 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.d0d57c56.chunk.css",
-    "main.js": "/static/js/main.c6ae1d95.chunk.js",
-    "main.js.map": "/static/js/main.c6ae1d95.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.bf8f77c6.js",
-    "runtime-main.js.map": "/static/js/runtime-main.bf8f77c6.js.map",
-    "static/js/2.d2ad2f37.chunk.js": "/static/js/2.d2ad2f37.chunk.js",
-    "static/js/2.d2ad2f37.chunk.js.map": "/static/js/2.d2ad2f37.chunk.js.map",
+    "main.css": "/static/css/main.02e765de.chunk.css",
+    "main.js": "/static/js/main.16ba250e.chunk.js",
+    "main.js.map": "/static/js/main.16ba250e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.c5931aa0.js",
+    "runtime-main.js.map": "/static/js/runtime-main.c5931aa0.js.map",
+    "static/js/2.1e46645a.chunk.js": "/static/js/2.1e46645a.chunk.js",
+    "static/js/2.1e46645a.chunk.js.map": "/static/js/2.1e46645a.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.d0d57c56.chunk.css.map": "/static/css/main.d0d57c56.chunk.css.map",
-    "static/js/2.d2ad2f37.chunk.js.LICENSE.txt": "/static/js/2.d2ad2f37.chunk.js.LICENSE.txt",
-    "static/media/IMG_3184.9488e182.JPG": "/static/media/IMG_3184.9488e182.JPG",
+    "static/css/main.02e765de.chunk.css.map": "/static/css/main.02e765de.chunk.css.map",
+    "static/js/2.1e46645a.chunk.js.LICENSE.txt": "/static/js/2.1e46645a.chunk.js.LICENSE.txt",
     "static/media/about.c05d6b0f.JPG": "/static/media/about.c05d6b0f.JPG",
     "static/media/backpack.584b1630.jpeg": "/static/media/backpack.584b1630.jpeg",
     "static/media/bazar-main.bbea257e.jpg": "/static/media/bazar-main.bbea257e.jpg",
     "static/media/bcu.dc74b439.jpeg": "/static/media/bcu.dc74b439.jpeg",
     "static/media/camp.556a0f13.png": "/static/media/camp.556a0f13.png",
-    "static/media/carols.506e2dfb.jpeg": "/static/media/carols.506e2dfb.jpeg",
     "static/media/child_support.ee409c26.jpg": "/static/media/child_support.ee409c26.jpg",
     "static/media/dragonboat.b30fc37d.jpeg": "/static/media/dragonboat.b30fc37d.jpeg",
     "static/media/embassadors.2ae30c25.jpeg": "/static/media/embassadors.2ae30c25.jpeg",
+    "static/media/flyer-min.f2c7936a.png": "/static/media/flyer-min.f2c7936a.png",
     "static/media/fundraized-event-1.6f2ce88d.jpg": "/static/media/fundraized-event-1.6f2ce88d.jpg",
     "static/media/gramota-1.639df248.jpg": "/static/media/gramota-1.639df248.jpg",
     "static/media/gramota-2.56822151.jpg": "/static/media/gramota-2.56822151.jpg",
@@ -37,7 +36,6 @@
     "static/media/mykolay-ad.371e1485.jpeg": "/static/media/mykolay-ad.371e1485.jpeg",
     "static/media/news-1.f787a728.jpeg": "/static/media/news-1.f787a728.jpeg",
     "static/media/news-2.f725c256.jpeg": "/static/media/news-2.f725c256.jpeg",
-    "static/media/news-3.7abe654e.jpeg": "/static/media/news-3.7abe654e.jpeg",
     "static/media/index.css": "/static/media/ottawa.383ddf98.jpg",
     "static/media/poland-embassy-1.0eb61ae8.jpg": "/static/media/poland-embassy-1.0eb61ae8.jpg",
     "static/media/polish-embassador.bb649088.jpeg": "/static/media/polish-embassador.bb649088.jpeg",
@@ -63,9 +61,9 @@
     "static/media/war-memorial-2.8ca25461.jpeg": "/static/media/war-memorial-2.8ca25461.jpeg"
   },
   "entrypoints": [
-    "static/js/runtime-main.bf8f77c6.js",
-    "static/js/2.d2ad2f37.chunk.js",
-    "static/css/main.d0d57c56.chunk.css",
-    "static/js/main.c6ae1d95.chunk.js"
+    "static/js/runtime-main.c5931aa0.js",
+    "static/js/2.1e46645a.chunk.js",
+    "static/css/main.02e765de.chunk.css",
+    "static/js/main.16ba250e.chunk.js"
   ]
 }

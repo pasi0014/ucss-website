@@ -78,10 +78,10 @@ const DrawerContent = (props: IDrawerContentProps) => {
               className="h-7 w-7 cursor-pointer transition-all transform duration-200 ease hover:scale-110"
               onClick={() => props.onClose(false)}
             />
-            <ArrowsExpandIcon
+            {/* <ArrowsExpandIcon
               onClick={handleOnExpand}
               className="w-7 h-7 cursor-pointer transition-all transform duration-200 ease hover:scale-110"
-            />
+            /> */}
           </div>
           <div className="h-full p-6 flex flex-col mx-auto">
             <div className="w-full lg:w-3/5 text-center mx-auto">

@@ -33,36 +33,6 @@ const DonateDrawer = (props: any) => {
       <div className="w-full flex md:flex-row flex-col items-center justify-center">
         <div
           className="w-full transition-all hover:scale-125 ease-in hover:bg-blue-300 cursor-pointer shadow-md rounded-lg mt-5 sm:mr-5"
-          onClick={() => handleClick(process.env.REACT_APP_5 as string)}>
-          <div className="md:flex p-8">
-            <h2 className="text-2xl font-semibold leading-6 text-gray-800">
-              $5
-            </h2>
-          </div>
-        </div>
-
-        <div
-          className="w-full transition-all hover:scale-125 ease-in hover:bg-blue-300 cursor-pointer shadow-md rounded-lg mt-5 sm:mr-5"
-          onClick={() => handleClick(process.env.REACT_APP_10 as string)}>
-          <div className="md:flex p-8">
-            <h2 className="text-2xl font-semibold leading-6 text-gray-800">
-              $10
-            </h2>
-          </div>
-        </div>
-
-        <div
-          className="w-full transition-all hover:scale-125 ease-in hover:bg-blue-300 cursor-pointer shadow-md rounded-lg mt-5 sm:mr-5"
-          onClick={() => handleClick(process.env.REACT_APP_25 as string)}>
-          <div className="md:flex items-center justify-center p-8">
-            <h2 className="text-2xl font-semibold leading-6 text-gray-800">
-              $25
-            </h2>
-          </div>
-        </div>
-
-        <div
-          className="w-full transition-all hover:scale-125 ease-in hover:bg-blue-300 cursor-pointer shadow-md rounded-lg mt-5 sm:mr-5"
           onClick={() => handleClick(process.env.REACT_APP_50 as string)}>
           <div className="md:flex items-center justify-center p-8">
             <h2 className="text-2xl font-semibold leading-6 text-gray-800">
@@ -72,7 +42,7 @@ const DonateDrawer = (props: any) => {
         </div>
 
         <div
-          className="w-full transition-all hover:scale-125 ease-in hover:bg-blue-300 cursor-pointer shadow-md rounded-lg  mt-5 sm:mr-0"
+          className="w-full transition-all hover:scale-125 ease-in hover:bg-blue-300 cursor-pointer shadow-md rounded-lg  mt-5 sm:mr-5"
           onClick={() => handleClick(process.env.REACT_APP_100 as string)}>
           <div className="md:flex items-center justify-center p-8">
             <h2 className="text-2xl font-semibold leading-6 text-gray-800">
@@ -80,18 +50,47 @@ const DonateDrawer = (props: any) => {
             </h2>
           </div>
         </div>
-      </div>
-      {/* <div
-        className="w-full transition-all hover:scale-125 ease-in hover:bg-blue-300 cursor-pointer shadow-md rounded-lg  mt-5 sm:mr-0"
-        onClick={() =>
-          handleClick(process.env.REACT_APP_CUSTOM_PRICE as string)
-        }>
-        <div className="md:flex items-center justify-center p-8">
-          <h2 className="text-2xl font-semibold leading-6 text-gray-800">
-            Enter the amount you wish to donate
-          </h2>
+
+        <div
+          className="w-full transition-all hover:scale-125 ease-in hover:bg-blue-300 cursor-pointer shadow-md rounded-lg  mt-5 sm:mr-5"
+          onClick={() => handleClick(process.env.REACT_APP_250 as string)}>
+          <div className="md:flex items-center justify-center p-8">
+            <h2 className="text-2xl font-semibold leading-6 text-gray-800">
+              $250
+            </h2>
+          </div>
         </div>
-      </div> */}
+
+        <div
+          className="w-full transition-all hover:scale-125 ease-in hover:bg-blue-300 cursor-pointer shadow-md rounded-lg  mt-5 sm:mr-5"
+          onClick={() => handleClick(process.env.REACT_APP_500 as string)}>
+          <div className="md:flex items-center justify-center p-8">
+            <h2 className="text-2xl font-semibold leading-6 text-gray-800">
+              $500
+            </h2>
+          </div>
+        </div>
+
+        <div
+          className="w-full transition-all hover:scale-125 ease-in hover:bg-blue-300 cursor-pointer shadow-md rounded-lg  mt-5 sm:mr-5"
+          onClick={() => handleClick(process.env.REACT_APP_1000 as string)}>
+          <div className="md:flex items-center justify-center p-8">
+            <h2 className="text-2xl font-semibold leading-6 text-gray-800">
+              $1000
+            </h2>
+          </div>
+        </div>
+
+        <div
+          className="w-full transition-all hover:scale-125 ease-in hover:bg-blue-300 cursor-pointer shadow-md rounded-lg  mt-5 sm:mr-5"
+          onClick={() => handleClick(process.env.REACT_APP_2500 as string)}>
+          <div className="md:flex items-center justify-center p-8">
+            <h2 className="text-2xl font-semibold leading-6 text-gray-800">
+              $2500
+            </h2>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

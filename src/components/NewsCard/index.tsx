@@ -150,7 +150,7 @@ function NewsCard({
   }, [title]);
 
   return (
-    <div className="w-full lg:w-9/12 lg:h-96 md:h-auto flex md:flex-row flex-col justify-end mx-auto overflow-hidden shadow rounded-xl mt-5">
+    <div className="w-full lg:w-9/12 lg:h-96 md:h-auto flex md:flex-row flex-col justify-end mx-auto overflow-hidden shadow rounded-xl my-5">
       <div className="md:w-6/12 w-full">
         {image && (
           <img

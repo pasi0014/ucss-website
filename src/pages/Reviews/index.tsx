@@ -2,17 +2,10 @@ import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { injectIntl } from "react-intl";
 import { Link } from "react-router-dom";
-
-import NewsCard from "../../components/NewsCard";
-
-import {
-  ChevronDoubleRightIcon,
-  ArrowsExpandIcon,
-} from "@heroicons/react/solid";
+import { client } from "../../utils/Contentful";
 
 import bazarMain from "../../assets/images/bazar-main.jpg";
 import embassyMain from "../../assets/images/poland-embassy-1.jpg";
-import oselyaPic from "../../assets/images/oselya-pic.jpg";
 import localBenefit from "../../assets/images/local-concert.jpg";
 import fundraiserMain from "../../assets/images/fundraized-event-1.jpg";
 import groupPhoto from "../../assets/images/group-photo.jpeg";
@@ -25,15 +18,13 @@ import madame from "../../assets/images/news-1.jpeg";
 import mykolay from "../../assets/images/news-2.jpeg";
 import vip from "../../assets/images/news-3.jpeg";
 import hotties from "../../assets/images/hotties-1.jpeg";
-import carols from "../../assets/images/carols.jpeg";
+
+import NewsCard from "../../components/NewsCard";
+import Loading from "../../components/Loading";
+import Drawer from "../../components/Drawer";
+import DrawerContent from "../../components/DrawerContent";
 
 import messages from "./messages";
-import Loading from "../../components/Loading";
-import { client } from "../../utils/Contentful";
-import Card from "../../components/EventCard";
-import Drawer from "../../components/Drawer";
-import Anime from "react-anime";
-import DrawerContent from "../../components/DrawerContent";
 
 function Reviews(props: any) {
   const { formatMessage } = props.intl;
@@ -60,7 +51,7 @@ function Reviews(props: any) {
   };
 
   useEffect(() => {
-    // window.scrollTo({ top: 500, behavior: "smooth" });
+    window.scrollTo({ top: 500, behavior: "smooth" });
     doFetchEntries();
   }, []);
 
@@ -114,7 +105,7 @@ function Reviews(props: any) {
           </Drawer>
 
           {/* TEMP CARD */}
-          <div className="w-full lg:w-9/12 lg:h-96 md:h-auto flex md:flex-row flex-col justify-end mx-auto overflow-hidden shadow rounded-xl">
+          {/* <div className="w-full lg:w-9/12 lg:h-96 md:h-auto flex md:flex-row flex-col justify-end mx-auto overflow-hidden shadow rounded-xl">
             <div className="md:w-6/12 w-full">
               <img
                 className="transform lg:h-96 md:h-full w-full object-cover object-center scale-100 transition-all duration-700"
@@ -167,7 +158,7 @@ function Reviews(props: any) {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {entries &&
             entries.length &&
@@ -239,7 +230,7 @@ function Reviews(props: any) {
             </div>
 
             {/* VIP Учасники Української Суспільної Служби в Оттаві подарували відомому гурту  VIP Тернопіль фудболку нашого товариства розписану гаслами перемоги і побажаннями миру Україні. Принагідно усі фонди зібрані від донатів з концерту Украінськоі Школи Танців, у сумі 500$, було передано у фонд підтримки наших дорогих гостей. */}
-            <div className="p-4 md:w-5/12">
+            {/* <div className="p-4 md:w-5/12">
               <div className="h-full rounded-xl shadow-cla-blue bg-gradient-to-r from-indigo-50 to-blue-50 overflow-hidden">
                 <img
                   className="transform lg:h-72 md:h-48 w-full object-cover object-center scale-110 transition-all duration-700 hover:scale-100"
@@ -266,7 +257,7 @@ function Reviews(props: any) {
                   </a>
                 </div>
               </div>
-            </div>
+            </div> */}
             {/* Mykolay */}
             <div className="p-4 md:w-5/12">
               <div className="h-full rounded-xl shadow-cla-blue bg-gradient-to-r from-indigo-50 to-blue-50 overflow-hidden">
@@ -495,39 +486,6 @@ function Reviews(props: any) {
                   <p className="leading-relaxed mb-3">
                     {formatMessage({ ...messages.content_bazar })}
                   </p>
-                </div>
-              </div>
-            </div>
-            {/* Embassy of Poland */}
-            <div className="p-4 md:w-5/12">
-              <div className="h-full rounded-xl shadow-cla-violate bg-gradient-to-r from-pink-50 to-red-50 overflow-hidden">
-                <img
-                  className="transform lg:h-48 md:h-36 w-full object-cover object-center scale-110 transition-all duration-400 hover:scale-100"
-                  src={embassyMain}
-                  alt="Thank You from Ukrainian Community in Canada to Polish people"
-                />
-                <div className="p-6">
-                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                    {formatMessage({ ...messages.date_embassy })}
-                  </h2>
-                  <h1 className="title-font text-lg font-medium text-gray-600 mb-3">
-                    {formatMessage({ ...messages.title_embassy })}
-                  </h1>
-                  <p className="leading-relaxed mb-3">
-                    {formatMessage({ ...messages.content_embassy })}
-                    <span className="italic text-cyan-500 font-semibold">
-                      #thankful
-                    </span>
-                  </p>
-                  <div className="flex items-center w-full text-center mt-5">
-                    <a
-                      href="https://www.cbc.ca/news/canada/ottawa/ukrainians-thank-poland-for-support-1.6421428"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="w-full bg-gradient-to-r from-orange-300 to-amber-400 hover:scale-105 drop-shadow-md shadow-cla-violate px-4 py-1 rounded-lg">
-                      {formatMessage({ ...messages.readMore })}
-                    </a>
-                  </div>
                 </div>
               </div>
             </div>

@@ -1,10 +1,9 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { FormattedMessage, useIntl } from "react-intl";
 import { Link } from "react-router-dom";
 
 import DonateDrawer from "../../components/DonateDrawer/index";
-import { Context } from "../../components/Wrappper/index";
 import { images } from "../../utils/importImages";
 
 import messages from "./messages";
@@ -13,8 +12,6 @@ export const Donate = () => {
   const { formatMessage } = useIntl();
   const [classTrigger, setClassTrigger] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
-  const context = useContext(Context);
-
 
   const coppyToClipboard = (e: any) => {
     e.preventDefault();
@@ -44,7 +41,7 @@ export const Donate = () => {
     <React.Fragment>
       <Helmet>
         <title>
-          Donate to Ukrainian Canadian Social Services Ottawa (UCSS Ottawa)
+          Donate - Ukrainian Canadian Social Services Ottawa (UCSS Ottawa)
         </title>
         <meta
           name="description"
@@ -67,8 +64,7 @@ export const Donate = () => {
                 .getElementById("donate-info")
                 ?.scrollIntoView({ behavior: "smooth" });
               setClassTrigger(true);
-            }}
-          >
+            }}>
             #HelpUkraineNow {formatMessage({ ...messages.helpNow })}
           </p>
           <div className="flex mt-6 justify-center"></div>
@@ -141,8 +137,7 @@ export const Donate = () => {
                       .getElementById("donate-info")
                       ?.scrollIntoView({ behavior: "smooth" });
                     setClassTrigger(true);
-                  }}
-                >
+                  }}>
                   {formatMessage({ ...messages.donateMoney })}
                 </h2>
               </div>
@@ -152,7 +147,7 @@ export const Donate = () => {
                 <h2 className="text-blue-400 sm:text-xl text-lg title-font font-medium mb-3">
                   {formatMessage({ ...messages.donateHumanitarian })}
                 </h2>
-                <p className="text-blue-500">
+                {/* <p className="text-blue-500">
                   <FormattedMessage
                     {...messages.donateAddress}
                     values={{
@@ -160,14 +155,13 @@ export const Donate = () => {
                         <a
                           href="https://www.google.com/maps/place/37+Ridgefield+Crescent,+Ottawa,+ON+K2H+6S3/@45.320697,-75.8220538,17z/data=!3m1!4b1!4m5!3m4!1s0x4ccdfe1e5f73feaf:0x5b4b83f7d30eed73!8m2!3d45.3206932!4d-75.8198651"
                           target="_blank"
-                          rel="noreferrer"
-                        >
+                          rel="noreferrer">
                           37 Ridgefield Crescent, Ottawa, ON, K2H 6S3
                         </a>
                       ),
                     }}
                   />
-                </p>
+                </p> */}
               </div>
             </div>
             <div className="p-4 md:w-1/3 flex flex-col text-center items-center">
@@ -186,8 +180,7 @@ export const Donate = () => {
               ? "transition-all duration-100 bg-yellow-500"
               : "transition-all duration-500 bg-white")
           }
-          id="donate-info"
-        >
+          id="donate-info">
           <div className="flex flex-col justify-center">
             <h2 className="pt-5">{formatMessage({ ...messages.subtitle })}</h2>
             <DonateDrawer />
@@ -204,23 +197,25 @@ export const Donate = () => {
                   email: (
                     <button
                       onClick={coppyToClipboard}
-                      className="text-indigo-500 hover:text-indigo-700 font-medium"
-                    >
+                      className="text-indigo-500 hover:text-indigo-700 font-medium">
                       ucss@xata.ca
                     </button>
                   ),
                 }}
               />
+              <br />
+              <br />
+              {formatMessage({ ...messages.mailCheque })}
               <img
                 src={images.interacLogo}
                 alt="interac"
                 className="w-40 mx-auto"
               />
+              {formatMessage({ ...messages.charitableNumber })}
               {isCopied && (
                 <div
                   className="py-3 px-5 mb-4 bg-green-100 text-green-900 text-sm rounded-md border border-green-200 transition-all duration-500"
-                  role="alert"
-                >
+                  role="alert">
                   {formatMessage({ ...messages.emailCopied })}
                 </div>
               )}
