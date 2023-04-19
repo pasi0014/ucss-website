@@ -10,15 +10,25 @@ export default class NavbarLinks {
         isActive: false,
       },
       // {
-      //   title: messages.about,
-      //   link: "/about",
+      //   title: messages.waitingList,
+      //   link: "/waiting-list",
       //   isActive: false,
       // },
-      // {
-      //   title: messages.howWeCanHelpYou,
-      //   link: "/how-we-can-help-you",
-      //   isActive: false,
-      // },
+      {
+        title: messages.events,
+        link: "/events",
+        isActive: false,
+      },
+      {
+        title: messages.reviews,
+        link: "/news",
+        isActive: false,
+      },
+      {
+        title: messages.testimonials,
+        link: "/testimonials",
+        isActive: false,
+      },
       {
         title: messages.donate,
         link: "/donate",

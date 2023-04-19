@@ -29,7 +29,7 @@ class Banner extends React.Component<BannerProps, BannerState> {
         opacity={[0, 1]}
         duration={1000}
       >
-        <div className="jumbotron bg-cover flex justify-center items-end">
+        <div className="jumbotron font-montserrat bg-cover flex justify-center items-end">
           <div className="overlay"></div>
           {this.state.animateTitle ? (
             <Anime

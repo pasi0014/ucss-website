@@ -1,15 +1,13 @@
-import React, { useContext } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 import { useIntl } from "react-intl";
-import { Context } from "../Wrappper";
 import messages from "./messages";
 
 export default function Footer() {
-  const context = useContext(Context);
   const { formatMessage } = useIntl();
   return (
     <>
-      <footer className="relative bg-gray-700 pt-8 pb-6 text-gray-200">
+      <footer className="font-montserrat bg-gray-700 pt-8 pb-6 text-gray-200">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap">
             <div className="w-full lg:w-4/12 px-4 py-5">

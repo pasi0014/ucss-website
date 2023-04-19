@@ -3,6 +3,10 @@
   padding: 0px;
 }
 
+body.drawer-open {
+  overflow: hidden;
+}
+
 .fade-appear,
 .fade-enter {
   opacity: 0;
@@ -45,4 +49,20 @@
   opacity: 0;
   transform: translateY(-10px);
   transition: opacity 150ms linear, transform 150ms ease-in;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #1f2937;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #4b5563;
 }
