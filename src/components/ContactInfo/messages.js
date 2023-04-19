@@ -87,7 +87,7 @@ export default defineMessages({
   },
   volunteerName2: {
     id: `${scope}.volunteerName2`,
-    defaultMessage: "Olga Sadonenko",
+    defaultMessage: "Olga Sadanenko",
   },
   volunteerName3: {
     id: `${scope}.volunteerName3`,

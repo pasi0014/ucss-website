@@ -71,7 +71,7 @@ const DonateDrawer = (props: any) => {
           </div>
         </div>
 
-        <div
+        {/* <div
           className="w-full transition-all hover:scale-125 ease-in hover:bg-blue-300 cursor-pointer shadow-md rounded-lg  mt-5 sm:mr-5"
           onClick={() => handleClick(process.env.REACT_APP_1000 as string)}>
           <div className="md:flex items-center justify-center p-8">
@@ -89,7 +89,7 @@ const DonateDrawer = (props: any) => {
               $2500
             </h2>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
