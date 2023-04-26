@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { FormattedDate, IntlShape, injectIntl } from "react-intl";
 
 import { client } from "../../utils/Contentful";
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 import {
   ArrowsExpandIcon,
   ChevronDoubleRightIcon,
@@ -22,7 +22,7 @@ const DrawerContent = (props: IDrawerContentProps) => {
   const [content, setContent] = useState<any>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
-  const history = useHistory();
+  // const history = useHistory();
 
   //   TODO: review if we ever would want to use it here - NP
   const getEntity = async (entityId: string) => {
@@ -48,7 +48,7 @@ const DrawerContent = (props: IDrawerContentProps) => {
 
   const handleOnExpand = () => {
     props.onClose(true);
-    history.push("/news/continental-marathon");
+    // history.push("/news/continental-marathon");
   };
 
   useEffect(() => {

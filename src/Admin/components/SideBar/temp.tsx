@@ -2,49 +2,12 @@ import React from "react";
 
 import logo from "../../../assets/images/logo.png";
 
-import { IconType } from "react-icons";
-import { HiOutlineHome } from "react-icons/hi";
-import { FaDonate, FaUsers, FaIdCard, FaChartBar } from "react-icons/fa";
-import { FiHome, FiCalendar } from "react-icons/fi";
-
-import { Link } from "react-router-dom";
-
 import { injectIntl } from "react-intl";
 
-interface LinkItemProps {
-  name: string;
-  icon: IconType;
-  url?: String;
-}
-// TODO: find out how to render the Navitems
-const LinkItems: Array<LinkItemProps> = [
-  { name: "Home", icon: FiHome, url: "/dashboard" },
-  { name: "Statistics", icon: FaChartBar, url: "/login" },
-  { name: "Donors", icon: FaUsers, url: "/donors" },
-  { name: "Donations", icon: FaDonate, url: "/donations" },
-  { name: "Events", icon: FiCalendar, url: "/events" },
-  { name: "Reservations", icon: FaIdCard, url: "/reservations" },
-];
-
-const NavItem = ({ icon, url, children, name }: any) => {
+const SideBar = () => {
   return (
-    <li>
-      <Link
-        to={url}
-        className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6">
-        <span className="inline-flex justify-center items-center ml-4">
-          {icon && icon}
-        </span>
-        <span className="ml-2 text-sm tracking-wide truncate">{name}</span>
-      </Link>
-    </li>
-  );
-};
-
-const SideBar = ({ children }: any) => {
-  return (
-    <div className="flex min-h-screen flex-row bg-gray-100 text-gray-800">
-      <aside className="sidebar w-1/6 -translate-x-full transform bg-white transition-transform duration-150 ease-in md:translate-x-0 md:shadow-md">
+    <div className="flex flex-row flex-auto bg-blue-50 text-gray-800">
+      <div className="flex flex-col flex-grow top-0 left-0 w-64 bg-white h-screen border-r">
         <div className="flex items-center justify-center h-14 border-b">
           <div className="flex items-center">
             <img src={logo} className="w-8 h-8 mr-2" />
@@ -57,29 +20,72 @@ const SideBar = ({ children }: any) => {
               <a
                 href="#"
                 className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6">
-                <span className="inline-flex justify-center items-center ml-4">
-                  <HiOutlineHome className="w-5 h-5" />
-                </span>
+                {/* icon here */}
                 <span className="ml-2 text-sm tracking-wide truncate">
                   Dashboard
                 </span>
               </a>
             </li>
+            {/* <li>
+              <a
+                href="#"
+                className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6">
+                <span className="ml-2 text-sm tracking-wide truncate">
+                  Inbox
+                </span>
+                <span className="px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-indigo-500 bg-indigo-50 rounded-full">
+                  New
+                </span>
+              </a>
+            </li> */}
             <li>
-              <Link
-                to=""
+              <a
+                href="#"
                 className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6">
                 <span className="inline-flex justify-center items-center ml-4">
-                  <FaIdCard className="w-5 h-5" />
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+                  </svg>
                 </span>
                 <span className="ml-2 text-sm tracking-wide truncate">
-                  Reservations
+                  Notifications
                 </span>
-                {/* TODO: could we display count of new donors potentially? - NP */}
-                {/* <span className="px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-green-500 bg-green-50 rounded-full">
-                  15
-                </span> */}
-              </Link>
+                <span className="px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-red-500 bg-red-50 rounded-full">
+                  1.2k
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6">
+                <span className="inline-flex justify-center items-center ml-4">
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+                  </svg>
+                </span>
+                <span className="ml-2 text-sm tracking-wide truncate">
+                  Available Tasks
+                </span>
+              </a>
             </li>
             <li>
               <a
@@ -100,12 +106,11 @@ const SideBar = ({ children }: any) => {
                   </svg>
                 </span>
                 <span className="ml-2 text-sm tracking-wide truncate">
-                  Donors
+                  Clients
                 </span>
-                {/* TODO: could we display new donors potentially? - NP */}
-                {/* <span className="px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-green-500 bg-green-50 rounded-full">
+                <span className="px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-green-500 bg-green-50 rounded-full">
                   15
-                </span> */}
+                </span>
               </a>
             </li>
             <li>
@@ -184,10 +189,10 @@ const SideBar = ({ children }: any) => {
             </li>
           </ul>
         </div>
-      </aside>
-      <main className="main -ml-48 flex flex-grow flex-col p-4 transition-all duration-150 ease-in md:ml-0">
-        {children}
-      </main>
+      </div>
+      <div className="w-full h-full bg-blue-300">
+        <h1>TEST</h1>
+      </div>
     </div>
   );
 };

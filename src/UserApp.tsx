@@ -1,4 +1,10 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Outlet,
+} from "react-router-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { injectIntl } from "react-intl";
 import { Helmet } from "react-helmet";
@@ -25,7 +31,7 @@ import { PostPage } from "./pages/PostPage";
 
 function UserApp() {
   return (
-    <Router basename="/">
+    <React.Fragment>
       <Helmet>
         <title>Ukrainian Canadian Social Services Ottawa branch</title>
         <meta
@@ -36,50 +42,29 @@ function UserApp() {
       <div className="mx-auto">
         <Banner animateTitle={true} animateBackgroundImage={true} />
         <Navbar animateNavbar={false} />
-        <Route
-          render={(location) => (
-            <TransitionGroup>
-              <CSSTransition
-                key={location.location.key}
-                timeout={1000}
-                classNames="fade">
-                <Switch>
-                  <Route path="/" exact component={Home} />
-                  <Route
-                    path="/news/vyshyvanka-vechir"
-                    exact
-                    component={Vyshyvanka}
-                  />
-                  <Route path="/home" exact component={Home} />
-                  <Route path="/news" exact component={Reviews} />
-                  <Route path="/temp" component={PostPage} />
-                  <Route path="/events" exact component={Events} />
-                  <Route path="/events/:slug" component={Events} />
-                  <Route
-                    path="/news/continental-marathon"
-                    exact
-                    component={Marathon}
-                  />
-                  <Route path="/testimonials" exact component={Testimonials} />
-                  <Route path="/events/sunflower-camp" exact component={Camp} />
-                  <Route
-                    path="/waiting-list"
-                    exact
-                    render={() => <WaitingList />}
-                  />
-                  <Route path="/donate" exact component={Donate} />
-                  <Route path="/donate/success" exact component={Success} />
-                  <Route path="/donate/failure" exact component={Failure} />
-                  <Route path="/contact" exact component={ContactForm} />
-                  <Route component={NotFound} />
-                </Switch>
-              </CSSTransition>
-            </TransitionGroup>
-          )}
-        />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/news" element={<Reviews />}>
+            <Route path="vyshyvanka-vechir" element={<Vyshyvanka />} />
+          </Route>
+          <Route path="/temp" element={<PostPage />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/events/:slug" element={<Events />} />
+          <Route path="/news/continental-marathon" element={<Marathon />} />
+          <Route path="/testimonials" element={<Testimonials />} />
+          <Route path="/events/sunflower-camp" element={<Camp />} />
+          <Route path="/waiting-list" element={<WaitingList />} />
+          <Route path="/donate" element={<Donate />} />
+          <Route path="/donate/success" element={<Success />} />
+          <Route path="/donate/failure" element={<Failure />} />
+          <Route path="/contact" element={<ContactForm />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+        <Outlet />
         <Footer />
       </div>
-    </Router>
+    </React.Fragment>
   );
 }
 

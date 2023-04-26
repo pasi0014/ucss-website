@@ -12,6 +12,7 @@ import { LOCALES } from "../../i18n/locales";
 import logo from "../../assets/images/logo.png";
 import NavbarLinks from "../../NavbarLinks";
 import "../../index.css";
+import CustomLink from "../CustomLink";
 
 interface NavbarProps {
   animateNavbar: boolean;
@@ -50,13 +51,13 @@ const Navbar = (props: NavbarProps) => {
                   <div className="ml-10 flex items-baseline space-x-4 navLinks">
                     {activeLink.map((item: any, index: number) => (
                       <Fragment key={formatMessage({ ...item.title })}>
-                        <NavLink to={item.link} activeClassName="activeLink">
+                        <CustomLink to={item.link}>
                           <button
                             key={index}
                             className="btn text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium ">
                             {formatMessage({ ...item.title })}
                           </button>
-                        </NavLink>
+                        </CustomLink>
                       </Fragment>
                     ))}
                     <select
@@ -114,13 +115,13 @@ const Navbar = (props: NavbarProps) => {
               <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 navLinks">
                 {activeLink.map((item: any) => (
                   <Fragment key={formatMessage({ ...item.title })}>
-                    <NavLink to={item.link} activeClassName="activeLink">
+                    <CustomLink to={item.link}>
                       <span
                         key={formatMessage({ ...item.title })}
                         className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium hover:no-underline">
                         {formatMessage({ ...item.title })}
                       </span>
-                    </NavLink>
+                    </CustomLink>
                   </Fragment>
                 ))}
                 <select
