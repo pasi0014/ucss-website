@@ -15,7 +15,7 @@ const DonateDrawer = (props: any) => {
   const handleClick = async (priceId: string) => {
     // When the customer clicks on the button, redirect them to Checkout.
     const stripe = await stripePromise;
-    await stripe?.redirectToCheckout({
+    await stripe.redirectToCheckout({
       lineItems: [
         {
           price: priceId,
@@ -33,6 +33,26 @@ const DonateDrawer = (props: any) => {
       <div className="w-full flex md:flex-row flex-col items-center justify-center">
         <div
           className="w-full transition-all hover:scale-125 ease-in hover:bg-blue-300 cursor-pointer shadow-md rounded-lg mt-5 sm:mr-5"
+          onClick={() => handleClick(process.env.REACT_APP_10 as string)}>
+          <div className="md:flex items-center justify-center p-8">
+            <h2 className="text-2xl font-semibold leading-6 text-gray-800">
+              $10
+            </h2>
+          </div>
+        </div>
+
+        <div
+          className="w-full transition-all hover:scale-125 ease-in hover:bg-blue-300 cursor-pointer shadow-md rounded-lg  mt-5 sm:mr-5"
+          onClick={() => handleClick(process.env.REACT_APP_25 as string)}>
+          <div className="md:flex items-center justify-center p-8">
+            <h2 className="text-2xl font-semibold leading-6 text-gray-800">
+              $25
+            </h2>
+          </div>
+        </div>
+
+        <div
+          className="w-full transition-all hover:scale-125 ease-in hover:bg-blue-300 cursor-pointer shadow-md rounded-lg  mt-5 sm:mr-5"
           onClick={() => handleClick(process.env.REACT_APP_50 as string)}>
           <div className="md:flex items-center justify-center p-8">
             <h2 className="text-2xl font-semibold leading-6 text-gray-800">
@@ -47,26 +67,6 @@ const DonateDrawer = (props: any) => {
           <div className="md:flex items-center justify-center p-8">
             <h2 className="text-2xl font-semibold leading-6 text-gray-800">
               $100
-            </h2>
-          </div>
-        </div>
-
-        <div
-          className="w-full transition-all hover:scale-125 ease-in hover:bg-blue-300 cursor-pointer shadow-md rounded-lg  mt-5 sm:mr-5"
-          onClick={() => handleClick(process.env.REACT_APP_250 as string)}>
-          <div className="md:flex items-center justify-center p-8">
-            <h2 className="text-2xl font-semibold leading-6 text-gray-800">
-              $250
-            </h2>
-          </div>
-        </div>
-
-        <div
-          className="w-full transition-all hover:scale-125 ease-in hover:bg-blue-300 cursor-pointer shadow-md rounded-lg  mt-5 sm:mr-5"
-          onClick={() => handleClick(process.env.REACT_APP_500 as string)}>
-          <div className="md:flex items-center justify-center p-8">
-            <h2 className="text-2xl font-semibold leading-6 text-gray-800">
-              $500
             </h2>
           </div>
         </div>

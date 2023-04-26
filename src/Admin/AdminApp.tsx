@@ -20,28 +20,6 @@ import { useAuth } from "./context/AuthContext";
 import LoginForm from "./components/LoginForm";
 import { Helmet } from "react-helmet";
 
-const PrivateRoute: React.FC<RouteProps> = ({ children, ...rest }) => {
-  const { user } = useAuth();
-
-  return (
-    <Route
-      {...rest}
-      render={({ location }) =>
-        user ? (
-          children
-        ) : (
-          <Redirect
-            to={{
-              pathname: "/login",
-              state: { from: location },
-            }}
-          />
-        )
-      }
-    />
-  );
-};
-
 const AdminApp: React.FC = () => {
   const { user, login } = useAuth();
 
@@ -60,10 +38,6 @@ const AdminApp: React.FC = () => {
           <Route path="/login">
             <LoginForm />
           </Route>
-          <PrivateRoute path="/">
-            <div>Authenticated app here</div>
-            {/* <App /> */}
-          </PrivateRoute>
         </Switch>
       </BrowserRouter>
     </React.Fragment>

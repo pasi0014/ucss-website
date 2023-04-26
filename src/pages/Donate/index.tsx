@@ -203,6 +203,13 @@ export const Donate = () => {
                   ),
                 }}
               />
+              {isCopied && (
+                <div
+                  className="py-3 px-5 mb-4 bg-green-100 text-green-900 text-sm rounded-md border border-green-200 transition-all duration-500"
+                  role="alert">
+                  {formatMessage({ ...messages.emailCopied })}
+                </div>
+              )}
               <br />
               <br />
               {formatMessage({ ...messages.mailCheque })}
@@ -212,13 +219,6 @@ export const Donate = () => {
                 className="w-40 mx-auto"
               />
               {formatMessage({ ...messages.charitableNumber })}
-              {isCopied && (
-                <div
-                  className="py-3 px-5 mb-4 bg-green-100 text-green-900 text-sm rounded-md border border-green-200 transition-all duration-500"
-                  role="alert">
-                  {formatMessage({ ...messages.emailCopied })}
-                </div>
-              )}
             </p>
           </div>
         </div>

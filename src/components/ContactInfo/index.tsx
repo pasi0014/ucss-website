@@ -92,10 +92,12 @@ function ContactInfo() {
           <p className="text-gray-700 text-base mb-4">
             {formatMessage({ ...messages.fundraiserTitle })}
           </p>
-          {/* <span className="flex flex-col">
-            <a href="tel:6135583893">613-558-3893</a>
-            <a href="mailto:nazar@ucssottawa.com">nazar@ucssottawa.com</a>
-          </span> */}
+          <span className="flex flex-col">
+            <a href="tel:6134221699">613-422-1699</a>
+            <a href="mailto:marlenethomas@rogers.com">
+              marlenethomas@rogers.com
+            </a>
+          </span>
         </div>
       </div>
 
