@@ -4,13 +4,6 @@ import { injectIntl } from "react-intl";
 import AdminApp from "./Admin/AdminApp";
 import UserApp from "./UserApp";
 
-import {
-  ClerkProvider,
-  SignIn,
-  SignUp,
-  SignedIn,
-  useClerk,
-} from "@clerk/clerk-react";
 
 import "./App.css";
 import { Routes, useLocation, Route, useNavigate } from "react-router-dom";
@@ -33,12 +26,7 @@ import Admin from "./layouts/Admin";
 
 function App() {
   const navigate = useNavigate();
-  const clerkFrontendApi = process.env
-    .REACT_APP_CLERK_PUBLISHABLE_KEY as string;
   return (
-    <ClerkProvider
-      publishableKey={clerkFrontendApi}
-      navigate={(to) => navigate(to)}>
       <Routes>
         {/* UserApp Public routes */}
         <Route path="/" element={<Main />}>
@@ -64,7 +52,6 @@ function App() {
         {/* Private Routes */}
         <Route path="/administration/*" element={<AdminApp />} />
       </Routes>
-    </ClerkProvider>
   );
 }
 

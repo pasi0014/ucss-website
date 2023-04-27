@@ -5,13 +5,7 @@ import { injectIntl } from "react-intl";
 export default function Register() {
   return (
     <div className="w-full h-screen flex justify-center items-center">
-      <SignUp
-        path="/administration/sign-up"
-        routing="path"
-        signInUrl="/administration/sign-in"
-        afterSignUpUrl="/administation/dashboard"
-        afterSignInUrl="/administation/dashboard"
-      />
+      Register
     </div>
   );
 }

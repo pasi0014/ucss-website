@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 
 import logo from "../../../assets/images/logo.png";
 
@@ -184,6 +184,13 @@ const SideBar = ({ children }: any) => {
             </li>
           </ul>
         </div>
+        <span className="absolute bottom-8 w-full flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6">
+          <span
+            className="ml-2 text-sm tracking-wide truncate text-center flex flex-row items-center cursor-pointer"
+            onClick={() => console.log("UserProfile")}>
+            User Pofile
+          </span>
+        </span>
       </aside>
       <main className="main -ml-48 flex flex-grow flex-col p-4 transition-all duration-150 ease-in md:ml-0">
         {children}
