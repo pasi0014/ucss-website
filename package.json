@@ -36,6 +36,7 @@
     "notion-client": "^6.16.0",
     "react": "^18.2.0",
     "react-anime": "^4.0.4",
+    "react-auth-kit": "^2.12.2",
     "react-bootstrap": "^1.6.4",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",

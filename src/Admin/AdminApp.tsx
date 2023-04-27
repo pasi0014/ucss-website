@@ -8,13 +8,7 @@ import { injectIntl } from "react-intl";
  * N.P
  *
  */
-import {
-  Route,
-  RouteProps,
-  BrowserRouter,
-  Routes,
-  Navigate,
-} from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Admin from "../layouts/Admin";
 import Login from "./containers/Login";
 import Register from "./containers/Register";

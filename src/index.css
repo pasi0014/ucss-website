@@ -61,6 +61,14 @@ blockquote {
   margin: 0px;
 }
 
+.login-cover {
+  background-image: url("./assets/images/ottawa.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
 .list li {
   @apply py-2 px-3 rounded-lg transition duration-300 ease-out cursor-pointer;
 }
