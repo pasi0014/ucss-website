@@ -55,8 +55,8 @@ const SideBar = ({ children }: any) => {
         <div className="overflow-y-auto overflow-x-hidden flex-grow">
           <ul className="flex flex-col py-4 space-y-1">
             <li>
-              <a
-                href="#"
+              <Link
+                to="dashboard"
                 className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6"
               >
                 <span className="inline-flex justify-center items-center ml-4">
@@ -65,11 +65,11 @@ const SideBar = ({ children }: any) => {
                 <span className="ml-2 text-sm tracking-wide truncate">
                   Dashboard
                 </span>
-              </a>
+              </Link>
             </li>
             <li>
               <Link
-                to=""
+                to="reservations"
                 className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6"
               >
                 <span className="inline-flex justify-center items-center ml-4">
@@ -85,8 +85,8 @@ const SideBar = ({ children }: any) => {
               </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to="donors"
                 className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6"
               >
                 <span className="inline-flex justify-center items-center ml-4">
@@ -112,11 +112,11 @@ const SideBar = ({ children }: any) => {
                 {/* <span className="px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-green-500 bg-green-50 rounded-full">
                   15
                 </span> */}
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to="events"
                 className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6"
               >
                 <span className="inline-flex justify-center items-center ml-4">
@@ -136,9 +136,9 @@ const SideBar = ({ children }: any) => {
                   </svg>
                 </span>
                 <span className="ml-2 text-sm tracking-wide truncate">
-                  Profile
+                  Events
                 </span>
-              </a>
+              </Link>
             </li>
             <li>
               <a

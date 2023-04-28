@@ -11,6 +11,7 @@ import Admin from "../layouts/Admin";
 import Login from "./containers/Login";
 import { RequireAuth, useAuthUser } from "react-auth-kit";
 import StatusContextProvider from "./context/StatusContext";
+import Events from "./containers/Events";
 
 const AdminApp: React.FC = () => {
   const auth = useAuthUser();
@@ -36,6 +37,23 @@ const AdminApp: React.FC = () => {
               </div>
             }
           />
+          <Route
+            path="reservations"
+            element={
+              <div className="h-full bg-green-300">
+                <h1 className="">Reservations</h1>
+              </div>
+            }
+          />
+          <Route
+            path="donors"
+            element={
+              <div className="h-full bg-yellow-300">
+                <h1 className="">Donors</h1>
+              </div>
+            }
+          />
+          <Route path="events" element={<Events />} />
           <Route path="*" element={<Navigate to="/administration" />} />
         </Route>
         {/* <Route path="/sign-up" element={<Register />} /> */}
