@@ -1,34 +1,44 @@
-import React, { useContext } from "react";
-import { injectIntl } from "react-intl";
-
 /**
  * All routes should be defined in this file
- * Maybe I should add a layout page?
- * It is something to consider
- * N.P
- *
  */
+
+import React from "react";
 import { Route, Routes } from "react-router-dom";
+import { Helmet } from "react-helmet";
+
 import Admin from "../layouts/Admin";
+// import Register from "./containers/Register";
 import Login from "./containers/Login";
-import Register from "./containers/Register";
+import { RequireAuth } from "react-auth-kit";
 
 const AdminApp: React.FC = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Admin />}>
+    <>
+      <Helmet>
+        <title>CRM - Ukrainian Canadian Socical Services</title>
+      </Helmet>
+      <Routes>
         <Route
-          path="dashboard"
+          path="/"
           element={
-            <div className="h-full bg-blue-300">
-              <h1 className="">TEST</h1>
-            </div>
+            <RequireAuth loginPath="login">
+              <Admin />
+            </RequireAuth>
           }
-        />
-      </Route>
-      <Route path="/sign-up" element={<Register />} />
-      <Route path="/login" element={<Login />} />
-    </Routes>
+        >
+          <Route
+            path="dashboard"
+            element={
+              <div className="h-full bg-blue-300">
+                <h1 className="">TEST</h1>
+              </div>
+            }
+          />
+        </Route>
+        {/* <Route path="/sign-up" element={<Register />} /> */}
+        <Route path="/login" element={<Login />} />
+      </Routes>
+    </>
   );
 };
 

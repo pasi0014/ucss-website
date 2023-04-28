@@ -341,5 +341,12 @@
 
   "app.components.Events.eventsTitle": "Майбутні події",
 
-  "app.components.NewsCard.readMore": "Читати далі"
+  "app.components.NewsCard.readMore": "Читати далі",
+
+
+
+  "app.Admin.containers.Login.title": "Вхід",
+  "app.Admin.containers.Login.email": "Електронна пошта",
+  "app.Admin.containers.Login.password": "Пароль",
+  "app.Admin.containers.Login.memo": "Якщо у вас виникли проблеми з логіном"
 }
