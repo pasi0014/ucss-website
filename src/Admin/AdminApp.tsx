@@ -3,17 +3,19 @@
  */
 
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
 import Admin from "../layouts/Admin";
 // import Register from "./containers/Register";
 import Login from "./containers/Login";
-import { RequireAuth } from "react-auth-kit";
+import { RequireAuth, useAuthUser } from "react-auth-kit";
+import StatusContextProvider from "./context/StatusContext";
 
 const AdminApp: React.FC = () => {
+  const auth = useAuthUser();
   return (
-    <>
+    <StatusContextProvider>
       <Helmet>
         <title>CRM - Ukrainian Canadian Socical Services</title>
       </Helmet>
@@ -34,11 +36,17 @@ const AdminApp: React.FC = () => {
               </div>
             }
           />
+          <Route path="*" element={<Navigate to="/administration" />} />
         </Route>
         {/* <Route path="/sign-up" element={<Register />} /> */}
-        <Route path="/login" element={<Login />} />
+        <Route
+          path="/login"
+          element={
+            auth()?.email ? <Navigate to="/administration" /> : <Login />
+          }
+        />
       </Routes>
-    </>
+    </StatusContextProvider>
   );
 };
 
