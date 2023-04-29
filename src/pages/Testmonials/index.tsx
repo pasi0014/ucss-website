@@ -258,12 +258,12 @@ const Testimonials = (props: any) => {
                     )}
                   </h3>
                   <p className="leading-relaxed mb-3">
-                    <p className="mt-2">
+                    <span className="mt-2">
                       <FormattedMessage
                         {...messages.rideauText}
                         values={sanitizedValues}
                       />
-                    </p>
+                    </span>
                   </p>
                 </div>
               </div>
@@ -308,9 +308,9 @@ const Testimonials = (props: any) => {
                     {formatMessage({ ...messages.hospitalTitle })}
                   </h3>
                   <p className="leading-relaxed mb-3">
-                    <p className="mt-2">
+                    <span className="mt-2">
                       {formatMessage({ ...messages.hospitalText })}
-                    </p>
+                    </span>
                   </p>
                 </div>
               </div>
@@ -331,9 +331,9 @@ const Testimonials = (props: any) => {
                     {formatMessage({ ...messages.thankyouTitle })}
                   </h3>
                   <p className="leading-relaxed mb-3">
-                    <p className="mt-2">
+                    <span className="mt-2">
                       {formatMessage({ ...messages.thankyouText })}
-                    </p>
+                    </span>
                   </p>
                 </div>
               </div>

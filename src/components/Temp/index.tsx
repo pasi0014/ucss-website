@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Anime from "react-anime";
 
 const DrawerTemp = ({ children }: any) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,15 +10,8 @@ const DrawerTemp = ({ children }: any) => {
   return (
     <>
       <button onClick={handleToggle}>Toggle Drawer</button>
-      <Anime
-        translateY={isOpen ? "0%" : "100%"}
-        easing="easeOutQuad"
-        duration={300}
-        direction="reverse">
-        <div className="">
-          {children}
-        </div>
-      </Anime>
+
+      <div className="">{children}</div>
     </>
   );
 };

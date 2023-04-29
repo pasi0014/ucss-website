@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { IntlProvider } from "react-intl";
 
 import { LOCALES } from "../../i18n/locales";
@@ -6,18 +6,19 @@ import Ukrainian from "../../lang/ua.json";
 import English from "../../lang/en.json";
 
 export const Context = React.createContext({
-  value: { locale: "en", selectLanguage: () => {} },
+  value: { locale: LOCALES.ENGLISH, selectLanguage: () => {} },
 } as any);
 
-const local = navigator.language;
-
+let local = navigator.language;
 let lang: any;
+
 if (local === LOCALES.ENGLISH) {
   lang = English;
+} else if (local === LOCALES.UKRAINIAN) {
+  lang = Ukrainian;
 } else {
-  if (local === LOCALES.UKRAINIAN) {
-    lang = Ukrainian;
-  }
+  local = LOCALES.ENGLISH;
+  lang = English;
 }
 
 const Wrapper = (props: any) => {

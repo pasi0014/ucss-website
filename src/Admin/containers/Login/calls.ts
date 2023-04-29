@@ -2,6 +2,7 @@ import { getAnErrorMessage } from "../../utils/helpers";
 import API_BASE_URL from "../../config";
 
 import axios from "axios";
+import { UCSS_API_CONSTANTS } from "../../utils/constants";
 
 export const loginUser = async (email: string, password: string) => {
   const ctx = {
@@ -21,9 +22,9 @@ export const loginUser = async (email: string, password: string) => {
       },
     });
 
-    if (response.status === 200) {
+    if (response.status === 200 && response.data.code.id === UCSS_API_CONSTANTS.SUCCESS_CODE) {
       console.log("Successfully logged in user", { ...ctx, response });
-      return { success: true, data: response.data };
+      return { success: true, data: response.data.content };
     }
 
     errorMessage = getAnErrorMessage(response);

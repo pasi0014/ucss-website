@@ -74,12 +74,15 @@ function Login(props: { intl: IntlShape }) {
 
       console.log(response.data);
 
-      signIn({
-        token: response.data.accessToken,
-        expiresIn: 10_800,
-        tokenType: "Bearer",
-        authState: { email },
-      });
+      if (response.success) {
+        signIn({
+          token: response.data.accessToken,
+          expiresIn: 10_800,
+          tokenType: "Bearer",
+          authState: { email },
+        });
+      }
+
       navigate("/administration");
     } catch (error: any) {
       setLoading(false);
@@ -125,8 +128,7 @@ function Login(props: { intl: IntlShape }) {
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium leading-6 text-gray-900"
-                >
+                  className="block text-sm font-medium leading-6 text-gray-900">
                   {formatMessage({ ...messages.email })}
                 </label>
                 <div className="mt-2">
@@ -146,8 +148,7 @@ function Login(props: { intl: IntlShape }) {
                 <div className="flex items-center justify-between">
                   <label
                     htmlFor="password"
-                    className="block text-sm font-medium leading-6 text-gray-900"
-                  >
+                    className="block text-sm font-medium leading-6 text-gray-900">
                     {formatMessage({ ...messages.password })}
                   </label>
                 </div>
@@ -168,8 +169,7 @@ function Login(props: { intl: IntlShape }) {
                 <button
                   type="submit"
                   onClick={() => doLogin()}
-                  className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                >
+                  className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                   {formatMessage({ ...messages.title })}
                 </button>
               </div>
@@ -178,8 +178,7 @@ function Login(props: { intl: IntlShape }) {
                   {formatMessage({ ...messages.memo })}{" "}
                   <a
                     href="mailto:nazar@ucssottawa.com"
-                    className="text-blue-300"
-                  >
+                    className="text-blue-300">
                     nazar@ucssottawa.com
                   </a>
                 </span>

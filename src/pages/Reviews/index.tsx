@@ -166,6 +166,7 @@ function Reviews(props: any) {
             entries.map((iPost: any) => {
               return (
                 <NewsCard
+                  key={iPost.sys.id}
                   id={iPost.sys.id}
                   title={
                     iPost.fields[
@@ -380,9 +381,9 @@ function Reviews(props: any) {
                     {formatMessage({ ...messages.dragonboatTitle })}
                   </h3>
                   <p className="leading-relaxed mb-3">
-                    <p className="mt-2">
+                    <span className="mt-2">
                       {formatMessage({ ...messages.dragonboatText })}
-                    </p>
+                    </span>
                   </p>
                 </div>
               </div>
@@ -403,9 +404,9 @@ function Reviews(props: any) {
                     {formatMessage({ ...messages.schoolTitle })}
                   </h3>
                   <p className="leading-relaxed mb-3">
-                    <p className="mt-2">
+                    <span className="mt-2">
                       {formatMessage({ ...messages.schoolText })}
-                    </p>
+                    </span>
                   </p>
                 </div>
               </div>
@@ -426,9 +427,9 @@ function Reviews(props: any) {
                     {formatMessage({ ...messages.campThanksTitle })}
                   </h3>
                   <p className="leading-relaxed mb-3">
-                    <p className="mt-2">
+                    <span className="mt-2">
                       {formatMessage({ ...messages.campThanksText })}
-                    </p>
+                    </span>
                   </p>
                 </div>
               </div>

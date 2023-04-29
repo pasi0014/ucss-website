@@ -40,7 +40,7 @@ function UserApp() {
         />
       </Helmet>
       <div className="mx-auto">
-        <Banner animateTitle={true} animateBackgroundImage={true} />
+        <Banner animateTitle={false} animateBackgroundImage={false} />
         <Navbar animateNavbar={false} />
         <Routes>
           <Route path="/" element={<Home />} />

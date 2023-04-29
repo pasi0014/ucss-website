@@ -6,7 +6,6 @@ import vyshyvankaPic from "../../assets/images/main.jpeg";
 import messages from "./messages";
 import { Link } from "react-router-dom";
 import Filter from "../../components/Filter";
-import Collapse from "../../components/Collapse";
 import { Helmet } from "react-helmet";
 
 {

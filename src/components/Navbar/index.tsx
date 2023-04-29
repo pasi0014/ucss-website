@@ -1,5 +1,4 @@
 import React, { ReactNode, useContext } from "react";
-import Anime from "react-anime";
 import { useIntl } from "react-intl";
 import { Fragment } from "react";
 import { NavLink } from "react-router-dom";
@@ -11,8 +10,9 @@ import { LOCALES } from "../../i18n/locales";
 
 import logo from "../../assets/images/logo.png";
 import NavbarLinks from "../../NavbarLinks";
-import "../../index.css";
 import CustomLink from "../CustomLink";
+
+import "../../index.css";
 
 interface NavbarProps {
   animateNavbar: boolean;
@@ -21,19 +21,6 @@ const Navbar = (props: NavbarProps) => {
   const context = useContext(Context);
   const { formatMessage } = useIntl();
   const activeLink: any = NavbarLinks.GetNavigationLinks();
-
-  function renderAnimatedNavbar(children: ReactNode) {
-    return (
-      <Anime
-        translateY={[-100, 0]}
-        opacity={[0, 1]}
-        easing={"easeInOutQuart"}
-        duration={3000}
-        delay={200}>
-        {children}
-      </Anime>
-    );
-  }
 
   const navBarChunk = (
     <Disclosure as="nav" className="font-montserrat bg-gray-800">
@@ -62,7 +49,6 @@ const Navbar = (props: NavbarProps) => {
                     ))}
                     <select
                       value={context.locale}
-                      defaultValue={context.locale}
                       onChange={context.selectLanguage}
                       className="text-gray-300 bg-gray-700 hover:bg-gray-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                       <option value={LOCALES.ENGLISH}>English</option>
@@ -126,7 +112,6 @@ const Navbar = (props: NavbarProps) => {
                 ))}
                 <select
                   value={context.locale}
-                  defaultValue={context.locale}
                   onChange={context.selectLanguage}
                   className="text-gray-300 w-full bg-gray-700 hover:bg-gray-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                   <option value={LOCALES.ENGLISH}>English</option>
@@ -140,7 +125,6 @@ const Navbar = (props: NavbarProps) => {
     </Disclosure>
   );
 
-  if (props.animateNavbar) return renderAnimatedNavbar(navBarChunk);
   return navBarChunk;
 };
 export default Navbar;

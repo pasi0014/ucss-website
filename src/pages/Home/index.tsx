@@ -239,9 +239,9 @@ const Home = () => {
                         <span className="italic font-medium leading-relaxed">
                           {formatMessage({ ...messages.campText1 })}
                         </span>
-                        <p className="mt-2">
+                        <span className="mt-2">
                           {formatMessage({ ...messages.campText2 })}
-                        </p>
+                        </span>
                       </p>
                       <a
                         href="https://ottawacitizen.com/news/local-news/an-unbelievable-experience-community-support-bolsters-outaouais-summer-camp-for-displaced-ukrainian-children?fbclid=IwAR261wEFwDaNGvZKRfSy8INfY5uS99JZMmBRFKBQq7BRMPCtoKCJzIbdCTU"
