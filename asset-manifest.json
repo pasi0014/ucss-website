@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.facec1ee.chunk.css",
-    "main.js": "/static/js/main.bcd1ac5b.chunk.js",
-    "main.js.map": "/static/js/main.bcd1ac5b.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.c71da749.js",
-    "runtime-main.js.map": "/static/js/runtime-main.c71da749.js.map",
-    "static/js/2.b7f566fa.chunk.js": "/static/js/2.b7f566fa.chunk.js",
-    "static/js/2.b7f566fa.chunk.js.map": "/static/js/2.b7f566fa.chunk.js.map",
+    "main.css": "/static/css/main.91025ee2.chunk.css",
+    "main.js": "/static/js/main.593cbbe5.chunk.js",
+    "main.js.map": "/static/js/main.593cbbe5.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.c5931aa0.js",
+    "runtime-main.js.map": "/static/js/runtime-main.c5931aa0.js.map",
+    "static/js/2.ccada394.chunk.js": "/static/js/2.ccada394.chunk.js",
+    "static/js/2.ccada394.chunk.js.map": "/static/js/2.ccada394.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.facec1ee.chunk.css.map": "/static/css/main.facec1ee.chunk.css.map",
-    "static/js/2.b7f566fa.chunk.js.LICENSE.txt": "/static/js/2.b7f566fa.chunk.js.LICENSE.txt",
+    "static/css/main.91025ee2.chunk.css.map": "/static/css/main.91025ee2.chunk.css.map",
+    "static/js/2.ccada394.chunk.js.LICENSE.txt": "/static/js/2.ccada394.chunk.js.LICENSE.txt",
     "static/media/about.c05d6b0f.JPG": "/static/media/about.c05d6b0f.JPG",
     "static/media/backpack.584b1630.jpeg": "/static/media/backpack.584b1630.jpeg",
     "static/media/bazar-main.bbea257e.jpg": "/static/media/bazar-main.bbea257e.jpg",
@@ -29,7 +29,6 @@
     "static/media/lions-marathon.6a37d0a7.jpeg": "/static/media/lions-marathon.6a37d0a7.jpeg",
     "static/media/local-concert.05e48ee0.jpg": "/static/media/local-concert.05e48ee0.jpg",
     "static/media/logo.20270243.png": "/static/media/logo.20270243.png",
-    "static/media/main.2082f081.jpeg": "/static/media/main.2082f081.jpeg",
     "static/media/medicine_1.3c9f04a7.jpg": "/static/media/medicine_1.3c9f04a7.jpg",
     "static/media/medicine_2.152240d1.jpg": "/static/media/medicine_2.152240d1.jpg",
     "static/media/medicine_3.bd0cab59.jpg": "/static/media/medicine_3.bd0cab59.jpg",
@@ -61,9 +60,9 @@
     "static/media/war-memorial-2.8ca25461.jpeg": "/static/media/war-memorial-2.8ca25461.jpeg"
   },
   "entrypoints": [
-    "static/js/runtime-main.c71da749.js",
-    "static/js/2.b7f566fa.chunk.js",
-    "static/css/main.facec1ee.chunk.css",
-    "static/js/main.bcd1ac5b.chunk.js"
+    "static/js/runtime-main.c5931aa0.js",
+    "static/js/2.ccada394.chunk.js",
+    "static/css/main.91025ee2.chunk.css",
+    "static/js/main.593cbbe5.chunk.js"
   ]
 }
