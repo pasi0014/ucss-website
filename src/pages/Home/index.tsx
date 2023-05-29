@@ -38,6 +38,14 @@ const Home = () => {
           name="keywords"
           content="donate camp, ukrainian charitable organization, ucss camp, ucss ottawa news"
         />
+        <div id="fb-root"></div>
+        <script
+          async
+          defer
+          crossOrigin="anonymous"
+          src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v16.0"
+          nonce="3gk0Bi40"
+        ></script>
       </Helmet>
       <main className="font-montserrat flex-1 overflow-x-hidden overflow-y-auto bg-yellow-100">
         {/* About Section */}
@@ -66,12 +74,12 @@ const Home = () => {
           <h2 className="text-center text-4xl text-gray-500 mt-5">
             {formatMessage({ ...messages.upcomingEvents })}
           </h2>
-          <div className="flex flex-nowrap w-full lg:flex-row flex-col p-3">
+          <div className="flex flex-nowrap w-full lg:flex-row flex-col p-3 mt-5">
             {/* Event Card */}
-            <div className="lg:w-8/12 w-full">
+            <div className="lg:w-8/12 w-full mx-auto">
               <div className="shadow lg:w-8/12 w-full rounded-xl mx-auto bg-white">
                 <img
-                  className="w-full h-64 object-cover rounded-t-xl"
+                  className="w-full h-90 object-cover rounded-t-xl"
                   src={campPic}
                   alt="Sunflower camp"
                 />
@@ -105,53 +113,6 @@ const Home = () => {
                   </Link> */}
                     <Link to="/donate" className="text-center">
                       <button className="transform transition-all duration-200 ease hover:shadow-lg  w-8/12 bg-gradient-to-r from-red-400 to-yellow-400 text-white font-medium px-5 py-2 rounded-xl mx-auto">
-                        {formatMessage({ ...messages.donate })}
-                      </button>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Vyshyvanks 2.0 */}
-            <div className="lg:w-8/12 w-full lg:mt-0 mt-6">
-              <div className="lg:w-8/12 w-full rounded-xl shadow mx-auto hover:shadow-xl bg-white">
-                <img
-                  className="w-full lg:h-72 h-auto object-cover rounded-t-xl"
-                  src={vyshyvankaPic}
-                  alt="Event"
-                />
-                <div className="w-full px-6 py-4">
-                  <div className="font-bold text-xl mb-2">
-                    {formatMessage({ ...messages.embroideryTitle })}
-                  </div>
-                  <p className="text-gray-400 text-base mb-2">
-                    {formatMessage({ ...messages.embroideryDate })}
-                  </p>
-                  <p className="text-gray-700 text-base">
-                    {formatMessage(
-                      { ...messages.embroideryText },
-                      {
-                        br: (
-                          <>
-                            <br />
-                            <br />
-                          </>
-                        ),
-                      }
-                    )}
-                  </p>
-                  <div className="mx-auto flex flex-col my-5">
-                    <a
-                      href="https://www.eventbrite.com/e/ukrainian-cultural-embroidery-event-tickets-597322466577"
-                      className="w-8/12 mx-auto mb-3"
-                      target="_blank">
-                      <button className="transition duration-200 ease hover:shadow-lg w-full bg-gradient-to-r from-cyan-400 to-blue-400 hover:from-cyan-300 hover:to-blue-300 text-white font-medium px-5 py-2 rounded-xl">
-                        {formatMessage({ ...messages.learnMore })}
-                      </button>
-                    </a>
-                    <Link to="/donate" className="text-center">
-                      <button className="transform transition-all duration-200 ease hover:shadow-lg w-8/12 bg-gradient-to-r from-red-400 to-yellow-400 text-white font-medium px-5 py-2 rounded-xl mx-auto">
                         {formatMessage({ ...messages.donate })}
                       </button>
                     </Link>
@@ -218,6 +179,65 @@ const Home = () => {
               <h2 className="text-center mb-4 text-4xl p-5">
                 {formatMessage({ ...messages.recentNewsTitle })}
               </h2>
+
+              <div className="md:w-7/12 p-4 mx-auto mb-4">
+                <div className="flex flex-col justify-center h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
+                  <div
+                    className="fb-video"
+                    data-href="https://www.facebook.com/oksana.melnyktv/posts/646577273468498/?vh=e&amp;extid=MSG-UNK-UNK-UNK-AN_GK0T-GK1C"
+                    data-width="1200"
+                    data-show-text="true"
+                  ></div>
+                </div>
+              </div>
+
+              {/* Video */}
+              <div className="md:w-7/12 p-4 mx-auto mb-4">
+                <div className="flex flex-col justify-center h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
+                  <div
+                    className="fb-video"
+                    data-width="1200"
+                    data-href="https://www.facebook.com/watch/?v=793415402177023"
+                    data-show-text="false"
+                  >
+                    <blockquote
+                      cite="https://www.facebook.com/yvanbaker/videos/793415402177023/"
+                      className="fb-xfbml-parse-ignore"
+                    >
+                      {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
+                      <a
+                        href="https://www.facebook.com/yvanbaker/videos/793415402177023/"
+                        target="_blank"
+                        rel="noreferrer"
+                      />
+                      <p>
+                        Canada will stand with the Ukrainian people until they
+                        win. Slava Ukraini!
+                      </p>
+                      Posted by{" "}
+                      <a href="https://www.facebook.com/yvanbaker">
+                        Yvan Baker, MP
+                      </a>{" "}
+                      on Thursday, May 18, 2023
+                    </blockquote>
+                  </div>
+                  <div className="flex flex-col mx-auto p-3">
+                    <span className="text-center text-medium">
+                      Canada will stand with the Ukrainian people until they
+                      win. Slava Ukraini!
+                    </span>
+                    <a
+                      href="https://www.facebook.com/yvanbaker"
+                      className="text-center"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Yvan Baker, MP
+                    </a>
+                  </div>
+                </div>
+              </div>
+
               <div className="flex flex-col md:flex-row sm:space-y-0 space-y-16 lg:space-x-16 justify-center rounded-xl">
                 {/* Camp report */}
                 <div className="md:w-7/12 shadow-md">
@@ -246,7 +266,8 @@ const Home = () => {
                       <a
                         href="https://ottawacitizen.com/news/local-news/an-unbelievable-experience-community-support-bolsters-outaouais-summer-camp-for-displaced-ukrainian-children?fbclid=IwAR261wEFwDaNGvZKRfSy8INfY5uS99JZMmBRFKBQq7BRMPCtoKCJzIbdCTU"
                         target="_blank"
-                        rel="noreferrer">
+                        rel="noreferrer"
+                      >
                         <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 text-white font-medium px-4 py-1 rounded-lg">
                           {formatMessage({ ...messages.readMore })}
                         </button>
@@ -281,35 +302,6 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-
-                {/* Gratidute from hospital */}
-                {/* <div className="md:w-8/12 shadow-md">
-                <div className="h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
-                  <img
-                    className="transform lg:h-48 md:h-36 w-full object-cover object-center scale-110 transition-all duration-700 hover:scale-100"
-                    src="https://scontent-yyz1-1.xx.fbcdn.net/v/t39.30808-6/278893210_2825694661068056_3343143635443493953_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=5cd70e&_nc_ohc=k2hUe9xvK2kAX-6_sWS&_nc_ht=scontent-yyz1-1.xx&oh=00_AT_cCguWxyWEuifxEL_Sg5vJyjNRcxa4XOyFGRLSbFobvw&oe=62C7F102"
-                    alt="Members of UCSS and Lions Club"
-                  />
-                  <div className="p-6">
-                    <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                      {formatMessage({ ...messages.date_lions })}
-                    </h2>
-                    <h3 className="title-font text-lg font-bold text-gray-600 mb-3">
-                      {formatMessage({ ...messages.hospitalGratiduteTitle })}
-                    </h3>
-                    <p className="leading-relaxed mb-3">
-                      {formatMessage({
-                        ...messages.hospitalGratiduteTextBlurb,
-                      })}
-                    </p>
-                    <Link to="/news/gratidute-from-hospital">
-                      <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 text-white font-medium px-4 py-1 rounded-lg">
-                        {formatMessage({ ...messages.readMore })}
-                      </button>
-                    </Link>
-                  </div>
-                </div>
-              </div> */}
               </div>
               {/* Vyshyvanka */}
               <div className="md:w-7/12 shadow-md mx-auto mt-5">

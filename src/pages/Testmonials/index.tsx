@@ -30,7 +30,8 @@ const Testimonials = (props: any) => {
           defer
           crossOrigin="anonymous"
           src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v16.0"
-          nonce="3gk0Bi40"></script>
+          nonce="3gk0Bi40"
+        ></script>
       </Helmet>
       <section className="w-full h-full bg-blue-100 text-gray-600 font-montserrat">
         <div className="py-20 mx-auto">
@@ -38,17 +39,75 @@ const Testimonials = (props: any) => {
             <h1>{formatMessage({ ...messages.header })}</h1>
           </div>
 
-          <div className="flex flex-wrap -m-4 justify-center">
-            {/* 1 */}
-            <div className="md:w-5/12 p-4">
-              <div className="flex justify-center h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
+          <div className="flex flex-wrap lg:flex-row mx-auto flex-col -m-4 justify-center overflow-scroll">
+            {/* Video */}
+            <div className="lg:w-5/12 w-full p-4">
+              <div className="flex justify-center h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-scroll mx-auto">
+                <div
+                  className="fb-post"
+                  data-href="https://www.facebook.com/viktoriavarvinskaa/posts/182134291392758/?vh=e&amp;extid=MSG-UNK-UNK-UNK-COM_GK0T-GK1C"
+                  data-show-text="true"
+                >
+                  <blockquote
+                    cite="https://www.facebook.com/viktoriavarvinskaa/posts/743321623954756"
+                    className="fb-xfbml-parse-ignore"
+                  >
+                    <p>
+                      Одразу відправка!🇺🇦💪 10 футболок,одна форма,2 геля для
+                      душа,медикаменти,3 ноші. Дякую ВСІМ СВОЇМ ПАТРІОТАМ🤝❤
+                      Дякую...
+                    </p>
+                    Posted by{" "}
+                    <a href="https://www.facebook.com/viktoriavarvinskaa">
+                      Виктория Варвинская
+                    </a>{" "}
+                    on&nbsp;
+                    <a href="https://www.facebook.com/viktoriavarvinskaa/posts/743321623954756">
+                      Thursday, April 27, 2023
+                    </a>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+
+            {/* Video */}
+            <div className="lg:w-5/12 p-4">
+              <div className="flex justify-center h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-scroll mx-auto">
+                <div
+                  className="fb-video"
+                  data-href="https://www.facebook.com/watch/?v=793415402177023"
+                  data-show-text="false"
+                >
+                  <blockquote
+                    cite="https://www.facebook.com/yvanbaker/videos/793415402177023/"
+                    className="fb-xfbml-parse-ignore"
+                  >
+                    <a href="https://www.facebook.com/yvanbaker/videos/793415402177023/"></a>
+                    <p>
+                      Canada will stand with the Ukrainian people until they
+                      win. Slava Ukraini!
+                    </p>
+                    Posted by{" "}
+                    <a href="https://www.facebook.com/yvanbaker">
+                      Yvan Baker, MP
+                    </a>{" "}
+                    on Thursday, May 18, 2023
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+
+            <div className="lg:w-5/12 p-4">
+              <div className="flex justify-center h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-scroll mx-auto">
                 <div
                   className="fb-post"
                   data-href="https://www.facebook.com/viktoriavarvinskaa/posts/pfbid02kTA24E4GrFHbb24UWWa7QDrWQ1D2mkSzNSb47y8qk4NQyjHiABp8Z3EyNaUDQnWsl"
-                  data-show-text="true">
+                  data-show-text="true"
+                >
                   <blockquote
                     cite="https://www.facebook.com/viktoriavarvinskaa/posts/720718652881720"
-                    className="fb-xfbml-parse-ignore">
+                    className="fb-xfbml-parse-ignore"
+                  >
                     <p>
                       І ЗНОВУ ПОДЯКА Maryna Popovych та всім хто допомогає нашим
                       ЗСУ💪🇺🇦💋 Дякую за грілки(дуже багато) Дякую за мякі
@@ -68,16 +127,17 @@ const Testimonials = (props: any) => {
               </div>
             </div>
 
-            {/* 2 */}
-            <div className="md:w-5/12 p-4">
-              <div className="flex justify-center h-auto rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
+            <div className="lg:w-5/12 p-4">
+              <div className="flex justify-center h-full rouned-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-scroll mx-auto">
                 <div
                   className="fb-post"
                   data-href="https://www.facebook.com/viktoriavarvinskaa/posts/pfbid0JUbyjePTReQgNie8fZsYoiBjfGGdQVA9vfeVyx4yDkVNwNLnuRvECzPLybQm2sAul"
-                  data-show-text="true">
+                  data-show-text="true"
+                >
                   <blockquote
                     cite="https://www.facebook.com/viktoriavarvinskaa/posts/715413763412209"
-                    className="fb-xfbml-parse-ignore">
+                    className="fb-xfbml-parse-ignore"
+                  >
                     <p>
                       Фотозвіт по берцам,43р. Нарешті наш Герой зміг забрати!!!
                       Подяка ВАМ ,друзі ,за взуття!! А також подяка за грілки
@@ -96,16 +156,52 @@ const Testimonials = (props: any) => {
               </div>
             </div>
 
-            {/* 3 */}
-            <div className="md:w-5/12 p-4">
-              <div className="flex justify-center h-auto rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
+            {/* <div className="lg:w-5/12 w-full p-4">
+
+
+            
+            <div className="lg:w-5/12 w-full p-4 mx-auto">
+              <div className="flex justify-center h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-scroll mx-auto">
                 <div
                   className="fb-post"
+                  data-href="https://www.facebook.com/viktoriavarvinskaa/posts/pfbid0JUbyjePTReQgNie8fZsYoiBjfGGdQVA9vfeVyx4yDkVNwNLnuRvECzPLybQm2sAul"
+                  data-show-text="true"
+                >
+                  <blockquote
+                    cite="https://www.facebook.com/viktoriavarvinskaa/posts/715413763412209"
+                    className="fb-xfbml-parse-ignore"
+                  >
+                    <p>
+                      Фотозвіт по берцам,43р. Нарешті наш Герой зміг забрати!!!
+                      Подяка ВАМ ,друзі ,за взуття!! А також подяка за грілки
+                      Maryna Popovych та всій її команді!!!🙏🙏🙏🙏🇺🇦
+                    </p>
+                    Posted by{" "}
+                    <a href="https://www.facebook.com/viktoriavarvinskaa">
+                      Виктория Варвинская
+                    </a>{" "}
+                    on&nbsp;
+                    <a href="https://www.facebook.com/viktoriavarvinskaa/posts/715413763412209">
+                      Friday, March 3, 2023
+                    </a>
+                  </blockquote>
+                </div>
+              </div>
+            </div> */}
+
+            {/* 3 */}
+            <div className="lg:w-5/12 w-full p-4">
+              <div className="flex justify-center h-auto rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-scroll mx-auto">
+                <div
+                  className="fb-post"
+                  data-width="500"
                   data-href="https://www.facebook.com/745041384/videos/744868523502528/"
-                  data-show-text="true">
+                  data-show-text="true"
+                >
                   <blockquote
                     cite="https://www.facebook.com/maryna.popovych/posts/10160709934261385"
-                    className="fb-xfbml-parse-ignore">
+                    className="fb-xfbml-parse-ignore"
+                  >
                     <p>
                       Військовий волонтер з Одеси ІГОР ЗЮБІН ! Дякуємо тобі і
                       Лілечки за ваш такий труд!!!! Хай ангели завжди будуть
@@ -126,36 +222,38 @@ const Testimonials = (props: any) => {
             </div>
 
             {/* 4 */}
-            <div className="md:w-5/12 p-4">
-              <div className="flex justify-center h-auto rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden"></div>
-              <div
-                className="fb-post"
-                data-href="https://www.facebook.com/viktoriavarvinskaa/posts/pfbid02YTvZgomu1f9ukGyZTwLoo7x9HoTYLVn8HeHksa2RCw7mjf8X5Z7GDaRDxEgSNgTMl"
-                data-width="590"
-                data-show-text="true">
-                <blockquote
-                  cite="https://www.facebook.com/viktoriavarvinskaa/posts/702134521406800"
-                  className="fb-xfbml-parse-ignore">
-                  <p>
-                    Фотозвіт ще від однієї 103 бригади,)🤝🇺🇦👍 Оля Давиденко
-                    Гриненко подяка Вам за мівіну, Тетяна Васильків подяка вам(
-                    за...
-                  </p>
-                  Posted by{" "}
-                  <a href="https://www.facebook.com/viktoriavarvinskaa">
-                    Виктория Варвинская
-                  </a>{" "}
-                  on&nbsp;
-                  <a href="https://www.facebook.com/viktoriavarvinskaa/posts/702134521406800">
-                    Thursday, February 9, 2023
-                  </a>
-                </blockquote>
+            <div className="lg:w-5/12 w-full p-4">
+              <div className="flex justify-center h-auto rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-scroll mx-auto">
+                <div
+                  className="fb-post w-full"
+                  data-href="https://www.facebook.com/viktoriavarvinskaa/posts/pfbid02YTvZgomu1f9ukGyZTwLoo7x9HoTYLVn8HeHksa2RCw7mjf8X5Z7GDaRDxEgSNgTMl"
+                  data-show-text="true"
+                >
+                  <blockquote
+                    cite="https://www.facebook.com/viktoriavarvinskaa/posts/702134521406800"
+                    className="fb-xfbml-parse-ignore"
+                  >
+                    <p>
+                      Фотозвіт ще від однієї 103 бригади,)🤝🇺🇦👍 Оля Давиденко
+                      Гриненко подяка Вам за мівіну, Тетяна Васильків подяка
+                      вам( за...
+                    </p>
+                    Posted by{" "}
+                    <a href="https://www.facebook.com/viktoriavarvinskaa">
+                      Виктория Варвинская
+                    </a>{" "}
+                    on&nbsp;
+                    <a href="https://www.facebook.com/viktoriavarvinskaa/posts/702134521406800">
+                      Thursday, February 9, 2023
+                    </a>
+                  </blockquote>
+                </div>
               </div>
             </div>
 
             {/* Hotties */}
-            <div className="md:w-5/12 p-4">
-              <div className="h-auto rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
+            <div className="lg:w-5/12 w-full p-4">
+              <div className="h-auto rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-scroll mx-auto">
                 <img
                   className="transform lg:h-80 md:h-56 w-full object-cover object-center transition-all duration-700 hover:scale-100"
                   src={turkey}
@@ -178,7 +276,7 @@ const Testimonials = (props: any) => {
               </div>
             </div>
             {/* Hotties */}
-            <div className="md:w-5/12 p-4">
+            <div className="lg:w-5/12 w-full p-4">
               <div className="h-auto rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
                 <div className="p-6">
                   February 7, 2023
@@ -198,7 +296,8 @@ const Testimonials = (props: any) => {
                       href="https://www.facebook.com/100048307747259/videos/576476517676123/"
                       target="_blank"
                       rel="noreferrer"
-                      className="mt-3 font-bold">
+                      className="mt-3 font-bold"
+                    >
                       Побачити більше
                     </a>{" "}
                   </div>
@@ -207,7 +306,7 @@ const Testimonials = (props: any) => {
             </div>
 
             {/* Bydychnist */}
-            <div className="md:w-5/12 p-4">
+            <div className="lg:w-5/12 w-full p-4">
               <div className="h-auto rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
                 <img
                   className="transform lg:h-80 md:h-56 w-full object-cover object-center scale-110 transition-all duration-700 hover:scale-100"
@@ -230,7 +329,7 @@ const Testimonials = (props: any) => {
               </div>
             </div>
 
-            <div className="md:w-5/12 p-4">
+            <div className="lg:w-5/12 w-full p-4">
               <div className="h-auto rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
                 <img
                   className="transform lg:h-80 md:h-56 w-full object-cover object-center scale-110 transition-all duration-700 hover:scale-100"
@@ -250,7 +349,8 @@ const Testimonials = (props: any) => {
                             href="https://www.rideaucanoeclub.ca/"
                             target="_blank"
                             rel="noreferrer"
-                            className="text-underline">
+                            className="text-underline"
+                          >
                             {str}
                           </a>
                         ),
@@ -268,7 +368,7 @@ const Testimonials = (props: any) => {
                 </div>
               </div>
             </div>
-            <div className="md:w-5/12 p-4">
+            <div className="lg:w-5/12 w-full p-4">
               <div className="h-auto rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
                 <div className="p-6">
                   <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
@@ -293,7 +393,7 @@ const Testimonials = (props: any) => {
               </div>
             </div>
 
-            <div className="md:w-5/12 p-4">
+            <div className="lg:w-5/12 w-full p-4">
               <div className="h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
                 <img
                   className="transform lg:h-80 md:h-56 w-full object-cover object-center transition-all duration-700"
@@ -316,7 +416,7 @@ const Testimonials = (props: any) => {
               </div>
             </div>
 
-            <div className="md:w-5/12 p-4">
+            <div className="lg:w-5/12 w-full p-4">
               <div className="h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
                 <img
                   className="transform h-96 w-full object-cover object-top scale-110 transition-all duration-700 hover:scale-100 mb-2"

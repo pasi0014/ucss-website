@@ -51,10 +51,10 @@ function Events() {
           {/* Event Container */}
           <div className="flex flex-nowrap w-full lg:flex-row flex-col p-3">
             {/* Event Card */}
-            <div className="lg:w-8/12 w-full">
+            <div className="lg:w-8/12 w-full mx-auto">
               <div className="shadow lg:w-8/12 w-full rounded-xl mx-auto">
                 <img
-                  className="w-full h-64 object-cover rounded-t-xl"
+                  className="w-full h-90 object-cover rounded-t-xl"
                   src={campPic}
                   alt="Sunflower camp"
                 />
@@ -88,53 +88,6 @@ function Events() {
                   </Link> */}
                     <Link to="/donate" className="text-center">
                       <button className="transform transition-all duration-200 ease hover:shadow-lg  w-8/12 bg-gradient-to-r from-red-400 to-yellow-400 text-white font-medium px-5 py-2 rounded-xl mx-auto">
-                        {formatMessage({ ...messages.donate })}
-                      </button>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Vyshyvanks 2.0 */}
-            <div className="lg:w-8/12 w-full lg:mt-0 mt-6">
-              <div className="lg:w-8/12 w-full rounded-xl shadow mx-auto hover:shadow-xl">
-                <img
-                  className="w-full lg:h-72 h-auto object-cover rounded-t-xl"
-                  src={vyshyvankaPic}
-                  alt="Event"
-                />
-                <div className="w-full px-6 py-4">
-                  <div className="font-bold text-xl mb-2">
-                    {formatMessage({ ...messages.embroideryTitle })}
-                  </div>
-                  <p className="text-gray-400 text-base mb-2">
-                    {formatMessage({ ...messages.embroideryDate })}
-                  </p>
-                  <p className="text-gray-700 text-base">
-                    {formatMessage(
-                      { ...messages.embroideryText },
-                      {
-                        br: (
-                          <>
-                            <br />
-                            <br />
-                          </>
-                        ),
-                      }
-                    )}
-                  </p>
-                  <div className="mx-auto flex flex-col my-5">
-                    <a
-                      href="https://www.eventbrite.com/e/ukrainian-cultural-embroidery-event-tickets-597322466577"
-                      className="w-8/12 mx-auto mb-3"
-                      target="_blank">
-                      <button className="transition duration-200 ease hover:shadow-lg w-full bg-gradient-to-r from-cyan-400 to-blue-400 hover:from-cyan-300 hover:to-blue-300 text-white font-medium px-5 py-2 rounded-xl">
-                        {formatMessage({ ...messages.learnMore })}
-                      </button>
-                    </a>
-                    <Link to="/donate" className="text-center">
-                      <button className="transform transition-all duration-200 ease hover:shadow-lg w-8/12 bg-gradient-to-r from-red-400 to-yellow-400 text-white font-medium px-5 py-2 rounded-xl mx-auto">
                         {formatMessage({ ...messages.donate })}
                       </button>
                     </Link>

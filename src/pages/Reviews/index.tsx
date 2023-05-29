@@ -84,7 +84,8 @@ function Reviews(props: any) {
               <div className="text-center">
                 <button
                   className="bg-blue-300 p-2 text-white font-bold rounded-xl w-2/12 mt-3"
-                  onClick={() => doFetchEntries()}>
+                  onClick={() => doFetchEntries()}
+                >
                   Refresh
                 </button>
               </div>
@@ -220,7 +221,8 @@ function Reviews(props: any) {
                     <a
                       href="https://www.facebook.com/groups/3189837834631563/?multi_permalinks=3434297586852252&ref=share"
                       target="_blank"
-                      rel="noreferrer">
+                      rel="noreferrer"
+                    >
                       <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 text-white font-medium px-4 py-1 rounded-lg mt-3">
                         {formatMessage({ ...messages.readMore })}
                       </button>
@@ -280,7 +282,8 @@ function Reviews(props: any) {
                   <a
                     href="https://www.facebook.com/maryna.popovych/posts/pfbid02xGbyDY5eFYaBjjsSNes4hzfHKLwhTW9q2aovusb7WZfkzwPFPSJyzr1qjEUYanFQl"
                     target="_blank"
-                    rel="noreferrer">
+                    rel="noreferrer"
+                  >
                     <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 text-white font-medium px-4 py-1 rounded-lg">
                       {formatMessage({ ...messages.readMore })}
                     </button>
@@ -331,7 +334,8 @@ function Reviews(props: any) {
                   <a
                     href="https://ottawa.ctvnews.ca/video?clipId=2585411"
                     target="_blank"
-                    rel="noreferrer">
+                    rel="noreferrer"
+                  >
                     <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 text-white font-medium px-4 py-1 rounded-lg">
                       {formatMessage({ ...messages.readMore })}
                     </button>
@@ -461,7 +465,8 @@ function Reviews(props: any) {
                   <a
                     href="https://ottawacitizen.com/news/local-news/an-unbelievable-experience-community-support-bolsters-outaouais-summer-camp-for-displaced-ukrainian-children?fbclid=IwAR261wEFwDaNGvZKRfSy8INfY5uS99JZMmBRFKBQq7BRMPCtoKCJzIbdCTU"
                     target="_blank"
-                    rel="noreferrer">
+                    rel="noreferrer"
+                  >
                     <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 text-white font-medium px-4 py-1 rounded-lg">
                       {formatMessage({ ...messages.readMore })}
                     </button>
@@ -578,7 +583,8 @@ function Reviews(props: any) {
                   window.open(
                     "https://ottawa.ctvnews.ca/video?cid=sm%3Atrueanthem%3Actvottawa%3Atwitterpost&clipId=2437050&taid=62770f1241582d0001992ce5&utm_campaign=trueAnthem%3A%20Trending%20Content&utm_medium=trueAnthem&utm_source=twitter"
                   )
-                }>
+                }
+              >
                 <img
                   className="transform lg:h-48 md:h-36 w-full object-cover object-center scale-110 transition-all duration-700 hover:scale-100"
                   src={localBenefit}
@@ -600,7 +606,8 @@ function Reviews(props: any) {
                       href="https://ottawa.ctvnews.ca/video?cid=sm%3Atrueanthem%3Actvottawa%3Atwitterpost&clipId=2437050&taid=62770f1241582d0001992ce5&utm_campaign=trueAnthem%3A%20Trending%20Content&utm_medium=trueAnthem&utm_source=twitter"
                       target="_blank"
                       className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 hover:scale-105 drop-shadow-md  shadow-cla-blue px-4 py-1 rounded-lg"
-                      rel="noreferrer">
+                      rel="noreferrer"
+                    >
                       {formatMessage({ ...messages.readMore })}
                     </a>
                   </div>
