@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { injectIntl, FormattedMessage } from 'react-intl';
 
 import dragonboat from '../../assets/images/dragonboat.jpeg';
@@ -9,13 +9,9 @@ import turkey from '../../assets/images/turkey.jpeg';
 
 import messages from './messages';
 import { Helmet } from 'react-helmet';
-import { useLocation } from 'react-router-dom';
 
 const Testimonials = (props: any) => {
   const { formatMessage } = props.intl;
-  const location = useLocation();
-  const [path, setPath] = useState(location.pathname);
-
   const sanitizedValues = {
     br: <br />,
   };
@@ -42,6 +38,7 @@ const Testimonials = (props: any) => {
             <div className="lg:w-5/12 w-full sm:p-4">
               <div className="flex justify-center h-full overflow-scroll mx-auto">
                 <iframe
+                  title="test"
                   src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fviktoriavarvinskaa%2Fposts%2Fpfbid02ZwTpGYfsf2dXx6t5BVoaF9hTjRPSueHArdEB7SbHZahC4HawS7pZLe4X3ref6e21l&show_text=true&width=500"
                   width="500"
                   height="646"
@@ -55,6 +52,7 @@ const Testimonials = (props: any) => {
             <div className="lg:w-5/12 w-full sm:p-4">
               <div className="flex justify-center h-full overflow-scroll mx-auto">
                 <iframe
+                  title="test1"
                   src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fyvanbaker%2Fvideos%2F793415402177023%2F&show_text=false&width=560&t=0"
                   width="600"
                   height="350"
@@ -67,6 +65,7 @@ const Testimonials = (props: any) => {
             <div className="lg:w-5/12 w-full sm:p-4">
               <div className="flex justify-center h-full overflow-scroll mx-auto">
                 <iframe
+                  title="test2"
                   src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fviktoriavarvinskaa%2Fposts%2Fpfbid02kTA24E4GrFHbb24UWWa7QDrWQ1D2mkSzNSb47y8qk4NQyjHiABp8Z3EyNaUDQnWsl&width=500&show_text=true&height=729&appId"
                   width="500"
                   height="729"
@@ -79,6 +78,7 @@ const Testimonials = (props: any) => {
             <div className="lg:w-5/12 w-full sm:p-4">
               <div className="flex justify-center h-fulloverflow-scroll mx-auto">
                 <iframe
+                  title="test3"
                   src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fviktoriavarvinskaa%2Fposts%2F715413763412209&width=500&show_text=true&height=674&appId"
                   width="500"
                   height="674"
@@ -91,6 +91,7 @@ const Testimonials = (props: any) => {
             <div className="lg:w-5/12 w-full p-4">
               <div className="flex justify-center h-auto overflow-scroll mx-auto">
                 <iframe
+                  title="test4"
                   src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2F745041384%2Fvideos%2F744868523502528%2F&width=500&show_text=true&height=427&appId"
                   width="500"
                   height="674"
@@ -104,6 +105,7 @@ const Testimonials = (props: any) => {
             <div className="lg:w-5/12 w-full p-4">
               <div className="flex justify-center h-auto overflow-scroll mx-auto">
                 <iframe
+                  title="test5"
                   src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fviktoriavarvinskaa%2Fposts%2Fpfbid02YTvZgomu1f9ukGyZTwLoo7x9HoTYLVn8HeHksa2RCw7mjf8X5Z7GDaRDxEgSNgTMl&width=500&show_text=true&height=723&appId"
                   width="500"
                   height="723"

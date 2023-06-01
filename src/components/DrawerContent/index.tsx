@@ -3,7 +3,7 @@ import { FormattedDate, IntlShape, injectIntl } from 'react-intl';
 
 import { client } from '../../utils/Contentful';
 // import { useHistory } from "react-router-dom";
-import { ArrowsExpandIcon, ChevronDoubleRightIcon } from '@heroicons/react/solid';
+import { ChevronDoubleRightIcon } from '@heroicons/react/solid';
 
 import RichTextContent from '../RichText';
 import Loading from '../Loading';
@@ -18,35 +18,35 @@ interface IDrawerContentProps {
 const DrawerContent = (props: IDrawerContentProps) => {
   const [content, setContent] = useState<any>(null);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
+  // const [error, setError] = useState(false);
   // const history = useHistory();
 
   //   TODO: review if we ever would want to use it here - NP
-  const getEntity = async (entityId: string) => {
-    const logContext = {
-      component: 'components/DrawerContent/index.getEntity',
-      params: { entityId },
-    };
+  // const getEntity = async (entityId: string) => {
+  //   const logContext = {
+  //     component: 'components/DrawerContent/index.getEntity',
+  //     params: { entityId },
+  //   };
 
-    setLoading(true);
+  //   setLoading(true);
 
-    try {
-      console.log('Fetching Content', logContext);
-      const response = await client.getEntry(entityId, { include: 10 });
-      setContent(response);
-    } catch (error) {
-      console.error('Unexpected error while trying to fetch Content', {
-        ...logContext,
-        error,
-      });
-    }
-    setLoading(false);
-  };
+  //   try {
+  //     console.log('Fetching Content', logContext);
+  //     const response = await client.getEntry(entityId, { include: 10 });
+  //     setContent(response);
+  //   } catch (error) {
+  //     console.error('Unexpected error while trying to fetch Content', {
+  //       ...logContext,
+  //       error,
+  //     });
+  //   }
+  //   setLoading(false);
+  // };
 
-  const handleOnExpand = () => {
-    props.onClose(true);
-    // history.push("/news/continental-marathon");
-  };
+  // const handleOnExpand = () => {
+  //   props.onClose(true);
+  //   // history.push("/news/continental-marathon");
+  // };
 
   useEffect(() => {
     return () => {

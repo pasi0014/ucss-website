@@ -102,6 +102,7 @@ function Reviews(props: any) {
             <div className="p-4 md:w-5/12 text-center mx-auto">
               <div className="h-full rounded-xl shadow-cla-blue bg-gradient-to-r from-indigo-50 to-blue-50 overflow-scroll mx-auto justify-center">
                 <iframe
+                  title="test1"
                   src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fyvanbaker%2Fvideos%2F793415402177023%2F&show_text=true&width=560&t=0"
                   width="500"
                   height="429"
@@ -116,6 +117,7 @@ function Reviews(props: any) {
             <div className="p-4 md:w-5/12 text-center mx-auto">
               <div className="h-full rounded-xl shadow-cla-blue bg-gradient-to-r from-indigo-50 to-blue-50 overflow-scroll mx-auto justify-center">
                 <iframe
+                  title="test2"
                   src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Foksana.melnyktv%2Fvideos%2F646577273468498%2F&show_text=true&width=560&t=0"
                   width="500"
                   height="500"
