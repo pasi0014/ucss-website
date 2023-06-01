@@ -350,7 +350,7 @@ function Reviews(props: any) {
                   <h3 className="title-font text-lg font-bold text-gray-600 mb-2">{formatMessage({ ...messages.campReportTitle })}</h3>
                   <p className="leading-relaxed mb-3">
                     <span className="italic font-medium leading-relaxed">{formatMessage({ ...messages.campReportSubTitle })}</span>
-                    <p className="mt-2">{formatMessage({ ...messages.campReportText })}</p>
+                    <span className="mt-2">{formatMessage({ ...messages.campReportText })}</span>
                   </p>
                   <a
                     href="https://ottawacitizen.com/news/local-news/an-unbelievable-experience-community-support-bolsters-outaouais-summer-camp-for-displaced-ukrainian-children?fbclid=IwAR261wEFwDaNGvZKRfSy8INfY5uS99JZMmBRFKBQq7BRMPCtoKCJzIbdCTU"

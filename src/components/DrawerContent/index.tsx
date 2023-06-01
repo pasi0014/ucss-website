@@ -1,15 +1,12 @@
-import { useEffect, useState } from "react";
-import { FormattedDate, IntlShape, injectIntl } from "react-intl";
+import { useEffect, useState } from 'react';
+import { FormattedDate, IntlShape, injectIntl } from 'react-intl';
 
-import { client } from "../../utils/Contentful";
+import { client } from '../../utils/Contentful';
 // import { useHistory } from "react-router-dom";
-import {
-  ArrowsExpandIcon,
-  ChevronDoubleRightIcon,
-} from "@heroicons/react/solid";
+import { ArrowsExpandIcon, ChevronDoubleRightIcon } from '@heroicons/react/solid';
 
-import RichTextContent from "../RichText";
-import Loading from "../Loading";
+import RichTextContent from '../RichText';
+import Loading from '../Loading';
 
 interface IDrawerContentProps {
   entryId: string;
@@ -27,18 +24,18 @@ const DrawerContent = (props: IDrawerContentProps) => {
   //   TODO: review if we ever would want to use it here - NP
   const getEntity = async (entityId: string) => {
     const logContext = {
-      component: "components/DrawerContent/index.getEntity",
+      component: 'components/DrawerContent/index.getEntity',
       params: { entityId },
     };
 
     setLoading(true);
 
     try {
-      console.log("Fetching Content", logContext);
+      console.log('Fetching Content', logContext);
       const response = await client.getEntry(entityId, { include: 10 });
       setContent(response);
     } catch (error) {
-      console.error("Unexpected error while trying to fetch Content", {
+      console.error('Unexpected error while trying to fetch Content', {
         ...logContext,
         error,
       });
@@ -85,39 +82,16 @@ const DrawerContent = (props: IDrawerContentProps) => {
           </div>
           <div className="h-full p-6 flex flex-col mx-auto">
             <div className="w-full lg:w-3/5 text-center mx-auto">
-              <h3>
-                {
-                  props.post.fields[
-                    `title${props.intl.locale
-                      .slice(0, 2)
-                      .toString()
-                      .toUpperCase()}`
-                  ]
-                }
-              </h3>
+              <h3>{props.post.fields[`title${props.intl.locale.slice(0, 2).toString().toUpperCase()}`]}</h3>
               <p className="mt-3 text-grey-dark text-sm italic">
-                <FormattedDate
-                  value={props.post.fields.date}
-                  year="numeric"
-                  month="long"
-                  day="numeric"
-                />
+                <FormattedDate value={props.post.fields.date} year="numeric" month="long" day="numeric" />
               </p>
               <hr className="w-full md:ml-0 mt-4 border" />
             </div>
             <div className="w-full lg:w-3/5 lg:px-3 mx-auto">
-              <p className="text-md mt-4 text-justify">
-                <RichTextContent
-                  content={
-                    props.post.fields[
-                      `content${props.intl.locale
-                        .slice(0, 2)
-                        .toString()
-                        .toUpperCase()}`
-                    ]
-                  }
-                />
-              </p>
+              <div className="text-md mt-4 text-justify">
+                <RichTextContent content={props.post.fields[`content${props.intl.locale.slice(0, 2).toString().toUpperCase()}`]} />
+              </div>
             </div>
           </div>
         </div>

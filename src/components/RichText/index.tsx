@@ -1,7 +1,7 @@
-import React from "react";
-import { BLOCKS, INLINES } from "@contentful/rich-text-types";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+import React from 'react';
+import { BLOCKS, INLINES } from '@contentful/rich-text-types';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 
 function RichTextContent({ content }: any) {
   const options = {
@@ -11,13 +11,11 @@ function RichTextContent({ content }: any) {
         const { title, description, file } = node?.data?.target?.fields || {};
         const mimeType = file?.contentType;
         const src = `https:${file?.url}`;
-        const alt = title || description || "Image";
+        const alt = title || description || 'Image';
 
         return <img src={src} alt={alt} />;
       },
-      [BLOCKS.PARAGRAPH]: (node: any, children: any) => (
-        <p className="my-3">{children}</p>
-      ),
+      [BLOCKS.PARAGRAPH]: (node: any, children: any) => <p className="my-3">{children}</p>,
       [INLINES.HYPERLINK]: (node: any, children: any) => (
         <a href={node.data.uri} target="_blank" rel="noreferrer">
           {children}
@@ -30,7 +28,6 @@ function RichTextContent({ content }: any) {
 }
 
 export default RichTextContent;
-
 
 // import { createClient } from 'contentful';
 
@@ -61,4 +58,3 @@ export default RichTextContent;
 //     console.log(error);
 //   }
 // }
-

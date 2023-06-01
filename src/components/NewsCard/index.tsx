@@ -111,14 +111,14 @@
             </div>
           </div> */
 
-import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
-import { FormattedDate, IntlShape, injectIntl } from "react-intl";
+import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { FormattedDate, IntlShape, injectIntl } from 'react-intl';
 
-import slugify from "slugify";
+import slugify from 'slugify';
 
-import RichTextContent from "../RichText";
-import messages from "./messages";
+import RichTextContent from '../RichText';
+import messages from './messages';
 
 export interface INewsCardProps {
   id: string;
@@ -132,18 +132,8 @@ export interface INewsCardProps {
   onOpen: (args: string) => void;
 }
 
-function NewsCard({
-  id,
-  title,
-  date,
-  image,
-  content,
-  intl,
-  isLink,
-  reactPageLink,
-  onOpen,
-}: INewsCardProps) {
-  const [slug, setSlug] = useState("");
+function NewsCard({ id, title, date, image, content, intl, isLink, reactPageLink, onOpen }: INewsCardProps) {
+  const [slug, setSlug] = useState('');
   const { formatMessage } = intl;
   useEffect(() => {
     if (title) setSlug(slugify(title.toLowerCase()));
@@ -166,25 +156,18 @@ function NewsCard({
             <div className="w-full lg:border-right lg:border-solid text-left md:text-center mb-4 px-3">
               <h3 className="mt-3 sm:text-2xl text-xl">{title}</h3>
               <p className="mb-0 mt-3 text-grey-dark text-sm italic">
-                <FormattedDate
-                  value={date}
-                  year="numeric"
-                  month="long"
-                  day="numeric"
-                />
+                <FormattedDate value={date} year="numeric" month="long" day="numeric" />
               </p>
             </div>
             {/* Content */}
             <div className="w-full lg:px-3 overflow-hidden mb-0 relative">
-              <p className="text-md lg:mt-0 text-justify md:text-left text-sm">
+              <div className="text-md lg:mt-0 text-justify md:text-left text-sm">
                 <RichTextContent content={content} />
-              </p>
+              </div>
               <div className="absolute -bottom-1.5 w-full h-16 bg-gradient-to-t from-white via-white to-transparent"></div>
             </div>
             <div className="w-full lg:w-2/5 mt-6 lg:mt-0 lg:px-4 text-center md:text-left">
-              <button
-                className="bg-white hover:text-gray-500 border border-solid border-grey w-1/3 lg:w-full py-2 rounded-xl"
-                onClick={() => onOpen(id)}>
+              <button className="bg-white hover:text-gray-500 border border-solid border-grey w-1/3 lg:w-full py-2 rounded-xl" onClick={() => onOpen(id)}>
                 {formatMessage({ ...messages.readMore })}
               </button>
             </div>
