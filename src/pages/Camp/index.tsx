@@ -1,72 +1,44 @@
-import React, { useEffect } from "react";
-import { Helmet } from "react-helmet";
-import { FormattedMessage, injectIntl } from "react-intl";
+import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
+import { FormattedMessage, injectIntl } from 'react-intl';
 
-import campPicture from "../../assets/images/camp.png";
-import messages from "./messages";
+import messages from './messages';
 
 function Camp(props: any) {
   const { formatMessage } = props.intl;
   useEffect(() => {
-    window.scrollTo({ top: 500, behavior: "smooth" });
+    window.scrollTo({ top: 500, behavior: 'smooth' });
   }, []);
   return (
     <React.Fragment>
       <Helmet>
-        <title>
-          Camp - Ukrainian Canadian Social Services organizes camp for displaced
-          children from Ukraine
-        </title>
+        <title>Camp - Ukrainian Canadian Social Services organizes camp for displaced children from Ukraine</title>
         <meta
           name="description"
           content="The Ukrainian Canadian Social Services Ottawa (UCSS Ottawa) is raising money to organize a summer camp for children who have been displaced by war in Ukraine. The goal of the camp is to provide a safe environment for children to play, learn and socialize with other children from Ottawa."
         />
-        <meta
-          name="keywords"
-          content="summer camp, camp, camp for ukrainian children, ucss camp"
-        />
+        <meta name="keywords" content="summer camp, camp, camp for ukrainian children, ucss camp" />
       </Helmet>
-      <div className="w-full sm:hidden block">
-        <img
-          className="w-full object-cover object-center"
-          src={campPicture}
-          alt="Lake on the camp"
-        />
-      </div>
+      <div className="w-full sm:hidden block"></div>
       <article className="text-gray-600 body-font">
         <div className="container sm:mx-auto">
           <div className="flex flex-wrap justify-center">
             <div className="p-4 md:w-12/12">
               <div className="h-full rounded-xl shadow-cla-blue bg-gradient-to-r from-indigo-50 to-blue-50 overflow-hidden">
                 <div className="w-full rounded-lg shadow-md bg-orange-200 p-5 text-center flex flex-col">
-                  <span className="text-xl font-medium text-orange-700">
-                    {formatMessage({ ...messages.warning })}
-                  </span>
+                  <span className="text-xl font-medium text-orange-700">{formatMessage({ ...messages.warning })}</span>
                   <span className="text-xl font-medium text-orange-700">
                     {formatMessage(
                       { ...messages.warning_1 },
                       {
-                        email: (
-                          <a href="mailto:camp@ucssottawa.com">
-                            camp@ucssottawa.com
-                          </a>
-                        ),
-                      }
+                        email: <a href="mailto:camp@ucssottawa.com">camp@ucssottawa.com</a>,
+                      },
                     )}
                   </span>
                 </div>
-                <img
-                  className="sm:block hidden transform w-full object-cover object-center scale-90"
-                  src={campPicture}
-                  alt="Lake on the camp"
-                />
                 <div className="p-6">
-                  <h1 className="title-font text-3xl font-medium text-gray-600 mb-3">
-                    {formatMessage({ ...messages.title })}
-                  </h1>
-                  <p className="leading-relaxed mb-3">
-                    {formatMessage({ ...messages.content })}
-                  </p>
+                  <h1 className="title-font text-3xl font-medium text-gray-600 mb-3">{formatMessage({ ...messages.title })}</h1>
+                  <p className="leading-relaxed mb-3">{formatMessage({ ...messages.content })}</p>
                   <div className="rounded-xl mt-5 text-blue-400">
                     <h2>{formatMessage({ ...messages.campDetails })}</h2>
                   </div>
@@ -90,9 +62,7 @@ function Camp(props: any) {
                   </div> */}
 
                   <div className="mt-3">
-                    <h3 className="text-gray-500">
-                      {formatMessage({ ...messages.when })}
-                    </h3>
+                    <h3 className="text-gray-500">{formatMessage({ ...messages.when })}</h3>
                     <p className="leading-relaxed mt-3">
                       {formatMessage({ ...messages.whenContent })}
                       <br />
@@ -103,9 +73,7 @@ function Camp(props: any) {
                   </div>
 
                   <div className="mt-3">
-                    <h3 className="text-gray-500">
-                      {formatMessage({ ...messages.where })}
-                    </h3>
+                    <h3 className="text-gray-500">{formatMessage({ ...messages.where })}</h3>
                     <p className="leading-relaxed mt-3">
                       <FormattedMessage
                         {...messages.whereContent}
@@ -126,21 +94,15 @@ function Camp(props: any) {
                   </div>
 
                   <div className="mt-3">
-                    <h3 className="text-gray-500">
-                      {formatMessage({ ...messages.cost })}
-                    </h3>
+                    <h3 className="text-gray-500">{formatMessage({ ...messages.cost })}</h3>
                     <p className="leading-relaxed mt-3">
                       <FormattedMessage {...messages.costContent} />
                     </p>
                   </div>
 
                   <div className="mt-3">
-                    <h3 className="text-blue-400">
-                      {formatMessage({ ...messages.programming })}
-                    </h3>
-                    <p className="leading-relaxed mt-3">
-                      {formatMessage({ ...messages.programmingContent })}
-                    </p>
+                    <h3 className="text-blue-400">{formatMessage({ ...messages.programming })}</h3>
+                    <p className="leading-relaxed mt-3">{formatMessage({ ...messages.programmingContent })}</p>
                     <p className="leading-relaxed mt-2">
                       {formatMessage({ ...messages.campActivitiesTitle })}
                       <ul className="list-disc sm:px-5 px-4 mt-3 mb-3">
@@ -209,18 +171,12 @@ function Camp(props: any) {
                   </div>
 
                   <div className="mt-3">
-                    <h3 className="text-gray-500">
-                      {formatMessage({ ...messages.finalDayAtCamp })}
-                    </h3>
-                    <p className="leading-relaxed mt-3">
-                      {formatMessage({ ...messages.finalDayAtCampContent })}
-                    </p>
+                    <h3 className="text-gray-500">{formatMessage({ ...messages.finalDayAtCamp })}</h3>
+                    <p className="leading-relaxed mt-3">{formatMessage({ ...messages.finalDayAtCampContent })}</p>
                   </div>
 
                   <div className="mt-3">
-                    <h3 className="text-blue-400">
-                      {formatMessage({ ...messages.foodAndAccommodation })}
-                    </h3>
+                    <h3 className="text-blue-400">{formatMessage({ ...messages.foodAndAccommodation })}</h3>
                     <p className="leading-relaxed mt-3">
                       <FormattedMessage
                         {...messages.foodAndAccommodationContent}

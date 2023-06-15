@@ -153,53 +153,6 @@ const Testimonials = (props: any) => {
               </div>
             </div>
 
-            {/* Bydychnist */}
-            <div className="lg:w-5/12 w-full p-4">
-              <div className="h-auto rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
-                <img
-                  className="transform lg:h-80 md:h-56 w-full object-cover object-center scale-110 transition-all duration-700 hover:scale-100"
-                  src={thankYouBD}
-                  alt="Members of UCSS collecting backpacks provided by Bydychnist bank"
-                />
-                <div className="p-6">
-                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-2 mt-2">{formatMessage({ ...messages.date_bcu })}</h2>
-                  <h3 className="title-font text-lg font-bold text-gray-600 mb-2">{formatMessage({ ...messages.bcuTitle })}</h3>
-                  <div className="w-full mx-auto text-left mb-3 mt-3">
-                    <p className="mt-2">{formatMessage({ ...messages.bcuText })}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="lg:w-5/12 w-full p-4">
-              <div className="h-auto rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
-                <img
-                  className="transform lg:h-80 md:h-56 w-full object-cover object-center scale-110 transition-all duration-700 hover:scale-100"
-                  src={dragonboat}
-                  alt="Members of UCSS and children during dragonboat event"
-                />
-                <div className="p-6">
-                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-2 mt-2">{formatMessage({ ...messages.date_rideau })}</h2>
-                  <h3 className="title-font text-lg font-bold text-gray-600 mb-2">
-                    {formatMessage(
-                      { ...messages.rideauTitle },
-                      {
-                        a: (str: string) => (
-                          <a href="https://www.rideaucanoeclub.ca/" target="_blank" rel="noreferrer" className="text-underline">
-                            {str}
-                          </a>
-                        ),
-                      },
-                    )}
-                  </h3>
-                  <p className="leading-relaxed mb-3">
-                    <span className="mt-2">
-                      <FormattedMessage {...messages.rideauText} values={sanitizedValues} />
-                    </span>
-                  </p>
-                </div>
-              </div>
-            </div>
             <div className="lg:w-5/12 w-full p-4">
               <div className="h-auto rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
                 <div className="p-6">

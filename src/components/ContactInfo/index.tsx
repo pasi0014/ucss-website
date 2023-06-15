@@ -58,6 +58,10 @@ function ContactInfo() {
         <div className="p-3 rounded-xl shadow-sm bg-white lg:w-4/12 w-full">
           <h5 className="text-gray-900 text-xl leading-tight font-medium mb-2">{formatMessage({ ...messages.fundraiserName })}</h5>
           <p className="text-gray-700 text-base mb-4">{formatMessage({ ...messages.fundraiserTitle })}</p>
+          <span className="flex flex-col">
+            <a href="tel:6134221699">613-422-1699</a>
+            <a href="mailto:marlenethomas@rogers.com">marlenethomas@rogers.com</a>
+          </span>
         </div>
       </div>
 
@@ -77,6 +81,15 @@ function ContactInfo() {
           <h5 className="text-gray-900 text-xl leading-tight font-medium mb-2">{formatMessage({ ...messages.volunteerName3 })}</h5>
           <p className="text-gray-700 text-base mb-4">{formatMessage({ ...messages.volunteerTitle })}</p>
         </div>
+      </div>
+
+      <div className="w-full px-4 md:px-0 flex lg:flex-row flex-col justify-center lg:space-x-5 space-y-5 lg:space-y-0 mt-4">
+        {/* 1 */}
+        <div className="p-3 rounded-xl shadow-sm bg-white lg:w-4/12 w-full">
+          <h5 className="text-gray-900 text-xl leading-tight font-medium mb-2">{formatMessage({ ...messages.volunteerName4 })}</h5>
+          <p className="text-gray-700 text-base mb-4 mt-3">{formatMessage({ ...messages.volunteerTitle })}</p>
+        </div>
+        {/* 2 */}
       </div>
     </div>
   );

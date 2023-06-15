@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import { client } from '../../utils/Contentful';
 
 import bazarMain from '../../assets/images/bazar-main.jpg';
-import embassyMain from '../../assets/images/poland-embassy-1.jpg';
 import localBenefit from '../../assets/images/local-concert.jpg';
 import fundraiserMain from '../../assets/images/fundraized-event-1.jpg';
 import groupPhoto from '../../assets/images/group-photo.jpeg';
@@ -16,7 +15,6 @@ import vyshyvanka from '../../assets/images/vyshyvanka-logo.jpeg';
 import previewToys from '../../assets/images/preview-toys.jpeg';
 import madame from '../../assets/images/news-1.jpeg';
 import mykolay from '../../assets/images/news-2.jpeg';
-import vip from '../../assets/images/news-3.jpeg';
 import hotties from '../../assets/images/hotties-1.jpeg';
 
 import NewsCard from '../../components/NewsCard';
