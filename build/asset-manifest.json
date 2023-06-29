@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.7980c085.chunk.css",
-    "main.js": "/static/js/main.0e040595.chunk.js",
-    "main.js.map": "/static/js/main.0e040595.chunk.js.map",
+    "main.js": "/static/js/main.bf98f5b3.chunk.js",
+    "main.js.map": "/static/js/main.bf98f5b3.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.c71da749.js",
     "runtime-main.js.map": "/static/js/runtime-main.c71da749.js.map",
     "static/js/2.bdc40490.chunk.js": "/static/js/2.bdc40490.chunk.js",
@@ -10,6 +10,7 @@
     "index.html": "/index.html",
     "static/css/main.7980c085.chunk.css.map": "/static/css/main.7980c085.chunk.css.map",
     "static/js/2.bdc40490.chunk.js.LICENSE.txt": "/static/js/2.bdc40490.chunk.js.LICENSE.txt",
+    "static/media/UNF.a48fb378.svg": "/static/media/UNF.a48fb378.svg",
     "static/media/about.c05d6b0f.JPG": "/static/media/about.c05d6b0f.JPG",
     "static/media/backpack.584b1630.jpeg": "/static/media/backpack.584b1630.jpeg",
     "static/media/bazar-main.bbea257e.jpg": "/static/media/bazar-main.bbea257e.jpg",
@@ -59,6 +60,6 @@
     "static/js/runtime-main.c71da749.js",
     "static/js/2.bdc40490.chunk.js",
     "static/css/main.7980c085.chunk.css",
-    "static/js/main.0e040595.chunk.js"
+    "static/js/main.bf98f5b3.chunk.js"
   ]
 }
