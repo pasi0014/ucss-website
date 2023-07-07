@@ -1,24 +1,24 @@
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet';
-import { injectIntl, useIntl } from 'react-intl';
-import { Link } from 'react-router-dom';
-import about from '../../assets/images/about.JPG';
-import groupPhoto from '../../assets/images/group-photo.jpeg';
-import vyshyvanka from '../../assets/images/vyshyvanka-logo.jpeg';
-import messages from './messages';
-import ContactInfo from '../../components/ContactInfo';
-import ContactForm from '../../components/ContactForm';
-import WaitingList from '../../components/WaitingList';
+import React, { useState } from "react";
+import { Helmet } from "react-helmet";
+import { injectIntl, useIntl } from "react-intl";
+import { Link } from "react-router-dom";
+import about from "../../assets/images/about.JPG";
+import groupPhoto from "../../assets/images/group-photo.jpeg";
+import vyshyvanka from "../../assets/images/vyshyvanka-logo.jpeg";
+import messages from "./messages";
+import ContactInfo from "../../components/ContactInfo";
+import ContactForm from "../../components/ContactForm";
+import WaitingList from "../../components/WaitingList";
 
-import ucu from '../../assets/images/ucu.png';
-import bcu from '../../assets/images/bcu.jpeg';
-import ucc from '../../assets/images/ucc.png';
-import embassy from '../../assets/images/eouic.png';
-import gramota1 from '../../assets/images/gramota-1.jpg';
-import gramota2 from '../../assets/images/gramota-2.jpg';
+import ucu from "../../assets/images/ucu.png";
+import bcu from "../../assets/images/bcu.jpeg";
+import ucc from "../../assets/images/ucc.png";
+import embassy from "../../assets/images/eouic.png";
+import gramota1 from "../../assets/images/gramota-1.jpg";
+import gramota2 from "../../assets/images/gramota-2.jpg";
 
-import vyshyvankaPic from '../../assets/images/main.jpeg';
-import campPic from '../../assets/images/flyer-min.png';
+import vyshyvankaPic from "../../assets/images/main.jpeg";
+import campPic from "../../assets/images/flyer.png";
 
 // TODO: add our vision and values to the website
 
@@ -27,40 +27,68 @@ const Home = () => {
   return (
     <React.Fragment>
       <Helmet>
-        <title>Home - Ukrainian Canadian Social Services Ottawa (UCSS Ottawa)</title>
+        <title>
+          Home - Ukrainian Canadian Social Services Ottawa (UCSS Ottawa)
+        </title>
         <meta
           name="description"
           content="Ukrainian Canadian Social Services - Ottawa Branch is a non-profit charitable organization serving the Ukrainian community in Ottawa. Guided by the needs of individuals and families of Ukrainian community, who experience language and cultural barriers. We provide a range of support services."
         />
-        <meta name="keywords" content="donate camp, ukrainian charitable organization, ucss camp, ucss ottawa news" />
+        <meta
+          name="keywords"
+          content="donate camp, ukrainian charitable organization, ucss camp, ucss ottawa news"
+        />
         <div id="fb-root"></div>
-        <script async defer crossOrigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v16.0" nonce="3gk0Bi40"></script>
+        <script
+          async
+          defer
+          crossOrigin="anonymous"
+          src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v16.0"
+          nonce="3gk0Bi40"></script>
       </Helmet>
       <main className="font-montserrat flex-1 overflow-x-hidden overflow-y-auto bg-yellow-100">
         {/* About Section */}
         <div className="w-full bg-sky-300 md:p-24 p-10 flex lg:flex-row flex-col-reverse lg:space-x-7 justify-center">
           <div className="flex flex-col w-full lg:w-4/12">
-            <h1 className="font-bold sm:text-4xl text-xl ">{formatMessage({ ...messages.aboutUsParagraphTitle })}</h1>
+            <h1 className="font-bold sm:text-4xl text-xl ">
+              {formatMessage({ ...messages.aboutUsParagraphTitle })}
+            </h1>
             <hr className="border-4 border-orange-300 my-3 w-2/12" />
-            <p className="text-lg text-gray-700">{formatMessage({ ...messages.aboutUsParagraph })}</p>
+            <p className="text-lg text-gray-700">
+              {formatMessage({ ...messages.aboutUsParagraph })}
+            </p>
           </div>
           <div className="flex flex-col w-full lg:w-5/12 mb-5 lg:mb-0">
-            <img src={about} alt="Kids drawing on paper" className="rounded-xl shadow-md" />
+            <img
+              src={about}
+              alt="Kids drawing on paper"
+              className="rounded-xl shadow-md"
+            />
           </div>
         </div>
 
         {/* UPCOMING EVENTS HERE */}
 
         <div className="w-full bg-green-100 rounded-lg p-3">
-          <h2 className="text-center text-4xl text-gray-500 mt-5">{formatMessage({ ...messages.upcomingEvents })}</h2>
+          <h2 className="text-center text-4xl text-gray-500 mt-5">
+            {formatMessage({ ...messages.upcomingEvents })}
+          </h2>
           <div className="flex flex-nowrap w-full lg:flex-row flex-col p-3 mt-5">
             {/* Event Card */}
             <div className="lg:w-8/12 w-full mx-auto">
               <div className="shadow lg:w-8/12 w-full rounded-xl mx-auto bg-white">
-                <img className="w-full h-90 object-cover rounded-t-xl" src={campPic} alt="Sunflower camp" />
+                <img
+                  className="w-full h-90 object-cover rounded-t-xl"
+                  src={campPic}
+                  alt="Sunflower camp"
+                />
                 <div className="w-full px-6 py-4">
-                  <div className="font-bold text-xl mb-2">{formatMessage({ ...messages.campTitle1 })}</div>
-                  <p className="text-base mb-2 py-1 text-gray-400">{formatMessage({ ...messages.campDate1 })}</p>
+                  <div className="font-bold text-xl mb-2">
+                    {formatMessage({ ...messages.campTitle1 })}
+                  </div>
+                  <p className="text-base mb-2 py-1 text-gray-400">
+                    {formatMessage({ ...messages.campDate1 })}
+                  </p>
                   <p className="text-gray-700 text-base py-2">
                     {formatMessage(
                       { ...messages.campText_1 },
@@ -70,18 +98,16 @@ const Home = () => {
                             <br /> <br />
                           </>
                         ),
-                      },
+                      }
                     )}
                   </p>
                   <div className="mx-auto flex flex-col my-5">
                     {/* TODO: Finish camp page - NP */}
-                    {/* <Link
-                    to="/events/sunflower-camp"
-                    className="w-8/12 mx-auto mb-3">
-                    <button className="transition duration-200 ease hover:shadow-lg w-full bg-gradient-to-r from-cyan-400 to-blue-400 hover:from-cyan-300 hover:to-blue-300 text-white font-medium px-5 py-2 rounded-xl">
-                      {formatMessage({ ...messages.learnMore })}
-                    </button>
-                  </Link> */}
+                    <Link to="/events/camp" className="w-8/12 mx-auto mb-3">
+                      <button className="transition duration-200 ease hover:shadow-lg w-full bg-gradient-to-r from-cyan-400 to-blue-400 hover:from-cyan-300 hover:to-blue-300 text-white font-medium px-5 py-2 rounded-xl">
+                        {formatMessage({ ...messages.learnMore })}
+                      </button>
+                    </Link>
                     <Link to="/donate" className="text-center">
                       <button className="transform transition-all duration-200 ease hover:shadow-lg  w-8/12 bg-gradient-to-r from-red-400 to-yellow-400 text-white font-medium px-5 py-2 rounded-xl mx-auto">
                         {formatMessage({ ...messages.donate })}
@@ -99,7 +125,9 @@ const Home = () => {
         </div>
         {/* Sponsors */}
         <div className="container bg-white shadow-xl rounded-xl mb-5 mt-5 p-5">
-          <h2 className="text-center m-3 pb-5">{formatMessage({ ...messages.sponsors })}</h2>
+          <h2 className="text-center m-3 pb-5">
+            {formatMessage({ ...messages.sponsors })}
+          </h2>
           <div className="flex flex-col md:flex-row flex-nowrap sm:flex-wrap">
             <div className="w-8/12 flex justify-center mx-auto md:mt-0 mt-5">
               <img src={ucu} alt="UCU" className="h-16" />
@@ -145,7 +173,9 @@ const Home = () => {
           <div className="container">
             {/* Latest News */}
             <div className="p-3">
-              <h2 className="text-center mb-4 text-4xl p-5">{formatMessage({ ...messages.recentNewsTitle })}</h2>
+              <h2 className="text-center mb-4 text-4xl p-5">
+                {formatMessage({ ...messages.recentNewsTitle })}
+              </h2>
 
               <div className="md:w-7/12 p-4 mx-auto mb-4">
                 <div className="flex flex-col justify-center h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
@@ -153,25 +183,48 @@ const Home = () => {
                     className="fb-video"
                     data-href="https://www.facebook.com/oksana.melnyktv/posts/646577273468498/?vh=e&amp;extid=MSG-UNK-UNK-UNK-AN_GK0T-GK1C"
                     data-width="1200"
-                    data-show-text="true"
-                  ></div>
+                    data-show-text="true"></div>
                 </div>
               </div>
 
               {/* Video */}
               <div className="md:w-7/12 p-4 mx-auto mb-4">
                 <div className="flex flex-col justify-center h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
-                  <div className="fb-video" data-width="1200" data-href="https://www.facebook.com/watch/?v=793415402177023" data-show-text="false">
-                    <blockquote cite="https://www.facebook.com/yvanbaker/videos/793415402177023/" className="fb-xfbml-parse-ignore">
+                  <div
+                    className="fb-video"
+                    data-width="1200"
+                    data-href="https://www.facebook.com/watch/?v=793415402177023"
+                    data-show-text="false">
+                    <blockquote
+                      cite="https://www.facebook.com/yvanbaker/videos/793415402177023/"
+                      className="fb-xfbml-parse-ignore">
                       {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
-                      <a href="https://www.facebook.com/yvanbaker/videos/793415402177023/" target="_blank" rel="noreferrer" />
-                      <p>Canada will stand with the Ukrainian people until they win. Slava Ukraini!</p>
-                      Posted by <a href="https://www.facebook.com/yvanbaker">Yvan Baker, MP</a> on Thursday, May 18, 2023
+                      <a
+                        href="https://www.facebook.com/yvanbaker/videos/793415402177023/"
+                        target="_blank"
+                        rel="noreferrer"
+                      />
+                      <p>
+                        Canada will stand with the Ukrainian people until they
+                        win. Slava Ukraini!
+                      </p>
+                      Posted by{" "}
+                      <a href="https://www.facebook.com/yvanbaker">
+                        Yvan Baker, MP
+                      </a>{" "}
+                      on Thursday, May 18, 2023
                     </blockquote>
                   </div>
                   <div className="flex flex-col mx-auto p-3">
-                    <span className="text-center text-medium">Canada will stand with the Ukrainian people until they win. Slava Ukraini!</span>
-                    <a href="https://www.facebook.com/yvanbaker" className="text-center" target="_blank" rel="noreferrer">
+                    <span className="text-center text-medium">
+                      Canada will stand with the Ukrainian people until they
+                      win. Slava Ukraini!
+                    </span>
+                    <a
+                      href="https://www.facebook.com/yvanbaker"
+                      className="text-center"
+                      target="_blank"
+                      rel="noreferrer">
                       Yvan Baker, MP
                     </a>
                   </div>
@@ -188,18 +241,25 @@ const Home = () => {
                       alt="Children sitting in front of the fireplace"
                     />
                     <div className="p-6">
-                      <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-3 mt-3">August 2, 2022</h2>
-                      <h3 className="title-font text-lg font-bold text-gray-600 mb-2">{formatMessage({ ...messages.campTitle })}</h3>
+                      <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-3 mt-3">
+                        August 2, 2022
+                      </h2>
+                      <h3 className="title-font text-lg font-bold text-gray-600 mb-2">
+                        {formatMessage({ ...messages.campTitle })}
+                      </h3>
                       <p className="leading-relaxed mb-3">
                         {/* {formatMessage({ ...messages.lionsTextBlurb })} */}
-                        <span className="italic font-medium leading-relaxed">{formatMessage({ ...messages.campText1 })}</span>
-                        <span className="mt-2">{formatMessage({ ...messages.campText2 })}</span>
+                        <span className="italic font-medium leading-relaxed">
+                          {formatMessage({ ...messages.campText1 })}
+                        </span>
+                        <span className="mt-2">
+                          {formatMessage({ ...messages.campText2 })}
+                        </span>
                       </p>
                       <a
                         href="https://ottawacitizen.com/news/local-news/an-unbelievable-experience-community-support-bolsters-outaouais-summer-camp-for-displaced-ukrainian-children?fbclid=IwAR261wEFwDaNGvZKRfSy8INfY5uS99JZMmBRFKBQq7BRMPCtoKCJzIbdCTU"
                         target="_blank"
-                        rel="noreferrer"
-                      >
+                        rel="noreferrer">
                         <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 text-white font-medium px-4 py-1 rounded-lg">
                           {formatMessage({ ...messages.readMore })}
                         </button>
@@ -217,9 +277,15 @@ const Home = () => {
                       alt="Members of UCSS and Lions Club"
                     />
                     <div className="p-6">
-                      <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-3 mt-3">{formatMessage({ ...messages.date_lions })}</h2>
-                      <h3 className="title-font text-lg font-bold text-gray-600 mb-3">{formatMessage({ ...messages.lionsTitle })}</h3>
-                      <p className="leading-relaxed mb-3">{formatMessage({ ...messages.lionsTextBlurb })}</p>
+                      <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-3 mt-3">
+                        {formatMessage({ ...messages.date_lions })}
+                      </h2>
+                      <h3 className="title-font text-lg font-bold text-gray-600 mb-3">
+                        {formatMessage({ ...messages.lionsTitle })}
+                      </h3>
+                      <p className="leading-relaxed mb-3">
+                        {formatMessage({ ...messages.lionsTextBlurb })}
+                      </p>
                       <Link to="/news/continental-marathon">
                         <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 text-white font-medium px-4 py-1 rounded-lg">
                           {formatMessage({ ...messages.readMore })}
@@ -238,9 +304,15 @@ const Home = () => {
                     alt="Embroidery Event"
                   />
                   <div className="p-6">
-                    <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-3 mt-3">{formatMessage({ ...messages.date_vyshyvanka })}</h2>
-                    <h3 className="title-font text-lg font-bold text-gray-600 mb-3">{formatMessage({ ...messages.vyshyvankaTitle })}</h3>
-                    <p className="leading-relaxed mb-3">{formatMessage({ ...messages.vyshyvankaTextBlurb })}</p>
+                    <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-3 mt-3">
+                      {formatMessage({ ...messages.date_vyshyvanka })}
+                    </h2>
+                    <h3 className="title-font text-lg font-bold text-gray-600 mb-3">
+                      {formatMessage({ ...messages.vyshyvankaTitle })}
+                    </h3>
+                    <p className="leading-relaxed mb-3">
+                      {formatMessage({ ...messages.vyshyvankaTextBlurb })}
+                    </p>
                     <Link to="/news/vyshyvanka-vechir">
                       <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 text-white font-medium px-4 py-1 rounded-lg">
                         {formatMessage({ ...messages.readMore })}

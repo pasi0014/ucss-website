@@ -1,24 +1,24 @@
-import { defineMessages } from '@formatjs/intl';
+import { defineMessages } from "@formatjs/intl";
 
-const scope = 'app.pages.Home';
+const scope = "app.pages.Home";
 
 export default defineMessages({
   title: {
     id: `${scope}.title`,
-    defaultMessage: 'About Us',
+    defaultMessage: "About Us",
   },
   sponsors: {
     id: `${scope}.sponsors`,
-    defaultMessage: 'Our Sponsors',
+    defaultMessage: "Our Sponsors",
   },
   achievements: {
     id: `${scope}.achievements`,
-    defaultMessage: 'Our Achievements',
+    defaultMessage: "Our Achievements",
   },
   mykolay: {
     id: `${scope}.mykolay`,
     defaultMessage:
-      'UCSS in partnership with Ukrainian Orthodox Church are organizing a concert for children in Ottawa. All are invited. Please, register how many children and of what age are going to participate at the show as St. Mykolay need to know how many presents to prepare. We encourage you to show support and kindness to Ukrainian children in these difficult circumstances! Please bring NEW warm clothes or something you think might be useful for kids in Ukraine! UCSS will send your donations to Ukraine!',
+      "UCSS in partnership with Ukrainian Orthodox Church are organizing a concert for children in Ottawa. All are invited. Please, register how many children and of what age are going to participate at the show as St. Mykolay need to know how many presents to prepare. We encourage you to show support and kindness to Ukrainian children in these difficult circumstances! Please bring NEW warm clothes or something you think might be useful for kids in Ukraine! UCSS will send your donations to Ukraine!",
   },
   embroideryText: {
     id: `${scope}.embroideryText`,
@@ -27,87 +27,93 @@ export default defineMessages({
   },
   embroideryTitle: {
     id: `${scope}.embroideryTitle`,
-    defaultMessage: 'Ukrainian Embroidery Cultural Event',
+    defaultMessage: "Ukrainian Embroidery Cultural Event",
   },
   upcomingEvents: {
     id: `${scope}.upcomingEvents`,
-    defaultMessage: 'Upcoming Events',
+    defaultMessage: "Upcoming Events",
   },
   register: {
     id: `${scope}.register`,
-    defaultMessage: 'Register',
+    defaultMessage: "Register",
   },
   loadMore: {
     id: `${scope}.loadMore`,
-    defaultMessage: 'Load more news',
+    defaultMessage: "Load more news",
   },
   recentNewsTitle: {
     id: `${scope}.recentNewsTitle`,
-    defaultMessage: 'Recent News',
+    defaultMessage: "Recent News",
   },
   googleForm: {
     id: `${scope}.googleForm`,
-    defaultMessage: 'Fill out the form to get involved in our volunteer program',
+    defaultMessage:
+      "Fill out the form to get involved in our volunteer program",
   },
   howYouCanHelp: {
     id: `${scope}.howYouCanHelp`,
-    defaultMessage: 'Let us know how you can help displaced Ukrainian people in Canada',
+    defaultMessage:
+      "Let us know how you can help displaced Ukrainian people in Canada",
   },
   donationWeReceived: {
     id: `${scope}.donationWeReceived`,
-    defaultMessage: 'Donations we received',
+    defaultMessage: "Donations we received",
   },
   aboutUsTitle: {
     id: `${scope}.aboutUsTitle`,
-    defaultMessage: 'About Us',
+    defaultMessage: "About Us",
   },
   aboutUsParagraphTitle: {
     id: `${scope}.aboutUsParagraphTitle`,
-    defaultMessage: 'What is Ukrainian Canadian Social Services - Ottawa Branch?',
+    defaultMessage:
+      "What is Ukrainian Canadian Social Services - Ottawa Branch?",
   },
   aboutUsParagraph: {
     id: `${scope}.aboutUsParagraph`,
     defaultMessage:
-      'Ukrainian Canadian Social Services (UCSS) Ottawa is a volunteer-run organization that supports displaced people from Ukraine on the Ottawa area. We provide settlement-related guidance, organize community events, run programs for children and youth, and distribute household items. We also collect donated medical supplies for defenders of freedom in Ukraine.',
+      "Ukrainian Canadian Social Services (UCSS) Ottawa is a volunteer-run organization that supports displaced people from Ukraine on the Ottawa area. We provide settlement-related guidance, organize community events, run programs for children and youth, and distribute household items. We also collect donated medical supplies for defenders of freedom in Ukraine.",
   },
   aboutUsExtra: {
     id: `${scope}.aboutUsExtra`,
-    defaultMessage: 'At this challenging time for Ukraine, we are committed to the humanitarian help to both Ukrainian refugees and people in Ukraine.',
+    defaultMessage:
+      "At this challenging time for Ukraine, we are committed to the humanitarian help to both Ukrainian refugees and people in Ukraine.",
   },
   eventsTitle: {
     id: `${scope}.eventsTitle`,
-    defaultMessage: 'Upcoming Events',
+    defaultMessage: "Upcoming Events",
   },
   summerCampTitle: {
     id: `${scope}.summerCampTitle`,
-    defaultMessage: 'UCSS Ottawa orginizes summer camp for displaced children from Ukraine',
+    defaultMessage:
+      "UCSS Ottawa orginizes summer camp for displaced children from Ukraine",
   },
   summerCampText: {
     id: `${scope}.summerCampText`,
     defaultMessage:
-      'We are organizing a summer camp for children from Ukraine who are displaced by the war in Ukraine. This is a great opportunity to help them improve their mental health and distract themselves from the terrible events in Ukraine.',
+      "We are organizing a summer camp for children from Ukraine who are displaced by the war in Ukraine. This is a great opportunity to help them improve their mental health and distract themselves from the terrible events in Ukraine.",
   },
   learnMore: {
     id: `${scope}.learnMore`,
-    defaultMessage: 'Learn more about this camp',
+    defaultMessage: "Learn more about this camp",
   },
   campTitle: {
     id: `${scope}.campTitle`,
-    defaultMessage: "'An unbelievable experience': Community support bolsters Outaouais summer camp for displaced Ukrainian children",
+    defaultMessage:
+      "'An unbelievable experience': Community support bolsters Outaouais summer camp for displaced Ukrainian children",
   },
   campText1: {
     id: `${scope}.campText1`,
     defaultMessage:
-      'Michael Ryndzak hopes to provide the same experience to other children affected by the war after seeing how the camp shaped the children who celebrated what they had despite what they had lost.',
+      "Michael Ryndzak hopes to provide the same experience to other children affected by the war after seeing how the camp shaped the children who celebrated what they had despite what they had lost.",
   },
   campText2: {
     id: `${scope}.campText2`,
     defaultMessage:
-      'A group of Ukrainian children displaced by war were able to play, sing and dance at a local summer camp thanks to contributions from the Ottawa community, its organizer said. Michael Ryndzak, who in May issued a plea for support to help repair and maintain an aging summer camp in the Outaouais hills which has served local Ukrainians...',
+      "A group of Ukrainian children displaced by war were able to play, sing and dance at a local summer camp thanks to contributions from the Ottawa community, its organizer said. Michael Ryndzak, who in May issued a plea for support to help repair and maintain an aging summer camp in the Outaouais hills which has served local Ukrainians...",
   },
   date_vyshyvanka: {
     id: `${scope}.date_vyshyvanka`,
-    defaultMessage: 'November 26, 2022',
+    defaultMessage: "November 26, 2022",
   },
   vyshyvankaTextBlurb: {
     id: `${scope}.vyshyvankaTextBlurb`,
@@ -115,11 +121,11 @@ export default defineMessages({
   },
   vyshyvankaTitle: {
     id: `${scope}.vyshyvankaTitle`,
-    defaultMessage: 'Embroidery Event presented to you by UCSS',
+    defaultMessage: "Embroidery Event presented to you by UCSS",
   },
   date_lions: {
     id: `${scope}.date_lions`,
-    defaultMessage: 'June 23, 2022',
+    defaultMessage: "June 23, 2022",
   },
   lionsTextBlurb: {
     id: `${scope}.lionsTextBlurb`,
@@ -128,11 +134,11 @@ export default defineMessages({
   lionsTitle: {
     id: `${scope}.lionsTitle`,
     defaultMessage:
-      'UCSS (Ukrainian Canadian Social Services), Ottawa branch have been invited to participate in the Continental Run Marathon organized by the prestigious Lions Club.',
+      "UCSS (Ukrainian Canadian Social Services), Ottawa branch have been invited to participate in the Continental Run Marathon organized by the prestigious Lions Club.",
   },
   readMore: {
     id: `${scope}.readMore`,
-    defaultMessage: 'Read More',
+    defaultMessage: "Read More",
   },
   hospitalGratiduteTitle: {
     id: `${scope}.hospitalGratiduteTitle`,
@@ -154,15 +160,15 @@ export default defineMessages({
   },
   learnMore: {
     id: `${scope}.learnMore`,
-    defaultMessage: 'Learn more',
+    defaultMessage: "Learn more",
   },
   donate: {
     id: `${scope}.donate`,
-    defaultMessage: 'Donate now',
+    defaultMessage: "Donate now",
   },
   upcomingEvent: {
     id: `${scope}.upcomingEvent`,
-    defaultMessage: 'Upcoming Event',
+    defaultMessage: "Upcoming Event",
   },
   campTitle1: {
     id: `${scope}.campTitle1`,
@@ -183,11 +189,11 @@ export default defineMessages({
   },
   embroideryTitle: {
     id: `${scope}.embroideryTitle`,
-    defaultMessage: 'Ukrainian Cultural Embroidery Event',
+    defaultMessage: "Ukrainian Cultural Embroidery Event",
   },
   embroideryDate: {
     id: `${scope}.embroideryDate`,
-    defaultMessage: '20 May, 2023',
+    defaultMessage: "20 May, 2023",
   },
   embroideryText: {
     id: `${scope}.embroideryText`,
@@ -196,6 +202,6 @@ export default defineMessages({
   },
   campDate1: {
     id: `${scope}.campDate1`,
-    defaultMessage: 'July 30 - August 6',
+    defaultMessage: "July 30 - August 5, 2023",
   },
 });

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { FormattedMessage, injectIntl } from "react-intl";
 
-import campPicture from "../../assets/images/camp.png";
+import campPicture from "../../assets/images/flyer.png";
 import messages from "./messages";
 
 function Camp(props: any) {
@@ -38,7 +38,8 @@ function Camp(props: any) {
           <div className="flex flex-wrap justify-center">
             <div className="p-4 md:w-12/12">
               <div className="h-full rounded-xl shadow-cla-blue bg-gradient-to-r from-indigo-50 to-blue-50 overflow-hidden">
-                <div className="w-full rounded-lg shadow-md bg-orange-200 p-5 text-center flex flex-col">
+                {/* Warning messages */}
+                {/* <div className="w-full rounded-lg shadow-md bg-orange-200 p-5 text-center flex flex-col">
                   <span className="text-xl font-medium text-orange-700">
                     {formatMessage({ ...messages.warning })}
                   </span>
@@ -54,7 +55,7 @@ function Camp(props: any) {
                       }
                     )}
                   </span>
-                </div>
+                </div> */}
                 <img
                   className="sm:block hidden transform w-full object-cover object-center scale-90"
                   src={campPicture}
@@ -67,9 +68,7 @@ function Camp(props: any) {
                   <p className="leading-relaxed mb-3">
                     {formatMessage({ ...messages.content })}
                   </p>
-                  <div className="rounded-xl mt-5 text-blue-400">
-                    <h2>{formatMessage({ ...messages.campDetails })}</h2>
-                  </div>
+                  <div className="rounded-xl mt-5 text-blue-400"></div>
                   {/* <div className="mt-5 before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-pink-500 ">
                     <h3 className="text-gray-500">
                       {formatMessage({ ...messages.who })}
@@ -89,49 +88,77 @@ function Camp(props: any) {
                     </p>
                   </div> */}
 
-                  <div className="mt-3">
-                    <h3 className="text-gray-500">
-                      {formatMessage({ ...messages.when })}
-                    </h3>
-                    <p className="leading-relaxed mt-3">
-                      {formatMessage({ ...messages.whenContent })}
-                      <br />
-                      {formatMessage({ ...messages.whenContentDropOff })}
-                      <br />
-                      {formatMessage({ ...messages.whenContentPickUp })}
-                    </p>
+                  <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+                    <div className="mx-auto max-w-screen-md text-center lg:mb-12">
+                      <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-blue-400">
+                        {formatMessage({ ...messages.registration })}
+                      </h2>
+                    </div>
+                    <div className="mx-auto rounded-xl flex">
+                      <div className="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-xl border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+                        <p className="font-light text-gray-500 sm:text-lg dark:text-gray-400 text-justify">
+                          <FormattedMessage
+                            {...messages.registrationContent}
+                            values={{
+                              email: (
+                                <a
+                                  href="mailto:camp@ucssottawa.com"
+                                  className="text-blue-300">
+                                  camp@ucssottawa.com
+                                </a>
+                              ),
+                            }}
+                          />
+                        </p>
+                      </div>
+                    </div>
                   </div>
 
-                  <div className="mt-3">
-                    <h3 className="text-gray-500">
-                      {formatMessage({ ...messages.where })}
-                    </h3>
-                    <p className="leading-relaxed mt-3">
-                      <FormattedMessage
-                        {...messages.whereContent}
-                        values={{
-                          link: (
-                            <a
-                              href="https://www.google.com/maps/place/21+Chem.+Newcombe,+Val-des-Monts,+QC+J8N+1A9/@45.7064719,-75.7814431,17z/data=!3m1!4b1!4m5!3m4!1s0x4cd1d935d065d57f:0x6508e46255959626!8m2!3d45.7064719!4d-75.7814431"
-                              target="_blank"
-                              rel="noreferrer"
-                              className="text-indigo-500"
-                            >
-                              St. John’s Ukrainian Camp
-                            </a>
-                          ),
-                        }}
-                      />
-                    </p>
-                  </div>
-
-                  <div className="mt-3">
-                    <h3 className="text-gray-500">
-                      {formatMessage({ ...messages.cost })}
-                    </h3>
-                    <p className="leading-relaxed mt-3">
-                      <FormattedMessage {...messages.costContent} />
-                    </p>
+                  <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+                    <div className="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
+                      <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-blue-400">
+                        {formatMessage({ ...messages.campDetails })}
+                      </h2>
+                    </div>
+                    <div className="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0 rounded-xl">
+                      <div className="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-xl border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+                        <h3 className="mb-4 text-2xl font-semibold text-blue-400">
+                          {formatMessage({ ...messages.when })}
+                        </h3>
+                        <p className="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+                          {formatMessage({ ...messages.whenContent })}
+                        </p>
+                      </div>
+                      <div className="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-xl border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+                        <h2 className="mb-4 text-2xl font-semibold text-blue-400">
+                          {formatMessage({ ...messages.where })}
+                        </h2>
+                        <p className="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+                          <FormattedMessage
+                            {...messages.whereContent}
+                            values={{
+                              link: (
+                                <a
+                                  href="https://www.google.com/maps/place/21+Chem.+Newcombe,+Val-des-Monts,+QC+J8N+1A9/@45.7064719,-75.7814431,17z/data=!3m1!4b1!4m5!3m4!1s0x4cd1d935d065d57f:0x6508e46255959626!8m2!3d45.7064719!4d-75.7814431"
+                                  target="_blank"
+                                  rel="noreferrer"
+                                  className="text-indigo-500">
+                                  St. John’s Ukrainian Camp
+                                </a>
+                              ),
+                            }}
+                          />
+                        </p>
+                      </div>
+                      <div className="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-xl border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+                        <h2 className="mb-4 text-2xl font-semibold text-blue-400">
+                          {formatMessage({ ...messages.cost })}
+                        </h2>
+                        <p className="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+                          {formatMessage({ ...messages.costContent })}
+                        </p>
+                      </div>
+                    </div>
                   </div>
 
                   <div className="mt-3">
@@ -141,7 +168,7 @@ function Camp(props: any) {
                     <p className="leading-relaxed mt-3">
                       {formatMessage({ ...messages.programmingContent })}
                     </p>
-                    <p className="leading-relaxed mt-2">
+                    <span className="leading-relaxed mt-2">
                       {formatMessage({ ...messages.campActivitiesTitle })}
                       <ul className="list-disc sm:px-5 px-4 mt-3 mb-3">
                         <li>
@@ -205,17 +232,17 @@ function Camp(props: any) {
                           })}
                         </li>
                       </ul>
-                    </p>
+                    </span>
                   </div>
 
-                  <div className="mt-3">
+                  {/* <div className="mt-3">
                     <h3 className="text-gray-500">
                       {formatMessage({ ...messages.finalDayAtCamp })}
                     </h3>
                     <p className="leading-relaxed mt-3">
                       {formatMessage({ ...messages.finalDayAtCampContent })}
                     </p>
-                  </div>
+                  </div> */}
 
                   <div className="mt-3">
                     <h3 className="text-blue-400">

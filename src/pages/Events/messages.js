@@ -15,9 +15,13 @@ export default defineMessages({
     id: `${scope}.donate`,
     defaultMessage: "Donate now",
   },
+  campDate_2023: {
+    id: `${scope}.campDate_2023`,
+    defaultMessage: "July 30 to August 5, 2023",
+  },
   upcomingEvent: {
     id: `${scope}.upcomingEvent`,
-    defaultMessage: "Upcoming Event"
+    defaultMessage: "Upcoming Event",
   },
   campTitle: {
     id: `${scope}.campTitle`,

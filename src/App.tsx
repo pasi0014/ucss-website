@@ -1,22 +1,22 @@
-import { injectIntl } from 'react-intl';
+import { injectIntl } from "react-intl";
 
-import './App.css';
-import { Routes, Route } from 'react-router-dom';
-import Main from './layouts/Main';
-import Home from './pages/Home';
-import Reviews from './pages/Reviews';
-import Vyshyvanka from './pages/Vyshyvanka';
-import { PostPage } from './pages/PostPage';
-import Events from './pages/Events';
-import Marathon from './pages/Marathon';
-import Testmonials from './pages/Testmonials';
-import Camp from './pages/Camp';
-import WaitingList from './components/WaitingList';
-import { Donate } from './pages/Donate';
-import Success from './pages/Success';
-import Failure from './pages/Failure';
-import ContactForm from './components/ContactForm';
-import NotFound from './pages/NotFound';
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import Main from "./layouts/Main";
+import Home from "./pages/Home";
+import Reviews from "./pages/Reviews";
+import Vyshyvanka from "./pages/Vyshyvanka";
+import { PostPage } from "./pages/PostPage";
+import Events from "./pages/Events";
+import Marathon from "./pages/Marathon";
+import Testmonials from "./pages/Testmonials";
+import Camp from "./pages/Camp";
+import WaitingList from "./components/WaitingList";
+import { Donate } from "./pages/Donate";
+import Success from "./pages/Success";
+import Failure from "./pages/Failure";
+import ContactForm from "./components/ContactForm";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -28,6 +28,7 @@ function App() {
         <Route path="/news" element={<Reviews />}>
           <Route path="vyshyvanka-vechir" element={<Vyshyvanka />} />
         </Route>
+        <Route path="/events/camp" element={<Camp />} />
         <Route path="/temp" element={<PostPage />} />
         <Route path="/events" element={<Events />} />
         <Route path="/events/:slug" element={<Events />} />
