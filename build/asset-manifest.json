@@ -1,24 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.c8053eab.chunk.css",
-    "main.js": "/static/js/main.792f1c5a.chunk.js",
-    "main.js.map": "/static/js/main.792f1c5a.chunk.js.map",
+    "main.css": "/static/css/main.f1a574d7.chunk.css",
+    "main.js": "/static/js/main.3148eb26.chunk.js",
+    "main.js.map": "/static/js/main.3148eb26.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.c71da749.js",
     "runtime-main.js.map": "/static/js/runtime-main.c71da749.js.map",
-    "static/js/2.bdc40490.chunk.js": "/static/js/2.bdc40490.chunk.js",
-    "static/js/2.bdc40490.chunk.js.map": "/static/js/2.bdc40490.chunk.js.map",
+    "static/js/2.f6ae7acc.chunk.js": "/static/js/2.f6ae7acc.chunk.js",
+    "static/js/2.f6ae7acc.chunk.js.map": "/static/js/2.f6ae7acc.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.c8053eab.chunk.css.map": "/static/css/main.c8053eab.chunk.css.map",
-    "static/js/2.bdc40490.chunk.js.LICENSE.txt": "/static/js/2.bdc40490.chunk.js.LICENSE.txt",
+    "static/css/main.f1a574d7.chunk.css.map": "/static/css/main.f1a574d7.chunk.css.map",
+    "static/js/2.f6ae7acc.chunk.js.LICENSE.txt": "/static/js/2.f6ae7acc.chunk.js.LICENSE.txt",
     "static/media/about.c05d6b0f.JPG": "/static/media/about.c05d6b0f.JPG",
     "static/media/backpack.584b1630.jpeg": "/static/media/backpack.584b1630.jpeg",
     "static/media/bazar-main.bbea257e.jpg": "/static/media/bazar-main.bbea257e.jpg",
     "static/media/bcu.dc74b439.jpeg": "/static/media/bcu.dc74b439.jpeg",
-    "static/media/camp.556a0f13.png": "/static/media/camp.556a0f13.png",
     "static/media/child_support.ee409c26.jpg": "/static/media/child_support.ee409c26.jpg",
     "static/media/dragonboat.b30fc37d.jpeg": "/static/media/dragonboat.b30fc37d.jpeg",
     "static/media/embassadors.2ae30c25.jpeg": "/static/media/embassadors.2ae30c25.jpeg",
-    "static/media/flyer-min.f2c7936a.png": "/static/media/flyer-min.f2c7936a.png",
+    "static/media/flyer.2b24e8f2.png": "/static/media/flyer.2b24e8f2.png",
     "static/media/fundraized-event-1.6f2ce88d.jpg": "/static/media/fundraized-event-1.6f2ce88d.jpg",
     "static/media/gramota-1.639df248.jpg": "/static/media/gramota-1.639df248.jpg",
     "static/media/gramota-2.56822151.jpg": "/static/media/gramota-2.56822151.jpg",
@@ -61,8 +60,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.c71da749.js",
-    "static/js/2.bdc40490.chunk.js",
-    "static/css/main.c8053eab.chunk.css",
-    "static/js/main.792f1c5a.chunk.js"
+    "static/js/2.f6ae7acc.chunk.js",
+    "static/css/main.f1a574d7.chunk.css",
+    "static/js/main.3148eb26.chunk.js"
   ]
 }
