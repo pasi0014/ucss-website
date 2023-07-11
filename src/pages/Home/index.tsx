@@ -13,6 +13,7 @@ import WaitingList from "../../components/WaitingList";
 import ucu from "../../assets/images/ucu.png";
 import bcu from "../../assets/images/bcu.jpeg";
 import ucc from "../../assets/images/ucc.png";
+import unf from "../../assets/images/unf.png";
 import embassy from "../../assets/images/eouic.png";
 import gramota1 from "../../assets/images/gramota-1.jpg";
 import gramota2 from "../../assets/images/gramota-2.jpg";
@@ -140,6 +141,9 @@ const Home = () => {
             </div>
             <div className="w-8/12 flex justify-center mx-auto mt-5">
               <img src={ucc} alt="UCC" className="h-16" />
+            </div>
+            <div className="w-8/12 flex justify-center mx-auto mt-5">
+              <img src={unf} alt="UNF Foundation" className="h-16" />
             </div>
           </div>
         </div>
