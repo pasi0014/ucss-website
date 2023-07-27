@@ -31,7 +31,7 @@ export default defineMessages({
   },
   upcomingEvents: {
     id: `${scope}.upcomingEvents`,
-    defaultMessage: "Upcoming Events",
+    defaultMessage: "Events",
   },
   register: {
     id: `${scope}.register`,
@@ -172,7 +172,7 @@ export default defineMessages({
   },
   campTitle1: {
     id: `${scope}.campTitle1`,
-    defaultMessage: `Welcome to "Sonyashnyk" summer camp, hosted by Ukrainian Canadian Social Services Ottawa!`,
+    defaultMessage: `Welcome to "Sonyashnyk" summer camp, hosted by Ukrainian Canadian Social Services Ottawa and co-sponsored by UNF!`,
   },
   campText_1: {
     id: `${scope}.campText_1`,
@@ -180,12 +180,7 @@ export default defineMessages({
     offers a wide range of outdoor activities including sports,
     dancing, canoeing, singing, and drawing, which help the
     children build confidence, teamwork skills, and develop a
-    positive attitude towards life.{br} 
-    The camp is seeking volunteers to create a memorable
-    experience for the campers. Your donation, no matter how
-    small, can make a big difference in the lives of these
-    children. Join us this summer at "Sonyashnyk" summer camp and
-    help us create lasting memories for our campers!`,
+    positive attitude towards life.{br}`,
   },
   embroideryTitle: {
     id: `${scope}.embroideryTitle`,

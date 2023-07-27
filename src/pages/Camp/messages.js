@@ -22,7 +22,7 @@ export default defineMessages({
   content: {
     id: `${scope}.content`,
     defaultMessage:
-      "Ukrainian Canadian Social Services – Ottawa Branch (UCSS Ottawa) is pleased to announce that it will be running “Sunflower Summer Camp,” an overnight camp starting July 30, 2023. It will be a safe, healthy, supervised, and inclusive environment led by a team of dedicated UCSS Ottawa volunteers.",
+      "Ukrainian Canadian Social Services – Ottawa Branch (UCSS Ottawa) in parternship with UNF is pleased to announce that it will be running “Sunflower Summer Camp” an overnight camp starting July 30, 2023. It will be a safe, healthy, supervised, and inclusive environment led by a team of dedicated UCSS Ottawa volunteers.",
   },
   registration: {
     id: `${scope}.registration`,

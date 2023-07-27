@@ -39,11 +39,11 @@ function Camp(props: any) {
             <div className="p-4 md:w-12/12">
               <div className="h-full rounded-xl shadow-cla-blue bg-gradient-to-r from-indigo-50 to-blue-50 overflow-hidden">
                 {/* Warning messages */}
-                {/* <div className="w-full rounded-lg shadow-md bg-orange-200 p-5 text-center flex flex-col">
+                <div className="w-full rounded-lg shadow-md bg-orange-200 p-5 text-center flex flex-col">
                   <span className="text-xl font-medium text-orange-700">
                     {formatMessage({ ...messages.warning })}
                   </span>
-                  <span className="text-xl font-medium text-orange-700">
+                  {/* <span className="text-xl font-medium text-orange-700">
                     {formatMessage(
                       { ...messages.warning_1 },
                       {
@@ -54,8 +54,8 @@ function Camp(props: any) {
                         ),
                       }
                     )}
-                  </span>
-                </div> */}
+                  </span> */}
+                </div>
                 <img
                   className="sm:block hidden transform w-full object-cover object-center scale-90"
                   src={campPicture}
@@ -88,7 +88,7 @@ function Camp(props: any) {
                     </p>
                   </div> */}
 
-                  <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+                  {/* <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
                     <div className="mx-auto max-w-screen-md text-center lg:mb-12">
                       <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-blue-400">
                         {formatMessage({ ...messages.registration })}
@@ -112,7 +112,7 @@ function Camp(props: any) {
                         </p>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
 
                   <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
                     <div className="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
