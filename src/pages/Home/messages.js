@@ -76,7 +76,7 @@ export default defineMessages({
   aboutUsExtra: {
     id: `${scope}.aboutUsExtra`,
     defaultMessage:
-      "At this challenging time for Ukraine, we are committed to the humanitarian help to both Ukrainian refugees and people in Ukraine.",
+      "At this challenging time for Ukraine, we are committed to the humanitarian help for both displaced Ukrainian people in Canada and people in Ukraine.",
   },
   eventsTitle: {
     id: `${scope}.eventsTitle`,

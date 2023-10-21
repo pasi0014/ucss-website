@@ -1,37 +1,35 @@
-import React, { useEffect, useState } from 'react';
-import { Helmet } from 'react-helmet';
-import { injectIntl } from 'react-intl';
-import { Link } from 'react-router-dom';
-import { client } from '../../utils/Contentful';
+import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
+import { injectIntl } from "react-intl";
+import { Link } from "react-router-dom";
+import { client } from "../../utils/Contentful";
 
-import bazarMain from '../../assets/images/bazar-main.jpg';
-import embassyMain from '../../assets/images/poland-embassy-1.jpg';
-import localBenefit from '../../assets/images/local-concert.jpg';
-import fundraiserMain from '../../assets/images/fundraized-event-1.jpg';
-import groupPhoto from '../../assets/images/group-photo.jpeg';
-import volunteers from '../../assets/images/volunteers.jpeg';
-import backpack from '../../assets/images/backpack.jpeg';
-import dragonboat from '../../assets/images/dragonboat.jpeg';
-import vyshyvanka from '../../assets/images/vyshyvanka-logo.jpeg';
-import previewToys from '../../assets/images/preview-toys.jpeg';
-import madame from '../../assets/images/news-1.jpeg';
-import mykolay from '../../assets/images/news-2.jpeg';
-import vip from '../../assets/images/news-3.jpeg';
-import hotties from '../../assets/images/hotties-1.jpeg';
+import bazarMain from "../../assets/images/bazar-main.jpg";
+import localBenefit from "../../assets/images/local-concert.jpg";
+import fundraiserMain from "../../assets/images/fundraized-event-1.jpg";
+import groupPhoto from "../../assets/images/group-photo.jpeg";
+import volunteers from "../../assets/images/volunteers.jpeg";
+import backpack from "../../assets/images/backpack.jpeg";
+import dragonboat from "../../assets/images/dragonboat.jpeg";
+import vyshyvanka from "../../assets/images/vyshyvanka-logo.jpeg";
+import previewToys from "../../assets/images/preview-toys.jpeg";
+import madame from "../../assets/images/news-1.jpeg";
+import mykolay from "../../assets/images/news-2.jpeg";
+import hotties from "../../assets/images/hotties-1.jpeg";
 
-import NewsCard from '../../components/NewsCard';
-import Loading from '../../components/Loading';
-import Drawer from '../../components/Drawer';
-import DrawerContent from '../../components/DrawerContent';
+import NewsCard from "../../components/NewsCard";
+import Loading from "../../components/Loading";
+import Drawer from "../../components/Drawer";
+import DrawerContent from "../../components/DrawerContent";
 
-import messages from './messages';
+import messages from "./messages";
 
 function Reviews(props: any) {
   const { formatMessage } = props.intl;
   const [isOpen, setIsOpen] = useState(false);
   const [selectedPost, setSelectedPost] = useState();
   const [entries, setEntries] = useState<any>();
-  const [entryId, setEntryId] = useState('');
+  const [entryId, setEntryId] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
 
@@ -39,19 +37,19 @@ function Reviews(props: any) {
     setLoading(true);
     try {
       const response = await client.getEntries({
-        content_type: 'post',
+        content_type: "post",
         include: 10,
       });
       setEntries(response.items);
     } catch (error) {
       setError(true);
-      console.error('Unexpected error while trying to fetch the Entries');
+      console.error("Unexpected error while trying to fetch the Entries");
     }
     setLoading(false);
   };
 
   useEffect(() => {
-    window.scrollTo({ top: 500, behavior: 'smooth' });
+    window.scrollTo({ top: 500, behavior: "smooth" });
     doFetchEntries();
   }, []);
 
@@ -63,7 +61,10 @@ function Reviews(props: any) {
           name="description"
           content="The Ukrainian Canadian Social Services Ottawa (UCSS Ottawa) is raising money to organize a summer camp for children who have been displaced by war in Ukraine. The goal of the camp is to provide a safe environment for children to play, learn and socialize with other children from Ottawa."
         />
-        <meta name="keywords" content="donate camp, ukrainian charitable organization, ucss camp, ucss ottawa news" />
+        <meta
+          name="keywords"
+          content="donate camp, ukrainian charitable organization, ucss camp, ucss ottawa news"
+        />
       </Helmet>
       <section className="text-gray-600 body-font font-montserrat">
         <div className="container lg:block py-20 mx-auto">
@@ -74,10 +75,14 @@ function Reviews(props: any) {
           {error && (
             <div className="container w-8/12 flex flex-col justify-center mx-auto bg-red-100 p-10 rounded-xl shadow-md my-5">
               <div>
-                <p className="text-center">Oops. There was an error while trying to get posts</p>
+                <p className="text-center">
+                  Oops. There was an error while trying to get posts
+                </p>
               </div>
               <div className="text-center">
-                <button className="bg-blue-300 p-2 text-white font-bold rounded-xl w-2/12 mt-3" onClick={() => doFetchEntries()}>
+                <button
+                  className="bg-blue-300 p-2 text-white font-bold rounded-xl w-2/12 mt-3"
+                  onClick={() => doFetchEntries()}>
                   Refresh
                 </button>
               </div>
@@ -90,7 +95,7 @@ function Reviews(props: any) {
             <DrawerContent
               onClose={() => {
                 setIsOpen(false);
-                setEntryId('');
+                setEntryId("");
               }}
               entryId={entryId}
               post={selectedPost}
@@ -106,10 +111,9 @@ function Reviews(props: any) {
                   src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fyvanbaker%2Fvideos%2F793415402177023%2F&show_text=true&width=560&t=0"
                   width="500"
                   height="429"
-                  style={{ border: 'none', overflow: 'scroll' }}
+                  style={{ border: "none", overflow: "scroll" }}
                   allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                  allowFullScreen={true}
-                ></iframe>
+                  allowFullScreen={true}></iframe>
               </div>
             </div>
 
@@ -121,10 +125,9 @@ function Reviews(props: any) {
                   src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Foksana.melnyktv%2Fvideos%2F646577273468498%2F&show_text=true&width=560&t=0"
                   width="500"
                   height="500"
-                  style={{ border: 'none', overflow: 'scroll' }}
+                  style={{ border: "none", overflow: "scroll" }}
                   allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                  allowFullScreen={true}
-                ></iframe>
+                  allowFullScreen={true}></iframe>
               </div>
             </div>
           </div>
@@ -137,16 +140,32 @@ function Reviews(props: any) {
                 <NewsCard
                   key={iPost.sys.id}
                   id={iPost.sys.id}
-                  title={iPost.fields[`title${props.intl.locale.slice(0, 2).toString().toUpperCase()}`]}
+                  title={
+                    iPost.fields[
+                      `title${props.intl.locale
+                        .slice(0, 2)
+                        .toString()
+                        .toUpperCase()}`
+                    ]
+                  }
                   image={iPost.fields.postImage?.fields}
-                  content={iPost.fields[`content${props.intl.locale.slice(0, 2).toString().toUpperCase()}`]}
+                  content={
+                    iPost.fields[
+                      `content${props.intl.locale
+                        .slice(0, 2)
+                        .toString()
+                        .toUpperCase()}`
+                    ]
+                  }
                   date={iPost.fields.date}
                   isLink={iPost.fields?.isPage}
                   reactPageLink={iPost.fields?.reactPageLink}
                   onOpen={(entryId) => {
                     setIsOpen(true);
                     setEntryId(entryId);
-                    setSelectedPost(entries.find((iEntry: any) => iEntry.sys.id === entryId));
+                    setSelectedPost(
+                      entries.find((iEntry: any) => iEntry.sys.id === entryId)
+                    );
                   }}
                 />
               );
@@ -162,11 +181,18 @@ function Reviews(props: any) {
                   alt="Ukrainian Easter Bazar at the St. John the Baptist Ukrainian Catholic Shrine"
                 />
                 <div className="p-6">
-                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-2 mt-2">{formatMessage({ ...messages.date_hotties })}</h2>
-                  <h3 className="title-font text-lg font-bold text-gray-600 mb-3">{formatMessage({ ...messages.hottiesTitle })}</h3>
+                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-2 mt-2">
+                    {formatMessage({ ...messages.date_hotties })}
+                  </h2>
+                  <h3 className="title-font text-lg font-bold text-gray-600 mb-3">
+                    {formatMessage({ ...messages.hottiesTitle })}
+                  </h3>
                   <p className="leading-relaxed mb-3">
                     {formatMessage({ ...messages.hottiesBody })}
-                    <a href="https://www.facebook.com/groups/3189837834631563/?multi_permalinks=3434297586852252&ref=share" target="_blank" rel="noreferrer">
+                    <a
+                      href="https://www.facebook.com/groups/3189837834631563/?multi_permalinks=3434297586852252&ref=share"
+                      target="_blank"
+                      rel="noreferrer">
                       <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 text-white font-medium px-4 py-1 rounded-lg mt-3">
                         {formatMessage({ ...messages.readMore })}
                       </button>
@@ -214,14 +240,19 @@ function Reviews(props: any) {
                   alt="Ukrainian Easter Bazar at the St. John the Baptist Ukrainian Catholic Shrine"
                 />
                 <div className="p-6">
-                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-2 mt-2">{formatMessage({ ...messages.date_mykolay })}</h2>
-                  <h3 className="title-font text-lg font-bold text-gray-600 mb-3">{formatMessage({ ...messages.mykolayTitle })}</h3>
-                  <p className="leading-relaxed mb-3">{formatMessage({ ...messages.mykolayText })}</p>
+                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-2 mt-2">
+                    {formatMessage({ ...messages.date_mykolay })}
+                  </h2>
+                  <h3 className="title-font text-lg font-bold text-gray-600 mb-3">
+                    {formatMessage({ ...messages.mykolayTitle })}
+                  </h3>
+                  <p className="leading-relaxed mb-3">
+                    {formatMessage({ ...messages.mykolayText })}
+                  </p>
                   <a
                     href="https://www.facebook.com/maryna.popovych/posts/pfbid02xGbyDY5eFYaBjjsSNes4hzfHKLwhTW9q2aovusb7WZfkzwPFPSJyzr1qjEUYanFQl"
                     target="_blank"
-                    rel="noreferrer"
-                  >
+                    rel="noreferrer">
                     <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 text-white font-medium px-4 py-1 rounded-lg">
                       {formatMessage({ ...messages.readMore })}
                     </button>
@@ -241,8 +272,12 @@ function Reviews(props: any) {
                   <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-2 mt-2">
                     {formatMessage({ ...messages.date_miracleWorker })}
                   </h2>
-                  <h3 className="title-font text-lg font-bold text-gray-600 mb-3">{formatMessage({ ...messages.miracleWorkerTitle })}</h3>
-                  <p className="leading-relaxed mb-3">{formatMessage({ ...messages.miracleWorkerText })}</p>
+                  <h3 className="title-font text-lg font-bold text-gray-600 mb-3">
+                    {formatMessage({ ...messages.miracleWorkerTitle })}
+                  </h3>
+                  <p className="leading-relaxed mb-3">
+                    {formatMessage({ ...messages.miracleWorkerText })}
+                  </p>
                 </div>
               </div>
             </div>
@@ -256,10 +291,19 @@ function Reviews(props: any) {
                   alt="Children sitting in front of the fireplace"
                 />
                 <div className="p-6">
-                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-2 mt-2">{formatMessage({ ...messages.date_toysForKids })}</h2>
-                  <h3 className="title-font text-lg font-bold text-gray-600 mb-3">{formatMessage({ ...messages.toysForKidsTitle })}</h3>
-                  <p className="leading-relaxed mb-3">{formatMessage({ ...messages.toysForKidsText })}</p>
-                  <a href="https://ottawa.ctvnews.ca/video?clipId=2585411" target="_blank" rel="noreferrer">
+                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-2 mt-2">
+                    {formatMessage({ ...messages.date_toysForKids })}
+                  </h2>
+                  <h3 className="title-font text-lg font-bold text-gray-600 mb-3">
+                    {formatMessage({ ...messages.toysForKidsTitle })}
+                  </h3>
+                  <p className="leading-relaxed mb-3">
+                    {formatMessage({ ...messages.toysForKidsText })}
+                  </p>
+                  <a
+                    href="https://ottawa.ctvnews.ca/video?clipId=2585411"
+                    target="_blank"
+                    rel="noreferrer">
                     <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 text-white font-medium px-4 py-1 rounded-lg">
                       {formatMessage({ ...messages.readMore })}
                     </button>
@@ -277,9 +321,15 @@ function Reviews(props: any) {
                   alt="Ukrainian Easter Bazar at the St. John the Baptist Ukrainian Catholic Shrine"
                 />
                 <div className="p-6">
-                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-2 mt-2">{formatMessage({ ...messages.date_vyshyvanka })}</h2>
-                  <h3 className="title-font text-lg font-medium text-gray-600 mb-3">{formatMessage({ ...messages.vyshyvankaTitle })}</h3>
-                  <p className="leading-relaxed mb-3">{formatMessage({ ...messages.vyshyvankaTextBlurb })}</p>
+                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-2 mt-2">
+                    {formatMessage({ ...messages.date_vyshyvanka })}
+                  </h2>
+                  <h3 className="title-font text-lg font-medium text-gray-600 mb-3">
+                    {formatMessage({ ...messages.vyshyvankaTitle })}
+                  </h3>
+                  <p className="leading-relaxed mb-3">
+                    {formatMessage({ ...messages.vyshyvankaTextBlurb })}
+                  </p>
                   <Link to="/news/vyshyvanka-vechir">
                     <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 hover:scale-105 drop-shadow-md  shadow-cla-blue px-4 py-1 rounded-lg">
                       {formatMessage({ ...messages.readMore })}
@@ -296,10 +346,16 @@ function Reviews(props: any) {
                   alt="Members of UCSS and Lions Club"
                 />
                 <div className="p-6">
-                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-2 mt-2">{formatMessage({ ...messages.date_dragonboat })}</h2>
-                  <h3 className="title-font text-lg font-bold text-gray-600 mb-2">{formatMessage({ ...messages.dragonboatTitle })}</h3>
+                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-2 mt-2">
+                    {formatMessage({ ...messages.date_dragonboat })}
+                  </h2>
+                  <h3 className="title-font text-lg font-bold text-gray-600 mb-2">
+                    {formatMessage({ ...messages.dragonboatTitle })}
+                  </h3>
                   <p className="leading-relaxed mb-3">
-                    <span className="mt-2">{formatMessage({ ...messages.dragonboatText })}</span>
+                    <span className="mt-2">
+                      {formatMessage({ ...messages.dragonboatText })}
+                    </span>
                   </p>
                 </div>
               </div>
@@ -313,10 +369,16 @@ function Reviews(props: any) {
                   alt="Members of UCSS and Lions Club"
                 />
                 <div className="p-6">
-                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">{formatMessage({ ...messages.date_school })}</h2>
-                  <h3 className="title-font text-lg font-bold text-gray-600 mb-2">{formatMessage({ ...messages.schoolTitle })}</h3>
+                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                    {formatMessage({ ...messages.date_school })}
+                  </h2>
+                  <h3 className="title-font text-lg font-bold text-gray-600 mb-2">
+                    {formatMessage({ ...messages.schoolTitle })}
+                  </h3>
                   <p className="leading-relaxed mb-3">
-                    <span className="mt-2">{formatMessage({ ...messages.schoolText })}</span>
+                    <span className="mt-2">
+                      {formatMessage({ ...messages.schoolText })}
+                    </span>
                   </p>
                 </div>
               </div>
@@ -330,10 +392,16 @@ function Reviews(props: any) {
                   alt="Members of UCSS and Lions Club"
                 />
                 <div className="p-6">
-                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">{formatMessage({ ...messages.date_campThanks })}</h2>
-                  <h3 className="title-font text-lg font-bold text-gray-600 mb-2">{formatMessage({ ...messages.campThanksTitle })}</h3>
+                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                    {formatMessage({ ...messages.date_campThanks })}
+                  </h2>
+                  <h3 className="title-font text-lg font-bold text-gray-600 mb-2">
+                    {formatMessage({ ...messages.campThanksTitle })}
+                  </h3>
                   <p className="leading-relaxed mb-3">
-                    <span className="mt-2">{formatMessage({ ...messages.campThanksText })}</span>
+                    <span className="mt-2">
+                      {formatMessage({ ...messages.campThanksText })}
+                    </span>
                   </p>
                 </div>
               </div>
@@ -348,17 +416,24 @@ function Reviews(props: any) {
                   alt="Members of UCSS and Lions Club"
                 />
                 <div className="p-6">
-                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">{formatMessage({ ...messages.date_campReport })}</h2>
-                  <h3 className="title-font text-lg font-bold text-gray-600 mb-2">{formatMessage({ ...messages.campReportTitle })}</h3>
+                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                    {formatMessage({ ...messages.date_campReport })}
+                  </h2>
+                  <h3 className="title-font text-lg font-bold text-gray-600 mb-2">
+                    {formatMessage({ ...messages.campReportTitle })}
+                  </h3>
                   <p className="leading-relaxed mb-3">
-                    <span className="italic font-medium leading-relaxed">{formatMessage({ ...messages.campReportSubTitle })}</span>
-                    <span className="mt-2">{formatMessage({ ...messages.campReportText })}</span>
+                    <span className="italic font-medium leading-relaxed">
+                      {formatMessage({ ...messages.campReportSubTitle })}
+                    </span>
+                    <span className="mt-2">
+                      {formatMessage({ ...messages.campReportText })}
+                    </span>
                   </p>
                   <a
                     href="https://ottawacitizen.com/news/local-news/an-unbelievable-experience-community-support-bolsters-outaouais-summer-camp-for-displaced-ukrainian-children?fbclid=IwAR261wEFwDaNGvZKRfSy8INfY5uS99JZMmBRFKBQq7BRMPCtoKCJzIbdCTU"
                     target="_blank"
-                    rel="noreferrer"
-                  >
+                    rel="noreferrer">
                     <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 text-white font-medium px-4 py-1 rounded-lg">
                       {formatMessage({ ...messages.readMore })}
                     </button>
@@ -375,9 +450,15 @@ function Reviews(props: any) {
                   alt="Ukrainian Easter Bazar at the St. John the Baptist Ukrainian Catholic Shrine"
                 />
                 <div className="p-6">
-                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">{formatMessage({ ...messages.date_bazar })}</h2>
-                  <h1 className="title-font text-lg font-medium text-gray-600 mb-3">{formatMessage({ ...messages.title_bazar })}</h1>
-                  <p className="leading-relaxed mb-3">{formatMessage({ ...messages.content_bazar })}</p>
+                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                    {formatMessage({ ...messages.date_bazar })}
+                  </h2>
+                  <h1 className="title-font text-lg font-medium text-gray-600 mb-3">
+                    {formatMessage({ ...messages.title_bazar })}
+                  </h1>
+                  <p className="leading-relaxed mb-3">
+                    {formatMessage({ ...messages.content_bazar })}
+                  </p>
                 </div>
               </div>
             </div>
@@ -417,9 +498,15 @@ function Reviews(props: any) {
                   alt="Fundraizer event at Buzzing Carnaval"
                 />
                 <div className="p-6">
-                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">{formatMessage({ ...messages.date_fundraizer })}</h2>
-                  <h1 className="title-font text-lg font-medium text-gray-600 mb-3">{formatMessage({ ...messages.fundraizerTitle })}</h1>
-                  <p className="leading-relaxed mb-3">{formatMessage({ ...messages.fundraizerText })}</p>
+                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                    {formatMessage({ ...messages.date_fundraizer })}
+                  </h2>
+                  <h1 className="title-font text-lg font-medium text-gray-600 mb-3">
+                    {formatMessage({ ...messages.fundraizerTitle })}
+                  </h1>
+                  <p className="leading-relaxed mb-3">
+                    {formatMessage({ ...messages.fundraizerText })}
+                  </p>
                   {/* <Link to="/camp">
                     <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 hover:scale-105 drop-shadow-md  shadow-cla-blue px-4 py-1 rounded-lg">
                       {formatMessage({ ...messages.readMore })}
@@ -438,9 +525,15 @@ function Reviews(props: any) {
                   alt="Fundraizer event at Buzzing Carnaval"
                 />
                 <div className="p-6">
-                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">{formatMessage({ ...messages.date_lions })}</h2>
-                  <h1 className="title-font text-lg font-medium text-gray-600 mb-3">{formatMessage({ ...messages.lionsTitle })}</h1>
-                  <p className="leading-relaxed mb-3">{formatMessage({ ...messages.lionsTextBlurb })}</p>
+                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                    {formatMessage({ ...messages.date_lions })}
+                  </h2>
+                  <h1 className="title-font text-lg font-medium text-gray-600 mb-3">
+                    {formatMessage({ ...messages.lionsTitle })}
+                  </h1>
+                  <p className="leading-relaxed mb-3">
+                    {formatMessage({ ...messages.lionsTextBlurb })}
+                  </p>
                   <Link to="/news/continental-marathon">
                     <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 hover:scale-105 drop-shadow-md  shadow-cla-blue px-4 py-1 rounded-lg">
                       {formatMessage({ ...messages.readMore })}
@@ -455,27 +548,31 @@ function Reviews(props: any) {
                 className="h-full rounded-xl cursor-pointer shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden"
                 onClick={() =>
                   window.open(
-                    'https://ottawa.ctvnews.ca/video?cid=sm%3Atrueanthem%3Actvottawa%3Atwitterpost&clipId=2437050&taid=62770f1241582d0001992ce5&utm_campaign=trueAnthem%3A%20Trending%20Content&utm_medium=trueAnthem&utm_source=twitter',
+                    "https://ottawa.ctvnews.ca/video?cid=sm%3Atrueanthem%3Actvottawa%3Atwitterpost&clipId=2437050&taid=62770f1241582d0001992ce5&utm_campaign=trueAnthem%3A%20Trending%20Content&utm_medium=trueAnthem&utm_source=twitter"
                   )
-                }
-              >
+                }>
                 <img
                   className="transform lg:h-48 md:h-36 w-full object-cover object-center scale-110 transition-all duration-700 hover:scale-100"
                   src={localBenefit}
                   alt="Local Benefit Concert to Support Ukraine"
                 />
                 <div className="p-6">
-                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">{formatMessage({ ...messages.date_localConcert })}</h2>
-                  <h2 className="title-font text-lg font-medium text-gray-600 mb-3">{formatMessage({ ...messages.localConcertTitle })}</h2>
-                  <p className="leading-relaxed mb-3">{formatMessage({ ...messages.localConcertText })}</p>
+                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                    {formatMessage({ ...messages.date_localConcert })}
+                  </h2>
+                  <h2 className="title-font text-lg font-medium text-gray-600 mb-3">
+                    {formatMessage({ ...messages.localConcertTitle })}
+                  </h2>
+                  <p className="leading-relaxed mb-3">
+                    {formatMessage({ ...messages.localConcertText })}
+                  </p>
 
                   <div className="flex items-center w-full text-center mt-5">
                     <a
                       href="https://ottawa.ctvnews.ca/video?cid=sm%3Atrueanthem%3Actvottawa%3Atwitterpost&clipId=2437050&taid=62770f1241582d0001992ce5&utm_campaign=trueAnthem%3A%20Trending%20Content&utm_medium=trueAnthem&utm_source=twitter"
                       target="_blank"
                       className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 hover:scale-105 drop-shadow-md  shadow-cla-blue px-4 py-1 rounded-lg"
-                      rel="noreferrer"
-                    >
+                      rel="noreferrer">
                       {formatMessage({ ...messages.readMore })}
                     </a>
                   </div>

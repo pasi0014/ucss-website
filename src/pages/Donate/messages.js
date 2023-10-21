@@ -36,7 +36,8 @@ export default defineMessages({
   },
   refugee: {
     id: `${scope}.refugee`,
-    defaultMessage: "Provide support to Ukrainian refugees coming to Canada",
+    defaultMessage:
+      "Provide support for displaced Ukrainian people coming to Canada",
   },
   helpInCanada: {
     id: `${scope}.helpInCanada`,
