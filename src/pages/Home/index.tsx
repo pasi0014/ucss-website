@@ -68,59 +68,6 @@ const Home = () => {
           </div>
         </div>
 
-        {/* UPCOMING EVENTS HERE */}
-
-        <div className="w-full bg-green-100 rounded-lg p-3">
-          <h2 className="text-center text-4xl text-gray-500 mt-5">
-            {formatMessage({ ...messages.upcomingEvents })}
-          </h2>
-          <div className="flex flex-nowrap w-full lg:flex-row flex-col p-3 mt-5">
-            {/* Event Card */}
-            <div className="lg:w-8/12 w-full mx-auto">
-              <div className="shadow lg:w-8/12 w-full rounded-xl mx-auto bg-white">
-                <img
-                  className="w-full h-90 object-cover rounded-t-xl"
-                  src={campPic}
-                  alt="Sunflower camp"
-                />
-                <div className="w-full px-6 py-4">
-                  <div className="font-bold text-xl mb-2">
-                    {formatMessage({ ...messages.campTitle1 })}
-                  </div>
-                  <p className="text-base mb-2 py-1 text-gray-400">
-                    {formatMessage({ ...messages.campDate1 })}
-                  </p>
-                  <p className="text-gray-700 text-base py-2">
-                    {formatMessage(
-                      { ...messages.campText_1 },
-                      {
-                        br: (
-                          <>
-                            <br /> <br />
-                          </>
-                        ),
-                      }
-                    )}
-                  </p>
-                  <div className="mx-auto flex flex-col my-5">
-                    {/* TODO: Finish camp page - NP */}
-                    <Link to="/events/camp" className="w-8/12 mx-auto mb-3">
-                      <button className="transition duration-200 ease hover:shadow-lg w-full bg-gradient-to-r from-cyan-400 to-blue-400 hover:from-cyan-300 hover:to-blue-300 text-white font-medium px-5 py-2 rounded-xl">
-                        {formatMessage({ ...messages.learnMore })}
-                      </button>
-                    </Link>
-                    <Link to="/donate" className="text-center">
-                      <button className="transform transition-all duration-200 ease hover:shadow-lg  w-8/12 bg-gradient-to-r from-red-400 to-yellow-400 text-white font-medium px-5 py-2 rounded-xl mx-auto">
-                        {formatMessage({ ...messages.donate })}
-                      </button>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         <div className="w-full">
           <ContactInfo />
         </div>

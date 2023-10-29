@@ -34,7 +34,7 @@ function App() {
         <Route path="/events/:slug" element={<Events />} />
         <Route path="/news/continental-marathon" element={<Marathon />} />
         <Route path="/testimonials" element={<Testmonials />} />
-        <Route path="/events/sunflower-camp" element={<Camp />} />
+        {/* <Route path="/events/sunflower-camp" element={<Camp />} /> */}
         <Route path="/waiting-list" element={<WaitingList />} />
         <Route path="/donate" element={<Donate />} />
         <Route path="/donate/success" element={<Success />} />
