@@ -136,7 +136,7 @@ const Home = () => {
                   />
                   <div className="p-6">
                     <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-3 mt-3">
-                      October 26, 2022
+                      October 26, 2023
                     </h2>
                     <h3 className="title-font text-lg font-bold text-gray-600 mb-2">
                       {/* {formatMessage({ ...messages.campTitle })} */}
