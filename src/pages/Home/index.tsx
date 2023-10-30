@@ -127,8 +127,69 @@ const Home = () => {
               <h2 className="text-center mb-4 text-4xl p-5">
                 {formatMessage({ ...messages.recentNewsTitle })}
               </h2>
-
-              <div className="md:w-7/12 p-4 mx-auto mb-4">
+              <div className="md:w-6/12 mx-auto shadow-md">
+                <div className="h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
+                  <img
+                    className="transform lg:h-80 md:h-36 w-full object-cover object-center scale-110 transition-all duration-700 hover:scale-100"
+                    src="https://smartcdn.gprod.postmedia.digital/ottawacitizen/wp-content/uploads/2023/08/ukraine-camp_jo16.jpg?location=full_width&quality=90&strip=all&w=1200&type=webp&sig=cd0JTov6ITbI3n30_yT-WQ"
+                    alt="Children sitting in front of the fireplace"
+                  />
+                  <div className="p-6">
+                    <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-3 mt-3">
+                      October 26, 2022
+                    </h2>
+                    <h3 className="title-font text-lg font-bold text-gray-600 mb-2">
+                      {/* {formatMessage({ ...messages.campTitle })} */}
+                      UNF FOUNDATION & UKRAINIAN CANADIAN SOCIAL SERVICES OTTAWA
+                      CO-SPONSORS of Sonyashnyk camp for Ukrainian children
+                      displaced by war, - a place where kids can just be kids.
+                      Held July 30 - Aug. 5, 2023
+                    </h3>
+                    <p className="leading-relaxed mb-3">
+                      <span className="font-medium ">
+                        Sunflower Camp, now in its second year of operation, is
+                        a place where 35 displaced Ukrainian children can enjoy
+                        the peace and calm of nature while surrounded by others
+                        who have known the trauma and dislocation of war.
+                        <br /> <br /> Many are living without their fathers, who
+                        remain in Ukraine to fight or to work. Most are living
+                        with host families. Few are certain what the future will
+                        bring. Organized by volunteers from the Ottawa branch of
+                        Ukrainian Canadian Social Services, and co-sponsored by
+                        the Ukrainian National Federation of Canada, the camp is
+                        infused with Ukrainian culture - its food, language, art
+                        and music.
+                        <br />
+                        <br /> Camp director Michael Ryndzak says organizers
+                        have learned not to program too much into each day so
+                        that children can just be with each other while enjoying
+                        camp activities. “We want to create a situation for them
+                        to bond, to meet one another, and have a chance to open
+                        up and relax,” he says. “We learned we don’t have to
+                        impose too many programs. Let nature do its trick. Let
+                        the kids be kids.”
+                        <br /> <br /> A wide range of activities, including
+                        swimming, fishing, canoeing, sports and games, dancing,
+                        singing and drawing, helped the children build
+                        confidence, teamwork skills and develop a positive
+                        attitude towards life. Ukrainian Canadian Social
+                        Services Ottawa plans to develop more social events for
+                        Ukrainian children so that newly-formed friendships can
+                        continue to grow.
+                      </span>
+                    </p>
+                    <a
+                      href="https://ottawacitizen.com/feature/summer-camp-for-ukrainian-children-displaced-by-war-a-place-where-kids-can-just-be-kids"
+                      target="_blank"
+                      rel="noreferrer">
+                      <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-400 text-white font-medium px-4 py-1 rounded-lg">
+                        {formatMessage({ ...messages.readMore })}
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="md:w-6/12 p-4 mx-auto mb-4">
                 <div className="flex flex-col justify-center h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
                   <div
                     className="fb-video"
@@ -139,7 +200,7 @@ const Home = () => {
               </div>
 
               {/* Video */}
-              <div className="md:w-7/12 p-4 mx-auto mb-4">
+              <div className="md:w-6/12 p-4 mx-auto mb-4">
                 <div className="flex flex-col justify-center h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
                   <div
                     className="fb-video"
@@ -184,7 +245,7 @@ const Home = () => {
 
               <div className="flex flex-col md:flex-row sm:space-y-0 space-y-16 lg:space-x-16 justify-center rounded-xl">
                 {/* Camp report */}
-                <div className="md:w-7/12 shadow-md">
+                <div className="md:w-6/12 shadow-md">
                   <div className="h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
                     <img
                       className="transform lg:h-80 md:h-36 w-full object-cover object-center scale-110 transition-all duration-700 hover:scale-100"
@@ -220,7 +281,7 @@ const Home = () => {
                 </div>
 
                 {/* Lions club event */}
-                <div className="md:w-7/12 shadow-md">
+                <div className="md:w-6/12 shadow-md">
                   <div className="h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
                     <img
                       className="transform lg:h-80 md:h-36 w-full object-cover object-center scale-110 transition-all duration-700 hover:scale-100"
@@ -247,7 +308,7 @@ const Home = () => {
                 </div>
               </div>
               {/* Vyshyvanka */}
-              <div className="md:w-7/12 shadow-md mx-auto mt-5">
+              <div className="md:w-6/12 shadow-md mx-auto mt-5">
                 <div className="h-full rounded-xl shadow-cla-pink bg-gradient-to-r from-fuchsia-50 to-pink-50 overflow-hidden">
                   <img
                     className="transform lg:h-80 md:h-36 w-full object-cover object-center scale-100 transition-all duration-700 hover:scale-110"
